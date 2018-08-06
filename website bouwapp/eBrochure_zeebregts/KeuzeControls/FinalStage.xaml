@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="eBrochure_zeebregts.KeuzeControls.FinalStage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:eBrochure_zeebregts.Controls"
+    xmlns:tk="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"   
+    mc:Ignorable="d"
+    d:DesignHeight="700" d:DesignWidth="700"
+           Loaded="UserControl_Loaded">
+       <Grid x:Name="LayoutRoot" Background="White" Width="700" Height="Auto" Margin="20,0,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.ColumnSpan="3">
+            <Border BorderBrush="Black" Height="2" VerticalAlignment="Top" BorderThickness="2" Margin="0,5,0,0"/>
+            <TextBlock x:Name="SubpTitel" HorizontalAlignment="Stretch"  Text="Tot slot" FontSize="22" FontFamily="Lucida Grande"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+            <TextBlock FontFamily="Lucida Grande" FontSize="14" Text="Vervolg acties" />
+            <TextBlock x:Name="Adjust" Text="" Width="50"  MouseLeftButtonUp="Adjust_MouseLeftButtonUp"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="2">
+            <TextBlock x:Name="ImageStaus" FontFamily="Lucida Grande" FontSize="10" />
+            <controls:StatusBox x:Name="CurrentStatusBox" Margin="5" Visibility="Collapsed"/>
+            <controls:StatusBox x:Name="NewStatusBox" Margin="5" Visibility="Collapsed"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1" Margin="5,0,35,0">
+            <Button Height="30" x:Name="Save2File" Content="Print offerte" Click="Save2File_Click" Margin="5" IsEnabled="false"/>
+            <Button Height="30" x:Name="ShowTegelRaport" Content="Bekijk Tegel Rapportage" Click="ShowTegelRaport_Click" Margin="5" IsEnabled="false"/>
+            <Button Height="30" x:Name="ShowPrijsRaport" Content="Bekijk Prijs Rapportage" Click="ShowPrijsRaport_Click"  Margin="5" IsEnabled="false"/>
+            <Button Height="30" x:Name="ShowTekeningBtn" Content="Bekijk tekeningen Rapportage" Click="ShowTekeningBtn_Click_1" Margin="5" IsEnabled="True" Visibility="Visible"/>
+            <Button Height="30" x:Name="MailFile" Content="Stuur als email" Click="MailFile_Click" Margin="5" IsEnabled="false" Visibility="Collapsed"/>
+            <Button Height="30" x:Name="PrintFile" Content="Uitprinten" Click="PrintFile_Click" Margin="5" IsEnabled="false" Visibility="Collapsed"/>
+            <Button Height="30" x:Name="SaveXml" Content="Save Offerte" Click="TestXML_Click" Margin="5" IsEnabled="true" Visibility="Visible"/>
+            <Button Height="30" x:Name="ResetSave" Content="Reset Save" Click="ResetSave_Click" Margin="5" IsEnabled="True" Visibility="Collapsed"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="2" Margin="5,0,35,0">
+            <CheckBox x:Name="OffAccoord" Content="Offerte ondertekend" Margin="5" Visibility="Collapsed" Checked="OffAccoord_Checked" Unchecked="OffAccoord_Unchecked"/>
+            <TextBlock x:Name="OffAccoordDate" />
+        </StackPanel>
+            <ScrollViewer Grid.ColumnSpan="3" Grid.Row="3" Height="250" Width="640" VerticalScrollBarVisibility="auto" HorizontalScrollBarVisibility="Auto" Visibility="Collapsed">
+        <controls:Uitvoer x:Name="UitvoerView" Height="Auto" />
+        </ScrollViewer>
+        <ScrollViewer Grid.ColumnSpan="3" Grid.Row="4" Height="250" Width="640" VerticalScrollBarVisibility="auto" HorizontalScrollBarVisibility="Auto" Visibility="Collapsed">
+            <controls:ExpertUitvoerPrijs x:Name="UitvoerPrijsView" Height="Auto" />
+        </ScrollViewer>
+    </Grid>
+    
+</UserControl>

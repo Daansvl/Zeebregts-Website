@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="eBrochure_zeebregts.ExpertControls.AdvancedTegelSubCatPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:eBrochure_zeebregts.ExpertControls"
+    xmlns:models="clr-namespace:eBrochure_zeebregts.ExpertControls.Models"
+    xmlns:System="clr-namespace:System;assembly=mscorlib"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="600"
+             x:Name="AdvancedControl" Height="Auto" >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <local:StatusButtonConverter x:Key="StatusImageConv"/>
+            <local:StatusVisibilityConverter x:Key="StatusVisibilityConv"/>
+            <local:ReadOnlyVisibilityConverter x:Key="ReadOnlyConv"/>
+            <local:WijzigDisableConverter x:Key="DisableConv"/>
+            <local:MetersVisConv x:Key="MetersVisConv"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="WhiteSmoke" Margin="20,0,10,0" >
+        <Grid.ColumnDefinitions>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Row="0">
+            <Border BorderBrush="Black" Height="2" VerticalAlignment="Top" BorderThickness="2" Margin="0,5,0,0"/>
+            <TextBlock x:Name="SubpTitel" HorizontalAlignment="Stretch"  Text="{Binding Path=InternData.SubCatTitle}" FontSize="20" FontFamily="Lucida Grande"/>
+        </StackPanel>
+        <ListBox Grid.Row="1" x:Name="AccentenListBox" ItemsSource="{Binding Path=InternData.Regels}" Height="Auto" >
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Row="0" Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                            <StackPanel Orientation="Horizontal" Grid.Row="1"  VerticalAlignment="Top">
+                                <TextBlock Text="{Binding Path=VervangInfo.GekozenMeters}" 
+                                           Visibility="{Binding ElementName=AddRemoveBtn, Path=Visibility, Converter={StaticResource MetersVisConv}, Mode=OneWay}" />
+                                <TextBlock Text="{Binding Path=Eenheid}"  Visibility="{Binding ElementName=AddRemoveBtn, Path=Visibility, Converter={StaticResource MetersVisConv}, Mode=OneWay}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left">
+                                <StackPanel.Visibility>
+                                    <Binding Path="LeesStand" ElementName="AdvancedControl" Converter="{StaticResource ReadOnlyConv}">
+                                        <Binding.ConverterParameter>
+                                            <System:Boolean>False</System:Boolean>
+                                        </Binding.ConverterParameter>
+                                    </Binding>
+                                </StackPanel.Visibility>
+                                <Button x:Name="AddRemoveBtn"  Click="AddRemoveBtn_Click" Height="30" Width="30">
+                                    <Button.Visibility>
+                                        <Binding Path="Status" Converter="{StaticResource StatusVisibilityConv}">
+                                            <Binding.ConverterParameter>
+                                                <System:String>AddRemBtn</System:String>
+                                            </Binding.ConverterParameter>
+                                        </Binding>
+                                    </Button.Visibility>
+                                    <Image Source="{Binding Path=Status, Converter={StaticResource StatusImageConv}}"/>
+                                </Button>
+                            </StackPanel>
+                        </Grid>
+                        <local:MetersInvoerControl Grid.Row="0" Grid.Column="2" SubmitMeters="MetersInvoerControl_SubmitMeters" SubmitWijzig="MetersInvoerControl_SubmitWijzig"
+                                                   SubmitDelete="MetersInvoerControl_SubmitDelete"
+                                                   Status="{Binding Path=Status, Mode=TwoWay}" ReadOnly="{Binding Path=LeesStand, ElementName=AdvancedControl}"
+                                                   RemainingBasisMeters="{Binding Path=RestantBasisMeters,ElementName=AdvancedControl, Mode=TwoWay}"
+                                                   >
+                            <local:MetersInvoerControl.Visibility>
+                                <Binding Path="Status" Converter="{StaticResource StatusVisibilityConv}">
+                                    <Binding.ConverterParameter>
+                                        <System:String>Meters</System:String>
+                                    </Binding.ConverterParameter>
+                                </Binding>
+                            </local:MetersInvoerControl.Visibility>
+                        </local:MetersInvoerControl>
+                    
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

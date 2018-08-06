@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="eBrochure_zeebregts.ExpertControls.AfspraakPopup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="240" d:DesignWidth="400" Width="400" Height="280">
+
+    <Grid x:Name="LayoutRoot" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" FontFamily="Lucida Grande" FontSize="14" FontWeight="Bold" Text="Afspraak voor:"  Margin="5,0,0,0"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock FontFamily="Lucida Grande" FontSize="14" Text="{Binding Path=DagNaam}" Margin="5,0,5,0" />
+            <TextBlock FontFamily="Lucida Grande" FontSize="14" Text="{Binding Path=Datum, StringFormat='{}{0:MM/dd/yyyy}'}"  Margin="5,0,5,0"/>
+            <TextBlock FontFamily="Lucida Grande" FontSize="14" Text="{Binding Path=TijdOmschrijving}"  Margin="5,0,5,0"/>
+        </StackPanel>
+        <TextBlock Grid.Row="2" FontFamily="Lucida Grande" FontSize="14" FontWeight="Bold" Text="Uw Adviseur:" Margin="5,0,0,0" />
+        <TextBlock Grid.Row="3" FontFamily="Lucida Grande" FontSize="14" Text="{Binding Path=Adviseur}" Margin="5,0,0,0" />
+        <TextBlock Grid.Row="4" FontFamily="Lucida Grande" FontSize="14" FontWeight="Bold" Text="Locatie:" Margin="5,0,0,0"/>
+        <StackPanel Grid.Row="5" Orientation="Vertical">
+            <TextBlock FontFamily="Lucida Grande" FontSize="14" Text="{Binding Path=LocatieNaam}"  Margin="5,0,0,0"/>
+            <TextBlock FontFamily="Lucida Grande" FontSize="14" Text="{Binding Path=LocatieStraat}"  Margin="5,0,0,0"/>
+            <TextBlock FontFamily="Lucida Grande" FontSize="14" Text="{Binding Path=LocatiePlaats}"  Margin="5,0,0,0"/>
+        </StackPanel>
+        <Button x:Name="InvokeBtn" Width="220"  Grid.Row="6" FontFamily="Lucida Grande" FontSize="16" Content="{Binding Path=KnopText}" IsEnabled="{Binding Path=KanKiezen}" Margin="5" HorizontalContentAlignment="Center" Click="Button_Click"/>
+    </Grid>
+</UserControl>

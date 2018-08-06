@@ -1,0 +1,12 @@
+public bool ValidLoginCombo(string name, string password)
+		{
+			return this.ObjectContext.Gebruikers.Where(g => g.Naam == name && g.Wachtwoord == password).FirstOrDefault() != null;
+		}
+		public bool DoesUserExist(string name)
+		{
+			return 	this.ObjectContext.Gebruikers.Where(g => g.Naam == name).First() != null;
+		}
+		public Gebruikers GetGebruiker(string name)
+		{
+			return this.ObjectContext.Gebruikers.Where(g => g.Naam == name).First();
+		}

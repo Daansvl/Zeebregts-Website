@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="eBrochure_zeebregts.ExpertControls.AfspraakMaker"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:cc="clr-namespace:eBrochure_zeebregts.ExpertControls"
+    mc:Ignorable="d"
+    d:DesignHeight="400" d:DesignWidth="800">
+    <UserControl.Resources>
+        <cc:Status2ColorConverter x:Key="StatusConverter"/>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="55"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="55"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="0" Width="45" Height="280" Margin="5" VerticalAlignment="Center" Content="&lt;" FontSize="50" Visibility="Collapsed" />
+        <Button Grid.Column="2" Width="45" Height="280" Margin="5" VerticalAlignment="Center" Content="&gt;" FontSize="50" Visibility="Collapsed" />
+
+        <ListBox x:Name="TopList" Grid.Column="1" Grid.Row="0" MaxWidth="700" Margin="5" ItemsSource="{Binding Path=Dagen}" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+            
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1" Background="#FFCCCCF0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Orientation="Vertical">
+                                <TextBlock Text="{Binding Path=DagNaam}" FontFamily="Lucida Grande" FontSize="14"/>
+                                <TextBlock Text="{Binding Path=Datum, StringFormat='{}{0:dd/MM/yyyy}'}" FontFamily="Lucida Grande" FontSize="14"/>
+                            </StackPanel>
+                            <ListBox Grid.Row="1" ItemsSource="{Binding Path=Blokken}" MouseLeftButtonUp="ListBox_MouseLeftButtonUp" >
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border BorderThickness="2" BorderBrush="Black" Background="{Binding Path=Status,Converter={StaticResource StatusConverter}}" Width="200">
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBlock FontFamily="Lucida Grande" FontSize="12" Text="{Binding Path=TijdOmschrijving}"/>
+                                                <TextBlock FontFamily="Lucida Grande" FontSize="12" Text="{Binding Path=StatusOmschrijving}"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Grid.Row="1" Grid.Column="1" Width="80" Height="45" Content="Close" FontFamily="Lucida Grande" FontSize="24" Click="Button_Click"/>
+    </Grid>
+</UserControl>

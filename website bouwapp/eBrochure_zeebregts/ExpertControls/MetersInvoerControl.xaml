@@ -1,0 +1,293 @@
+﻿<UserControl x:Class="eBrochure_zeebregts.ExpertControls.MetersInvoerControl"
+             x:Name="MetersControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:eBrochure_zeebregts.ExpertControls"
+             xmlns:ex="clr-namespace:eBrochure_zeebregts.ExpertControls.UiElements"
+             xmlns:ltk="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Layout.Toolkit"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d"
+             d:DesignHeight="660" d:DesignWidth="600">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <local:WijzigVisibilityConverter x:Key="WijzigVisConv"/>
+            <local:ImageConverter x:Key="ImageConv"/>
+            <local:ReadOnlyVisibilityConverter x:Key="ReadOnlyConv"/>
+            <local:MeterInputEnableConverter x:Key="MeterEnableConv"/>
+            <local:OpmerkingConverter x:Key="OpmConv"/>
+            <local:FilterdVisibilityConverter x:Key="FilterConv"/>
+            <local:BorderHideConverter x:Key="BorderConv"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Background="White">
+        <Grid HorizontalAlignment="Stretch" Width="600">
+            <Grid.Visibility>
+                <Binding Path="ReadOnly," ElementName="MetersControl" Converter="{StaticResource ReadOnlyConv}">
+                    <Binding.ConverterParameter>
+                        <System:Boolean>True</System:Boolean>
+                    </Binding.ConverterParameter>
+                </Binding>
+            </Grid.Visibility>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Grid.RowSpan="5" Grid.Column="0" Orientation="Vertical">
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding Path=GekozenTegel.TegelOmschrijving}"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding Path=MeterPrijsText, ElementName=MetersControl}"/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text=""/><!--{Binding Path=InstapPrijsTekst, ElementName=MetersControl}-->
+                <TextBlock Grid.Row="4" Grid.Column="0" MaxWidth="320" TextWrapping="Wrap"  Text="{Binding Path=VervangInfo.Opmerking, Converter={StaticResource OpmConv}}"/>
+            </StackPanel>
+            <!--<StackPanel Grid.Row="0" Grid.RowSpan="4" Grid.Column="1"></StackPanel>-->
+            <Image Grid.Column="2" Grid.Row="0" Grid.RowSpan="4" Source="{Binding Path=GekozenTegel.ImgPath, Converter={StaticResource ImageConv}}"/>
+        </Grid>
+        <Grid>
+            <Grid.Visibility>
+                <Binding Path="ReadOnly," ElementName="MetersControl" Converter="{StaticResource ReadOnlyConv}">
+                    <Binding.ConverterParameter>
+                        <System:Boolean>False</System:Boolean>
+                    </Binding.ConverterParameter>
+                </Binding>
+            </Grid.Visibility>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="550"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+<!--edit mode-->
+            <Button     Grid.Row="0" Grid.Column="0" Content="Wijzig" Height="35" Width="45" Margin="0" Click="WijzigButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Button.Visibility>
+                    <Binding Path="VervangInfo.Wijzigstand" Converter="{StaticResource WijzigVisConv}">
+                        <Binding.ConverterParameter>
+                            <System:Boolean>False</System:Boolean>
+                        </Binding.ConverterParameter>
+                    </Binding>
+                </Button.Visibility>
+            </Button>
+            <TextBlock  Grid.Row="0" Grid.Column="0" Text="Product:" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.Visibility>
+                    <Binding Path="VervangInfo.Wijzigstand" Converter="{StaticResource WijzigVisConv}">
+                        <Binding.ConverterParameter>
+                            <System:Boolean>True</System:Boolean>
+                        </Binding.ConverterParameter>
+                    </Binding>
+                </TextBlock.Visibility>
+            </TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=GekozenTegel.TegelOmschrijving}" Margin="5,0,0,0">
+                <TextBlock.Visibility>
+                    <Binding Path="VervangInfo.Wijzigstand" Converter="{StaticResource WijzigVisConv}">
+                        <Binding.ConverterParameter>
+                            <System:Boolean>True</System:Boolean>
+                        </Binding.ConverterParameter>
+                    </Binding>
+                </TextBlock.Visibility>
+            </TextBlock>
+            <TextBlock  Grid.Row="1" Grid.Column="0" Text="Aantal:" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.Visibility>
+                    <Binding Path="VervangInfo.Wijzigstand" Converter="{StaticResource WijzigVisConv}">
+                        <Binding.ConverterParameter>
+                            <System:Boolean>True</System:Boolean>
+                        </Binding.ConverterParameter>
+                    </Binding>
+                </TextBlock.Visibility>
+            </TextBlock>
+            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <StackPanel.Visibility>
+                    <Binding Path="VervangInfo.Wijzigstand" Converter="{StaticResource WijzigVisConv}">
+                        <Binding.ConverterParameter>
+                            <System:Boolean>True</System:Boolean>
+                        </Binding.ConverterParameter>
+                    </Binding>
+                </StackPanel.Visibility>
+                <ex:doubleInput x:Name="decimalInput" Width="100" Height="30" doubleValue="{Binding Path=VervangInfo.GekozenMeters,Mode=TwoWay }" IsEnabled="{Binding Path=Status,Converter={StaticResource MeterEnableConv}}" PropertyChanged="doubleInput_PropertyChanged"      />
+                <!--<TextBox Width="60" Height="20" Margin="5" Text="{Binding Path=VervangInfo.GekozenMeters,Mode=TwoWay}" TextChanged="MetersTB_TextChanged" IsEnabled="{Binding Path=Status,Converter={StaticResource MeterEnableConv}}"/>-->
+                
+                <TextBlock Text="{Binding Path=GekozenTegel.PrijsPerMeter, StringFormat= x \{0:C\} , ConverterCulture=nl-NL}" VerticalAlignment="Center"/>
+                <TextBlock VerticalAlignment="Center" Margin="10,0,0,0"
+                   Text="{Binding Path=TotaalPrijs, ElementName=MetersControl}">
+                    <TextBlock.Visibility>
+                        <Binding Path="VervangInfo.Wijzigstand" Converter="{StaticResource WijzigVisConv}">
+                            <Binding.ConverterParameter>
+                                <System:Boolean>True</System:Boolean>
+                            </Binding.ConverterParameter>
+                        </Binding>
+                    </TextBlock.Visibility>
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical">
+                <Button x:Name="OkButton" Content="Ok" Width="45" Height="35" Margin="2"
+                Click="OkButton_Click">
+                    <Button.Visibility>
+                        <Binding Path="VervangInfo.Wijzigstand" Converter="{StaticResource WijzigVisConv}">
+                            <Binding.ConverterParameter>
+                                <System:Boolean>True</System:Boolean>
+                            </Binding.ConverterParameter>
+                        </Binding>
+                    </Button.Visibility>
+                </Button>
+                <Button x:Name="CancelButton" Content="Cancel" Width="45" Height="35" Margin="2" Click="CancelButton_Click">
+                    <Button.Visibility>
+                        <Binding Path="VervangInfo.Wijzigstand" Converter="{StaticResource WijzigVisConv}">
+                            <Binding.ConverterParameter>
+                                <System:Boolean>True</System:Boolean>
+                            </Binding.ConverterParameter>
+                        </Binding>
+                    </Button.Visibility>
+                </Button>
+            </StackPanel>
+            <TextBox    Grid.Row="2" Grid.Column="1" Height="80" VerticalAlignment="Top" Margin="0" Text="{Binding Path=VervangInfo.Opmerking, Mode=TwoWay, Converter={StaticResource OpmConv}}"
+                     MaxWidth="350" Width="350" TextWrapping="Wrap" HorizontalAlignment="Left">
+                <TextBox.Visibility>
+                    <Binding Path="VervangInfo.Wijzigstand" Converter="{StaticResource WijzigVisConv}">
+                        <Binding.ConverterParameter>
+                            <System:Boolean>True</System:Boolean>
+                        </Binding.ConverterParameter>
+                    </Binding>
+                </TextBox.Visibility>
+            </TextBox>
+            <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+                <Image x:Name="SearchImg" Height="20" Width="20" Source="/Images/search-icon.jpg"/>
+                <TextBox x:Name="SearchTb"  HorizontalAlignment="Stretch" Margin="5,0,5,0" Width="150"
+                     TextChanged="TextBox_TextChanged"/>
+                <StackPanel.Visibility>
+                    <Binding Path="VervangInfo.Wijzigstand" Converter="{StaticResource WijzigVisConv}">
+                        <Binding.ConverterParameter>
+                            <System:Boolean>True</System:Boolean>
+                        </Binding.ConverterParameter>
+                    </Binding>
+                </StackPanel.Visibility>
+            </StackPanel>
+            <ListBox    Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" x:Name="TegelListBox" MinHeight="180" MaxHeight="485" ItemsSource="{Binding Path=VervangInfo.Tegels}"
+                 SelectionChanged="ListBox_SelectionChanged" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+
+                <ListBox.Visibility>
+                    <Binding Path="VervangInfo.Wijzigstand" Converter="{StaticResource WijzigVisConv}">
+                        <Binding.ConverterParameter>
+                            <System:Boolean>True</System:Boolean>
+                        </Binding.ConverterParameter>
+                    </Binding>
+                </ListBox.Visibility>
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ListBoxItem">
+                                    <ContentPresenter x:Name="contentPresenter" Margin="0" />
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <!--<Border BorderBrush="White" BorderThickness="4" Visibility="{Binding Filtered, Converter={StaticResource FilterConv}}">-->
+                            <Grid Visibility="{Binding Filtered, Converter={StaticResource FilterConv}}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="120"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                    <RowDefinition Height="4"/>
+                                    <RowDefinition Height="60"/>
+                                    <RowDefinition Height="60"/>
+                            </Grid.RowDefinitions>
+                                <Border BorderBrush="Black" Height="1" BorderThickness="1" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,2,5,2"/>
+                                <RadioButton Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" 
+                                         IsChecked="{Binding IsGekozen,Mode=TwoWay}"
+                                         IsHitTestVisible="true"
+                                         Checked="RadioButton_Checked"
+                                         GroupName="TegelRbGroup"/>
+                                <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
+                                    <TextBlock Text="{Binding Path=TegelOmschrijving}" />
+                                    <TextBlock Text="{Binding Path=TegelDetails}" />
+                                    <TextBlock Text="{Binding Path=PrijsPerMeter, StringFormat=Meterprijs:  \{0:C\},ConverterCulture=nl-NL}" />
+                                    <TextBlock Text="{Binding Path=InstapPrijs, StringFormat=Instapprijs: \{0:C\},ConverterCulture=nl-NL}"/>
+                                        <!--<TextBlock Text="{Binding Path=SBreedte}"/>
+                                        <TextBlock Text="{Binding Path=SLengte}"/>-->
+                                </StackPanel>
+                            <ltk:LayoutTransformer x:Name="LayTrans" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <ltk:LayoutTransformer.LayoutTransform>
+                                    <ScaleTransform x:Name="ScaleTransformer1" ScaleX="1" ScaleY="1"/>
+                                </ltk:LayoutTransformer.LayoutTransform>
+                                <ltk:LayoutTransformer.Content>
+                                    <Image  Source="{Binding Path=ImgPath, Converter={StaticResource ImageConv}}" HorizontalAlignment="Right" VerticalAlignment="Top"
+                                     Width="120" Height="120"/>
+                                </ltk:LayoutTransformer.Content>
+                            </ltk:LayoutTransformer>
+
+                        </Grid>
+                        <!--</Border>-->
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+<!--read mode-->
+            <Grid       Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">
+                <Grid.Visibility>
+                    <Binding Path="VervangInfo.Wijzigstand" Converter="{StaticResource WijzigVisConv}">
+                        <Binding.ConverterParameter>
+                            <System:Boolean>False</System:Boolean>
+                        </Binding.ConverterParameter>
+                    </Binding>
+                </Grid.Visibility>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="120" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" Orientation="Vertical">
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding Path=GekozenTegel.TegelOmschrijving}"/>
+                    <!--<TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding Path=GekozenTegel.TegelDetails}"/>-->
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding Path=MeterPrijsText, ElementName=MetersControl}"/>
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="" /><!--"{Binding Path=InstapPrijsTekst, ElementName=MetersControl}"-->
+                    <TextBlock Width="320" HorizontalAlignment="Left" TextWrapping="Wrap" MaxHeight="70" Height="Auto" Text="{Binding Path=VervangInfo.Opmerking, Mode=OneWay, Converter={StaticResource OpmConv}}">
+                        <TextBlock.Visibility>
+                            <Binding Path="VervangInfo.Wijzigstand" Converter="{StaticResource WijzigVisConv}">
+                                <Binding.ConverterParameter>
+                                    <System:Boolean>False</System:Boolean>
+                                </Binding.ConverterParameter>
+                            </Binding>
+                        </TextBlock.Visibility>
+                    </TextBlock>
+                </StackPanel>
+                <ltk:LayoutTransformer x:Name="LayTrans" Grid.Column="2" Grid.Row="0" Grid.RowSpan="4" MaxHeight="120">
+                    <ltk:LayoutTransformer.LayoutTransform>
+                        <ScaleTransform x:Name="ScaleTransformer1" ScaleX="1" ScaleY="1"/>
+                    </ltk:LayoutTransformer.LayoutTransform>
+                    <ltk:LayoutTransformer.Content>
+                        <Image  Source="{Binding Path=GekozenTegel.ImgPath, Converter={StaticResource ImageConv}}" Width="120" Height="120"/>
+                    </ltk:LayoutTransformer.Content>
+                </ltk:LayoutTransformer>
+                
+            </Grid>
+            
+            
+        </Grid>
+    </Grid>
+</UserControl>

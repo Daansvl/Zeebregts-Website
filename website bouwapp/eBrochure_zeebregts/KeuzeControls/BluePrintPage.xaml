@@ -1,0 +1,19 @@
+﻿<UserControl
+    x:Class="eBrochure_zeebregts.KeuzeControls.BluePrintPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:local="clr-namespace:eBrochure_zeebregts.KeuzeControls"
+    d:DesignHeight="300" d:DesignWidth="400">
+    
+    <StackPanel x:Name="LayoutRoot" Background="White">
+        <TextBlock x:Name="StatusText" FontFamily="Lucida Grande" FontSize="12" Text="Status info en uitleg verdere stap" Margin="20,0,0,0"/>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="RetryBtn" Content="Retry" HorizontalAlignment="Left" Margin="20,10,10,10" VerticalAlignment="Center" Click="RetryBtn_Click_1"/>
+            <CheckBox x:Name="geenBlueprintCB" Content="Ga verder zonder plaatjes" Margin="10" VerticalAlignment="Center" Checked="geenBlueprintCB_Checked_1" Unchecked="geenBlueprintCB_Checked_1"/>
+         </StackPanel>
+        <local:BluePrintControl x:Name="BluePrintImg"/>
+    </StackPanel>
+</UserControl>

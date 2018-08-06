@@ -1,0 +1,74 @@
+﻿<UserControl xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  x:Class="eBrochure_zeebregts.KeuzeControls.NewUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:eBrochure_zeebregts.KeuzeControls"
+    mc:Ignorable="d"
+    d:DesignHeight="650" d:DesignWidth="600"
+             x:Name="NewUserWindow">
+    <UserControl.Resources>
+        <local:VisibilityConverter x:Key="VisConv"/>
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Gebruikersnaam:" VerticalAlignment="Center"/>
+        <TextBox x:Name="TBGebruikersnaam" Grid.Row="0" Grid.Column="1" Width="250" Height="25" Margin="10" HorizontalAlignment="Left"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Email:" VerticalAlignment="Center"/>
+        <TextBox x:Name="TBEmail" Grid.Row="1" Grid.Column="1" Width="250" Height="25" Margin="10" HorizontalAlignment="Left"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Rol:" VerticalAlignment="Center"/>
+        <ComboBox x:Name="RolCBB" DataContext="{Binding}" SelectionChanged="RolCBB_SelectionChanged" Grid.Row="2" Grid.Column="1" Width="250" Height="25" Margin="10" HorizontalAlignment="Left"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Wachtwoord:" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
+            <TextBox x:Name="PassBox" Width="180" Height="25" Margin="10" HorizontalAlignment="Left"/>
+            <Button Width="60" Height="25" Content="Genereer" Click="Button_Click"/>
+        </StackPanel>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Projecten:" VerticalAlignment="Center" Visibility="{Binding Path=KiesProject,ElementName=NewUserWindow,Converter={StaticResource VisConv}}"/>
+        <ListBox x:Name="ProjectLB"  Grid.Row="4" Grid.Column="1" Width="250" Margin="10" HorizontalAlignment="Left" Visibility="{Binding Path=KiesProject,ElementName=NewUserWindow,Converter={StaticResource VisConv}}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox Content="{Binding Omschrijving, Mode=TwoWay}" IsChecked="{Binding IsGekozen,Mode=TwoWay}"  />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Bouwnummer:" VerticalAlignment="Center" Visibility="{Binding Path=KiesBouwnummer,ElementName=NewUserWindow,Converter={StaticResource VisConv}}"/>
+        <ListBox x:Name="BouwNummerLB" Grid.Row="5" Grid.Column="1" Width="250" Margin="10" HorizontalAlignment="Left" Visibility="{Binding Path=KiesColBouwnummer,ElementName=NewUserWindow,Converter={StaticResource VisConv}}" MaxHeight="350">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox Content="{Binding Omschrijving,Mode=TwoWay}" IsChecked="{Binding IsGekozen,Mode=TwoWay}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ComboBox x:Name="BouwNrCBB" DataContext="{Binding}" Grid.Row="5" Grid.Column="1" Width="250" Height="25" HorizontalAlignment="Left" Margin="10" Visibility="{Binding Path=KiesBouwnummer,ElementName=NewUserWindow,Converter={StaticResource VisConv}}"/>
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Geldigheids periode:" VerticalAlignment="top" Margin="0,8,0,0" Visibility="{Binding Path=KiesPeriode,ElementName=NewUserWindow,Converter={StaticResource VisConv}}"/>
+        <StackPanel Orientation="Vertical" Grid.Row="6" Grid.Column="1" Visibility="{Binding Path=KiesPeriode,ElementName=NewUserWindow,Converter={StaticResource VisConv}}">
+            <TextBlock x:Name="FromDateTB" Text="" VerticalAlignment="Center" Margin="10,0,0,0" />
+            <sdk:Calendar x:Name="FromDateCal" HorizontalAlignment="Left" Margin="10" SelectedDatesChanged="FromDateCal_SelectedDatesChanged"/>
+             <TextBlock x:Name="ToDateTB" Text="" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <sdk:Calendar x:Name="ToDateCal" HorizontalAlignment="Left" Margin="10" SelectedDatesChanged="ToDateCal_SelectedDatesChanged"/>
+        </StackPanel>
+        <TextBlock x:Name="ValGebruikersnaam" Grid.Row="0" Grid.Column="2" Text="X" FontSize="10" Foreground="Red" Visibility="Collapsed" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="ValEmail" Grid.Row="1" Grid.Column="2" Text="X" FontSize="10" Foreground="Red" Visibility="Collapsed" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="ValRol" Grid.Row="2" Grid.Column="2" Text="X" FontSize="10" Foreground="Red" Visibility="Collapsed" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="ValWachtwoord" Grid.Row="3" Grid.Column="2" Text="X" FontSize="10" Foreground="Red" Visibility="Collapsed" TextWrapping="Wrap" HorizontalAlignment="Center" MaxWidth="100" />
+        <TextBlock x:Name="ValProject" Grid.Row="4" Grid.Column="2" Text="X" FontSize="10" Foreground="Red" Visibility="Collapsed" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="ValBouwnummer" Grid.Row="5" Grid.Column="2" Text="X" FontSize="10" Foreground="Red" Visibility="Collapsed" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="ValPeriode" Grid.Row="6" Grid.Column="2" Text="X" FontSize="10" Foreground="Red" Visibility="Collapsed" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+        <Button Grid.Row="7" Grid.Column="1" Height="25" Margin="20" Content="Opslaan" Click="OpslaanClick"/>
+    </Grid>
+</UserControl>

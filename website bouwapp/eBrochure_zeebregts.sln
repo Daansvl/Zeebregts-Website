@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBrochure_zeebregts", "eBrochure_zeebregts\eBrochure_zeebregts.csproj", "{38D27762-A41C-44ED-8730-3B2AF6115D50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBrochure_zeebregts.Web", "eBrochure_zeebregts.Web\eBrochure_zeebregts.Web.csproj", "{0D1E7ADE-3B71-44D5-9BC7-8FA8347263F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6BDBEDE3-48F5-4E28-878F-B3C2C06450CA}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://softserv:8080/tfs/website%20bouwapp
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = eBrochure_zeebregts\\eBrochure_zeebregts.csproj
+		SccProjectName1 = eBrochure_zeebregts
+		SccLocalPath1 = eBrochure_zeebregts
+		SccProjectUniqueName2 = eBrochure_zeebregts.Web\\eBrochure_zeebregts.Web.csproj
+		SccProjectName2 = eBrochure_zeebregts.Web
+		SccLocalPath2 = eBrochure_zeebregts.Web
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38D27762-A41C-44ED-8730-3B2AF6115D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38D27762-A41C-44ED-8730-3B2AF6115D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38D27762-A41C-44ED-8730-3B2AF6115D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38D27762-A41C-44ED-8730-3B2AF6115D50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D1E7ADE-3B71-44D5-9BC7-8FA8347263F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D1E7ADE-3B71-44D5-9BC7-8FA8347263F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D1E7ADE-3B71-44D5-9BC7-8FA8347263F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D1E7ADE-3B71-44D5-9BC7-8FA8347263F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

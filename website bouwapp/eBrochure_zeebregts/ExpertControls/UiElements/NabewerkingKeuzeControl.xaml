@@ -1,0 +1,61 @@
+﻿<UserControl x:Name="VerwerkingControl" x:Class="eBrochure_zeebregts.ExpertControls.UiElements.NabewerkingKeuzeControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:eBrochure_zeebregts.ExpertControls.UiElements"
+             mc:Ignorable="d"
+             
+    d:DesignHeight="150" d:DesignWidth="675">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <local:VerwerkVisConv x:Key="VisConv"/>
+            <local:WijzigstandOnVisConv x:Key="WijzigOnConv"/>
+            <local:WijzigstanOffVisConv x:Key="WijzigOffConv"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Border BorderBrush="AliceBlue" BorderThickness="2">
+        <Grid x:Name="LayoutRoot" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="610"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" x:Name="MetersTB" Text="{Binding Path=MetersText}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Grid Grid.Column="1" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0"/>
+            <ColumnDefinition Width="390"/>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="150"/>
+           
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{Binding ElementName=VerwerkingControl,Path=Wijzigstand,Converter={StaticResource WijzigOnConv}}"/>
+            <RowDefinition Height="{Binding ElementName=VerwerkingControl,Path=Wijzigstand,Converter={StaticResource WijzigOnConv}}"/>
+            <RowDefinition Height="{Binding ElementName=VerwerkingControl,Path=Wijzigstand,Converter={StaticResource WijzigOffConv}}"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="1" x:Name="ProdInfoTB" Text="{Binding Path=InfoText}" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="voeg"  VerticalAlignment="Center" HorizontalAlignment="Left"
+                   Visibility="{Binding Path=bewerkingenVoeg, Converter={StaticResource ResourceKey=VisConv}}"/>
+        <ComboBox Grid.Row="0" Grid.Column="3" x:Name="VoegCbb" Margin="2" ItemsSource="{Binding Path=bewerkingenVoeg}"
+                  DisplayMemberPath="Omschrijving" SelectedValuePath="Nabewerking_ID"
+                  Visibility="{Binding Path=bewerkingenVoeg, Converter={StaticResource ResourceKey=VisConv}}"/>
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="verwerking" VerticalAlignment="Center" HorizontalAlignment="Left"
+                   Visibility="{Binding Path=bewerkingVerwerk, Converter={StaticResource ResourceKey=VisConv}}"/>
+        <ComboBox Grid.Row="1" Grid.Column="3" x:Name="VerwerkingCbb" Margin="2" ItemsSource="{Binding Path=bewerkingVerwerk}"
+                  DisplayMemberPath="Omschrijving" SelectedValuePath="Nabewerking_ID" 
+                  Visibility="{Binding Path=bewerkingVerwerk, Converter={StaticResource ResourceKey=VisConv}}" />
+        
+        <!-- Leesstand block-->
+        <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5" 
+                   x:Name="LeesTekst" Visibility="{Binding Path=bewerkingenVoeg, Converter={StaticResource ResourceKey=VisConv}}">
+            <Run Text="{Binding Path=InfoText }"/>
+            <Run Text="{Binding Path=SelectedItem.Omschrijving,ElementName=VerwerkingCbb}"/>
+            <Run Text=" verwerkt met voeg: "/>
+            <Run Text="{Binding Path=SelectedItem.Omschrijving, ElementName=VoegCbb}" />
+        </TextBlock>
+    </Grid>
+
+        </Grid>
+    </Border>
+</UserControl>
