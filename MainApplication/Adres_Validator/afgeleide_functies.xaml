@@ -1,0 +1,59 @@
+﻿<Window x:Class="Adres_Validator.afgeleide_functies"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="afgeleide_functies" Height="600" Width="800">
+    <Window.Resources>
+        <Style TargetType="{x:Type ListBox}">
+            <Setter Property="ItemTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Border BorderBrush="Black"  BorderThickness="1" Margin="6">
+                            <StackPanel Orientation="Horizontal">
+                                <Border BorderBrush="Black" BorderThickness="1">
+                                    <StackPanel Width="273" Orientation="Horizontal">
+                                        <TextBlock  Margin="4" Text="{Binding Path=funct_naam}"/>
+                                    </StackPanel>
+                                </Border>
+                                <Border BorderBrush="Black" BorderThickness="1">
+                                    <TextBlock Width="40" Margin="4" Text="{Binding Path=funct_count}"/>
+                                </Border>
+                                <Border BorderBrush="Black" BorderThickness="1">
+                                    <TextBlock Width="40" Margin="4" Text="{Binding Path=uit_var}"/>
+                                </Border>
+                                <Border BorderBrush="Black" BorderThickness="1">
+                                    <TextBlock Width="40" Margin="4" Text="{Binding Path=functie_id}"/>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0" >
+            <RadioButton x:Name="rb_contacten" Content="contacten laden"/>
+            <RadioButton x:Name="rb_bedrijven" Content="bedrijven laden"/>
+        </StackPanel>
+        <Label x:Name="lbl_info" Grid.Column="1" Grid.Row="0" Content="actu info"/>
+            <Button x:Name="btn_inladen" Click="btn_inladen_Click" Grid.Column="0" Grid.Row="1" Content="laad" Margin="2"/>
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <Button x:Name="btn_starten" Click="btn_starten_Click" Content="start" Margin="2"/>
+            <Button x:Name="btn_opslaan" Click="btn_opslaan_Click" Content="opslaan" Margin="2"/>
+        </StackPanel>
+        <DataGrid x:Name="dg_oud" Grid.Column="0" Grid.Row="2"/>
+            <ListBox ItemsSource="{Binding}" x:Name="dg_nieuw" Grid.Column="1" Grid.Row="2"/>
+
+            <ProgressBar x:Name="pro_bar" Grid.ColumnSpan="2" Grid.Row="3" Margin="3"/>
+    </Grid>
+</Window>

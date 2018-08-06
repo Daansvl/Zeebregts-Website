@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="MandagenRegistratie.controls.Projecten.Dagview.ProjectDagViewProjectUur"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="20" d:DesignWidth="80">
+    <StackPanel Orientation="Vertical" x:Name="spUur">
+        <StackPanel Orientation="Horizontal">
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" Cursor="SizeWE" HorizontalAlignment="Left" Name="btn15" BorderThickness="1" VerticalAlignment="Top" Width="20" MouseEnter="btn15_MouseMove" MouseLeftButtonDown="btn15_MouseMove" MouseLeftButtonUp="btn15_MouseMove">
+                <TextBlock x:Name="txt15" Visibility="Hidden">15</TextBlock>
+            </Border>
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" Cursor="SizeWE" HorizontalAlignment="Left" Name="btn30" BorderThickness="1" VerticalAlignment="Top" Width="20" MouseEnter="btn30_MouseMove" MouseLeftButtonDown="btn30_MouseMove" MouseLeftButtonUp="btn30_MouseMove">
+                <TextBlock x:Name="txt30" Visibility="Hidden">30</TextBlock>
+            </Border>
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" Cursor="SizeWE" HorizontalAlignment="Left" Name="btn45" BorderThickness="1" VerticalAlignment="Top" Width="20" MouseEnter="btn45_MouseMove" MouseLeftButtonDown="btn45_MouseMove" MouseLeftButtonUp="btn45_MouseMove">
+                <TextBlock x:Name="txt45" Visibility="Hidden">45</TextBlock>
+            </Border>
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" Cursor="SizeWE" HorizontalAlignment="Left" Name="btn60" BorderThickness="1" VerticalAlignment="Top" Width="20" MouseEnter="btn60_MouseMove" MouseLeftButtonDown="btn60_MouseMove" MouseLeftButtonUp="btn60_MouseMove">
+                <TextBlock x:Name="txt60" Visibility="Hidden">60</TextBlock>
+            </Border>
+        </StackPanel>
+        <Label Height="5" x:Name="testlabel"></Label>
+
+    </StackPanel>
+</UserControl>

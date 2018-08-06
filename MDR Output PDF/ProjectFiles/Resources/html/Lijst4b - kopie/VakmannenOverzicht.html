@@ -1,0 +1,100 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+  <title></title>
+</head>
+
+<body>
+<!-- experiment, table eromheen met display table -->
+<!-- experiment geslaagd: blijkbaar heeft de pdf converter toch een table nodig om te herkennen dat een header op de volgende pagina wordt herhaald -->
+<!-- dus kunstmatig alles in een table gezet, en zo min mogelijk stijlen op de table toegepast, alleen de broodnodige -->
+<!-- alle benodigde stijlen heb ik gewoon in de div's gelaten hoe ik het al had -->
+
+<table style="display: table">
+  <thead style="display: table-header-group;">
+    <tr>
+      <th><!-- vanwege de stijl display: table-header-group; komt deze div als header boven elke pagina (als het goed is) -->
+        <div
+        style="page-break-before : always; border: 1px solid #0094ff; padding: 20px 0px 20px 20px; 
+                margin : 10px; float: left; width: 1000px; position: relative; display: table-header-group; font-family:Calibri">
+        <!-- een div links uitgelijnd -->
+        
+        <div style="float: none; width: 150px; text-align: left;">
+        &nbsp;Periode </div>
+
+        <!-- een div links uitgelijnd -->
+
+        <div style="float: left; width: 150px; text-align: left;">
+        &nbsp;&nbsp;
+        Van / tot</div>
+
+        <div style="float:none; width: 622px; text-align: left;">
+        [%vantot%] </div>
+        <!-- een div rechts uitgelijnd -->
+
+        <!-- een div links uitgelijnd -->
+
+        <div style="float: left; width: 150px; text-align: left;">
+            Afgedrukt op</div>
+
+        <div style="float: none; width: 624px; text-align: left;">
+        [%versiedatum%] <br><br><br> </div>
+        <!-- een div rechts uitgelijnd -->
+
+        <!-- header eerste kolomn -->
+
+        <div style="float: left; width: 200px; text-align: left; ">
+        	Alle vakmannen</div>
+        
+        <!-- BSN -->
+		<div style=" float: left; width:100px; text-align: left"> BSN<br>
+	        <!-- bsn -->
+	        <div style="float: left; width: 75px; text-align: left; padding: 5px;">
+	        <i>bsn</i> </div>
+        </div>
+
+        <!-- Adres -->
+		<div style=" float: left; width: 330px; text-align:left; margin-left:10px"> Adres<br>
+	        <!-- Straat -->
+	        <div style="float: left; width: 141px; text-align: left; padding: 5px;">
+	            <em>straat</em></div>
+	        <!-- Postcode -->
+	        <div style="float: left; width: 70px; text-align: left; padding: 5px;">
+	            <i>postcode</i></div>
+	        <!-- Plaats -->
+	        <div style="float: left; text-align: left; padding: 5px;">
+	            <i>plaats </i></div>
+	     </div>
+        <!-- Mail -->
+		<div style=" float: left; text-align:left; width:130px">Mail<br>
+	        <!-- email -->
+	        <div style="float: left; text-align: left; padding: 5px;">
+	            <i>email</i> </div>
+        </div>
+        
+        <!-- Totaal -->
+		<div style=" float: left; padding-left: 50px ">Totaal <br>
+	        <!-- uren-->
+	        <div style="float: left; width: 75px; text-align: center; padding: 1px; margin-left:10px">
+	        <i>uren</i> </div>
+	        <!-- dagen -->
+	        <div style="float: left; width: 65px; text-align: center; padding: 1px;">
+	        <i>dagen</i></div>
+	    </div>
+
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div
+        style="border: 0px solid #0094ff; float: left; width: 1000px; position: relative;">
+        [%OverzichtItems%] </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

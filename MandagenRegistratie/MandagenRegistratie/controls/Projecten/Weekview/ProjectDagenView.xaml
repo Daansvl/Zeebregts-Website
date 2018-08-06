@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="MandagenRegistratie.controls.Projecten.Weekview.ProjectDagenView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignWidth="900">
+    <StackPanel Orientation="Vertical">
+        <StackPanel x:Name="spProjectInfo" HorizontalAlignment="Left" Width="884" Orientation="Horizontal">
+            <WrapPanel Height="100" x:Name="spVakmanInfo" Width="400" Orientation="Horizontal">
+                <Label Content="Naam: " Width="200px"  />
+                <Label x:Name="lblProjectnaam" Width="200px" Background="LightGray" FontWeight="ExtraBold"  />
+                <Label Content="ProjectId: " Width="200px"  />
+                <Label x:Name="lblProjectId" Width="200px"  />
+                <Label Content="Projectleider: " Width="200px"  />
+                <Label x:Name="lblProjectleider" Width="200px" Background="LightGray" FontWeight="ExtraBold" />
+            </WrapPanel>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="30" Width="884" Orientation="Horizontal">
+            <Button HorizontalAlignment="Left" Width="150" Click="Button_Click_5">
+                <Button.Content>
+                    <![CDATA[ <<< vorige week ]]>
+                </Button.Content>
+            </Button>
+            <Label Height="30" VerticalAlignment="Top" Width="500" x:Name="lblWeekInfo" />
+
+            <Button HorizontalAlignment="Right" Width="150" Click="Button_Click_6">
+                <Button.Content>
+                    <![CDATA[ volgende week >>> ]]>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+        <StackPanel x:Name="spProjecten" HorizontalAlignment="Left" VerticalAlignment="Top" Width="900" Orientation="Horizontal">
+        </StackPanel>
+        <StackPanel x:Name="spAddVakman" HorizontalAlignment="Left" VerticalAlignment="Top" Width="900" Orientation="Horizontal">
+            <ComboBox Height="23" x:Name="ddlVakmannen" Width="120" />
+            <Button Content="Toevoegen" Height="23" Name="btnAddVakman" Width="75" Click="btnAddVakman_Click" />
+        </StackPanel>
+    </StackPanel>
+
+</UserControl>

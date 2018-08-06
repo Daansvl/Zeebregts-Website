@@ -1,0 +1,21 @@
+﻿<local:MenuControl x:Class="MandagenRegistratie.controls.Vakmannen.Overzicht.ContactenOverview"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZeebregtsLogic;assembly=ZeebregtsLogic"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1050">
+    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" PreviewKeyDown="DockPanel_PreviewKeyDown">
+        <TextBox DockPanel.Dock="Top" x:Name="txtSearch" Height="23" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="500" TextChanged="txtSearch_TextChanged" />
+        <DataGrid DockPanel.Dock="Bottom" IsReadOnly="True" MaxHeight="800" AutoGenerateColumns="False" HorizontalAlignment="Stretch" Margin="0,10,0,0" Name="dgContacten" VerticalAlignment="Stretch" Visibility="Visible" MouseDoubleClick="dgContacten_DoubleClick" AlternatingRowBackground="#FF959BD8">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=persoon_nr}" Header="Persoon nr" />
+                <DataGridTextColumn Binding="{Binding Path=voorletters}" Header="Voorletters" />
+                <DataGridTextColumn Binding="{Binding Path=voornaam}" Header="Voornaam" />
+                <DataGridTextColumn Binding="{Binding Path=tussenvoegsel}" Header="Tussenvoegsel" />
+                <DataGridTextColumn Binding="{Binding Path=achternaam}" Header="Achternaam" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</local:MenuControl>

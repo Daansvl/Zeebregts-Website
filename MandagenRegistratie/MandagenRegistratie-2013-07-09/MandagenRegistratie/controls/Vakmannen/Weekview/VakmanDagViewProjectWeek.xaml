@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="MandagenRegistratie.controls.VakmanDagViewProjectWeek"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="80">
+    <StackPanel Orientation="Vertical" x:Name="spUur">
+        <StackPanel Orientation="Horizontal">
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" HorizontalAlignment="Left" Name="btnApprove" Visibility="Hidden" BorderThickness="1" VerticalAlignment="Top" Width="40" BorderBrush="Green">
+                <TextBlock>Accept</TextBlock>
+            </Border>
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" HorizontalAlignment="Left" Name="btnReject" Visibility="Hidden" BorderThickness="1" VerticalAlignment="Top" Width="40" BorderBrush="Red">
+                <TextBlock>Reject</TextBlock>
+            </Border>
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" HorizontalAlignment="Left" Name="btnCancel" Visibility="Hidden" BorderThickness="1" VerticalAlignment="Top" Width="40" BorderBrush="Orange">
+                <TextBlock>Cancel</TextBlock>
+            </Border>
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" HorizontalAlignment="Left" Name="btnHasSeen" Visibility="Hidden" BorderThickness="1" VerticalAlignment="Top" Width="40" BorderBrush="Orange">
+                <TextBlock>Cancel</TextBlock>
+            </Border>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" HorizontalAlignment="Left" Name="btnMa" BorderThickness="1" VerticalAlignment="Top" Width="20">
+                <TextBlock x:Name="txtMa" Visibility="Hidden">M</TextBlock>
+            </Border>
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" HorizontalAlignment="Left" Name="btnDi" BorderThickness="1" VerticalAlignment="Top" Width="20">
+                <TextBlock x:Name="txtDi" Visibility="Hidden">D</TextBlock>
+            </Border>
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" HorizontalAlignment="Left" Name="btnWo" BorderThickness="1" VerticalAlignment="Top" Width="20">
+                <TextBlock x:Name="txtWo" Visibility="Hidden">W</TextBlock>
+            </Border>
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" HorizontalAlignment="Left" Name="btnDo" BorderThickness="1" VerticalAlignment="Top" Width="20">
+                <TextBlock x:Name="txtDo" Visibility="Hidden">D</TextBlock>
+            </Border>
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" HorizontalAlignment="Left" Name="btnVr" BorderThickness="1" VerticalAlignment="Top" Width="20">
+                <TextBlock x:Name="txtVr" Visibility="Hidden">V</TextBlock>
+            </Border>
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" HorizontalAlignment="Left" Name="btnZa" BorderThickness="1" VerticalAlignment="Top" Width="20">
+                <TextBlock x:Name="txtZa" Visibility="Hidden">Z</TextBlock>
+            </Border>
+            <Border SnapsToDevicePixels="True" Height="20" Padding="3" HorizontalAlignment="Left" Name="btnZo" BorderThickness="1" VerticalAlignment="Top" Width="20">
+                <TextBlock x:Name="txtZo" Visibility="Hidden">Z</TextBlock>
+            </Border>
+        </StackPanel>
+        <Label Height="5" x:Name="testlabel"></Label>
+
+    </StackPanel>
+</UserControl>

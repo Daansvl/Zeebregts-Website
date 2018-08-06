@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="MandagenRegistratie.controls.MultiSlider"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="700">
+    <Grid>
+        <StackPanel x:Name="spStackPanel" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="700" Orientation="Vertical">
+            <Label x:Name="lblGridsplitterStatus" Content="" HorizontalAlignment="Left" Width="700" Height="30"/>
+            <Grid x:Name="gridMultislider"></Grid>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="zeebregtsCs.multibox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="400">
+    <UserControl.Resources>
+        <DataTemplate x:Key="ComboTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Path=naam}" Width="200" TextTrimming="CharacterEllipsis" />
+                <TextBlock Text="{Binding Path=informatie}" Width="180" TextTrimming="CharacterEllipsis"/>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+   <Grid Height="30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="40"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+            <ComboBox KeyUp="multibox1_KeyUp" LostFocus="multibox1_LostFocus" Margin="5" IsTextSearchEnabled="True" TextSearch.TextPath="Naam" VerticalAlignment="Top" IsEditable="True" SelectionChanged="multibox1_SelectionChanged" KeyDown="multibox1_KeyDown"  Name="multibox1" ItemTemplate="{StaticResource ComboTemplate}" />
+       
+        <Button Name="linkbtn1" Grid.Column="1" BorderThickness="0" Click="linkbtn1_Click" Background="White" VerticalAlignment="Center" HorizontalAlignment="Center" MinHeight="27" MinWidth="27" IsTabStop="False">
+            <Button.Content>
+                <Image Name="row1image" Source="Resources/pijl re1.jpg" Stretch="None" MinHeight="27" MinWidth="30"></Image>
+            </Button.Content>
+        </Button>
+    </Grid>
+</UserControl>

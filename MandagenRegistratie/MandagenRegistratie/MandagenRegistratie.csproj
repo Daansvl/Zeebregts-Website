@@ -1,0 +1,638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CF65F471C1C199704AF63D5C0B7844FF8A21EE55</ManifestCertificateThumbprint>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>\\OFFICE-SERVER\Bestanden\Bestanden\master\5.1%29 ontwikkeling\systeem Zeebregts\project Juraci\ClickOnce2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\OFFICE-SERVER\Bestanden\Bestanden\master\5.1%29 ontwikkeling\systeem Zeebregts\project Juraci\ClickOnce2\</InstallUrl>
+    <ProductName>MDR</ProductName>
+    <PublisherName>Zeebregts</PublisherName>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>39</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MandagenRegistratie_4_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RemoteLocal|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\RemoteLocal\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\MandagenRegistratie.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Office-Server|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Office-Server\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\MandagenRegistratie.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OfficeServer|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\OfficeServer\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\MandagenRegistratie.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RemoteLocalBeta|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\RemoteLocalBeta\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\MandagenRegistratie.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RemoteLocalDev|AnyCPU'">
+    <OutputPath>bin\RemoteLocalDev\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'RemoteLocalDev'">
+    <ApplicationIcon>MDR-logo-dev.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'RemoteLocalBeta'">
+    <ApplicationIcon>MDR-logo-beta.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'RemoteLocal'">
+    <ApplicationIcon>MDR-logo-live.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FAABE3B7-9EE1-44DE-9B23-B97EAD3C3BE7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MandagenRegistratie</RootNamespace>
+    <AssemblyName>MandagenRegistratie</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="evohtmltopdf, Version=4.6.0.0, Culture=neutral, PublicKeyToken=e1fcbb86597de299, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\evohtmltopdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\ZeebregtsSysteem\ZeebregtsSysteem\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="vhCalendar">
+      <HintPath>bin\vhCalendar.dll</HintPath>
+    </Reference>
+    <Reference Include="vhdatepicker">
+      <HintPath>bin\vhdatepicker.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFToolkit.Extended, Version=1.7.4644.13122, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\WPFToolkit.Extended.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\Constants.cs" />
+    <Compile Include="classes\Periode.cs" />
+    <Compile Include="controls\Admin\Comparison.xaml.cs">
+      <DependentUpon>Comparison.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Admin\LoggingPage.xaml.cs">
+      <DependentUpon>LoggingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Admin\Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Login\Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Login\Intro.xaml.cs">
+      <DependentUpon>Intro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Navigatie\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Printen\Intro.xaml.cs">
+      <DependentUpon>Intro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Intro.xaml.cs">
+      <DependentUpon>Intro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Overzicht\PerProjectleider.xaml.cs">
+      <DependentUpon>PerProjectleider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Overzicht\PerProjectleiderHeader.xaml.cs">
+      <DependentUpon>PerProjectleiderHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Overzicht\PerProjectleiderWeekHeader.xaml.cs">
+      <DependentUpon>PerProjectleiderWeekHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Overzicht\PerProjectleiderWeekSummary.xaml.cs">
+      <DependentUpon>PerProjectleiderWeekSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Dagview\ProjectDagOverzicht.xaml.cs">
+      <DependentUpon>ProjectDagOverzicht.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Dagview\ProjectDagProjectHeader.xaml.cs">
+      <DependentUpon>ProjectDagProjectHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Dagview\ProjectDagView.xaml.cs">
+      <DependentUpon>ProjectDagView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Dagview\ProjectDagViewProjectUur.xaml.cs">
+      <DependentUpon>ProjectDagViewProjectUur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Dagview\ProjectDagViewProjectUurLabel.xaml.cs">
+      <DependentUpon>ProjectDagViewProjectUurLabel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Lijst\AlleProjecten.xaml.cs">
+      <DependentUpon>AlleProjecten.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Lijst\Project.xaml.cs">
+      <DependentUpon>Project.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Lijst\ProjectEdit.xaml.cs">
+      <DependentUpon>ProjectEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Lijst\Projecten.xaml.cs">
+      <DependentUpon>Projecten.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Admin\Intro.xaml.cs">
+      <DependentUpon>Intro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Weekview\ProjectWeekViewProjectDag.xaml.cs">
+      <DependentUpon>ProjectWeekViewProjectDag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Projecten\Weekview\ProjectWeekViewProjectDagLabel.xaml.cs">
+      <DependentUpon>ProjectWeekViewProjectDagLabel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Dagview\VakmanDagViewProjectUurLabel.xaml.cs">
+      <DependentUpon>VakmanDagViewProjectUurLabel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Dagview\VakmanDagProjectHeader.xaml.cs">
+      <DependentUpon>VakmanDagProjectHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Dagview\VakmanDagOverzicht.xaml.cs">
+      <DependentUpon>VakmanDagOverzicht.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Detail\VakmanDetailEdit.xaml.cs">
+      <DependentUpon>VakmanDetailEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Detail\VakmanDetailView.xaml.cs">
+      <DependentUpon>VakmanDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Intro.xaml.cs">
+      <DependentUpon>Intro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Lijst\ContactenOverview.xaml.cs">
+      <DependentUpon>ContactenOverview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Lijst\VakmannenOverview.xaml.cs">
+      <DependentUpon>VakmannenOverview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Overzicht\Overzicht.xaml.cs">
+      <DependentUpon>Overzicht.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Overzicht\OverzichtHeader.xaml.cs">
+      <DependentUpon>OverzichtHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Overzicht\OverzichtWeekHeader.xaml.cs">
+      <DependentUpon>OverzichtWeekHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Overzicht\OverzichtWeekSummary.xaml.cs">
+      <DependentUpon>OverzichtWeekSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Dagview\VakmanDagView.xaml.cs">
+      <DependentUpon>VakmanDagView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Dagview\VakmanDagViewProjectUur.xaml.cs">
+      <DependentUpon>VakmanDagViewProjectUur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Weekview\VakmanWeekViewProjectDag.xaml.cs">
+      <DependentUpon>VakmanWeekViewProjectDag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Vakmannen\Weekview\VakmanWeekViewProjectDagLabel.xaml.cs">
+      <DependentUpon>VakmanWeekViewProjectDagLabel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Logfile.cs" />
+    <Compile Include="Logging.cs" />
+    <Compile Include="Rechten.cs" />
+    <Compile Include="tools\Functies.cs" />
+    <Compile Include="tools\DbTools.cs" />
+    <Page Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Admin\Comparison.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Admin\LoggingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Admin\Edit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Login\Edit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Login\Intro.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Navigatie\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Printen\Intro.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Projecten\Intro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Projecten\Overzicht\PerProjectleider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Projecten\Overzicht\PerProjectleiderHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Projecten\Overzicht\PerProjectleiderWeekHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Projecten\Overzicht\PerProjectleiderWeekSummary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Projecten\Dagview\ProjectDagOverzicht.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Projecten\Dagview\ProjectDagProjectHeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Projecten\Dagview\ProjectDagView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Projecten\Dagview\ProjectDagViewProjectUur.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Projecten\Dagview\ProjectDagViewProjectUurLabel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Projecten\Lijst\AlleProjecten.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Projecten\Lijst\Project.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Projecten\Lijst\ProjectEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Projecten\Lijst\Projecten.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Admin\Intro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Projecten\Weekview\ProjectWeekViewProjectDag.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Projecten\Weekview\ProjectWeekViewProjectDagLabel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Vakmannen\Dagview\VakmanDagViewProjectUurLabel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Vakmannen\Dagview\VakmanDagProjectHeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Vakmannen\Dagview\VakmanDagOverzicht.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Vakmannen\Detail\VakmanDetailEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Vakmannen\Detail\VakmanDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Vakmannen\Intro.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Vakmannen\Lijst\ContactenOverview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Vakmannen\Lijst\VakmannenOverview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Vakmannen\Overzicht\Overzicht.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Vakmannen\Overzicht\OverzichtHeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Vakmannen\Overzicht\OverzichtWeekHeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Vakmannen\Overzicht\OverzichtWeekSummary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Vakmannen\Dagview\VakmanDagView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Vakmannen\Dagview\VakmanDagViewProjectUur.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Vakmannen\Weekview\VakmanWeekViewProjectDag.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\Vakmannen\Weekview\VakmanWeekViewProjectDagLabel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Resource Include="images\MDR-logo-beta.png" />
+    <Resource Include="images\MDR-logo-dev.png" />
+    <Resource Include="images\MDR-logo-live.png" />
+    <Resource Include="images\calendar.png" />
+    <Resource Include="MDR-logo-beta.ico" />
+    <Resource Include="MDR-logo-live.ico" />
+    <Resource Include="MDR-logo-dev.ico" />
+    <Resource Include="images\MDR-logo-beta.ico" />
+    <Resource Include="images\MDR-logo-dev.ico" />
+    <Resource Include="images\MDR-logo-live.ico" />
+    <Resource Include="images\MDR-logo-beta-old.PNG" />
+    <Resource Include="images\MDR-logo-dev-old.PNG" />
+    <Resource Include="images\MDR-logo-live-old.PNG" />
+    <Resource Include="images\groen-stippel.png" />
+    <Resource Include="images\oranje-stippel.png" />
+    <Resource Include="images\rood-stippel.png" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="html\Container.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\VakmannenOverzichtItem.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\VakmannenOverzicht.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="images\calendar-on.png" />
+    <Content Include="images\cancel-button.png" />
+    <None Include="config\App.Debug.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="config\App.Release.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="config\App.RemoteLocal.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="config\App.RemoteLocalBeta.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="config\App.RemoteLocalDev.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MDR Output PDF\ProjectFiles\MDR2PDF.csproj">
+      <Project>{6bfba866-8797-494f-b07b-5c2dcb054e90}</Project>
+      <Name>MDR2PDF</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ZeebregtsSysteem\ZeebregtsLogic\ZeebregtsLogic.csproj">
+      <Project>{d30a6eb1-d3cf-417c-878e-33dbf5029e53}</Project>
+      <Name>ZeebregtsLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MandagenRegistratieDomain\MandagenRegistratieDomain.csproj">
+      <Project>{d4d40816-3d2b-4572-b37f-87887715c88c}</Project>
+      <Name>MandagenRegistratieDomain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ok-button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="controls\MDR2Excel\" />
+    <Folder Include="controls\Projecten\Maandview\" />
+    <Folder Include="controls\Vakmannen\Maandview\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild">
+    <Delete Files="$(TargetDir)$(TargetFileName).config" />
+    <Copy SourceFiles="$(ProjectDir)\Config\App.$(Configuration).config" DestinationFiles="$(TargetDir)$(TargetFileName).config" />
+  </Target>
+</Project>

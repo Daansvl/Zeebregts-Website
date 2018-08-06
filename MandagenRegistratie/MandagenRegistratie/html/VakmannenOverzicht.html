@@ -1,0 +1,82 @@
+﻿<!-- experiment, table eromheen met display table -->
+<!-- experiment geslaagd: blijkbaar heeft de pdf converter toch een table nodig om te herkennen dat een header op de volgende pagina wordt herhaald -->
+<!-- dus kunstmatig alles in een table gezet, en zo min mogelijk stijlen op de table toegepast, alleen de broodnodige -->
+<!-- alle benodigde stijlen heb ik gewoon in de div's gelaten hoe ik het al had -->
+<table style="display: table">
+    <thead style="display: table-header-group;">
+        <tr>
+            <th>
+
+<!-- vanwege de stijl display: table-header-group; komt deze div als header boven elke pagina (als het goed is) -->
+<div style="page-break-before : always; border: 1px solid #0094ff; padding: 20px; margin : 10px; float: left; width: 1000px; position: relative; display: table-header-group;">
+    <!-- een div links uitgelijnd -->
+    <div style="float: left; width: 460px; text-align: left;">
+        [%Naam%]: ik sta links uitgelijnd 
+    </div>
+    <!-- een div rechts uitgelijnd -->
+    <div style="float: left; width: 460px; text-align: right;">
+        ik sta rechts uitgelijnd
+    </div>
+    <!-- een div links uitgelijnd -->
+    <div style="float: left; width: 460px; text-align: left;">
+        ik sta links uitgelijnd op regel 2
+    </div>
+    <!-- een div rechts uitgelijnd -->
+    <div style="float: left; width: 460px; text-align: right;">
+        ik sta rechts uitgelijnd op regel 2
+    </div>
+    <!-- een div links uitgelijnd -->
+    <div style="float: left; width: 460px; text-align: left;">
+        ik sta links uitgelijnd op regel 3
+    </div>
+    <!-- een div rechts uitgelijnd -->
+    <div style="float: left; width: 460px; text-align: right;">
+        ik sta rechts uitgelijnd op regel 3
+    </div>
+
+    <!-- header eerste kolomn  -->
+    <div style="float: left; width: 200px; text-align: left; padding: 5px;">
+        header kolom 1
+    </div>
+    <!-- header 2e kolomn  -->
+    <div style="float: left; width: 100px; text-align: left; padding: 5px;">
+        header kolom 2
+    </div>
+    <!-- header 3e kolomn  -->
+    <div style="float: left; width: 100px; text-align: left; padding: 5px;">
+        header kolom 3
+    </div>
+    <!-- header 4e kolomn  -->
+    <div style="float: left; width: 100px; text-align: left; padding: 5px;">
+        header kolom 4
+    </div>
+    <!-- header 5e kolomn  -->
+    <div style="float: left; width: 100px; text-align: left; padding: 5px;">
+        header kolom 5
+    </div>
+    <!-- header 6e kolomn  -->
+    <div style="float: left; width: 100px; text-align: left; padding: 5px;">
+        header kolom 6
+    </div>
+    <!-- header 7e kolomn  -->
+    <div style="float: left; width: 100px; text-align: left; padding: 5px;">
+        header kolom 7
+    </div>
+
+</div>
+                </th>
+            </tr>
+        </thead>
+    <tbody>
+        <tr>
+            <td>
+
+<div style="border: 1px solid #0094ff; float: left; width: 1000px; position: relative;">
+
+    [%OverzichtItems%]
+    
+</div>
+            </td>
+        </tr>
+    </tbody>
+</table>

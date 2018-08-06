@@ -1,0 +1,72 @@
+﻿<local:MenuControl x:Class="MandagenRegistratie.controls.Projecten.Overzicht.PerProjectleider"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZeebregtsLogic;assembly=ZeebregtsLogic"
+             mc:Ignorable="d" 
+             d:DesignHeight="690" d:DesignWidth="1400" SizeChanged="MenuControl_SizeChanged_1">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="47" Margin="0,10,0,0">
+                    <StackPanel x:Name="spHeaderTop" Orientation="Vertical" Width="160" VerticalAlignment="Top">
+
+                    </StackPanel>
+                    <Border x:Name="bbWeek1Top" BorderThickness="1,1,1,0" BorderBrush="#FFC5D9F1">
+                        <StackPanel x:Name="spWeek1Top" Orientation="Vertical" Width="200">
+
+
+                        </StackPanel>
+                    </Border>
+                    <Border x:Name="bbWeek2Top" BorderThickness="1,1,1,0" BorderBrush="#FFC5D9F1">
+                        <StackPanel x:Name="spWeek2Top" Orientation="Vertical" Width="200">
+
+                        </StackPanel>
+                    </Border>
+                    <Border x:Name="bbWeek3Top" BorderThickness="1,1,1,0" BorderBrush="#FFC5D9F1">
+                        <StackPanel x:Name="spWeek3Top" Orientation="Vertical" Width="200">
+
+                        </StackPanel>
+                    </Border>
+                    <Border x:Name="bbWeek4Top" BorderThickness="1,1,1,0" BorderBrush="#FFC5D9F1">
+                        <StackPanel x:Name="spWeek4Top" Orientation="Vertical" Width="200">
+
+                        </StackPanel>
+                    </Border>
+                    <StackPanel x:Name="spNextTop" Orientation="Vertical" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                    </StackPanel>
+            </StackPanel>
+            <ScrollViewer HorizontalContentAlignment="Stretch" BorderThickness="0" MinHeight="480" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" x:Name="svScrollviewerWrapper">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel x:Name="spHeader" Orientation="Vertical" Width="160" VerticalAlignment="Top">
+
+                    </StackPanel>
+                    <Border x:Name="bbWeek1" BorderThickness="1,0,1,1" BorderBrush="#FFC5D9F1">
+                        <StackPanel x:Name="spWeek1" Orientation="Vertical" Width="200">
+                    
+            
+                        </StackPanel>
+                    </Border>
+                    <Border x:Name="bbWeek2" BorderThickness="1,0,1,1" BorderBrush="#FFC5D9F1">
+                        <StackPanel x:Name="spWeek2" Orientation="Vertical" Width="200">
+
+                        </StackPanel>
+                    </Border>
+                    <Border x:Name="bbWeek3" BorderThickness="1,0,1,1" BorderBrush="#FFC5D9F1">
+                        <StackPanel x:Name="spWeek3" Orientation="Vertical" Width="200">
+
+                        </StackPanel>
+                    </Border>
+                    <Border x:Name="bbWeek4" BorderThickness="1,0,1,1" BorderBrush="#FFC5D9F1">
+                        <StackPanel x:Name="spWeek4" Orientation="Vertical" Width="200">
+
+                        </StackPanel>
+                    </Border>
+                    <StackPanel x:Name="spNext" Orientation="Vertical" Width="50" Height="30" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+    </StackPanel>
+</local:MenuControl>

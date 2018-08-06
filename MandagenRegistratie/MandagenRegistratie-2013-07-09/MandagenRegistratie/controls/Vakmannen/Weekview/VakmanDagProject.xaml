@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="MandagenRegistratie.controls.VakmanDagProject"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             d:DesignHeight="50" d:DesignWidth="100">
+    <StackPanel x:Name="spWrapper" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Orientation="Vertical" Height="50" MouseLeftButtonDown="spWrapper_MouseLeftButtonDown">
+        <Label Content="" Height="10" Name="label1" />
+
+        <Button x:Name="btnCreateMandag" BorderThickness="2" BorderBrush="OrangeRed" Width="20" Height="20" Background="White" Click="btnCreateMandag_Click">
+            
+        </Button>
+        <!--<StackPanel x:Name="spVakmanDagUren"  HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="120" Orientation="Horizontal" Visibility="Collapsed">
+            <Button x:Name="btnUrenDecrease" BorderThickness="1" BorderBrush="OrangeRed" Width="15" Height="20" Background="White" Click="btnUrenDecrease_Click">
+            </Button>
+            <Label x:Name="lblVakmandagUren" Height="20" Width="20" Content="8"></Label>
+            <Button x:Name="btnUrenIncrease" BorderThickness="1" BorderBrush="OrangeRed" Width="15" Height="20" Background="White" Click="btnUrenIncrease_Click">
+            </Button>
+            <Button x:Name="btnMinutenDecrease" BorderThickness="1" BorderBrush="OrangeRed" Width="15" Height="20" Background="White" Click="btnMinutenDecrease_Click">
+            </Button>
+            <Label x:Name="lblVakmandagMinuten" Height="20" Width="20" Content="0"></Label>
+            <Button x:Name="btnMinutenIncrease" BorderThickness="1" BorderBrush="OrangeRed" Width="15" Height="20" Background="White" Click="btnMinutenIncrease_Click">
+            </Button>
+        </StackPanel>-->
+        <StackPanel x:Name="spVakmanDagProject"  HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="100" Orientation="Horizontal">
+            <Rectangle x:Name="recDag" Fill="OrangeRed" Width="100" Height="20" IsEnabled="True" ContextMenuService.ShowOnDisabled="True">
+            </Rectangle>
+        </StackPanel>
+    </StackPanel>
+    
+</UserControl>

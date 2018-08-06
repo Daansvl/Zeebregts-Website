@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity version="1.5.1.0" name="zeebregtsCs.exe" publicKeyToken="2ee7183ffb235905" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="zbwebico2.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="zeebregtsCs" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="zeebregtsCs.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.VisualBasic.PowerPacks.Vs" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zeebregtsCs.exe" size="5258752">
+      <assemblyIdentity name="zeebregtsCs" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>8IhKYuaquUGKTmDiph+vYNeoKic=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="favicon.ico" size="15086">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>pNtctudNdCCSWW1licRT9QW1ugY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="left_btn.bmp" size="1440054">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>e5r87BG43kr6h+mZhqUVbFHv/SM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="zbcs.ico" size="1982">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>EpCX64o3RkNWYW1+kEEoHpVgng8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ZbCsalt.ico" size="1982">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>6/mTN/de7BeSvPZoUTPBcj6YIT0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="zbico2.ico" size="1982">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>7YChp9ObSzhplHjkATtYLPHWZQc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="zbicoweb.ico" size="1406">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OQpZS9OjXn0zLcM9CeR3muD4kzI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="zbwebico2.ico" size="1406">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HySxOykij7Cud2i9bNWK6H1pJbM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="zeebregtsCs.exe.config" size="3603">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gGwnTgb4s/uAYQz20As7dm2NGUo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=Daan-TOSH\Daan" issuerKeyHash="1e1ce2c423ebc5753569a5b2e702df05d9c01ff0" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>4Qq2qVG79vr39TLeGhbX5tdettQ=</DigestValue></Reference></SignedInfo><SignatureValue>S9PJ4gty4j9Tt4sSecv8spNIgGNZOLksk8ciF0hK5a5IfQn89ENCQe+J8uhJfa/8APrmzaSr3B4tWN0lBQKLxmGFqrS1DNkxS9p0KyHYWP54142UiHohvXbHBW5lCvEpJ8GVH8469/IqUGJQlDVbFE44mwZA4UchlH5Yk1EbeNg=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>0wOA2dere084sqgIhmNVsQPlxvMhDazYOrqWkjzmRPU/9/EvdSWXiDC0Ei51M3Q2e16bthm37STusNC9PBh/sjFRvGDWlZQSL6AHlX/m/1IOMLD0coRZo9OmCD63EI8mwbWkOOGSdKtjzZpifpGzvEdmPWzDh81XrcLSWcvMfQE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="d4b65ed7e6d7161ade32f5f7faf6bb51a9b60ae1" Description="" Url=""><as:assemblyIdentity version="1.5.1.0" name="zeebregtsCs.exe" publicKeyToken="2ee7183ffb235905" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=Daan-TOSH\Daan</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>KlHKxb5AofcsmU9Bk/zlhAwnTJo=</DigestValue></Reference></SignedInfo><SignatureValue>yc+HSaX5FblIWs2OqbD8DCQiuGfLO3HWOiF+geSWZMpPFxbGbSbDqNTY2gw4WzSxj6jjw7vsFh22gb+Jzt3AqV1R6Ax6Hndz8tbfyUDmecTqaYONdKouePOGIRJzNSwmW8LMGSBsEmfsudBMf11mm1w/IuAu1e7/d637wKJ75iU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>0wOA2dere084sqgIhmNVsQPlxvMhDazYOrqWkjzmRPU/9/EvdSWXiDC0Ei51M3Q2e16bthm37STusNC9PBh/sjFRvGDWlZQSL6AHlX/m/1IOMLD0coRZo9OmCD63EI8mwbWkOOGSdKtjzZpifpGzvEdmPWzDh81XrcLSWcvMfQE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQaXd2bhL34YBHuO6KddB1bjANBgkqhkiG9w0BAQUFADAnMSUwIwYDVQQDHhwARABhAGEAbgAtAFQATwBTAEgAXABEAGEAYQBuMB4XDTExMTIwMTEyMzYyNFoXDTEyMTEzMDE4MzYyNFowJzElMCMGA1UEAx4cAEQAYQBhAG4ALQBUAE8AUwBIAFwARABhAGEAbjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA0wOA2dere084sqgIhmNVsQPlxvMhDazYOrqWkjzmRPU/9/EvdSWXiDC0Ei51M3Q2e16bthm37STusNC9PBh/sjFRvGDWlZQSL6AHlX/m/1IOMLD0coRZo9OmCD63EI8mwbWkOOGSdKtjzZpifpGzvEdmPWzDh81XrcLSWcvMfQECAwEAATANBgkqhkiG9w0BAQUFAAOBgQBi5FEC1nytZd5n7fA6c4VqUGDAYjQF1rBQyZJQnG/nwdIm848DOP48IzrJ+BeeYQ9sq6CSI3k7iNjILNbl/GTZNAYDoP1MIWisPMsOT7oEnMABwqoCHglezhDetXFcqH2123gWvMdCcbXvSLOY5DHlTq3v8ojCpoy4MAqWPbMVqQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

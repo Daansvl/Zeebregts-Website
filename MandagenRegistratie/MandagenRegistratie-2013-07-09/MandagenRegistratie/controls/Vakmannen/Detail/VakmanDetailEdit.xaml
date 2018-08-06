@@ -1,0 +1,83 @@
+﻿<local:MenuControl x:Class="MandagenRegistratie.controls.Vakmannen.Detail.VakmanDetailEdit"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZeebregtsLogic;assembly=ZeebregtsLogic"
+             mc:Ignorable="d" 
+             d:DesignHeight="710" d:DesignWidth="1050">
+    <Grid>
+        <TabControl TabStripPlacement="Bottom" Height="650" Name="tabControl" Background="White">
+            <TabItem Header="Details" Name="tabDetails">
+                <ScrollViewer>
+                    <WrapPanel x:Name="wpDetailsEdit" Width="400">
+                        <Label Content="VakmanId: " Width="200px"  />
+                        <Label x:Name="lblVakmanId" Width="200px" Background="Beige" FontWeight="ExtraBold" />
+                        <Label Content="Naam: " Width="200px"  />
+                        <Label x:Name="lblVakmanNaam" Width="200px" Background="Beige" FontWeight="ExtraBold" />
+                        <Label Content="Bsn: " Width="200px"  />
+                        <TextBox x:Name="txtBsn" Width="200px"  />
+                        <Label Content="Postcode: " Width="200px"  />
+                        <TextBox x:Name="txtPostcode" Width="200px"  />
+                        <Label Content="Huisnummer: " Width="200px"  />
+                        <TextBox x:Name="txtHuisnummer" Width="200px"  />
+                        <Label Content="Adres: " Width="200px"  />
+                        <TextBox x:Name="txtAdres" Width="200px"  />
+                        <Label Content="Default aantal uren op: " Width="200px" />
+                        <Label Content="Ma" Width="28px" Height="23" />
+                        <Label Content="Di" Width="28px" />
+                        <Label Content="Wo" Width="28px" />
+                        <Label Content="Do" Width="28px" />
+                        <Label Content="Vr" Width="28px" />
+                        <Label Content="Za" Width="28px" />
+                        <Label Content="Zo" Width="28px" />
+                        <Label Content="" Width="200px" />
+                        <TextBox Height="23" Name="txtMa" Width="28" />
+                        <TextBox Height="23" Name="txtDi" Width="28" />
+                        <TextBox Height="23" Name="txtWo" Width="28" />
+                        <TextBox Height="23" Name="txtDo" Width="28" />
+                        <TextBox Height="23" Name="txtVr" Width="28" />
+                        <TextBox Height="23" Name="txtZa" Width="28" />
+                        <TextBox Height="23" Name="txtZo" Width="28" />
+                        <Label Content="Totaal uren per week: " Width="200px"  />
+                        <Label x:Name="lblVakmanWerkweek" Width="200px" Background="Beige" FontWeight="ExtraBold" />
+                        <Label Content="Default begintijd: " Width="200px"  />
+                        <ComboBox Height="23" Name="ddlDefaultBeginuur" Width="50">
+                            <ListBoxItem Content="01"></ListBoxItem>
+                            <ListBoxItem Content="02"></ListBoxItem>
+                            <ListBoxItem Content="03"></ListBoxItem>
+                            <ListBoxItem Content="04"></ListBoxItem>
+                            <ListBoxItem Content="05"></ListBoxItem>
+                            <ListBoxItem Content="06"></ListBoxItem>
+                            <ListBoxItem Content="07"></ListBoxItem>
+                            <ListBoxItem Content="08"></ListBoxItem>
+                            <ListBoxItem Content="09"></ListBoxItem>
+                            <ListBoxItem Content="10"></ListBoxItem>
+                            <ListBoxItem Content="11"></ListBoxItem>
+                            <ListBoxItem Content="12"></ListBoxItem>
+                            <ListBoxItem Content="13"></ListBoxItem>
+                            <ListBoxItem Content="14"></ListBoxItem>
+                            <ListBoxItem Content="15"></ListBoxItem>
+                            <ListBoxItem Content="16"></ListBoxItem>
+                            <ListBoxItem Content="17"></ListBoxItem>
+                            <ListBoxItem Content="18"></ListBoxItem>
+                            <ListBoxItem Content="19"></ListBoxItem>
+                            <ListBoxItem Content="20"></ListBoxItem>
+                            <ListBoxItem Content="21"></ListBoxItem>
+                            <ListBoxItem Content="22"></ListBoxItem>
+                            <ListBoxItem Content="23"></ListBoxItem>
+                        </ComboBox>
+                        <Label Content="uur" Width="30px"  />
+                        <ComboBox Height="23" Name="ddlDefaultBeginminuut" Width="50">
+                            <ListBoxItem Content="00"></ListBoxItem>
+                            <ListBoxItem Content="15"></ListBoxItem>
+                            <ListBoxItem Content="30"></ListBoxItem>
+                            <ListBoxItem Content="45"></ListBoxItem>
+                        </ComboBox>
+                        <Label Content="minuten" Width="50px"  />
+                    </WrapPanel>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</local:MenuControl>

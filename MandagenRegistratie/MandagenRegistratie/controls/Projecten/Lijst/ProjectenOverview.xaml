@@ -1,0 +1,18 @@
+﻿<local:MenuControl x:Class="MandagenRegistratie.controls.Projecten.Overzicht.ProjectenOverview"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MandagenRegistratie.controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1050">
+    <Grid>
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,10,620,0" Name="txtSearch" VerticalAlignment="Top" Width="420" TextChanged="txtSearch_TextChanged" />
+        <DataGrid AutoGenerateColumns="False" Height="306" HorizontalAlignment="Left" Margin="10,49,0,0" Name="dgVakmannen" VerticalAlignment="Top" Width="825">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=project_NR}" Header="ProjectNr" />
+                <DataGridTextColumn Binding="{Binding Path=naam_project}" Header="Naam project" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</local:MenuControl>

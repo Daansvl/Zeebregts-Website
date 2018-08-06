@@ -1,0 +1,129 @@
+<html>
+<head style ="font-family:Calibri ;font-size:medium">
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+  <title></title>
+  <style type="text/css">
+  .auto-style15 {
+          font-size: x-small;
+          text-align: center;
+      }
+  .auto-style17 {
+	  border-left-width: 0px;
+	  border-right-width: 0px;
+      font-family : Calibri ;
+      font-size :14px;
+      border :none ;
+      vertical-align:top ;
+  }
+  .auto-style19 {
+	  border-bottom-style: solid;
+	  border-bottom-width: 1px;
+  }
+      .auto-styleT {
+          width: 2px;
+          border:none;
+      }
+      .auto-style20 {
+          text-align: center;
+      }
+      .auto-style21 {
+          width: 10px;
+          height: 2px;
+      }
+      .auto-style22 {
+          height: 2px;
+      }
+      </style>
+  </head>
+
+<body>
+<!-- experiment, table eromheen met display table -->
+<!-- experiment geslaagd: blijkbaar heeft de pdf converter toch een table nodig om te herkennen dat een header op de volgende pagina wordt herhaald -->
+<!-- dus kunstmatig alles in een table gezet, en zo min mogelijk stijlen op de table toegepast, alleen de broodnodige -->
+<!-- alle benodigde stijlen heb ik gewoon in de div's gelaten hoe ik het al had -->
+
+<table style="display: table">
+  <thead style="display: table-header-group;">
+    <tr>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div
+        style="float: left; width: 1000px; position: relative; page-break-inside :avoid">
+        	<table style="width: 100%" class="auto-style17">
+                    <tr align="center" style="background-color:aliceblue; border:outset ;border: none ;" >
+					    <td colspan=2 align="left" width="200px"  style="height: 24px" >[%uitvoerder%]</td>
+					    <td colspan="2" width="150px"  style="height: 24px" ><center >
+					    <strong>Datum</strong></center></td>
+                        <td class="auto-styleT"></td>
+					    <td colspan="2" width="150px" style="height: 24px"><center >
+					    <strong>Intern</strong></td>
+                        <td class="auto-styleT"></td>
+					    <td colspan="2" width="150px"  style="height: 24px"><strong>ZZP</strong></td>
+                        <td class="auto-styleT"></td>
+					    <td colspan="2" width="150px"  style="height: 24px"><strong>Uitzendkracht</strong></td>
+                        <td class="auto-styleT"></td>
+					    <td colspan="2" width="150px"  style="height: 24px"><strong>Extern</strong></td>
+                        <td class="auto-styleT"></td>
+					    <td colspan="2" width="200px" style="height: 24px"><strong>Totaal</strong></td>
+				    </tr>
+				    <tr align="center">
+					    <td align="left" class="auto-style19" colspan="2"><em>Projecten</em></td>
+					    <td class="auto-style19" ><em>Van</em></td>
+					    <td class="auto-style19" ><em>Tot</em></td>
+                        <td class="auto-styleT"></td>
+					    <td class="auto-style19" ><em>Uren</em></td>
+					    <td class="auto-style19" ><em>Dagen</em></td>
+                        <td class="auto-styleT"></td>
+					    <td class="auto-style19" ><em>Uren</em></td>
+					    <td class="auto-style19" ><em>Dagen</em></td>
+                        <td class="auto-styleT"></td>
+					    <td class="auto-style19" ><em>Uren</em></td>
+					    <td class="auto-style19" ><em>Dagen</em></td>
+                        <td class="auto-styleT"></td>
+					    <td class="auto-style19" ><em>Uren</em></td>
+					    <td class="auto-style19" ><em>Dagen</em></td>
+                        <td class="auto-styleT"></td>
+					    <td class="auto-style19" ><em>Uren</em></td>
+					    <td class="auto-style19" ><em>Dagen</em></td>
+				    </tr>
+				<tr align="center" >
+					<td colspan="24" style="height: 2px"></td>
+				</tr>
+                <tr>
+                    <td colspan="2"><strong>{0}</strong></td>
+					<td class="auto-style15">{1}</td>
+					<td class="auto-style15">{2}</td>
+                    <td class="auto-styleT"></td>
+					<td class="auto-style20" >{3}</td>
+					<td class="auto-style20" >{4}</td>
+                        <td class="auto-styleT"></td>
+					<td class="auto-style20" >{5}</td>
+					<td class="auto-style20" >{6}</td>
+                        <td class="auto-styleT"></td>
+					<td class="auto-style20" >{7}</td>
+					<td class="auto-style20" >{8}</td>
+                        <td class="auto-styleT"></td>
+					<td class="auto-style20" >{9}</td>
+					<td class="auto-style20" >{10}</td>
+                        <td class="auto-styleT"></td>
+					<td class="auto-style20" ><strong>{11}</strong></td>
+					<td class="auto-style20" ><strong>{12}</strong></td>
+				</tr>
+				<tr align="center" >
+                    <td class="auto-style21"></td>
+                    <td class="auto-style22"></td>
+					<td colspan="24" class="auto-style22"></td>
+				</tr>
+				[%OverzichtItems%]
+			</table>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

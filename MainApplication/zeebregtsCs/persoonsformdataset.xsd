@@ -1,0 +1,897 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="persoonsformdataset" targetNamespace="http://tempuri.org/persoonsformdataset.xsd" xmlns:mstns="http://tempuri.org/persoonsformdataset.xsd" xmlns="http://tempuri.org/persoonsformdataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="zeebregtsdbConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="zeebregtsdbConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.zeebregtsCs.Properties.Settings.GlobalReference.Default.zeebregtsdbConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="UserConnection" IsAppSettingsProperty="true" Modifier="Assembly" Name="UserConnection (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.zeebregtsCs.Properties.Settings.GlobalReference.Default.UserConnection" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="zeebregtsdbConnectionStringRemote" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="zeebregtsdbConnectionStringRemote (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.zeebregtsCs.Properties.Settings.GlobalReference.Default.zeebregtsdbConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="persoonTableAdapter" GeneratorDataComponentClassName="persoonTableAdapter" Name="persoon" UserDataComponentName="persoonTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="zeebregtsdbConnectionString1 (Settings)" DbObjectName="zeebregtsdb.dbo.persoon" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [persoon] WHERE (([persoon_ID] = @Original_persoon_ID) AND ((@IsNull_persoon_nr = 1 AND [persoon_nr] IS NULL) OR ([persoon_nr] = @Original_persoon_nr)) AND ((@IsNull_taak_id = 1 AND [taak_id] IS NULL) OR ([taak_id] = @Original_taak_id)) AND ((@IsNull_bedrijf_nr = 1 AND [bedrijf_nr] IS NULL) OR ([bedrijf_nr] = @Original_bedrijf_nr)) AND ((@IsNull_man = 1 AND [man] IS NULL) OR ([man] = @Original_man)) AND ((@IsNull_voorletters = 1 AND [voorletters] IS NULL) OR ([voorletters] = @Original_voorletters)) AND ((@IsNull_voornaam = 1 AND [voornaam] IS NULL) OR ([voornaam] = @Original_voornaam)) AND ((@IsNull_tussenvoegsel = 1 AND [tussenvoegsel] IS NULL) OR ([tussenvoegsel] = @Original_tussenvoegsel)) AND ((@IsNull_achternaam = 1 AND [achternaam] IS NULL) OR ([achternaam] = @Original_achternaam)) AND ((@IsNull_zamobiel = 1 AND [zamobiel] IS NULL) OR ([zamobiel] = @Original_zamobiel)) AND ((@IsNull_zatelefoonvast = 1 AND [zatelefoonvast] IS NULL) OR ([zatelefoonvast] = @Original_zatelefoonvast)) AND ((@IsNull_zafax = 1 AND [zafax] IS NULL) OR ([zafax] = @Original_zafax)) AND ((@IsNull_zaemail = 1 AND [zaemail] IS NULL) OR ([zaemail] = @Original_zaemail)) AND ((@IsNull_geboortedatum = 1 AND [geboortedatum] IS NULL) OR ([geboortedatum] = @Original_geboortedatum)) AND ((@IsNull_vastevrijedag1 = 1 AND [vastevrijedag1] IS NULL) OR ([vastevrijedag1] = @Original_vastevrijedag1)) AND ((@IsNull_vastevrijedag2 = 1 AND [vastevrijedag2] IS NULL) OR ([vastevrijedag2] = @Original_vastevrijedag2)) AND ((@IsNull_vastevrijedag3 = 1 AND [vastevrijedag3] IS NULL) OR ([vastevrijedag3] = @Original_vastevrijedag3)) AND ((@IsNull_NIETactief = 1 AND [NIETactief] IS NULL) OR ([NIETactief] = @Original_NIETactief)) AND ((@IsNull_adres_id = 1 AND [adres_id] IS NULL) OR ([adres_id] = @Original_adres_id)) AND ((@IsNull_telefoon_nr_settings = 1 AND [telefoon_nr_settings] IS NULL) OR ([telefoon_nr_settings] = @Original_telefoon_nr_settings)) AND ((@IsNull_telefoon_nr_1 = 1 AND [telefoon_nr_1] IS NULL) OR ([telefoon_nr_1] = @Original_telefoon_nr_1)) AND ((@IsNull_telefoon_nr_2 = 1 AND [telefoon_nr_2] IS NULL) OR ([telefoon_nr_2] = @Original_telefoon_nr_2)) AND ((@IsNull_telefoon_nr_3 = 1 AND [telefoon_nr_3] IS NULL) OR ([telefoon_nr_3] = @Original_telefoon_nr_3)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_persoon_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="persoon_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_persoon_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="persoon_nr" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_persoon_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="persoon_nr" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_taak_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="taak_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_taak_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="taak_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bedrijf_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bedrijf_nr" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_bedrijf_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bedrijf_nr" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_man" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="man" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_man" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="man" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_voorletters" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="voorletters" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_voorletters" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="voorletters" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_voornaam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="voornaam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_voornaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="voornaam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tussenvoegsel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tussenvoegsel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_tussenvoegsel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tussenvoegsel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_achternaam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="achternaam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_achternaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="achternaam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_zamobiel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="zamobiel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_zamobiel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zamobiel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_zatelefoonvast" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="zatelefoonvast" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_zatelefoonvast" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zatelefoonvast" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_zafax" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="zafax" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_zafax" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zafax" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_zaemail" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="zaemail" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_zaemail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zaemail" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_geboortedatum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="geboortedatum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_geboortedatum" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="geboortedatum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_vastevrijedag1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="vastevrijedag1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_vastevrijedag1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="vastevrijedag1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_vastevrijedag2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="vastevrijedag2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_vastevrijedag2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="vastevrijedag2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_vastevrijedag3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="vastevrijedag3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_vastevrijedag3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="vastevrijedag3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NIETactief" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NIETactief" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_NIETactief" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="NIETactief" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_adres_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="adres_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_adres_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="adres_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telefoon_nr_settings" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telefoon_nr_settings" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_telefoon_nr_settings" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_settings" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telefoon_nr_1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telefoon_nr_1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_telefoon_nr_1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telefoon_nr_2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telefoon_nr_2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_telefoon_nr_2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telefoon_nr_3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telefoon_nr_3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_telefoon_nr_3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [persoon] ([persoon_nr], [taak_id], [bedrijf_nr], [man], [voorletters], [voornaam], [tussenvoegsel], [achternaam], [zamobiel], [zatelefoonvast], [zafax], [zaemail], [geboortedatum], [vastevrijedag1], [vastevrijedag2], [vastevrijedag3], [NIETactief], [adres_id], [telefoon_nr_settings], [telefoon_nr_1], [telefoon_nr_2], [telefoon_nr_3]) VALUES (@persoon_nr, @taak_id, @bedrijf_nr, @man, @voorletters, @voornaam, @tussenvoegsel, @achternaam, @zamobiel, @zatelefoonvast, @zafax, @zaemail, @geboortedatum, @vastevrijedag1, @vastevrijedag2, @vastevrijedag3, @NIETactief, @adres_id, @telefoon_nr_settings, @telefoon_nr_1, @telefoon_nr_2, @telefoon_nr_3);
+SELECT persoon_ID, persoon_nr, taak_id, bedrijf_nr, man, voorletters, voornaam, tussenvoegsel, achternaam, zamobiel, zatelefoonvast, zafax, zaemail, geboortedatum, vastevrijedag1, vastevrijedag2, vastevrijedag3, NIETactief, adres_id, telefoon_nr_settings, telefoon_nr_1, telefoon_nr_2, telefoon_nr_3 FROM persoon WHERE (persoon_ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@persoon_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="persoon_nr" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@taak_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="taak_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@bedrijf_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bedrijf_nr" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@man" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="man" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@voorletters" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="voorletters" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@voornaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="voornaam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@tussenvoegsel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tussenvoegsel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@achternaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="achternaam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@zamobiel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zamobiel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@zatelefoonvast" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zatelefoonvast" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@zafax" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zafax" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@zaemail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zaemail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@geboortedatum" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="geboortedatum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@vastevrijedag1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="vastevrijedag1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@vastevrijedag2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="vastevrijedag2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@vastevrijedag3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="vastevrijedag3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@NIETactief" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="NIETactief" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@adres_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="adres_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@telefoon_nr_settings" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_settings" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@telefoon_nr_1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@telefoon_nr_2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@telefoon_nr_3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT*FROM persoon</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [persoon] SET [persoon_nr] = @persoon_nr, [taak_id] = @taak_id, [bedrijf_nr] = @bedrijf_nr, [man] = @man, [voorletters] = @voorletters, [voornaam] = @voornaam, [tussenvoegsel] = @tussenvoegsel, [achternaam] = @achternaam, [zamobiel] = @zamobiel, [zatelefoonvast] = @zatelefoonvast, [zafax] = @zafax, [zaemail] = @zaemail, [geboortedatum] = @geboortedatum, [vastevrijedag1] = @vastevrijedag1, [vastevrijedag2] = @vastevrijedag2, [vastevrijedag3] = @vastevrijedag3, [NIETactief] = @NIETactief, [adres_id] = @adres_id, [telefoon_nr_settings] = @telefoon_nr_settings, [telefoon_nr_1] = @telefoon_nr_1, [telefoon_nr_2] = @telefoon_nr_2, [telefoon_nr_3] = @telefoon_nr_3 WHERE (([persoon_ID] = @Original_persoon_ID) AND ((@IsNull_persoon_nr = 1 AND [persoon_nr] IS NULL) OR ([persoon_nr] = @Original_persoon_nr)) AND ((@IsNull_taak_id = 1 AND [taak_id] IS NULL) OR ([taak_id] = @Original_taak_id)) AND ((@IsNull_bedrijf_nr = 1 AND [bedrijf_nr] IS NULL) OR ([bedrijf_nr] = @Original_bedrijf_nr)) AND ((@IsNull_man = 1 AND [man] IS NULL) OR ([man] = @Original_man)) AND ((@IsNull_voorletters = 1 AND [voorletters] IS NULL) OR ([voorletters] = @Original_voorletters)) AND ((@IsNull_voornaam = 1 AND [voornaam] IS NULL) OR ([voornaam] = @Original_voornaam)) AND ((@IsNull_tussenvoegsel = 1 AND [tussenvoegsel] IS NULL) OR ([tussenvoegsel] = @Original_tussenvoegsel)) AND ((@IsNull_achternaam = 1 AND [achternaam] IS NULL) OR ([achternaam] = @Original_achternaam)) AND ((@IsNull_zamobiel = 1 AND [zamobiel] IS NULL) OR ([zamobiel] = @Original_zamobiel)) AND ((@IsNull_zatelefoonvast = 1 AND [zatelefoonvast] IS NULL) OR ([zatelefoonvast] = @Original_zatelefoonvast)) AND ((@IsNull_zafax = 1 AND [zafax] IS NULL) OR ([zafax] = @Original_zafax)) AND ((@IsNull_zaemail = 1 AND [zaemail] IS NULL) OR ([zaemail] = @Original_zaemail)) AND ((@IsNull_geboortedatum = 1 AND [geboortedatum] IS NULL) OR ([geboortedatum] = @Original_geboortedatum)) AND ((@IsNull_vastevrijedag1 = 1 AND [vastevrijedag1] IS NULL) OR ([vastevrijedag1] = @Original_vastevrijedag1)) AND ((@IsNull_vastevrijedag2 = 1 AND [vastevrijedag2] IS NULL) OR ([vastevrijedag2] = @Original_vastevrijedag2)) AND ((@IsNull_vastevrijedag3 = 1 AND [vastevrijedag3] IS NULL) OR ([vastevrijedag3] = @Original_vastevrijedag3)) AND ((@IsNull_NIETactief = 1 AND [NIETactief] IS NULL) OR ([NIETactief] = @Original_NIETactief)) AND ((@IsNull_adres_id = 1 AND [adres_id] IS NULL) OR ([adres_id] = @Original_adres_id)) AND ((@IsNull_telefoon_nr_settings = 1 AND [telefoon_nr_settings] IS NULL) OR ([telefoon_nr_settings] = @Original_telefoon_nr_settings)) AND ((@IsNull_telefoon_nr_1 = 1 AND [telefoon_nr_1] IS NULL) OR ([telefoon_nr_1] = @Original_telefoon_nr_1)) AND ((@IsNull_telefoon_nr_2 = 1 AND [telefoon_nr_2] IS NULL) OR ([telefoon_nr_2] = @Original_telefoon_nr_2)) AND ((@IsNull_telefoon_nr_3 = 1 AND [telefoon_nr_3] IS NULL) OR ([telefoon_nr_3] = @Original_telefoon_nr_3)));
+SELECT persoon_ID, persoon_nr, taak_id, bedrijf_nr, man, voorletters, voornaam, tussenvoegsel, achternaam, zamobiel, zatelefoonvast, zafax, zaemail, geboortedatum, vastevrijedag1, vastevrijedag2, vastevrijedag3, NIETactief, adres_id, telefoon_nr_settings, telefoon_nr_1, telefoon_nr_2, telefoon_nr_3 FROM persoon WHERE (persoon_ID = @persoon_ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@persoon_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="persoon_nr" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@taak_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="taak_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@bedrijf_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bedrijf_nr" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@man" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="man" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@voorletters" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="voorletters" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@voornaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="voornaam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@tussenvoegsel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tussenvoegsel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@achternaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="achternaam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@zamobiel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zamobiel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@zatelefoonvast" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zatelefoonvast" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@zafax" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zafax" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@zaemail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zaemail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@geboortedatum" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="geboortedatum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@vastevrijedag1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="vastevrijedag1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@vastevrijedag2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="vastevrijedag2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@vastevrijedag3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="vastevrijedag3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@NIETactief" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="NIETactief" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@adres_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="adres_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@telefoon_nr_settings" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_settings" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@telefoon_nr_1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@telefoon_nr_2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@telefoon_nr_3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_persoon_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="persoon_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_persoon_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="persoon_nr" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_persoon_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="persoon_nr" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_taak_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="taak_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_taak_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="taak_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bedrijf_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bedrijf_nr" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_bedrijf_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bedrijf_nr" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_man" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="man" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_man" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="man" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_voorletters" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="voorletters" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_voorletters" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="voorletters" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_voornaam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="voornaam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_voornaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="voornaam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tussenvoegsel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tussenvoegsel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_tussenvoegsel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tussenvoegsel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_achternaam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="achternaam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_achternaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="achternaam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_zamobiel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="zamobiel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_zamobiel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zamobiel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_zatelefoonvast" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="zatelefoonvast" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_zatelefoonvast" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zatelefoonvast" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_zafax" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="zafax" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_zafax" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zafax" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_zaemail" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="zaemail" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_zaemail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zaemail" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_geboortedatum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="geboortedatum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_geboortedatum" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="geboortedatum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_vastevrijedag1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="vastevrijedag1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_vastevrijedag1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="vastevrijedag1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_vastevrijedag2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="vastevrijedag2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_vastevrijedag2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="vastevrijedag2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_vastevrijedag3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="vastevrijedag3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_vastevrijedag3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="vastevrijedag3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NIETactief" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NIETactief" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_NIETactief" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="NIETactief" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_adres_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="adres_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_adres_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="adres_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telefoon_nr_settings" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telefoon_nr_settings" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_telefoon_nr_settings" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_settings" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telefoon_nr_1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telefoon_nr_1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_telefoon_nr_1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telefoon_nr_2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telefoon_nr_2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_telefoon_nr_2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telefoon_nr_3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telefoon_nr_3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_telefoon_nr_3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="telefoon_nr_3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="persoon_ID" ColumnName="persoon_ID" DataSourceName="zeebregtsdb.dbo.persoon" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@persoon_ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="persoon_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="persoon_ID" DataSetColumn="persoon_ID" />
+              <Mapping SourceColumn="persoon_nr" DataSetColumn="persoon_nr" />
+              <Mapping SourceColumn="bedrijf_nr" DataSetColumn="bedrijf_nr" />
+              <Mapping SourceColumn="man" DataSetColumn="man" />
+              <Mapping SourceColumn="voorletters" DataSetColumn="voorletters" />
+              <Mapping SourceColumn="voornaam" DataSetColumn="voornaam" />
+              <Mapping SourceColumn="tussenvoegsel" DataSetColumn="tussenvoegsel" />
+              <Mapping SourceColumn="achternaam" DataSetColumn="achternaam" />
+              <Mapping SourceColumn="zamobiel" DataSetColumn="zamobiel" />
+              <Mapping SourceColumn="zatelefoonvast" DataSetColumn="zatelefoonvast" />
+              <Mapping SourceColumn="zafax" DataSetColumn="zafax" />
+              <Mapping SourceColumn="zaemail" DataSetColumn="zaemail" />
+              <Mapping SourceColumn="vastevrijedag1" DataSetColumn="vastevrijedag1" />
+              <Mapping SourceColumn="vastevrijedag2" DataSetColumn="vastevrijedag2" />
+              <Mapping SourceColumn="vastevrijedag3" DataSetColumn="vastevrijedag3" />
+              <Mapping SourceColumn="NIETactief" DataSetColumn="NIETactief" />
+              <Mapping SourceColumn="geboortedatum" DataSetColumn="geboortedatum1" />
+              <Mapping SourceColumn="adres_id" DataSetColumn="adres_id" />
+              <Mapping SourceColumn="telefoon_nr_settings" DataSetColumn="telefoon_nr_settings" />
+              <Mapping SourceColumn="taak_id" DataSetColumn="taak_id" />
+              <Mapping SourceColumn="telefoon_nr_1" DataSetColumn="telefoon_nr_1" />
+              <Mapping SourceColumn="telefoon_nr_2" DataSetColumn="telefoon_nr_2" />
+              <Mapping SourceColumn="telefoon_nr_3" DataSetColumn="telefoon_nr_3" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="zeebregtsdbConnectionString1 (Settings)" DbObjectName="zeebregtsdb.dbo.add_werkgevers_wijziging" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="add_werkgevers_wijziging" Modifier="Public" Name="add_werkgevers_wijziging" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="add_werkgevers_wijziging">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.add_werkgevers_wijziging</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@persoon_id" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@bedrijf_id_oud" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@bedrijf_id_nieuw" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@datetime" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="zeebregtsdbConnectionString1 (Settings)" DbObjectName="zeebregtsdb.dbo.Check_del_pers" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Check_del_pers" Modifier="Public" Name="Check_del_pers" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Check_del_pers">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.Check_del_pers</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@persoon_nr" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@column" Precision="0" ProviderType="NVarChar" Scale="0" Size="125" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@table" Precision="0" ProviderType="NVarChar" Scale="0" Size="125" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="zeebregtsdbConnectionString1 (Settings)" DbObjectName="zeebregtsdb.dbo.persoon" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM persoon WHERE (persoon_nr = @persoonnum)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="persoonnum" ColumnName="persoon_nr" DataSourceName="zeebregtsdb.dbo.persoon" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@persoonnum" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="persoon_nr" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="zeebregtsdbConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillWerkgeverslog" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetWerkgeverslog" GeneratorSourceName="FillWerkgeverslog" GetMethodModifier="Public" GetMethodName="GetWerkgeverslog" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetWerkgeverslog" UserSourceName="FillWerkgeverslog">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT bedrijf.naam, werkgevers_wijzigingen.timestamp FROM werkgevers_wijzigingen
+LEFT JOIN bedrijf ON werkgevers_wijzigingen.werkgever_oud_ID = bedrijf.bedrijf_nr
+WHERE persoon_ID = @persoon_nr</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="persoon_nr" ColumnName="persoon_ID" DataSourceName="zeebregtsdb.dbo.werkgevers_wijzigingen" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@persoon_nr" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="persoon_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="zeebregtsdbConnectionString1 (Settings)" DbObjectName="zeebregtsdb.dbo.Update_vervangen_werkgevers_log" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Update_vervangen_werkgevers_log" Modifier="Public" Name="Update_vervangen_werkgevers_log" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="Update_vervangen_werkgevers_log">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.Update_vervangen_werkgevers_log</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@pers_id_new" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@pers_id_oud" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="zeebregtsdbConnectionString1 (Settings)" DbObjectName="zeebregtsdb.dbo.vervang_del_pers" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="vervang_del_pers" Modifier="Public" Name="vervang_del_pers" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="vervang_del_pers">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.vervang_del_pers</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@persoon_nr_oud" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@column" Precision="0" ProviderType="NVarChar" Scale="0" Size="125" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@table" Precision="0" ProviderType="NVarChar" Scale="0" Size="125" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@persoon_nr_new" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bedrijflinkTableAdapter" GeneratorDataComponentClassName="bedrijflinkTableAdapter" Name="bedrijflink" UserDataComponentName="bedrijflinkTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="zeebregtsdbConnectionString1 (Settings)" DbObjectName="zeebregtsdb.dbo.persoon" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     persoon.persoon_ID, bedrijf.bedrijf_ID, persoon.bedrijf_nr, bedrijf.bedrijf_nr AS Expr1, bedrijf.zoeknaam, bedrijf.postcode, bedrijf.postPLAATS,bedrijf.postPOSTCODE,bedrijf.postSTRAAT, bedrijf.straat, bedrijf.plaats, bedrijf.postcode
+FROM         bedrijf INNER JOIN
+                      persoon ON bedrijf.bedrijf_nr = persoon.bedrijf_nr
+WHERE persoon.persoon_nr = @persoonnum</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="persoonnum" ColumnName="persoon_nr" DataSourceName="zeebregtsdb.dbo.persoon" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@persoonnum" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="persoon_nr" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="persoon_ID" DataSetColumn="persoon_ID" />
+              <Mapping SourceColumn="bedrijf_ID" DataSetColumn="bedrijf_ID" />
+              <Mapping SourceColumn="bedrijf_nr" DataSetColumn="bedrijf_nr" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="zoeknaam" DataSetColumn="zoeknaam" />
+              <Mapping SourceColumn="postcode" DataSetColumn="postcode" />
+              <Mapping SourceColumn="postPLAATS" DataSetColumn="postPLAATS" />
+              <Mapping SourceColumn="postPOSTCODE" DataSetColumn="postPOSTCODE" />
+              <Mapping SourceColumn="postSTRAAT" DataSetColumn="postSTRAAT" />
+              <Mapping SourceColumn="straat" DataSetColumn="straat" />
+              <Mapping SourceColumn="plaats" DataSetColumn="plaats" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bedrijfTableAdapter" GeneratorDataComponentClassName="bedrijfTableAdapter" Name="bedrijf" UserDataComponentName="bedrijfTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="zeebregtsdbConnectionString1 (Settings)" DbObjectName="zeebregtsdb.dbo.bedrijf" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [bedrijf] WHERE (((@IsNull_bedrijf_nr = 1 AND [bedrijf_nr] IS NULL) OR ([bedrijf_nr] = @Original_bedrijf_nr)) AND ((@IsNull_zoeknaam = 1 AND [zoeknaam] IS NULL) OR ([zoeknaam] = @Original_zoeknaam)) AND ((@IsNull_plaats = 1 AND [plaats] IS NULL) OR ([plaats] = @Original_plaats)) AND ([bedrijf_ID] = @Original_bedrijf_ID) AND ((@IsNull_naam = 1 AND [naam] IS NULL) OR ([naam] = @Original_naam)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bedrijf_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bedrijf_nr" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_bedrijf_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bedrijf_nr" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_zoeknaam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="zoeknaam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_zoeknaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zoeknaam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_plaats" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="plaats" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_plaats" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="plaats" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_bedrijf_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bedrijf_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_naam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="naam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_naam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="naam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [bedrijf] ([bedrijf_nr], [zoeknaam], [plaats], [naam]) VALUES (@bedrijf_nr, @zoeknaam, @plaats, @naam);
+SELECT bedrijf_nr, zoeknaam, plaats, bedrijf_ID, naam FROM bedrijf WHERE (bedrijf_ID = SCOPE_IDENTITY()) ORDER BY zoeknaam</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@bedrijf_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bedrijf_nr" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@zoeknaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zoeknaam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@plaats" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="plaats" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@naam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="naam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT bedrijf_nr, zoeknaam,plaats, bedrijf_ID, naam FROM bedrijf
+ORDER BY zoeknaam</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [bedrijf] SET [bedrijf_nr] = @bedrijf_nr, [zoeknaam] = @zoeknaam, [plaats] = @plaats, [naam] = @naam WHERE (((@IsNull_bedrijf_nr = 1 AND [bedrijf_nr] IS NULL) OR ([bedrijf_nr] = @Original_bedrijf_nr)) AND ((@IsNull_zoeknaam = 1 AND [zoeknaam] IS NULL) OR ([zoeknaam] = @Original_zoeknaam)) AND ((@IsNull_plaats = 1 AND [plaats] IS NULL) OR ([plaats] = @Original_plaats)) AND ([bedrijf_ID] = @Original_bedrijf_ID) AND ((@IsNull_naam = 1 AND [naam] IS NULL) OR ([naam] = @Original_naam)));
+SELECT bedrijf_nr, zoeknaam, plaats, bedrijf_ID, naam FROM bedrijf WHERE (bedrijf_ID = @bedrijf_ID) ORDER BY zoeknaam</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@bedrijf_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bedrijf_nr" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@zoeknaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zoeknaam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@plaats" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="plaats" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@naam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="naam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bedrijf_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bedrijf_nr" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_bedrijf_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bedrijf_nr" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_zoeknaam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="zoeknaam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_zoeknaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="zoeknaam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_plaats" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="plaats" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_plaats" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="plaats" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_bedrijf_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bedrijf_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_naam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="naam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_naam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="naam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="bedrijf_ID" ColumnName="bedrijf_ID" DataSourceName="zeebregtsdb.dbo.bedrijf" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@bedrijf_ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="bedrijf_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="bedrijf_nr" DataSetColumn="bedrijf_nr" />
+              <Mapping SourceColumn="zoeknaam" DataSetColumn="zoeknaam" />
+              <Mapping SourceColumn="bedrijf_ID" DataSetColumn="bedrijf_ID" />
+              <Mapping SourceColumn="plaats" DataSetColumn="plaats" />
+              <Mapping SourceColumn="naam" DataSetColumn="naam" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="zeebregtsdbConnectionString1 (Settings)" DbObjectName="zeebregtsdb.dbo.get_plaats" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="get_plaats" Modifier="Public" Name="get_plaats" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="get_plaats">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.get_plaats</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@bedrijf_nr" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="persoon_nr_locatiesTableAdapter" GeneratorDataComponentClassName="persoon_nr_locatiesTableAdapter" Name="persoon_nr_locaties" UserDataComponentName="persoon_nr_locatiesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="zeebregtsdbConnectionString1 (Settings)" DbObjectName="zeebregtsdb.dbo.persoon_nr_locaties" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [persoon_nr_locaties] WHERE (([regel_nr] = @Original_regel_nr) AND ((@IsNull_column = 1 AND [column] IS NULL) OR ([column] = @Original_column)) AND ((@IsNull_tabel = 1 AND [tabel] IS NULL) OR ([tabel] = @Original_tabel)) AND ((@IsNull_weergavenaam = 1 AND [weergavenaam] IS NULL) OR ([weergavenaam] = @Original_weergavenaam)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_regel_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="regel_nr" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_column" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="column" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_column" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="column" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tabel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tabel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_tabel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tabel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_weergavenaam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="weergavenaam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_weergavenaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="weergavenaam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [persoon_nr_locaties] ([column], [tabel], [weergavenaam]) VALUES (@column, @tabel, @weergavenaam);
+SELECT regel_nr, [column], tabel, weergavenaam FROM persoon_nr_locaties WHERE (regel_nr = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@column" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="column" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@tabel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tabel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@weergavenaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="weergavenaam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        persoon_nr_locaties.*
+FROM            persoon_nr_locaties</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [persoon_nr_locaties] SET [column] = @column, [tabel] = @tabel, [weergavenaam] = @weergavenaam WHERE (([regel_nr] = @Original_regel_nr) AND ((@IsNull_column = 1 AND [column] IS NULL) OR ([column] = @Original_column)) AND ((@IsNull_tabel = 1 AND [tabel] IS NULL) OR ([tabel] = @Original_tabel)) AND ((@IsNull_weergavenaam = 1 AND [weergavenaam] IS NULL) OR ([weergavenaam] = @Original_weergavenaam)));
+SELECT regel_nr, [column], tabel, weergavenaam FROM persoon_nr_locaties WHERE (regel_nr = @regel_nr)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@column" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="column" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@tabel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tabel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@weergavenaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="weergavenaam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_regel_nr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="regel_nr" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_column" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="column" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_column" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="column" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tabel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tabel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_tabel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tabel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_weergavenaam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="weergavenaam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_weergavenaam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="weergavenaam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="regel_nr" ColumnName="regel_nr" DataSourceName="zeebregtsdb.dbo.persoon_nr_locaties" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@regel_nr" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="regel_nr" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="regel_nr" DataSetColumn="regel_nr" />
+              <Mapping SourceColumn="column" DataSetColumn="column" />
+              <Mapping SourceColumn="tabel" DataSetColumn="tabel" />
+              <Mapping SourceColumn="weergavenaam" DataSetColumn="weergavenaam" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="var_pers_funct_countTableAdapter" GeneratorDataComponentClassName="var_pers_funct_countTableAdapter" Name="var_pers_funct_count" UserDataComponentName="var_pers_funct_countTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="zeebregtsdbConnectionString1 (Settings)" DbObjectName="zeebregtsdb.dbo.verwijder_get_varpersoon_functnaam" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.verwijder_get_varpersoon_functnaam</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@persoon_nr" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="aantal" DataSetColumn="aantal" />
+              <Mapping SourceColumn="naam" DataSetColumn="naam" />
+              <Mapping SourceColumn="functie_id" DataSetColumn="functie_id" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="werkgevers_logTableAdapter" GeneratorDataComponentClassName="werkgevers_logTableAdapter" Name="werkgevers_log" UserDataComponentName="werkgevers_logTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="zeebregtsdbConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT bedrijf.naam, werkgevers_wijzigingen.timestamp FROM werkgevers_wijzigingen
+LEFT JOIN bedrijf ON werkgevers_wijzigingen.werkgever_oud_ID = bedrijf.bedrijf_nr
+WHERE persoon_ID = @persoon_nr</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="persoon_nr" ColumnName="persoon_ID" DataSourceName="zeebregtsdb.dbo.werkgevers_wijzigingen" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@persoon_nr" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="persoon_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="naam" DataSetColumn="naam" />
+              <Mapping SourceColumn="timestamp" DataSetColumn="timestamp" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="new_del_record_logTableAdapter" GeneratorDataComponentClassName="new_del_record_logTableAdapter" Name="new_del_record_log" UserDataComponentName="new_del_record_logTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="zeebregtsdbConnectionString1 (Settings)" DbObjectName="zeebregtsdb.dbo.new_del_record_log" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [new_del_record_log] WHERE (([ID] = @Original_ID) AND ((@IsNull_naam = 1 AND [naam] IS NULL) OR ([naam] = @Original_naam)) AND ((@IsNull_record_ID = 1 AND [record_ID] IS NULL) OR ([record_ID] = @Original_record_ID)) AND ((@IsNull_type = 1 AND [type] IS NULL) OR ([type] = @Original_type)) AND ((@IsNull_datum_tijd = 1 AND [datum_tijd] IS NULL) OR ([datum_tijd] = @Original_datum_tijd)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_naam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="naam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_naam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="naam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_record_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="record_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_record_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="record_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_type" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="type" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_datum_tijd" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="datum_tijd" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_datum_tijd" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="datum_tijd" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [new_del_record_log] ([naam], [record_ID], [type], [datum_tijd]) VALUES (@naam, @record_ID, @type, @datum_tijd);
+SELECT TOP (1) ID, naam, record_ID, type, datum_tijd FROM new_del_record_log WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@naam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="naam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@record_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="record_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@datum_tijd" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="datum_tijd" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TOP(1) * FROM new_del_record_log
+WHERE record_ID = @record_id AND type = @type</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="record_id" ColumnName="record_ID" DataSourceName="zeebregtsdb.dbo.new_del_record_log" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@record_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="record_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="type" ColumnName="type" DataSourceName="zeebregtsdb.dbo.new_del_record_log" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@type" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [new_del_record_log] SET [naam] = @naam, [record_ID] = @record_ID, [type] = @type, [datum_tijd] = @datum_tijd WHERE (([ID] = @Original_ID) AND ((@IsNull_naam = 1 AND [naam] IS NULL) OR ([naam] = @Original_naam)) AND ((@IsNull_record_ID = 1 AND [record_ID] IS NULL) OR ([record_ID] = @Original_record_ID)) AND ((@IsNull_type = 1 AND [type] IS NULL) OR ([type] = @Original_type)) AND ((@IsNull_datum_tijd = 1 AND [datum_tijd] IS NULL) OR ([datum_tijd] = @Original_datum_tijd)));
+SELECT TOP (1) ID, naam, record_ID, type, datum_tijd FROM new_del_record_log WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@naam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="naam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@record_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="record_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@datum_tijd" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="datum_tijd" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_naam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="naam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_naam" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="naam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_record_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="record_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_record_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="record_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_type" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="type" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_datum_tijd" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="datum_tijd" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_datum_tijd" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="datum_tijd" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="zeebregtsdb.dbo.new_del_record_log" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="naam" DataSetColumn="naam" />
+              <Mapping SourceColumn="record_ID" DataSetColumn="record_ID" />
+              <Mapping SourceColumn="type" DataSetColumn="type" />
+              <Mapping SourceColumn="datum_tijd" DataSetColumn="datum_tijd" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="persoonsformdataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="persoonsformdataset" msprop:Generator_UserDSName="persoonsformdataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="persoon" msprop:Generator_TableClassName="persoonDataTable" msprop:Generator_TableVarName="tablepersoon" msprop:Generator_TablePropName="persoon" msprop:Generator_RowDeletingName="persoonRowDeleting" msprop:Generator_RowChangingName="persoonRowChanging" msprop:Generator_RowEvHandlerName="persoonRowChangeEventHandler" msprop:Generator_RowDeletedName="persoonRowDeleted" msprop:Generator_UserTableName="persoon" msprop:Generator_RowChangedName="persoonRowChanged" msprop:Generator_RowEvArgName="persoonRowChangeEvent" msprop:Generator_RowClassName="persoonRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="persoon_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpersoon_ID" msprop:Generator_ColumnPropNameInRow="persoon_ID" msprop:Generator_ColumnPropNameInTable="persoon_IDColumn" msprop:Generator_UserColumnName="persoon_ID" type="xs:int" />
+              <xs:element name="persoon_nr" msprop:Generator_ColumnVarNameInTable="columnpersoon_nr" msprop:Generator_ColumnPropNameInRow="persoon_nr" msprop:Generator_ColumnPropNameInTable="persoon_nrColumn" msprop:Generator_UserColumnName="persoon_nr" type="xs:int" minOccurs="0" />
+              <xs:element name="bedrijf_nr" msprop:Generator_ColumnVarNameInTable="columnbedrijf_nr" msprop:Generator_ColumnPropNameInRow="bedrijf_nr" msprop:Generator_ColumnPropNameInTable="bedrijf_nrColumn" msprop:Generator_UserColumnName="bedrijf_nr" type="xs:int" minOccurs="0" />
+              <xs:element name="man" msprop:Generator_ColumnVarNameInTable="columnman" msprop:Generator_ColumnPropNameInRow="man" msprop:Generator_ColumnPropNameInTable="manColumn" msprop:Generator_UserColumnName="man" type="xs:boolean" minOccurs="0" />
+              <xs:element name="voorletters" msprop:Generator_ColumnVarNameInTable="columnvoorletters" msprop:Generator_ColumnPropNameInRow="voorletters" msprop:Generator_ColumnPropNameInTable="voorlettersColumn" msprop:Generator_UserColumnName="voorletters" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="voornaam" msprop:Generator_ColumnVarNameInTable="columnvoornaam" msprop:Generator_ColumnPropNameInRow="voornaam" msprop:Generator_ColumnPropNameInTable="voornaamColumn" msprop:Generator_UserColumnName="voornaam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tussenvoegsel" msprop:Generator_ColumnVarNameInTable="columntussenvoegsel" msprop:Generator_ColumnPropNameInRow="tussenvoegsel" msprop:Generator_ColumnPropNameInTable="tussenvoegselColumn" msprop:Generator_UserColumnName="tussenvoegsel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="achternaam" msprop:Generator_ColumnVarNameInTable="columnachternaam" msprop:Generator_ColumnPropNameInRow="achternaam" msprop:Generator_ColumnPropNameInTable="achternaamColumn" msprop:Generator_UserColumnName="achternaam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="zamobiel" msprop:Generator_ColumnVarNameInTable="columnzamobiel" msprop:Generator_ColumnPropNameInRow="zamobiel" msprop:Generator_ColumnPropNameInTable="zamobielColumn" msprop:Generator_UserColumnName="zamobiel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="zatelefoonvast" msprop:Generator_ColumnVarNameInTable="columnzatelefoonvast" msprop:Generator_ColumnPropNameInRow="zatelefoonvast" msprop:Generator_ColumnPropNameInTable="zatelefoonvastColumn" msprop:Generator_UserColumnName="zatelefoonvast" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="zafax" msprop:Generator_ColumnVarNameInTable="columnzafax" msprop:Generator_ColumnPropNameInRow="zafax" msprop:Generator_ColumnPropNameInTable="zafaxColumn" msprop:Generator_UserColumnName="zafax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="zaemail" msprop:Generator_ColumnVarNameInTable="columnzaemail" msprop:Generator_ColumnPropNameInRow="zaemail" msprop:Generator_ColumnPropNameInTable="zaemailColumn" msprop:Generator_UserColumnName="zaemail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vastevrijedag1" msprop:Generator_ColumnVarNameInTable="columnvastevrijedag1" msprop:Generator_ColumnPropNameInRow="vastevrijedag1" msprop:Generator_ColumnPropNameInTable="vastevrijedag1Column" msprop:Generator_UserColumnName="vastevrijedag1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vastevrijedag2" msprop:Generator_ColumnVarNameInTable="columnvastevrijedag2" msprop:Generator_ColumnPropNameInRow="vastevrijedag2" msprop:Generator_ColumnPropNameInTable="vastevrijedag2Column" msprop:Generator_UserColumnName="vastevrijedag2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vastevrijedag3" msprop:Generator_ColumnVarNameInTable="columnvastevrijedag3" msprop:Generator_ColumnPropNameInRow="vastevrijedag3" msprop:Generator_ColumnPropNameInTable="vastevrijedag3Column" msprop:Generator_UserColumnName="vastevrijedag3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NIETactief" msprop:Generator_ColumnVarNameInTable="columnNIETactief" msprop:Generator_ColumnPropNameInRow="NIETactief" msprop:Generator_ColumnPropNameInTable="NIETactiefColumn" msprop:Generator_UserColumnName="NIETactief" type="xs:boolean" minOccurs="0" />
+              <xs:element name="geboortedatum1" msdata:Caption="geboortedatum" msprop:Generator_ColumnVarNameInTable="columngeboortedatum1" msprop:Generator_ColumnPropNameInRow="geboortedatum1" msprop:Generator_ColumnPropNameInTable="geboortedatum1Column" msprop:Generator_UserColumnName="geboortedatum1" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="adres_id" msprop:Generator_ColumnVarNameInTable="columnadres_id" msprop:Generator_ColumnPropNameInRow="adres_id" msprop:Generator_ColumnPropNameInTable="adres_idColumn" msprop:Generator_UserColumnName="adres_id" type="xs:int" minOccurs="0" />
+              <xs:element name="telefoon_nr_settings" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="telefoon_nr_settings" msprop:Generator_ColumnVarNameInTable="columntelefoon_nr_settings" msprop:Generator_ColumnPropNameInTable="telefoon_nr_settingsColumn" msprop:Generator_UserColumnName="telefoon_nr_settings" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="taak_id" msprop:Generator_ColumnVarNameInTable="columntaak_id" msprop:Generator_ColumnPropNameInRow="taak_id" msprop:Generator_ColumnPropNameInTable="taak_idColumn" msprop:Generator_UserColumnName="taak_id" type="xs:int" minOccurs="0" />
+              <xs:element name="telefoon_nr_1" msprop:Generator_ColumnVarNameInTable="columntelefoon_nr_1" msprop:Generator_ColumnPropNameInRow="telefoon_nr_1" msprop:Generator_ColumnPropNameInTable="telefoon_nr_1Column" msprop:Generator_UserColumnName="telefoon_nr_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefoon_nr_2" msprop:Generator_ColumnVarNameInTable="columntelefoon_nr_2" msprop:Generator_ColumnPropNameInRow="telefoon_nr_2" msprop:Generator_ColumnPropNameInTable="telefoon_nr_2Column" msprop:Generator_UserColumnName="telefoon_nr_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefoon_nr_3" msprop:Generator_ColumnVarNameInTable="columntelefoon_nr_3" msprop:Generator_ColumnPropNameInRow="telefoon_nr_3" msprop:Generator_ColumnPropNameInTable="telefoon_nr_3Column" msprop:Generator_UserColumnName="telefoon_nr_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bedrijflink" msprop:Generator_TableClassName="bedrijflinkDataTable" msprop:Generator_TableVarName="tablebedrijflink" msprop:Generator_TablePropName="bedrijflink" msprop:Generator_RowDeletingName="bedrijflinkRowDeleting" msprop:Generator_RowChangingName="bedrijflinkRowChanging" msprop:Generator_RowEvHandlerName="bedrijflinkRowChangeEventHandler" msprop:Generator_RowDeletedName="bedrijflinkRowDeleted" msprop:Generator_UserTableName="bedrijflink" msprop:Generator_RowChangedName="bedrijflinkRowChanged" msprop:Generator_RowEvArgName="bedrijflinkRowChangeEvent" msprop:Generator_RowClassName="bedrijflinkRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="persoon_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpersoon_ID" msprop:Generator_ColumnPropNameInRow="persoon_ID" msprop:Generator_ColumnPropNameInTable="persoon_IDColumn" msprop:Generator_UserColumnName="persoon_ID" type="xs:int" />
+              <xs:element name="bedrijf_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnbedrijf_ID" msprop:Generator_ColumnPropNameInRow="bedrijf_ID" msprop:Generator_ColumnPropNameInTable="bedrijf_IDColumn" msprop:Generator_UserColumnName="bedrijf_ID" type="xs:int" />
+              <xs:element name="bedrijf_nr" msprop:Generator_ColumnVarNameInTable="columnbedrijf_nr" msprop:Generator_ColumnPropNameInRow="bedrijf_nr" msprop:Generator_ColumnPropNameInTable="bedrijf_nrColumn" msprop:Generator_UserColumnName="bedrijf_nr" type="xs:int" minOccurs="0" />
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" minOccurs="0" />
+              <xs:element name="zoeknaam" msprop:Generator_ColumnVarNameInTable="columnzoeknaam" msprop:Generator_ColumnPropNameInRow="zoeknaam" msprop:Generator_ColumnPropNameInTable="zoeknaamColumn" msprop:Generator_UserColumnName="zoeknaam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="postcode" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="postcode" msprop:Generator_ColumnVarNameInTable="columnpostcode" msprop:Generator_ColumnPropNameInTable="postcodeColumn" msprop:Generator_UserColumnName="postcode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="postPLAATS" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="postPLAATS" msprop:Generator_ColumnVarNameInTable="columnpostPLAATS" msprop:Generator_ColumnPropNameInTable="postPLAATSColumn" msprop:Generator_UserColumnName="postPLAATS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="postPOSTCODE" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="postPOSTCODE" msprop:Generator_ColumnVarNameInTable="columnpostPOSTCODE" msprop:Generator_ColumnPropNameInTable="postPOSTCODEColumn" msprop:Generator_UserColumnName="postPOSTCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="postSTRAAT" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="postSTRAAT" msprop:Generator_ColumnVarNameInTable="columnpostSTRAAT" msprop:Generator_ColumnPropNameInTable="postSTRAATColumn" msprop:Generator_UserColumnName="postSTRAAT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="straat" msprop:Generator_ColumnVarNameInTable="columnstraat" msprop:Generator_ColumnPropNameInRow="straat" msprop:Generator_ColumnPropNameInTable="straatColumn" msprop:Generator_UserColumnName="straat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="plaats" msprop:Generator_ColumnVarNameInTable="columnplaats" msprop:Generator_ColumnPropNameInRow="plaats" msprop:Generator_ColumnPropNameInTable="plaatsColumn" msprop:Generator_UserColumnName="plaats" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bedrijf" msprop:Generator_TableClassName="bedrijfDataTable" msprop:Generator_TableVarName="tablebedrijf" msprop:Generator_TablePropName="bedrijf" msprop:Generator_RowDeletingName="bedrijfRowDeleting" msprop:Generator_RowChangingName="bedrijfRowChanging" msprop:Generator_RowEvHandlerName="bedrijfRowChangeEventHandler" msprop:Generator_RowDeletedName="bedrijfRowDeleted" msprop:Generator_UserTableName="bedrijf" msprop:Generator_RowChangedName="bedrijfRowChanged" msprop:Generator_RowEvArgName="bedrijfRowChangeEvent" msprop:Generator_RowClassName="bedrijfRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="bedrijf_nr" msprop:Generator_ColumnVarNameInTable="columnbedrijf_nr" msprop:Generator_ColumnPropNameInRow="bedrijf_nr" msprop:Generator_ColumnPropNameInTable="bedrijf_nrColumn" msprop:Generator_UserColumnName="bedrijf_nr" type="xs:int" minOccurs="0" />
+              <xs:element name="zoeknaam" msprop:Generator_ColumnVarNameInTable="columnzoeknaam" msprop:Generator_ColumnPropNameInRow="zoeknaam" msprop:Generator_ColumnPropNameInTable="zoeknaamColumn" msprop:Generator_UserColumnName="zoeknaam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bedrijf_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnbedrijf_ID" msprop:Generator_ColumnPropNameInRow="bedrijf_ID" msprop:Generator_ColumnPropNameInTable="bedrijf_IDColumn" msprop:Generator_UserColumnName="bedrijf_ID" type="xs:int" />
+              <xs:element name="plaats" msprop:Generator_ColumnVarNameInTable="columnplaats" msprop:Generator_ColumnPropNameInRow="plaats" msprop:Generator_ColumnPropNameInTable="plaatsColumn" msprop:Generator_UserColumnName="plaats" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="naam" msprop:Generator_ColumnVarNameInTable="columnnaam" msprop:Generator_ColumnPropNameInRow="naam" msprop:Generator_ColumnPropNameInTable="naamColumn" msprop:Generator_UserColumnName="naam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="persoon_nr_locaties" msprop:Generator_TableClassName="persoon_nr_locatiesDataTable" msprop:Generator_TableVarName="tablepersoon_nr_locaties" msprop:Generator_TablePropName="persoon_nr_locaties" msprop:Generator_RowDeletingName="persoon_nr_locatiesRowDeleting" msprop:Generator_RowChangingName="persoon_nr_locatiesRowChanging" msprop:Generator_RowEvHandlerName="persoon_nr_locatiesRowChangeEventHandler" msprop:Generator_RowDeletedName="persoon_nr_locatiesRowDeleted" msprop:Generator_UserTableName="persoon_nr_locaties" msprop:Generator_RowChangedName="persoon_nr_locatiesRowChanged" msprop:Generator_RowEvArgName="persoon_nr_locatiesRowChangeEvent" msprop:Generator_RowClassName="persoon_nr_locatiesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="regel_nr" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnregel_nr" msprop:Generator_ColumnPropNameInRow="regel_nr" msprop:Generator_ColumnPropNameInTable="regel_nrColumn" msprop:Generator_UserColumnName="regel_nr" type="xs:int" />
+              <xs:element name="column" msprop:Generator_ColumnVarNameInTable="columnFieldcolumn" msprop:Generator_ColumnPropNameInRow="column" msprop:Generator_ColumnPropNameInTable="columnColumn" msprop:Generator_UserColumnName="column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="125" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tabel" msprop:Generator_ColumnVarNameInTable="columntabel" msprop:Generator_ColumnPropNameInRow="tabel" msprop:Generator_ColumnPropNameInTable="tabelColumn" msprop:Generator_UserColumnName="tabel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="125" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="weergavenaam" msprop:Generator_ColumnVarNameInTable="columnweergavenaam" msprop:Generator_ColumnPropNameInRow="weergavenaam" msprop:Generator_ColumnPropNameInTable="weergavenaamColumn" msprop:Generator_UserColumnName="weergavenaam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="125" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="var_pers_funct_count" msprop:Generator_TableClassName="var_pers_funct_countDataTable" msprop:Generator_TableVarName="tablevar_pers_funct_count" msprop:Generator_TablePropName="var_pers_funct_count" msprop:Generator_RowDeletingName="var_pers_funct_countRowDeleting" msprop:Generator_RowChangingName="var_pers_funct_countRowChanging" msprop:Generator_RowEvHandlerName="var_pers_funct_countRowChangeEventHandler" msprop:Generator_RowDeletedName="var_pers_funct_countRowDeleted" msprop:Generator_UserTableName="var_pers_funct_count" msprop:Generator_RowChangedName="var_pers_funct_countRowChanged" msprop:Generator_RowEvArgName="var_pers_funct_countRowChangeEvent" msprop:Generator_RowClassName="var_pers_funct_countRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aantal" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnaantal" msprop:Generator_ColumnPropNameInRow="aantal" msprop:Generator_ColumnPropNameInTable="aantalColumn" msprop:Generator_UserColumnName="aantal" type="xs:int" minOccurs="0" />
+              <xs:element name="naam" msprop:Generator_ColumnVarNameInTable="columnnaam" msprop:Generator_ColumnPropNameInRow="naam" msprop:Generator_ColumnPropNameInTable="naamColumn" msprop:Generator_UserColumnName="naam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="functie_id" msprop:Generator_ColumnVarNameInTable="columnfunctie_id" msprop:Generator_ColumnPropNameInRow="functie_id" msprop:Generator_ColumnPropNameInTable="functie_idColumn" msprop:Generator_UserColumnName="functie_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="werkgevers_log" msprop:Generator_TableClassName="werkgevers_logDataTable" msprop:Generator_TableVarName="tablewerkgevers_log" msprop:Generator_TablePropName="werkgevers_log" msprop:Generator_RowDeletingName="werkgevers_logRowDeleting" msprop:Generator_RowChangingName="werkgevers_logRowChanging" msprop:Generator_RowEvHandlerName="werkgevers_logRowChangeEventHandler" msprop:Generator_RowDeletedName="werkgevers_logRowDeleted" msprop:Generator_UserTableName="werkgevers_log" msprop:Generator_RowChangedName="werkgevers_logRowChanged" msprop:Generator_RowEvArgName="werkgevers_logRowChangeEvent" msprop:Generator_RowClassName="werkgevers_logRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="naam" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="naam" msprop:Generator_ColumnVarNameInTable="columnnaam" msprop:Generator_ColumnPropNameInTable="naamColumn" msprop:Generator_UserColumnName="naam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="timestamp" msprop:Generator_ColumnVarNameInTable="columntimestamp" msprop:Generator_ColumnPropNameInRow="timestamp" msprop:Generator_ColumnPropNameInTable="timestampColumn" msprop:Generator_UserColumnName="timestamp" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="new_del_record_log" msprop:Generator_TableClassName="new_del_record_logDataTable" msprop:Generator_TableVarName="tablenew_del_record_log" msprop:Generator_TablePropName="new_del_record_log" msprop:Generator_RowDeletingName="new_del_record_logRowDeleting" msprop:Generator_RowChangingName="new_del_record_logRowChanging" msprop:Generator_RowEvHandlerName="new_del_record_logRowChangeEventHandler" msprop:Generator_RowDeletedName="new_del_record_logRowDeleted" msprop:Generator_UserTableName="new_del_record_log" msprop:Generator_RowChangedName="new_del_record_logRowChanged" msprop:Generator_RowEvArgName="new_del_record_logRowChangeEvent" msprop:Generator_RowClassName="new_del_record_logRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="naam" msprop:Generator_ColumnVarNameInTable="columnnaam" msprop:Generator_ColumnPropNameInRow="naam" msprop:Generator_ColumnPropNameInTable="naamColumn" msprop:Generator_UserColumnName="naam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="record_ID" msprop:Generator_ColumnVarNameInTable="columnrecord_ID" msprop:Generator_ColumnPropNameInRow="record_ID" msprop:Generator_ColumnPropNameInTable="record_IDColumn" msprop:Generator_UserColumnName="record_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="type" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnPropNameInTable="typeColumn" msprop:Generator_UserColumnName="type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="datum_tijd" msprop:Generator_ColumnVarNameInTable="columndatum_tijd" msprop:Generator_ColumnPropNameInRow="datum_tijd" msprop:Generator_ColumnPropNameInTable="datum_tijdColumn" msprop:Generator_UserColumnName="datum_tijd" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:persoon" />
+      <xs:field xpath="mstns:persoon_ID" />
+    </xs:unique>
+    <xs:unique name="bedrijflink_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bedrijflink" />
+      <xs:field xpath="mstns:persoon_ID" />
+      <xs:field xpath="mstns:bedrijf_ID" />
+    </xs:unique>
+    <xs:unique name="bedrijf_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bedrijf" />
+      <xs:field xpath="mstns:bedrijf_ID" />
+    </xs:unique>
+    <xs:unique name="persoon_nr_locaties_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:persoon_nr_locaties" />
+      <xs:field xpath="mstns:regel_nr" />
+    </xs:unique>
+    <xs:unique name="new_del_record_log_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:new_del_record_log" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

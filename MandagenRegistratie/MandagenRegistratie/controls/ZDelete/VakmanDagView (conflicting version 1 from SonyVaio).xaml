@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="MandagenRegistratie.controls.VakmanDagView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignWidth="884">
+    <StackPanel HorizontalAlignment="Left" Orientation="Vertical">
+        <StackPanel HorizontalAlignment="Left" Width="884" Orientation="Horizontal">
+            <WrapPanel Height="100" x:Name="spVakmanInfo" Width="400" Orientation="Horizontal">
+                <Label Content="Naam: " Width="200px"  />
+                <Label x:Name="lblVakmanNaam" Width="200px" Background="Beige" FontWeight="ExtraBold" />
+                <Label Content="Bsn: " Width="200px"  />
+                <Label x:Name="lblVakmanBsn" Width="200px"  />
+                <Label Content="Uren per week: " Width="200px"  />
+                <Label x:Name="lblVakmanWerkweek" Width="200px" Background="Beige" FontWeight="ExtraBold" />
+            </WrapPanel>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Left" Height="30" Width="884" Orientation="Horizontal">
+            <Button HorizontalAlignment="Left" Width="150" Click="Button_Click_5">
+                <Button.Content>
+                    <![CDATA[ <<< vorige dag ]]>
+                </Button.Content>
+            </Button>
+            <Label Height="30" VerticalAlignment="Top" Width="500" x:Name="lblDagInfo" />
+
+            <Button HorizontalAlignment="Right" Width="150" Click="Button_Click_6">
+                <Button.Content>
+                    <![CDATA[ volgende dag >>> ]]>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" x:Name="spOverzicht">
+            </StackPanel>
+            <ScrollViewer Width="884" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" x:Name="svScrollviewer">
+                <WrapPanel x:Name="spVakmanDag" HorizontalAlignment="Left" Width="1920" VerticalAlignment="Top" Orientation="Horizontal">
+                </WrapPanel>
+            </ScrollViewer>
+        </StackPanel>
+        <Button Content="Klaar" Height="23" Name="btnConfirm" Width="75" Click="btnConfirm_Click" />
+        <Label x:Name="lblCorcor" Content="Label" Height="28" />
+    </StackPanel>
+</UserControl>

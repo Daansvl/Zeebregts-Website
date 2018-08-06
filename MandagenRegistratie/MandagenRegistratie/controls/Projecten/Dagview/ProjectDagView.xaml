@@ -1,0 +1,161 @@
+﻿<UserControl x:Class="MandagenRegistratie.controls.Projecten.Dagview.ProjectDagView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1050" SizeChanged="UserControl_SizeChanged" MouseLeftButtonUp="UserControl_MouseLeftButtonUp" MouseLeave="UserControl_MouseLeave">
+    <StackPanel HorizontalAlignment="Left" Orientation="Vertical">
+        <StackPanel Orientation="Horizontal" Height="100" MinWidth="1050">
+            <WrapPanel Height="100" x:Name="spProjectInfo" Orientation="Vertical" HorizontalAlignment="Stretch">
+                <Label x:Name="lblProject" Width="Auto" FontSize="20" Content="" />
+                <Label x:Name="lblProjectleider" Width="Auto" FontSize="14" Content="" Margin="0,-4,0,0" />
+            </WrapPanel>
+            <Border x:Name="bDatepicker" BorderBrush="Black" BorderThickness="1" Height="82">
+                <StackPanel x:Name="spDatepicker" Orientation="Vertical" HorizontalAlignment="Center" Width="226" Height="80">
+                    <Grid Width="224" HorizontalAlignment="Center" Margin="1,1,1,1">
+                        <StackPanel Orientation="Vertical" Width="224" HorizontalAlignment="Center" x:Name="spFlowDirectionController">
+                            <StackPanel Orientation="Horizontal" Width="224" HorizontalAlignment="Center">
+                                <Button x:Name="btnVorige" HorizontalAlignment="Left" Margin="1,1,1,1" Width="50" Height="24" Click="btnVorige_Click">
+                                    <Button.Content>
+                                        <![CDATA[ < dag ]]>
+                                    </Button.Content>
+                                </Button>
+                                <Label BorderBrush="Black" BorderThickness="1" Padding="0,-2,0,0" FontSize="16" Height="24" HorizontalAlignment="Center" Width="118" HorizontalContentAlignment="Center" VerticalAlignment="Top" x:Name="lblDagInfo" Visibility="Collapsed" Margin="1,1,1,1" />
+                                <Button FontSize="14" Height="24" HorizontalAlignment="Center" Width="118" HorizontalContentAlignment="Center" VerticalAlignment="Top" x:Name="btnDagInfo" Margin="1,1,1,1" Click="btnDagInfo_Click" />
+                                <Button x:Name="btnVolgende" HorizontalAlignment="Center" Margin="1,1,1,1" Width="50" Height="24" Click="btnVolgende_Click">
+                                    <Button.Content>
+                                        <![CDATA[ dag > ]]>
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Width="224" HorizontalAlignment="Center">
+                                <Button x:Name="btnMa" Height="24" Width="30" Margin="1,1,1,1" Click="btnMa_Click">
+                                    <TextBlock x:Name="txtMa">Ma</TextBlock>
+                                </Button>
+                                <Button x:Name="btnDi" Height="24" Width="30" Margin="1,1,1,1" Click="btnDi_Click">
+                                    <TextBlock x:Name="txtDi">Di</TextBlock>
+                                </Button>
+                                <Button x:Name="btnWo" Height="24" Width="30" Margin="1,1,1,1" Click="btnWo_Click">
+                                    <TextBlock x:Name="txtWo">Wo</TextBlock>
+                                </Button>
+                                <Button x:Name="btnDo" Height="24" Width="30" Margin="1,1,1,1" Click="btnDo_Click">
+                                    <TextBlock x:Name="txtDo">Do</TextBlock>
+                                </Button>
+                                <Button x:Name="btnVr" Height="24" Width="30" Margin="1,1,1,1" Click="btnVr_Click">
+                                    <TextBlock x:Name="txtVr">Vr</TextBlock>
+                                </Button>
+                                <Button x:Name="btnZa" Height="24" Width="30" Margin="1,1,1,1" Click="btnZa_Click">
+                                    <TextBlock x:Name="txtZa">Za</TextBlock>
+                                </Button>
+                                <Button x:Name="btnZo" Height="24" Width="30" Margin="1,1,1,1" Click="btnZo_Click">
+                                    <TextBlock x:Name="txtZo">Zo</TextBlock>
+                                </Button>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Width="224" HorizontalAlignment="Center">
+                                <Button x:Name="btnVorigeWeek" HorizontalAlignment="Left" Margin="1,1,1,1" Width="50" Height="24" Click="btnVorigeWeek_Click">
+                                    <Button.Content>
+                                        <![CDATA[ < week ]]>
+                                    </Button.Content>
+                                </Button>
+                                <Label BorderBrush="Black" BorderThickness="1" Padding="0,-1,0,0" FontSize="16" Height="24" HorizontalAlignment="Stretch" Margin="1,1,1,1" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="118" x:Name="lblWeekInfo" />
+                                <Button FontSize="14" Height="24" HorizontalAlignment="Center" Width="118" HorizontalContentAlignment="Center" VerticalAlignment="Top" x:Name="btnWeekInfo" Visibility="Collapsed" Margin="1,1,1,1" Click="btnWeekInfo_Click_1" />
+                                <Button x:Name="btnVolgendeWeek" HorizontalAlignment="Center" Margin="1,1,1,1" Width="50" Height="24" Click="btnVolgendeWeek_Click">
+                                    <Button.Content>
+                                        <![CDATA[ week > ]]>
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Border>
+            <Border x:Name="bDatepicker2" BorderBrush="Black" BorderThickness="1" Height="82" Visibility="Collapsed">
+                <StackPanel x:Name="spDatepicker2" Orientation="Vertical" HorizontalAlignment="Center" Width="226" Height="80">
+                    <Grid Width="224" HorizontalAlignment="Center" Margin="1,1,1,1">
+                        <StackPanel Orientation="Vertical" Width="224" HorizontalAlignment="Center" x:Name="spFlowDirectionController2">
+                            <StackPanel Orientation="Horizontal" Width="224" HorizontalAlignment="Center">
+                                <Button x:Name="btnVorigeWeek2" HorizontalAlignment="Left" Margin="1,1,1,1" Width="50" Height="24" Click="btnVorigeWeek_Click">
+                                    <Button.Content>
+                                        <![CDATA[ < week ]]>
+                                    </Button.Content>
+                                </Button>
+                                <Label BorderBrush="Black" BorderThickness="1" Padding="0,-1,0,0" FontSize="16" Height="24" HorizontalAlignment="Stretch" Margin="1,1,1,1" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="118" x:Name="lblWeekInfo2" />
+                                <Button FontSize="14" Height="24" HorizontalAlignment="Center" Width="118" HorizontalContentAlignment="Center" VerticalAlignment="Top" x:Name="btnWeekInfo2" Visibility="Collapsed" Margin="1,1,1,1" Click="btnWeekInfo_Click_1" />
+                                <Button x:Name="btnVolgendeWeek2" HorizontalAlignment="Center" Margin="1,1,1,1" Width="50" Height="24" Click="btnVolgendeWeek_Click">
+                                    <Button.Content>
+                                        <![CDATA[ week > ]]>
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Width="224" HorizontalAlignment="Center">
+                                <Button x:Name="btnMa2" Height="24" Width="30" Margin="1,1,1,1" Click="btnMa_Click">
+                                    <TextBlock x:Name="txtMa2">Ma</TextBlock>
+                                </Button>
+                                <Button x:Name="btnDi2" Height="24" Width="30" Margin="1,1,1,1" Click="btnDi_Click">
+                                    <TextBlock x:Name="txtDi2">Di</TextBlock>
+                                </Button>
+                                <Button x:Name="btnWo2" Height="24" Width="30" Margin="1,1,1,1" Click="btnWo_Click">
+                                    <TextBlock x:Name="txtWo2">Wo</TextBlock>
+                                </Button>
+                                <Button x:Name="btnDo2" Height="24" Width="30" Margin="1,1,1,1" Click="btnDo_Click">
+                                    <TextBlock x:Name="txtDo2">Do</TextBlock>
+                                </Button>
+                                <Button x:Name="btnVr2" Height="24" Width="30" Margin="1,1,1,1" Click="btnVr_Click">
+                                    <TextBlock x:Name="txtVr2">Vr</TextBlock>
+                                </Button>
+                                <Button x:Name="btnZa2" Height="24" Width="30" Margin="1,1,1,1" Click="btnZa_Click">
+                                    <TextBlock x:Name="txtZa2">Za</TextBlock>
+                                </Button>
+                                <Button x:Name="btnZo2" Height="24" Width="30" Margin="1,1,1,1" Click="btnZo_Click">
+                                    <TextBlock x:Name="txtZo2">Zo</TextBlock>
+                                </Button>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Width="224" HorizontalAlignment="Center">
+                                <Button x:Name="btnVorige2" HorizontalAlignment="Left" Margin="1,1,1,1" Width="50" Height="24" Click="btnVorige_Click">
+                                    <Button.Content>
+                                        <![CDATA[ < dag ]]>
+                                    </Button.Content>
+                                </Button>
+                                <Label BorderBrush="Black" BorderThickness="1" Padding="0,-2,0,0" FontSize="16" Height="24" HorizontalAlignment="Center" Width="118" HorizontalContentAlignment="Center" VerticalAlignment="Top" x:Name="lblDagInfo2" Visibility="Collapsed" Margin="1,1,1,1" />
+                                <Button FontSize="14" Height="24" HorizontalAlignment="Center" Width="118" HorizontalContentAlignment="Center" VerticalAlignment="Top" x:Name="btnDagInfo2" Margin="1,1,1,1" Click="btnDagInfo_Click" />
+                                <Button x:Name="btnVolgende2" HorizontalAlignment="Center" Margin="1,1,1,1" Width="50" Height="24" Click="btnVolgende_Click">
+                                    <Button.Content>
+                                        <![CDATA[ dag > ]]>
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+
+            </Border>
+            <StackPanel Height="100" x:Name="spProjectInfo2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label x:Name="lblDatumInfo" HorizontalContentAlignment="Right" FontSize="20"></Label>
+                <DatePicker Height="25" HorizontalAlignment="Right" Width="30" Margin="0,5,10,0" Name="datePicker1"
+                        VerticalAlignment="Top" SelectedDateChanged="clCalendar_SelectedDatesChanged" />
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <ScrollViewer MinWidth="1020" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" x:Name="svScrollviewerWrapper" Focusable="True">
+                <StackPanel MinWidth="1020" x:Name="testingElement" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical" x:Name="spOverzicht" Width="250" >
+                    </StackPanel>
+                    <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalAlignment="Top" VerticalScrollBarVisibility="Disabled" x:Name="svScrollviewer" PreviewMouseWheel="svScrollviewer_PreviewMouseWheel_1">
+                        <StackPanel Width="1920" x:Name="spContainer" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical">
+                            <WrapPanel x:Name="spVakmanDagLabels" HorizontalAlignment="Left" Width="1920" VerticalAlignment="Top" Orientation="Horizontal">
+                            </WrapPanel>
+                            <Canvas Name="canvasWrapper" Width="1920">
+                                <WrapPanel x:Name="spVakmanDag" HorizontalAlignment="Left" Canvas.Left="0" Canvas.Top="0" Width="1920" VerticalAlignment="Top" Orientation="Horizontal">
+                                </WrapPanel>
+                            </Canvas>
+                            <WrapPanel x:Name="spVakmanDagLabelsBottom" HorizontalAlignment="Left" Width="1920" VerticalAlignment="Top" Orientation="Horizontal">
+                            </WrapPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

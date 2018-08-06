@@ -1,0 +1,18 @@
+﻿<local:MenuControl x:Class="MandagenRegistratie.controls.Vakmannen.Intro"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZeebregtsLogic;assembly=ZeebregtsLogic"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" BorderThickness="0">
+    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="spWrapper">
+        <TabControl BorderThickness="0" Background="White" TabStripPlacement="Bottom" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" x:Name="tcTabs" SelectionChanged="tcTabs_SelectionChanged">
+            <TabItem Header="Overzicht" x:Name="tiOverzicht" Background="White" BorderBrush="Azure" BorderThickness="0">
+            </TabItem>
+            <!--<TabItem Header="Lijst" x:Name="tiLijst">
+            </TabItem>-->
+        </TabControl>
+
+    </StackPanel>
+</local:MenuControl>

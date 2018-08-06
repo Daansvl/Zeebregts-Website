@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="zeebregtsdb" Class="Linq2handelingenLogDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SQL-SERVER;Initial Catalog=zeebregtsdb;Persist Security Info=True;User ID=daan" SettingsObjectName="GebruikersMonitor.Properties.Settings" SettingsPropertyName="zeebregtsdbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.log_handeling_gebruiker" Member="log_handeling_gebruikers">
+    <Type Name="log_handeling_gebruiker">
+      <Column Name="log_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gebruiker" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="record_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="record_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="handeling_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="timestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.gebruikers_handelingen" Member="gebruikers_handelingens">
+    <Type Name="gebruikers_handelingen">
+      <Column Name="handeling_nr" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="handeling_omschrijving" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Categorie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sort_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.handeling_log_project" Method="handeling_log_project">
+    <ElementType Name="handeling_log_projectResult">
+      <Column Name="gebruiker" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Listview normaal open project]" Member="Listview_normaal_open_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Listview normaal nieuw project]" Member="Listview_normaal_nieuw_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Record gewijzigd]" Member="Record_gewijzigd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Copy2Clipboard NAW gebruikt]" Member="Copy2Clipboard_NAW_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Website geopend]" Member="Website_geopend" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Project verwijderd]" Member="Project_verwijderd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[nieuwe projecten ingevoer]" Member="nieuwe_projecten_ingevoer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Dubbele invoer staat in lijst]" Member="Dubbele_invoer_staat_in_lijst" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Dubbele invoer staat niet in lijst]" Member="Dubbele_invoer_staat_niet_in_lijst" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Listview advanced filter gebruikt]" Member="Listview_advanced_filter_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[1e zoekregel gebruikt]" Member="_1e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[2e zoekregel gebruikt]" Member="_2e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[3e zoekregel gebruikt]" Member="_3e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[4e zoekregel gebruikt]" Member="_4e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.handeling_log_bedrijf" Method="handeling_log_bedrijf">
+    <ElementType Name="handeling_log_bedrijfResult">
+      <Column Name="gebruiker" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Listview normaal open bedrijf]" Member="Listview_normaal_open_bedrijf" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Listview normaal nieuw bedrijf]" Member="Listview_normaal_nieuw_bedrijf" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Bedrijf gewijzigd]" Member="Bedrijf_gewijzigd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Copy2Clipboard NAW gebruikt]" Member="Copy2Clipboard_NAW_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Website geopend]" Member="Website_geopend" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[E-mail geopend]" Member="E_mail_geopend" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Bedrijf verwijderd]" Member="Bedrijf_verwijderd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Verwijderen niet mogelijk terug naar lijst]" Member="Verwijderen_niet_mogelijk_terug_naar_lijst" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Verwijderen niet mogelijk, vervangen en verwijderd]" Member="Verwijderen_niet_mogelijk__vervangen_en_verwijderd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Nieuw bedrijf via rode route project]" Member="Nieuw_bedrijf_via_rode_route_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Bedrijf geselecteerd via rode route project]" Member="Bedrijf_geselecteerd_via_rode_route_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Bedrijf bekeken via groene route project]" Member="Bedrijf_bekeken_via_groene_route_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Bedrijf gewijzigd via groene route project]" Member="Bedrijf_gewijzigd_via_groene_route_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Nieuw bedrijf via rode route contact]" Member="Nieuw_bedrijf_via_rode_route_contact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Bedrijf geselecteerd via rode route contact]" Member="Bedrijf_geselecteerd_via_rode_route_contact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Bedrijf bekeken via groene route contact]" Member="Bedrijf_bekeken_via_groene_route_contact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Bedrijf gewijzigd via groene route contact]" Member="Bedrijf_gewijzigd_via_groene_route_contact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Nieuw bedrijf ingevoerd]" Member="Nieuw_bedrijf_ingevoerd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Dubbele invoer wel in lijst]" Member="Dubbele_invoer_wel_in_lijst" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Dubbele invoer niet in lijst]" Member="Dubbele_invoer_niet_in_lijst" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Listview advanced filter gebruikt]" Member="Listview_advanced_filter_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[1e zoekregel gebruikt]" Member="_1e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[2e zoekregel gebruikt]" Member="_2e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[3e zoekregel gebruikt]" Member="_3e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[4e zoekregel gebruikt]" Member="_4e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.handeling_log_contact" Method="handeling_log_contact">
+    <ElementType Name="handeling_log_contactResult">
+      <Column Name="gebruiker" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Listview normaal geselecteerd]" Member="Listview_normaal_geselecteerd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Nieuw record toegevoegd]" Member="Nieuw_record_toegevoegd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Contact gewijzigd]" Member="Contact_gewijzigd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Copy2Clipboard NAW]" Member="Copy2Clipboard_NAW" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Copy2Clipboard post]" Member="Copy2Clipboard_post" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Copy2Clipboard bezoek]" Member="Copy2Clipboard_bezoek" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[E-mail geopend]" Member="E_mail_geopend" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Verwijderd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Verwijderen niet mogelijk terug naar leesstand]" Member="Verwijderen_niet_mogelijk_terug_naar_leesstand" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Verwijderen niet mogelijk, vervangen en verwijderd]" Member="Verwijderen_niet_mogelijk__vervangen_en_verwijderd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Nieuw record via rode route project]" Member="Nieuw_record_via_rode_route_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Contact geselecteerd via rode route project]" Member="Contact_geselecteerd_via_rode_route_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Contact bekeken via groene route project]" Member="Contact_bekeken_via_groene_route_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Contact gewijzigd via groene route project]" Member="Contact_gewijzigd_via_groene_route_project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Nieuw contact toegevoegd]" Member="Nieuw_contact_toegevoegd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Dubbel invoer staat in lijst]" Member="Dubbel_invoer_staat_in_lijst" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Dubbel invoer staat niet in lijst]" Member="Dubbel_invoer_staat_niet_in_lijst" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Listview advanced filter gebruikt]" Member="Listview_advanced_filter_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[1e zoekregel gebruikt]" Member="_1e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[2e zoekregel gebruikt]" Member="_2e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[3e zoekregel gebruikt]" Member="_3e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[4e zoekregel gebruikt]" Member="_4e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.handeling_log_algemeen" Method="handeling_log_algemeen">
+    <ElementType Name="handeling_log_algemeenResult">
+      <Column Name="gebruiker" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Listview normaal open record]" Member="Listview_normaal_open_record" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Nieuw record via normaal listview]" Member="Nieuw_record_via_normaal_listview" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Records gewijzigd]" Member="Records_gewijzigd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Copy2Clipboard" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[E-mail geopend]" Member="E_mail_geopend" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Website geopend]" Member="Website_geopend" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Verwijderd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Verwijderen niet mogelijk, terug naar leesstand]" Member="Verwijderen_niet_mogelijk__terug_naar_leesstand" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Verwijderen niet mogelijk, vervangen en verwijderd]" Member="Verwijderen_niet_mogelijk__vervangen_en_verwijderd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Nieuw record via rode route]" Member="Nieuw_record_via_rode_route" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Record geselecteerd via rode route]" Member="Record_geselecteerd_via_rode_route" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Record bekeken via groene route]" Member="Record_bekeken_via_groene_route" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Record gewijzigd via groene route]" Member="Record_gewijzigd_via_groene_route" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Nieuw ingevoerd]" Member="Nieuw_ingevoerd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Dubbele invoer, wel in lijst]" Member="Dubbele_invoer__wel_in_lijst" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Dubbele invoer, niet in lijst]" Member="Dubbele_invoer__niet_in_lijst" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Advanced filter gebruikt]" Member="Advanced_filter_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[1e zoekregel gebruikt]" Member="_1e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[2e zoekregel gebruikt]" Member="_2e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[3e zoekregel gebruikt]" Member="_3e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[4e zoekregel gebruikt]" Member="_4e_zoekregel_gebruikt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

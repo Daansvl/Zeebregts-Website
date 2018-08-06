@@ -1,0 +1,431 @@
+﻿
+    <style type="text/css">
+        .Kop {
+            font-family: calibri;
+            font-weight: bold;
+            background: #D9D9D9;
+            text-align: center;
+        }
+
+        .TableOnSamePage {
+            margin-top: 30px;
+        }
+
+        .TableOnNewPage {
+            page-break-before: always;
+            margin-top: 10px;
+        }
+
+        }
+
+        .Kop1 {
+            font-family: calibri;
+            font-weight: bold;
+            background: #D9D9D9;
+            text-align: center;
+        }
+
+        .Samenvatting {
+            font-family: calibri;
+            font-weight: normal;
+            background: white;
+            text-align: left;
+        }
+
+        .Kop2 {
+            font-family: calibri;
+            font-weight: normal;
+            background: #D9D9D9;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .ProjectRegel {
+            font-family: calibri;
+            font-weight: normal;
+            background: white;
+            text-align: left;
+            font-style: normal;
+            vertical-align: text-top;
+            margin-right: 5px;
+            vertical-align: top;
+            color: #333333; /*   :darkgray;*/
+        }
+
+        .TotaalRegel {
+            font-family: calibri;
+            font-weight: normal;
+            background: white;
+            text-align: right;
+            font-style: normal;
+            border-left: 1px red solid;
+            border-right: 1px red solid;
+            background: #D9D9D9;
+            padding-right: 20px;
+        }
+
+        .Detailregel {
+            font-family: calibri;
+            font-weight: normal;
+            background: white;
+            text-align: center;
+            font-style: normal;
+            border-left: 1px red solid;
+            border-right: 1px red solid;
+            background: white;
+        }
+
+        .DetailregelColor0 {
+            font-family: calibri;
+            font-weight: normal;
+            background: white;
+            text-align: center;
+            font-style: normal;
+            border-left: 1px red solid;
+            border-right: 1px red solid;
+            color: #333333; /*   :darkgray;*/
+            background: white;
+        }
+
+        .DetailregelColor1 {
+            font-family: calibri;
+            font-weight: normal;
+            background: white;
+            text-align: center;
+            font-style: normal;
+            border-left: 1px red solid;
+            border-right: 1px red solid;
+            color: #333333; /*   :darkgray;*/
+            background-color: #EFEEEC; /*#F9F8F6 /* Heel licht grijs */
+        }
+
+        .van {
+            text-align: center;
+            border-left: 1px solid gray;
+            border-width: 1px;
+        }
+
+        .tot {
+            font-family: calibri;
+            font-weight: normal;
+            text-align: center;
+            font-style: normal;
+            /*font-size: x-small;*/
+        }
+
+        .uren {
+            font-family: calibri;
+            font-weight: normal;
+            text-align: center;
+            font-style: normal;
+            border-left: 1px solid gray;
+        }
+
+        .dagen {
+            font-family: calibri;
+            font-weight: normal;
+            text-align: center;
+            font-style: normal;
+        }
+
+        .kostprijs {
+            font-family: calibri;
+            font-weight: normal;
+            text-align: center;
+            font-style: normal;
+            border-right: 1px gray solid;
+        }
+
+        .projectnummer {
+            text-align: right;
+            vertical-align: top;
+            border-left: 1px solid gray;
+            padding-right: 7px;
+        }
+
+        .lomschr {
+            text-align: left;
+            text-indent: 20px;
+            vertical-align: top;
+            border-left: 1px solid gray;
+        }
+
+        .lkop {
+            text-align: left;
+            text-indent: 20px;
+            vertical-align: top;
+            border-left: 1px solid gray;
+        }
+
+        ._van {
+            border-left: 1px black solid;
+        }
+
+        ._uren {
+            border-left: 1px black solid;
+        }
+
+        ._dagen {
+        }
+
+        ._kostprijs {
+            border-right: 1px black solid;
+        }
+        .auto-style1 {
+            width: 111px;
+        }
+        .auto-style2 {
+            height: 19px;
+        }
+        .DagStijl
+        {
+        	text-align:right;
+        	padding-right:10px;
+		}
+}
+    </style>
+
+<body>
+
+    <!-- PROJECTTABEL -->
+    <table style="font-size:18px">
+    <tr>
+        <td style="vertical-align:top">
+		    <table class="TableOnNewPage" style="font-family:calibri, serif; font-size:18px; width: 100%"> 
+		        <tr style="vertical-align:text-top">
+		            <td style="width:60% ;height:35px;"><strong>Manurenstaat</strong></td>
+		            <td style="width:40% ;height:35px;"><strong>Projectgegevens</strong></td>
+		        </tr>
+		        <tr>
+			        <td height="100%" valign="top">
+				        <table width="100%" cellpadding="0px" cellspacing="0px" align="left" style="line-height:23px"  >
+					        <tr style="vertical-align:top" >
+								<td width="135px">Rapport:</td>
+								<td >Weeklijst Extern</td>
+							</tr>
+							<tr style="vertical-align:top" >
+								<td >Bestandscode:</td>
+								<td >{Bestandscode}</td>
+							</tr>
+							<tr style="vertical-align:top" >
+								<td >Opdrachtgever:</td>
+					            <td >{Opdrachtgever}</td>
+							</tr>
+							<tr style="vertical-align:top" >
+								<td >Periode:</td>
+					            <td >{Periode}</td>
+							</tr>
+							<tr style="vertical-align:top" >
+								<td >Week:</td>
+					            <td >{Week}</td>        
+					     	</tr>
+						</table>
+					</td>
+			        <td height="100%" valign="top">
+						<table width="100%" cellpadding="0px" cellspacing="0px" style="line-height:23px;">
+					        <tr style="vertical-align:top" >
+					            <td width="135px">Projectnummer:</td>
+					            <td >{Projectnummer}</td>
+					        </tr>
+					        <tr style="vertical-align:top" >
+					            <td style="height: 23px" >Aannemer:</td>
+					            <td style="height: 23px" >{Aannemer}</td>
+					        </tr>
+					        <tr style="vertical-align:top" >
+					            <td >Projectnaam:</td>
+					            <td >{Projectnaam} 
+								xxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxx 
+								xxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+					        </tr>
+					        <tr style="vertical-align:top" >
+					            <td >Projectlocatie:</td>
+					            <td >{Projectlocatie}</td>
+					        </tr>
+					        <tr style="vertical-align:top" >
+					            <td>Projectstraat:</td>
+					            <td>{Projectstraat}</td>
+					    	</tr>
+						</table>
+					</td>
+				</tr>
+		
+	<!-- Ruimte tussen Info-blokje en Tabel -->
+		        <tr style="height: 70px"> 
+		            <td style="width: 277px">&nbsp;</td>
+		        </tr>
+			</table>
+        
+    <!-- Lijntje voor boven de onderliggende tabel -->
+		    <table border="0" cellpadding="0" cellspacing="0" class="Kop" width="100%">
+		        <tr>
+		            <td style="width:100%;height:0px; border-bottom: 1px gray solid"></td>
+		        </tr>
+		    </table>
+
+    <!-- Projecttabel -->
+		    <table border="0" cellpadding="0" cellspacing="0" style="width:876pt" class="Kop" style="line-height:normal">
+		        <thead>
+		            <tr class="Kop1">
+		                <th colspan="2" align="left" style="text-indent: 20px;border-left: 1px gray solid;" class="auto-style2">Weeklijst Extern</th>
+		                <th class ="DagStijl" style="border-left: 1px gray solid;">Ma</th>
+		                <th class="DagStijl">Di</th>
+		                <th class="DagStijl">Wo</th>
+		                <th class="DagStijl">Do</th>
+		                <th class="DagStijl">Vr</th>
+		                <th class="DagStijl">Za</th>
+		                <th class="DagStijl">Zo</th>
+		                <th style="border-left: 1px gray solid;border-right: 1px gray solid;" class="DagStijl">Totaal</th>
+		                <th rowspan="3" style="width: 0pt; page-break-inside:avoid"></th>
+		            </tr>
+		            <tr class="Kop2">
+		                <td style="white-space:nowrap;width:160px; text-indent:20px; border-left: 1px gray solid; height: 19px;" valign="top" align="left">
+		                    BSN
+		                </td>
+		                <td style="width:240px; text-align:left">Naam</td>
+		                <td class ="DagStijl" style="width: 68px; border-left: 1px gray solid">Uren</td>
+		                <td class ="DagStijl" style="width: 68px; ">Uren</td>
+		                <td class ="DagStijl" style="width: 68px; ">Uren</td>
+		                <td class ="DagStijl" style="width: 68px; ">Uren</td>
+		                <td class ="DagStijl" style="width: 68px; ">Uren</td>
+		                <td class ="DagStijl" style="width: 68px; ">Uren</td>
+		                <td class ="DagStijl" style="width: 68px; ">Uren</td>
+		                <td class ="DagStijl" style="width: 70pt; border-left:1px gray solid; border-right: 1px gray solid; ">Uren</td>
+		            </tr>
+		        </thead>
+		        <!-- TABELREGELS -->
+		        <!-- TOTAALREGEL -->
+		        <tr style="background:white; border-left:1px gray solid;">
+		            <td colspan="2" style="border-left:1px gray solid;">&nbsp;</td>
+		            <td colspan="7" style="border-left:1px gray solid;"></td>
+		            <td style="border-left:1px gray solid; border-right: 1px gray solid"></td>
+		            <td rowspan="3" style="width: 0pt; page-break-inside:avoid"></td>
+		        </tr>
+		        <tr class="TotaalRegel">
+		            <td colspan="2" style="text-indent:20px; border-left: 1px gray solid ;" align="left">
+		                {Periode}</td>
+		            <td class ="DagStijl" style="border-left:1px gray solid">{Monday}</td>
+		            <td class ="DagStijl">{Tuesday}</td>
+		            <td class ="DagStijl">{Wednesday}</td>
+		            <td class ="DagStijl">{Thursday}</td>
+		            <td class ="DagStijl">{Friday}</td>
+		            <td class ="DagStijl">{Saturday}</td>
+		            <td class ="DagStijl">{Sunday}</td>
+		            <td class ="DagStijl" style="border-left: 1px gray solid; border-right: 1px gray solid">{Totaal}</td>
+		        </tr>
+		        <!-- /TOTAALREGEL -->
+		        <!-- DETAILREGEL -->
+		        <tr class="Detailregel" style="page-break-inside:avoid">
+		            <td style="text-indent:20px; border-left: 1px gray solid; height: 19px;" align="left">{BSN}</td>
+		            <td style="text-align:left; height: 19px;" class="auto-style1">{Naam}</td>
+		            <td  class ="DagStijl" style="border-left:1px gray solid; height: 19px;">{Monday}</td>
+		            <td class ="DagStijl" style="height: 19px">{Tuesday}</td>
+		            <td class ="DagStijl" style="height: 19px">{Wednesday}</td>
+		            <td class ="DagStijl" style="height: 19px">{Thursday}</td>
+		            <td class ="DagStijl" style="height: 19px">{Friday}</td>
+		            <td class ="DagStijl" style="height: 19px">{Saturday}</td>
+		            <td class ="DagStijl" style="height: 19px">{Sunday}</td>
+		            <td class ="DagStijl" style="border-left: 1px gray solid; border-right: 1px gray solid; height: 19px;">{Totaal}</td>
+		            <TD style="page-break-inside:avoid"></td>
+		        </tr>
+		        <!-- /DETAILREGEL -->
+		        <!-- /TABELREGELS -->
+		        <tr>
+		        <!-- Onderste lijntje -->
+		            <td colspan="13" style="border-top: 1px gray solid; height:0px; background:white"></td>
+		        </tr>
+
+
+		        <!-- Ondertekenings tabel binnen één row -->
+		        <tr> <!-- START Handtekening ROW -->
+		        <td colspan="20"><table width="100%" bgcolor="white" style="font-size:18px">
+		        
+				        <tr style="padding-top:100px">
+				            <td style="width:60% ;height:35px;"><strong>Namens de onderaannemer</strong></td>
+				            <td style="width:40% ;height:35px;"><strong>Namens de opdrachtgever / aannemer</strong></td>
+				        </tr>
+				        <tr>
+					        <td height="100%" valign="top">
+						        <table width="100%" cellpadding="0px" cellspacing="0px" align="left">
+									<tr height="40px" style="vertical-align:bottom" >
+										<td width="135px" style="height: 19px">Naam:</td>
+										<td colspan="2">{Projectleider}</td>
+										<td style="height: 19px"></td>
+									</tr>
+									<tr height="40px" style="vertical-align:bottom" >
+										<td >Datum:</td>
+										<td style="width: 200px; border-bottom:1px gray solid" >&nbsp;</td>
+									</tr>
+									<tr height="40px" style="vertical-align:bottom" >
+										<td >Handtekening:</td>
+							            <td style="width: 106px" >&nbsp;</td>
+									</tr>
+								</table>
+							</td>
+					        <td height="100%" valign="top">
+								<table width="100%" cellpadding="0px" cellspacing="0px" style="line-height:23px;">
+									<tr height="40px" style="vertical-align:bottom" >
+							            <td width="135px">Naam:</td>
+							            <td width="300px">&nbsp;</td>
+							            <td>&nbsp</td>
+							        </tr>
+									<tr height="40px" style="vertical-align:bottom" >
+							            <td >Datum:</td>
+							            <td style="border-bottom:1px gray solid">&nbsp;</td>
+							            <td></td>
+							        </tr>
+									<tr height="40px" style="vertical-align:bottom" >
+							            <td >Handtekening:</td>
+							            <td colspan="2" >&nbsp;</td>
+							        </tr>
+								</table>
+							</td>
+						</tr>
+		
+					</table></td>        
+		        </tr> <!-- Einde handtekening ROW -->
+
+		    </table>
+
+    <table style="font-family:calibri, serif; font-size:18px; width: 1136px; height: 100%; bottom:0; "> 
+        <tr>
+            <td style="width:135px; height: 35px;"></td>
+            <td style="width:300px; height: 35px;"></td>
+            <td style="width:450px; height: 35px;"></td>
+            <td style="width:135px; height: 35px;"></td>
+            <td style="width:300px; height: 35px;"></td>
+            <td style="width:100px; height: 35px;"></td>
+        </tr>
+        <tr><td style="height: 20px"></tr>
+        <tr style="margin-top:30px">
+            <td colspan="3" style ="margin-top:10px"><strong>Namens de onderaannemer</strong></td>
+            <td colspan="3"><strong>Namens de opdrachtgever / aannemer</strong></td>
+        </tr>
+        <tr valign="bottom">
+            <td height="40px">Naam:</td>
+            <td colspan="2">{Projectleider}</td>
+            <td>Naam:</td>
+            <td style="border-bottom:1px gray solid"></td>
+            <td></td>
+        </tr>
+        <tr valign="bottom">
+            <td height="40px">Datum:</td>
+            <td style="border-bottom:1px gray solid"></td>
+            <td></td>
+            <td>Datum:</td>
+            <td style="border-bottom:1px gray solid"></td>
+            <td></td>
+        </tr>
+        <tr valign="bottom">
+            <td height="40px">Handtekening:</td>
+            <td ></td>
+            <td ></td>
+            <td >Handtekening:</td>
+            <td ></td>
+            <td ></td>
+        </tr>
+    </table>
+
+    </tr></td></table>
+<!-- /PROJECTTABEL -->
+
+</body>

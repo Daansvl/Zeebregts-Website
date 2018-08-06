@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="MandagenRegistratie.controls.Vakmannen.Overzicht.OverzichtWeekHeader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="185">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <Label x:Name="lblMa" Content="Ma" HorizontalContentAlignment="Right" Width="28" Margin="0,0,0,0" FontSize="11"></Label>
+            <Label x:Name="lblDi" Content="Di" HorizontalContentAlignment="Right" Width="28" Margin="0,0,0,0" FontSize="11"></Label>
+            <Label x:Name="lblWo" Content="Wo" HorizontalContentAlignment="Right" Width="28" Margin="0,0,0,0" FontSize="11"></Label>
+            <Label x:Name="lblDo" Content="Do" HorizontalContentAlignment="Right" Width="28" Margin="0,0,0,0" FontSize="11"></Label>
+            <Label x:Name="lblVr" Content="Vr" HorizontalContentAlignment="Right" Width="28" Margin="0,0,0,0" FontSize="11"></Label>
+            <Label x:Name="lblZa" Content="Za" HorizontalContentAlignment="Right" Width="28" Margin="0,0,0,0" FontSize="11"></Label>
+            <Label x:Name="lblZo" Content="Zo" HorizontalContentAlignment="Right" Width="28" Margin="0,0,0,0" FontSize="11"></Label>
+        </StackPanel>
+        <Border BorderThickness="1" x:Name="bbDivider" BorderBrush="Black">
+
+        </Border>
+    </StackPanel>
+</UserControl>

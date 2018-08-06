@@ -1,0 +1,88 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="zeebregtsCs.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="zeebregtsDBConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;"Server=SQL-SERVER;Database=zeebregtsdb;Trusted_Connection=Yes;Integrated Security=SSPI"&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">"Server=SQL-SERVER;Database=zeebregtsdb;Trusted_Connection=Yes;Integrated Security=SSPI"</Value>
+    </Setting>
+    <Setting Name="zeebregtsdbConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=SQL-SERVER;Initial Catalog=zeebregtsdb;Persist Security Info=True;User ID=daan;Password=Bl22sk22k!&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=SQL-SERVER;Initial Catalog=zeebregtsdb;Persist Security Info=True;User ID=daan;Password=Bl22sk22k!</Value>
+    </Setting>
+    <Setting Name="pr_btn_loc" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">3, 2</Value>
+    </Setting>
+    <Setting Name="up_btn_loc" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">3, 235</Value>
+    </Setting>
+    <Setting Name="be_btn_loc" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">112, 4</Value>
+    </Setting>
+    <Setting Name="pe_btn_loc" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">240, 4</Value>
+    </Setting>
+    <Setting Name="pl_btn_loc" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">229, 369</Value>
+    </Setting>
+    <Setting Name="se_btn_loc" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">240, 235</Value>
+    </Setting>
+    <Setting Name="MyLoc" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="start_pos" Type="System.Windows.Forms.FormStartPosition" Scope="User">
+      <Value Profile="(Default)">WindowsDefaultLocation</Value>
+    </Setting>
+    <Setting Name="MySize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">1024, 768</Value>
+    </Setting>
+    <Setting Name="MyState" Type="System.Windows.Forms.FormWindowState" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
+    </Setting>
+    <Setting Name="UL_check" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="mo_btn_loc" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">517, 208</Value>
+    </Setting>
+    <Setting Name="UserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PassWord" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="zeebregtsdbConnectionStringRemote" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=SQL-SERVER;Initial Catalog=zeebregtsdb;Persist Security Info=True;User ID=daan;Password=Bl22sk22k!&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=SQL-SERVER;Initial Catalog=zeebregtsdb;Persist Security Info=True;User ID=daan;Password=Bl22sk22k!</Value>
+    </Setting>
+    <Setting Name="ZeebregtsDbRemoteBeta" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=SQL-SERVER;Initial Catalog=zeebregtsdbBeta;Persist Security Info=True;User ID=daan;Password=Bl22sk22k!&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=SQL-SERVER;Initial Catalog=zeebregtsdbBeta;Persist Security Info=True;User ID=daan;Password=Bl22sk22k!</Value>
+    </Setting>
+    <Setting Name="ZeebregtsDbLocalBeta" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=SQL-SERVER;Initial Catalog=zeebregtsdbBeta;Trusted_Connection=Yes;Integrated Security=SSPI&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=SQL-SERVER;Initial Catalog=zeebregtsdbBeta;Trusted_Connection=Yes;Integrated Security=SSPI</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

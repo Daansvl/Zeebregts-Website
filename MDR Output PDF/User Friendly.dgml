@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph DataVirtualized="True" Layout="ForceDirected" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 @2 @7 Member=LijstOpties)" Category="CodeSchema_Method" Bounds="117.557627665347,343.02172151414,90.9930133333333,25.9384319999999" CodeSchemaProperty_IsPrivate="True" CommonLabel="LijstOpties" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" Label="LijstOpties" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/USMario.cs&quot; StartLineNumber=626 StartCharacterOffset=8 EndLineNumber=626 EndCharacterOffset=8)" />
+    <Node Id="(@1 @2 @7 Member=Vul_Alle_SelectieListBoxen)" Category="CodeSchema_Method" Bounds="26.1144274038672,-139.43462521667,173.766666666667,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="Vul_Alle_SelectieListBoxen" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" Label="Vul_Alle_SelectieListBoxen" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/USMario.cs&quot; StartLineNumber=1066 StartCharacterOffset=8 EndLineNumber=1066 EndCharacterOffset=8)" UseManualLocation="True" />
+    <Node Id="(@1 @2 @7 Member=WijzigPeriode)" Category="CodeSchema_Method" Bounds="7.60235772186535,-83.4746142323041,108.873333333333,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="WijzigPeriode" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" Label="WijzigPeriode" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/USMario.cs&quot; StartLineNumber=1498 StartCharacterOffset=8 EndLineNumber=1498 EndCharacterOffset=8)" />
+    <Node Id="(@1 @2 Type=USMarioStart Member=WindowsLogonIsManager)" Category="CodeSchema_Method" Bounds="397.05341304502,37.1334541805341,173.92,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="WindowsLogonIsManager" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" Label="WindowsLogonIsManager" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///d:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/USMarioStart.cs&quot; StartLineNumber=154 StartCharacterOffset=0 EndLineNumber=154 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@14 Namespace=System.Windows.Forms Type=CheckBox Member=Checked)" Category="CodeSchema_Property" Bounds="0,0,103.795728120715,25" CodeSchemaProperty_IsExternal="True" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" FunctionTypeFlags="Property Assignment" Group="Collapsed" Label="Checked" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" UseManualLocation="True" />
+    <Node Id="*DatumboxenAan/uit*ShowallDingenAan/uit" Category="Comment" Bounds="115.794918458076,110.811061089095,149.99,73.84" Label="* Datumboxen aan/uit&#xD;&#xA;* Showall dingen aan/uit&#xD;&#xA;* Week selectie&#xD;&#xA;* Select Projectleider" />
+    <Node Id="@10" Category="CodeSchema_Method" Bounds="10.4240271604309,28.8509610890951,190.083333333333,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="cbFriendlyUserInterface_Click" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" Label="cbFriendlyUserInterface_Click" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/USMario.cs&quot; StartLineNumber=2937 StartCharacterOffset=8 EndLineNumber=2937 EndCharacterOffset=8)" />
+    <Node Id="@11" Category="CodeSchema_Method" Bounds="365.281741213587,165.036717007514,100.28,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CommonLabel="StartScherm" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Constructor" Label="StartScherm" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///d:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/StartScherm.cs&quot; StartLineNumber=8 StartCharacterOffset=0 EndLineNumber=8 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@12" Category="CodeSchema_Method" Bounds="383.696937869948,95.4008102666263,106.396666666667,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CommonLabel="USMarioStart" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Constructor" Label="USMarioStart" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///d:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/USMarioStart.cs&quot; StartLineNumber=129 StartCharacterOffset=0 EndLineNumber=129 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@13" Category="CodeSchema_Field" Bounds="96.1088397760218,276.606215667069,161.353333333333,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="cbFriendlyUserInterface" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/USMario.Designer.cs&quot; StartLineNumber=1980 StartCharacterOffset=46 EndLineNumber=1980 EndCharacterOffset=46)" />
+    <Node Id="@15" Category="CodeSchema_Method" Bounds="15.6825754397408,220.651161089095,142.29,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="InitializeComponent" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" Label="InitializeComponent" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/USMario.Designer.cs&quot; StartLineNumber=28 StartCharacterOffset=8 EndLineNumber=28 EndCharacterOffset=8)" />
+    <Node Id="@16" Category="CodeSchema_Method" Bounds="106.419918458076,84.8109610890951,168.74,105.8402" CodeSchemaProperty_IsPrivate="True" CommonLabel="Lijst_Layout_Setttings" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" Group="Expanded" Label="Lijst_Layout_Setttings" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/USMario.cs&quot; StartLineNumber=703 StartCharacterOffset=0 EndLineNumber=703 EndCharacterOffset=0)" UseManualLocation="True">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@17" Category="CodeSchema_Method" Bounds="429.149542106407,221.003025580286,62.5799999999999,25.96" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" CommonLabel="Main" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" Label="Main" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///d:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/Program.cs&quot; StartLineNumber=18 StartCharacterOffset=0 EndLineNumber=18 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@6" Category="CodeSchema_Method" Bounds="298.286108773074,221.003025580286,100.863333333333,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="OpenPagina" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" Label="OpenPagina" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///d:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/StartScherm.cs&quot; StartLineNumber=64 StartCharacterOffset=0 EndLineNumber=64 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@8" Category="CodeSchema_Method" Bounds="187.97267543974,220.651161089095,80.3133333333333,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="Bevestig" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" Label="Bevestig" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///D:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/USMario.cs&quot; StartLineNumber=2531 StartCharacterOffset=0 EndLineNumber=2531 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@9" Category="CodeSchema_Method" Bounds="337.837085149369,276.963025580286,112.27,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="btVerder_Click" DelayedCrossGroupLinksState="Fetched" FunctionTypeFlags="Method" Label="btVerder_Click" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=&quot;file:///d:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/StartScherm.cs&quot; StartLineNumber=81 StartCharacterOffset=0 EndLineNumber=81 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="ExternalCodeRootNode" Category="ExternalCallStackEntry" Bounds="480.107185149369,276.963025580286,92.9866666666667,25.96" Label="External Code">
+      <Category Ref="CallStackEntry" />
+    </Node>
+    <Node Id="_standardGraphExternalsGroup" Category="Externals" Bounds="0,-27.4266592040958,86.99,25" Group="Collapsed" Label="Externals" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="(@1 @2 @7 Member=LijstOpties)" Target="@13" Category="CodeSchema_FieldReference" Bounds="165.711631282343,311.386231802815,6.52335092253398,31.6810757883854" Weight="1">
+      <Category Ref="CodeSchema_FieldRead" />
+    </Link>
+    <Link Source="(@1 @2 @7 Member=WijzigPeriode)" Target="(@1 @2 @7 Member=Vul_Alle_SelectieListBoxen)" Category="CodeSchema_Calls" Bounds="73.8760386267549,-106.816828254559,21.2291982421771,23.3418725329484" Weight="1" />
+    <Link Source="@10" Target="@16" Category="CodeSchema_Calls" Bounds="117.01425775675,54.8109610890951,20.7092009684942,23.2760913139037" Weight="1" />
+    <Link Source="@11" Target="@12" Category="CallStackDirectCall" Bounds="419.478310163284,129.917259179894,10.7892075593974,35.1257664003922">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@11" Target="@6" Category="CodeSchema_Calls" Bounds="371.103951064711,191.003025580286,28.8991996723247,24.2191383940607" Weight="1" />
+    <Link Source="@12" Target="(@1 @2 Type=USMarioStart Member=WindowsLogonIsManager)" Category="CallStackDirectCall" Bounds="447.394438418652,70.0373667641794,20.4744705825761,25.3165935445161">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@15" Target="@10" Category="CodeSchema_FunctionPointer" Bounds="88.0889024699936,63.7687665727818,15.2449926636523,156.882394516313" Weight="1" />
+    <Link Source="@15" Target="@13" Category="CodeSchema_FieldRead" Bounds="107.678883426651,246.611161089095,40.5519981449321,25.243737047654" Weight="14">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@16" Target="*DatumboxenAan/uit*ShowallDingenAan/uit" Category="Contains" />
+    <Link Source="@16" Target="@13" Category="CodeSchema_FieldRead" Bounds="178.755245308304,190.651161089095,7.13255167046108,76.9983667783409" Weight="19" />
+    <Link Source="@17" Target="@11" Category="CallStackDirectCall" Bounds="431.553189366027,198.019811767742,18.4605643076637,22.9832138125441" Weight="1">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@17" Target="@9" Category="CallStackIndirectCall" Bounds="416.27414798778,246.963025580286,28.748174831594,24.2035416612348" Label="External Code" LabelBounds="431.936337256636,260.594761644543,72.9866666666667,15.96" />
+    <Link Source="@6" Target="@8" Category="CallStackDirectCall" Bounds="277.285970459795,233.774595011787,21.0001383132791,0.0612762167836536">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@8" Target="@13" Category="CodeSchema_FieldRead" Bounds="194.735164407697,246.611161089095,21.4703439534306,23.3721025023406" Weight="1" />
+    <Link Source="@8" Target="@16" Category="CodeSchema_Calls" Bounds="214.660186484159,199.037874828049,8.41529520963846,21.6132862610461" Label="" LabelBounds="222.877800117778,198.671157848964,0.0999999999999943,15.96" Weight="1">
+      <Category Ref="CallStackDirectCall" />
+    </Link>
+    <Link Source="@9" Target="@6" Category="CallStackDirectCall" Bounds="364.873835295163,253.9610810475,18.6014496392136,23.0019445327861">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="ExternalCodeRootNode" Target="@17" Category="CallStackIndirectCall" Bounds="482.657294630117,252.775151986574,28.5970931634449,24.1878735937118" />
+    <Link Source="_standardGraphExternalsGroup" Target="(@14 Namespace=System.Windows.Forms Type=CheckBox Member=Checked)" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="CallStackDirectCall" Label="Call Stack direct call" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Call Stack direct call" OutgoingActionLabel="Call Stack direct call" />
+    <Category Id="CallStackEntry" Label="Call Stack Entry" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Call Stack Entry" />
+    <Category Id="CallStackIndirectCall" Label="Call Stack indirect call" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Call Stack indirect call" OutgoingActionLabel="Call Stack indirect call" />
+    <Category Id="CodeSchema_Calls" Label="Calls" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Called By" OutgoingActionLabel="Calls" />
+    <Category Id="CodeSchema_Field" Label="Field" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Fields" />
+    <Category Id="CodeSchema_FieldRead" Label="Field Read" BasedOn="CodeSchema_FieldReference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Read By" OutgoingActionLabel="Reads Fields" />
+    <Category Id="CodeSchema_FieldReference" Label="Field Reference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References Fields" />
+    <Category Id="CodeSchema_FieldWrite" Label="Field Write" BasedOn="CodeSchema_FieldReference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Written By" OutgoingActionLabel="Writes Fields" />
+    <Category Id="CodeSchema_FunctionPointer" Label="Function Pointer" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Function Pointers" OutgoingActionLabel="Function Pointers" />
+    <Category Id="CodeSchema_Member" Label="Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Members" />
+    <Category Id="CodeSchema_Method" Label="Method" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" NavigationActionLabel="Methods" />
+    <Category Id="CodeSchema_Property" Label="Property" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Property" NavigationActionLabel="Properties" />
+    <Category Id="CodeSchema_SourceLocation" Label="Source Location" Icon="File" />
+    <Category Id="Comment" Label="Comment" Description="Represents a user defined comment on the diagram" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Comments" />
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="ExternalCallStackEntry" Label="External Call Stack Entry" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="External Call Stack Entry" />
+    <Category Id="Externals" Label="Externals" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Externals" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsConstructor" Label="Is Constructor" Description="Flag to indicate the method is a constructor" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsExternal" Label="Is External" Description="Flag indicating whether this node is considered external" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPrivate" Label="Is Private" Description="Flag to indicate the scope is Private" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPublic" Label="Is Public" Description="Flag to indicate the scope is Public" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsStatic" Label="Is Static" Description="Flag to indicate the member is a static member" DataType="System.Boolean" />
+    <Property Id="CommonLabel" DataType="System.String" />
+    <Property Id="DataVirtualized" Label="Data Virtualized" Description="If true, the graph can contain nodes and links that represent data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="DelayedChildNodesState" Label="Delayed Child Nodes State" Description="Unspecified if the delayed child nodes state is not specified. NotFetched if the group contains child nodes that are not fetched into the graph yet. Fetched if the group has all its delayed child nodes already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="DelayedCrossGroupLinksState" Label="Delayed Cross-Group Links State" Description="Unspecified if the delayed cross-group links state is not specified. NotFetched if delayed cross-group links on this node are not fetched into the graph yet. Fetched if all delayed cross-group links have already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="FunctionTypeFlags" Label="FunctionTypeFlags" Description="FunctionTypeFlags" DataType="System.String" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="LabelBounds" DataType="System.Windows.Rect" />
+    <Property Id="Language" Label="Language" Description="Language" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="SourceLocation" Label="Start Line Number" DataType="Microsoft.VisualStudio.GraphModel.CodeSchema.SourceLocation" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
+    <Property Id="Weight" Label="Weight" Description="Weight" DataType="System.Double" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="Member" Label="Member" ValueType="System.Object" />
+    <Name Id="Name" Label="Name" ValueType="System.String" />
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+    <Name Id="OverloadingParameters" Label="Parameter" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" Formatter="NameValueNoEscape" />
+    <Name Id="Type" Label="Type" ValueType="System.Object" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(6bfba866-8797-494f-b07b-5c2dcb054e90.OutputPathUri)" />
+    <Alias n="2" Id="Namespace=MDR2PDF" />
+    <Alias n="5" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll" />
+    <Alias n="6" Id="(@1 @2 Type=StartScherm Member=(Name=OpenPagina OverloadingParameters=[(@5 Namespace=System Type=Int32)]))" />
+    <Alias n="7" Id="Type=USMario" />
+    <Alias n="8" Id="(@1 @2 @7 Member=(Name=Bevestig OverloadingParameters=[(@1 @2 Type=MarioPDFSettings)]))" />
+    <Alias n="9" Id="(@1 @2 Type=StartScherm Member=(Name=btVerder_Click OverloadingParameters=[(@5 Namespace=System Type=Object),(@5 Namespace=System Type=EventArgs)]))" />
+    <Alias n="10" Id="(@1 @2 @7 Member=(Name=cbFriendlyUserInterface_Click OverloadingParameters=[(@5 Namespace=System Type=Object),(@5 Namespace=System Type=EventArgs)]))" />
+    <Alias n="11" Id="(@1 @2 Type=StartScherm Member=.ctor)" />
+    <Alias n="12" Id="(@1 @2 Type=USMarioStart Member=.ctor)" />
+    <Alias n="13" Id="(@1 @2 @7 Member=cbFriendlyUserInterface)" />
+    <Alias n="14" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.5/System.Windows.Forms.dll" />
+    <Alias n="15" Id="(@1 @2 @7 Member=InitializeComponent)" />
+    <Alias n="16" Id="(@1 @2 @7 Member=Lijst_Layout_Setttings)" />
+    <Alias n="17" Id="(@1 @2 Type=Program Member=Main)" />
+  </IdentifierAliases>
+  <Styles>
+    <Style TargetType="Link" GroupLabel="Current Call Stack Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CurrentCallStackCall')" />
+      <Setter Property="Stroke" Value="#FFD93701" />
+      <Setter Property="Weight" Value="1" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Call Stack Indirect Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CallStackIndirectCall')" />
+      <Setter Property="Stroke" Value="#FFB8B8B8" />
+      <Setter Property="StrokeDashArray" Value="4 1" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Call Stack Direct Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CallStackDirectCall')" />
+      <Setter Property="Stroke" Value="#FFB8B8B8" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="External And Current" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('ExternalCallStackEntry') And HasCategory('CurrentCallStackEntry')" />
+      <Setter Property="Background" Value="#FFFFF8F0" />
+      <Setter Property="Stroke" Value="#FFCE5100" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Current Call Stack Node" ValueLabel="True">
+      <Condition Expression="HasCategory('CurrentCallStackEntry') And !HasCategory('QueryResult')" />
+      <Setter Property="Background" Value="#FFFFE3C6" />
+      <Setter Property="Stroke" Value="#FFD93701" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="External Call Stack Entry" ValueLabel="True">
+      <Condition Expression="HasCategory('ExternalCallStackEntry')" />
+      <Setter Property="Background" Value="#FFF7F7F7" />
+      <Setter Property="StrokeDashArray" Value="1 3" />
+      <Setter Property="Foreground" Value="#FFA5A5A5" />
+      <Setter Property="Stroke" Value="#FFA5A5A5" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
+      <Condition Expression="HasCategory('QueryResult')" />
+      <Setter Property="Background" Value="#FFBCFFBE" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Assembly" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Assembly')" />
+      <Setter Property="Background" Value="#FF094167" />
+      <Setter Property="Stroke" Value="#FF094167" />
+      <Setter Property="Icon" Value="CodeSchema_Assembly" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Namespace" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Namespace')" />
+      <Setter Property="Background" Value="#FF0E619A" />
+      <Setter Property="Stroke" Value="#FF0E619A" />
+      <Setter Property="Icon" Value="CodeSchema_Namespace" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Interface" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Interface')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Interface" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Struct" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Struct')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Struct" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enumeration" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Enum')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Enum" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Delegate" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Delegate')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Delegate" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Class" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Type')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Class" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Property')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Property" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Method" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Method') Or HasCategory('CodeSchema_CallStackUnresolvedMethod')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Method" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Event" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Event')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Event" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Field')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Field" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Out Parameter" ValueLabel="True">
+      <Condition Expression="CodeSchemaProperty_IsOut = 'True'" />
+      <Setter Property="Icon" Value="CodeSchema_OutParameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Parameter" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_Parameter')" />
+      <Setter Property="Icon" Value="CodeSchema_Parameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Local Variable" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_LocalExpression')" />
+      <Setter Property="Icon" Value="CodeSchema_LocalExpression" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Externals" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Externals')" />
+      <Setter Property="Background" Value="#FF424242" />
+      <Setter Property="Stroke" Value="#FF424242" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Inherits From" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('InheritsFrom') And Target.HasCategory('CodeSchema_Class')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('Implements') And Target.HasCategory('CodeSchema_Interface')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Field Read" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Target.HasCategory('CodeSchema_Field') And HasCategory('CodeSchema_FieldRead')" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Comment Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Source.HasCategory('Comment')" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Cursor Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCursorLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Disabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="DisabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="EnabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Instruction Pointer Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsInstructionPointerLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Current Callstack Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCurrentCallstackFrame" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Comment" ValueLabel="Has comment">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="#FFFFFACD" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="MaxWidth" Value="250" />
+    </Style>
+  </Styles>
+  <Paths>
+    <Path Id="6bfba866-8797-494f-b07b-5c2dcb054e90.OutputPath" Value="D:\- Data\Marino\Documents\- Essed automatisering\Zeebregts\MDR Output PDF\ProjectFiles\bin\Debug\MDR Output PDF.exe" />
+    <Path Id="6bfba866-8797-494f-b07b-5c2dcb054e90.OutputPathUri" Value="file:///D:/- Data/Marino/Documents/- Essed automatisering/Zeebregts/MDR Output PDF/ProjectFiles/bin/Debug/MDR Output PDF.exe" />
+    <Path Id="FxReferenceAssemblies" Value="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework" />
+    <Path Id="FxReferenceAssembliesUri" Value="file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework" />
+  </Paths>
+</DirectedGraph>

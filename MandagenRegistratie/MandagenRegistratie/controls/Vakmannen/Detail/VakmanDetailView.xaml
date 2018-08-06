@@ -1,0 +1,106 @@
+﻿<local:MenuControl x:Class="MandagenRegistratie.controls.Vakmannen.Detail.VakmanDetailView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZeebregtsLogic;assembly=ZeebregtsLogic"
+             mc:Ignorable="d" 
+             d:DesignHeight="690" d:DesignWidth="1050" SizeChanged="MenuControl_SizeChanged">
+    <DockPanel LastChildFill="True">
+        <TabControl VerticalAlignment="Stretch" BorderThickness="0" TabStripPlacement="Bottom" MinHeight="580" Name="tabControl" Background="White" DockPanel.Dock="Top">
+            <TabItem Header="Planning" Name="tabPlanning" BorderThickness="0" IsEnabled="True" IsSelected="True" GotFocus="tabPlanning_GotFocus">
+            </TabItem>
+            <TabItem Header="Gegevens" Name="tabDetails" GotFocus="tabDetails_GotFocus" BorderThickness="0">
+                <ScrollViewer>
+                    <WrapPanel x:Name="wpDetails" Width="640">
+                        <Label Content="Vakman" FontWeight="ExtraBold" Width="200px" Background="#FFFFFFFF" Height="25"  />
+                        <Label Width="250px" FontWeight="ExtraBold" />
+                        <Label Content="VakmanId" Width="200px" Background="#FFD8E4BC" Height="25" />
+                        <Label x:Name="lblVakmanId" Width="250px" FontWeight="ExtraBold" />
+                        <Label Content="Naam" Width="200px" Background="#FFD8E4BC" Height="25" />
+                        <Label x:Name="lblVakmanNaam" Width="250px" FontWeight="ExtraBold" />
+                        <Label x:Name="lblBsn" Content="Bsn" Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label x:Name="txtBsn" Width="250px"  />
+                        <Label x:Name="lblGebdatum" Content="Geboortedatum" Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label x:Name="txtGebdatum" Width="250px"  />
+                        <Label x:Name="lblTelefoonPrive1" Content="Telefoonnummer 1" Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label x:Name="txtTelefoonPrive1" Width="250px"  />
+                        <Label x:Name="lblTelefoonPrive2" Content="Telefoonnummer 2" Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label x:Name="txtTelefoonPrive2" Width="250px"  />
+                        <Label x:Name="lblTelefoonPrive3" Content="Telefoonnummer 3" Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label x:Name="txtTelefoonPrive3" Width="250px"  />
+                        <Label x:Name="lblEmail" Content="Email" Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label x:Name="txtEmail" Width="250px"  />
+                        <Label x:Name="lblWoonadres" Content="Woonadres" FontWeight="ExtraBold" Width="450px" Background="#FFFFFFFF" Height="25" Margin="0,25,0,0"  />
+                        <Label x:Name="lblAdres" Content="Adres" Width="200px" Height="25" Background="#FFD8E4BC"  />
+                        <Label x:Name="txtAdres" Width="250px"  />
+                        <Label x:Name="lblPostcode" Content="Postcode" Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label x:Name="txtPostcode" Width="250px"  />
+                        <!--<Label x:Name="lblPlaats" Content="Woonplaats: " Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label x:Name="txtPlaats" Width="250px"  />-->
+                        <Label x:Name="lblLand" Content="Land" Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label x:Name="txtLand" Width="250px"  />
+                        <Label Content="Werkrelatie" FontWeight="ExtraBold" Width="450px" Background="#FFFFFFFF" Height="25" Margin="0,25,0,0"  />
+                        <Label Content="Werkrelatie" Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label x:Name="lblWerkrelatie" Width="250px" />
+                        <Label x:Name="lbWerkrelatie" Content="Werkgever" Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label x:Name="lblWerkgever" Width="250px" />
+                        <Label Content="Tools" FontWeight="ExtraBold" Width="450px" Background="#FFFFFFFF" Height="25" Margin="0,25,0,0"  />
+                        <Label Content="Urenregistratie" Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label Content="Ja" Width="250px" Height="25" />
+                        <Label Content="Chauffeursregistratie" Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label x:Name="lblIsChauffeur" Width="250px" Height="25" />
+                        <Label Content="Bijrijdersregistratie" Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label x:Name="lblIsBijrijder" Width="250px" Height="25" />
+                        <Label Content="Instellingen tools" FontWeight="ExtraBold" Width="450px" Background="#FFFFFFFF" Height="25" Margin="0,25,0,0"  />
+                        <Label Content="Default aantal uren op" Width="200px" Background="#FFD8E4BC" Height="25" />
+                        <Label Content="Ma" Width="40" Height="23" />
+                        <Label Content="Di" Width="40" Height="23" />
+                        <Label Content="Wo" Width="40" Height="23" />
+                        <Label Content="Do" Width="40" Height="23" />
+                        <Label Content="Vr" Width="40" Height="23" />
+                        <Label Content="Za" Width="40" Height="23" />
+                        <Label Content="Zo" Width="40" Height="23" />
+                        <Label x:Name="lblVakmanWerkweek" Content="Uren" Width="200px" Background="#FFD8E4BC" Height="25"  />
+                        <Label Height="23" Name="txtMa" Width="40" />
+                        <Label Height="23" Name="txtDi" Width="40" />
+                        <Label Height="23" Name="txtWo" Width="40" />
+                        <Label Height="23" Name="txtDo" Width="40" />
+                        <Label Height="23" Name="txtVr" Width="40" />
+                        <Label Height="23" Name="txtZa" Width="40" />
+                        <Label Height="23" Name="txtZo" Width="40" />
+                        <WrapPanel x:Name="wpChauffeur" Orientation="Horizontal" Width="640">
+                            <Label Content="Chauffeur" Width="200px" Background="#FFD8E4BC" Height="25" />
+                            <Label Height="23" Name="txtChMa" Width="40" />
+                            <Label Height="23" Name="txtChDi" Width="40" />
+                            <Label Height="23" Name="txtChWo" Width="40" />
+                            <Label Height="23" Name="txtChDo" Width="40" />
+                            <Label Height="23" Name="txtChVr" Width="40" />
+                            <Label Height="23" Name="txtChZa" Width="40" />
+                            <Label Height="23" Name="txtChZo" Width="40" />
+                        </WrapPanel>
+                        <WrapPanel x:Name="wpBijrijder" Orientation="Horizontal" Width="640">
+                            <Label Content="Bijrijder" Width="200px" Background="#FFD8E4BC" Height="25" />
+                            <Label Height="23" Name="txtBrMa" Width="40" />
+                            <Label Height="23" Name="txtBrDi" Width="40" />
+                            <Label Height="23" Name="txtBrWo" Width="40" />
+                            <Label Height="23" Name="txtBrDo" Width="40" />
+                            <Label Height="23" Name="txtBrVr" Width="40" />
+                            <Label Height="23" Name="txtBrZa" Width="40" />
+                            <Label Height="23" Name="txtBrZo" Width="40" />
+                        </WrapPanel>
+
+                        <!-- <Label Content="Default begintijd: " Width="200px" Background="#FFD8E4BC"  />
+                    <Label Height="23" Name="ddlDefaultBeginuur" Width="60">
+                        </Label>
+                        <Label Content="uur" Width="30px"  />
+                    <Label Height="23" Name="ddlDefaultBeginminuut" Width="60">
+                        </Label>
+                        <Label Content="minuten" Width="50px"  />-->
+
+                    </WrapPanel>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</local:MenuControl>

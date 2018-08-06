@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="zeebregtsCs.AdvancedFilter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm ="clr-namespace:zeebregtsCs"
+             mc:Ignorable="d" 
+             d:DesignHeight="120" d:DesignWidth="986">
+    <UserControl.DataContext>
+        <vm:MenuEngine />
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <Style TargetType="{x:Type ComboBox}" x:Key="SelectFase1">
+                <EventSetter Event="SelectionChanged" Handler="Fase1Select" />
+                
+            </Style>
+            <Style TargetType="{x:Type ComboBox}" x:Key="SelectFase2">
+                <EventSetter Event="SelectionChanged" Handler="Fase2Select" />
+                
+            </Style>
+            <ImageSource x:Key="PijlUp">Resources/pijl_up.jpg</ImageSource>
+            <ImageSource x:Key="PijlDown">Resources/pijl_dwn.jpg</ImageSource>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="40"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="400"/>
+            </Grid.RowDefinitions>
+        <Button Name="AdvBtn1" Grid.Column="4" BorderThickness="0" Click="AdvBtn1_Click" Background="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" IsTabStop="False" Margin="6,0">
+            <Button.Content>
+                <Image Name="row1image" Source="Resources/pijl_dwn.jpg" Stretch="None" Focusable="False"></Image>
+            </Button.Content>
+        </Button>
+        <Button Name="AdvBtn2" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="1" BorderThickness="0" Click="AdvBtn2_Click" Background="White" VerticalAlignment="Center" HorizontalAlignment="Center" IsTabStop="False">
+            <Button.Content>
+                <Image Name="row2image" Source="Resources/pijl_dwn.jpg" Stretch="None"></Image>
+            </Button.Content>
+        </Button>
+        <Button Name="AdvBtn3" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="1" BorderThickness="0" Click="AdvBtn3_Click" Background="White" VerticalAlignment="Center" HorizontalAlignment="Center" IsTabStop="False">
+            <Button.Content>
+                <Image Name="row3image" Source="Resources/pijl_dwn.jpg" Stretch="None"></Image>
+            </Button.Content>
+        </Button>
+        <Button Name="AdvBtn4" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="1" BorderThickness="0" Click="AdvBtn4_Click" Background="White" VerticalAlignment="Center" HorizontalAlignment="Center" IsTabStop="False">
+            <Button.Content>
+                <Image Name="row4image" Source="Resources/pijl_dwn.jpg" Stretch="None"></Image>
+            </Button.Content>
+        </Button>
+            <CheckBox Name="quickcheck1" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5" Checked="quickcheck_Checked" Unchecked="quickcheck_Unchecked" Visibility="Hidden" IsTabStop="False"/>
+            <Label Name="fase0lbl1" MouseDown="q_lbl_MouseDown" Visibility="Hidden" IsTabStop="False" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top">Uitgebreid zoeken</Label>
+            <ComboBox Name="fase1cbb1" GotFocus="cbb_GotFocus" LostFocus="cbb_LostFocus" DropDownClosed="cbb_DropDownClosed" Grid.Column="1" PreviewTextInput="cbb_PreviewTextInput" KeyUp="overig_cbb_KeyUp"  KeyDown="cbb_KeyDown" Style="{StaticResource SelectFase1}"  IsEditable="True" IsTextSearchEnabled="True" TextSearch.TextPath="Text" Margin="5,5,5,0"  ItemsSource="{Binding Path=Fase1}" DisplayMemberPath="Text" SelectedValuePath="Waarde" Visibility="Hidden" Height="20" VerticalAlignment="Top" />
+            <TextBox  Name="Quicktb1" Grid.Column="2" Grid.Row="0" PreviewMouseUp="Quicktb_PreviewMouseUp" LostFocus="Quicktb_LostFocus" GotFocus="Quicktb_GotFocus"  KeyDown="Quicktb_KeyDown" PreviewKeyDown="Quicktb_KeyDown" VerticalAlignment="Top" Margin="5" TextChanged="Quicktb_TextChanged" Visibility="Hidden" />
+            <ComboBox Name="fase2cbb1" GotFocus="cbb_GotFocus" LostFocus="cbb_LostFocus" DropDownClosed="cbb_DropDownClosed" Grid.Column="2" PreviewTextInput="cbb_PreviewTextInput"  KeyUp="overig_cbb_KeyUp" KeyDown="cbb_KeyDown" Style="{StaticResource SelectFase2}" Grid.Row="0" VerticalAlignment="Top" IsEditable="True"  IsTextSearchEnabled="True" Margin="5" Visibility="Hidden"/>
+            <TextBox Name="fase3tbb1" PreviewMouseUp="Quicktb_PreviewMouseUp" LostFocus="Quicktb_LostFocus" GotFocus="Quicktb_GotFocus" KeyDown="Quicktb_KeyDown" PreviewKeyDown="Quicktb_KeyDown"  Grid.Column="3" Grid.Row="0"  VerticalAlignment="Top" Margin="5" TextChanged="fase3tbb_TextChanged" Visibility="Hidden" />
+            <ComboBox Name="fase3cbb1" GotFocus="cbb_GotFocus" LostFocus="cbb_LostFocus" Grid.Column="3" PreviewTextInput="cbb_PreviewTextInput"  KeyUp="overig_cbb_KeyUp"  Grid.Row="0" KeyDown="cbb_KeyDown" SelectionChanged="fase3cbb_SelectionChanged" VerticalAlignment="Top" Margin="5" IsEditable="True" IsTextSearchEnabled="True" Visibility="Hidden" />
+            <vm:multibox x:Name="fase3mcbb1"  HorizontalAlignment="Stretch" Grid.Column="3" Grid.Row="0" VerticalAlignment="Top" Visibility="Hidden" />
+            <RadioButton Name="fase3ckb1J"  Grid.Column="3" Grid.Row="0" Checked="fase3ckb_Checked" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" Visibility="Hidden">wel actief</RadioButton>
+            <RadioButton Name="fase3ckb1N" Grid.Column="3" Grid.Row="0"  Checked="fase3ckb_Checked" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Visibility="Hidden">niet actief</RadioButton>
+
+            <CheckBox Name="quickcheck2" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5" Checked="quickcheck_Checked" Unchecked="quickcheck_Unchecked" Visibility="Hidden" IsTabStop="False" />
+            <Label Name="fase0lbl2" Visibility="Hidden" IsTabStop="False" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top">Uitgebreid zoeken</Label>
+            <ComboBox Name="fase1cbb2" PreviewTextInput="cbb_PreviewTextInput" GotFocus="cbb_GotFocus" LostFocus="cbb_LostFocus" DropDownClosed="cbb_DropDownClosed" Grid.Column="1" KeyUp="overig_cbb_KeyUp" KeyDown="cbb_KeyDown" Style="{StaticResource SelectFase1}" Grid.Row="1" VerticalAlignment="Top" IsEditable="True"  IsTextSearchEnabled="True" Margin="5"  ItemsSource="{Binding Path=Fase1}" DisplayMemberPath="Text" SelectedValuePath="Waarde" Visibility="Hidden" />
+            <TextBox Name="Quicktb2" Grid.Column="2" Grid.Row="1" PreviewMouseUp="Quicktb_PreviewMouseUp" LostFocus="Quicktb_LostFocus" GotFocus="Quicktb_GotFocus" KeyDown="Quicktb_KeyDown" PreviewKeyDown="Quicktb_KeyDown" VerticalAlignment="Top" Margin="5" TextChanged="Quicktb_TextChanged" Visibility="Hidden" />
+            <ComboBox Name="fase2cbb2" PreviewTextInput="cbb_PreviewTextInput" GotFocus="cbb_GotFocus" LostFocus="cbb_LostFocus" DropDownClosed="cbb_DropDownClosed" Grid.Column="2" KeyUp="overig_cbb_KeyUp" KeyDown="cbb_KeyDown" Style="{StaticResource SelectFase2}" Grid.Row="1" VerticalAlignment="Top" IsEditable="True"  IsTextSearchEnabled="True" Margin="5" Visibility="Hidden" />
+            <TextBox Name="fase3tbb2" KeyDown="Quicktb_KeyDown" PreviewKeyDown="Quicktb_KeyDown" PreviewMouseUp="Quicktb_PreviewMouseUp" LostFocus="Quicktb_LostFocus" GotFocus="Quicktb_GotFocus"  Grid.Column="3" Grid.Row="1" VerticalAlignment="Top" Margin="5" TextChanged="fase3tbb_TextChanged" Visibility="Hidden" />
+            <ComboBox Name="fase3cbb2" PreviewTextInput="cbb_PreviewTextInput" GotFocus="cbb_GotFocus" LostFocus="cbb_LostFocus" Grid.Column="3" KeyUp="overig_cbb_KeyUp" Grid.Row="1" KeyDown="cbb_KeyDown" SelectionChanged="fase3cbb_SelectionChanged" VerticalAlignment="Top" Margin="5" IsEditable="True" IsTextSearchEnabled="True" Visibility="Hidden" />
+            <vm:multibox x:Name="fase3mcbb2" Grid.Column="3" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" Visibility="Hidden" />
+            <RadioButton Name="fase3ckb2J" Grid.Column="3" Grid.Row="1" Checked="fase3ckb_Checked" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" Visibility="Hidden">wel actief</RadioButton>
+            <RadioButton Name="fase3ckb2N" Grid.Column="3" Grid.Row="1" Checked="fase3ckb_Checked" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Visibility="Hidden">niet actief</RadioButton>
+
+            <CheckBox Name="quickcheck3" Grid.Row="2" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5" Checked="quickcheck_Checked" Unchecked="quickcheck_Unchecked" Visibility="Hidden" IsTabStop="False" />
+            <Label Name="fase0lbl3" Visibility="Hidden" IsTabStop="False" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top">Uitgebreid zoeken</Label>
+            <ComboBox Name="fase1cbb3" PreviewTextInput="cbb_PreviewTextInput" GotFocus="cbb_GotFocus" LostFocus="cbb_LostFocus" DropDownClosed="cbb_DropDownClosed" Grid.Column="1" KeyUp="overig_cbb_KeyUp" KeyDown="cbb_KeyDown" Style="{StaticResource SelectFase1}" Grid.Row="2" VerticalAlignment="Top" IsEditable="True"  IsTextSearchEnabled="True" Margin="5"  ItemsSource="{Binding Path=Fase1}" DisplayMemberPath="Text" SelectedValuePath="Waarde" Visibility="Hidden" />
+            <TextBox Name="Quicktb3" Grid.Column="2" Grid.Row="2" PreviewMouseUp="Quicktb_PreviewMouseUp" LostFocus="Quicktb_LostFocus" GotFocus="Quicktb_GotFocus" KeyDown="Quicktb_KeyDown" PreviewKeyDown="Quicktb_KeyDown" VerticalAlignment="Top" Margin="5" TextChanged="Quicktb_TextChanged" Visibility="Hidden" />
+            <ComboBox Name="fase2cbb3" PreviewTextInput="cbb_PreviewTextInput" GotFocus="cbb_GotFocus" LostFocus="cbb_LostFocus" DropDownClosed="cbb_DropDownClosed" Grid.Column="2" KeyUp="overig_cbb_KeyUp" KeyDown="cbb_KeyDown" Style="{StaticResource SelectFase2}" Grid.Row="2" VerticalAlignment="Top" IsEditable="True"  IsTextSearchEnabled="True" Margin="5" Visibility="Hidden" />
+            <TextBox Name="fase3tbb3" KeyDown="Quicktb_KeyDown" PreviewKeyDown="Quicktb_KeyDown" PreviewMouseUp="Quicktb_PreviewMouseUp" LostFocus="Quicktb_LostFocus" GotFocus="Quicktb_GotFocus"  Grid.Column="3" Grid.Row="2" VerticalAlignment="Top" Margin="5" TextChanged="fase3tbb_TextChanged" Visibility="Hidden" />
+            <ComboBox Name="fase3cbb3" PreviewTextInput="cbb_PreviewTextInput" GotFocus="cbb_GotFocus" LostFocus="cbb_LostFocus"  Grid.Column="3" KeyUp="overig_cbb_KeyUp" Grid.Row="2" KeyDown="cbb_KeyDown" SelectionChanged="fase3cbb_SelectionChanged" VerticalAlignment="Top" Margin="5" IsEditable="True" IsTextSearchEnabled="True" Visibility="Hidden" />
+            <vm:multibox x:Name="fase3mcbb3" Grid.Column="3" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" Visibility="Hidden" />
+            <RadioButton Name="fase3ckb3J" Grid.Column="3" Grid.Row="2" Checked="fase3ckb_Checked" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" Visibility="Hidden">wel actief</RadioButton>
+            <RadioButton Name="fase3ckb3N" Grid.Column="3" Grid.Row="2" Checked="fase3ckb_Checked" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Visibility="Hidden">niet actief</RadioButton>
+
+            <CheckBox Name="quickcheck4" Grid.Row="3" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5" Checked="quickcheck_Checked" Unchecked="quickcheck_Unchecked" Visibility="Hidden" IsTabStop="False" />
+            <Label Name="fase0lbl4" Visibility="Hidden" IsTabStop="False" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top">Uitgebreid zoeken</Label>
+            <ComboBox Name="fase1cbb4" PreviewTextInput="cbb_PreviewTextInput" GotFocus="cbb_GotFocus" LostFocus="cbb_LostFocus" DropDownClosed="cbb_DropDownClosed" Grid.Column="1" KeyUp="overig_cbb_KeyUp" KeyDown="cbb_KeyDown" Style="{StaticResource SelectFase1}" Grid.Row="3" VerticalAlignment="Top" IsEditable="True"  IsTextSearchEnabled="True" Margin="5"  ItemsSource="{Binding Path=Fase1}" DisplayMemberPath="Text" SelectedValuePath="Waarde" Visibility="Hidden" />
+            <TextBox Name="Quicktb4" Grid.Column="2" Grid.Row="3" PreviewMouseUp="Quicktb_PreviewMouseUp" LostFocus="Quicktb_LostFocus" GotFocus="Quicktb_GotFocus" KeyDown="Quicktb_KeyDown" PreviewKeyDown="Quicktb_KeyDown" VerticalAlignment="Top" Margin="5" TextChanged="Quicktb_TextChanged" Visibility="Hidden" />
+            <ComboBox Name="fase2cbb4" PreviewTextInput="cbb_PreviewTextInput" GotFocus="cbb_GotFocus" LostFocus="cbb_LostFocus" DropDownClosed="cbb_DropDownClosed" Grid.Column="2" KeyUp="overig_cbb_KeyUp" KeyDown="cbb_KeyDown" Style="{StaticResource SelectFase2}" Grid.Row="3" VerticalAlignment="Top" IsEditable="True"  IsTextSearchEnabled="True" Margin="5" Visibility="Hidden" />
+            <TextBox Name="fase3tbb4" KeyDown="Quicktb_KeyDown" PreviewKeyDown="Quicktb_KeyDown" PreviewMouseUp="Quicktb_PreviewMouseUp" LostFocus="Quicktb_LostFocus" GotFocus="Quicktb_GotFocus"  Grid.Column="3" Grid.Row="3" VerticalAlignment="Top" Margin="5" TextChanged="fase3tbb_TextChanged" Visibility="Hidden" />
+            <ComboBox Name="fase3cbb4" PreviewTextInput="cbb_PreviewTextInput" GotFocus="cbb_GotFocus" LostFocus="cbb_LostFocus" Grid.Column="3" KeyUp="overig_cbb_KeyUp" Grid.Row="3" KeyDown="cbb_KeyDown" SelectionChanged="fase3cbb_SelectionChanged" VerticalAlignment="Top" Margin="5" IsEditable="True" IsTextSearchEnabled="True" Visibility="Hidden" />
+            <vm:multibox x:Name="fase3mcbb4" Grid.Column="3" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Stretch" Visibility="Hidden" />
+            <RadioButton Name="fase3ckb4J" Grid.Column="3" Grid.Row="3" Checked="fase3ckb_Checked" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" Visibility="Hidden">wel actief</RadioButton>
+            <RadioButton Name="fase3ckb4N" Grid.Column="3" Grid.Row="3" Checked="fase3ckb_Checked" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Visibility="Hidden">niet actief</RadioButton>
+        
+        </Grid>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dbLPdfOutput">
+  <DataContextMoniker Name="/dbLPdfOutputDataContext" />
+  <nestedChildShapes>
+    <classShape Id="696086bd-4893-4484-9cda-5ee353f746b6" isExpanded="false" absoluteBounds="5.375, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/allArbeidsRelaty" />
+      <nestedChildShapes>
+        <elementListCompartment Id="900d78dd-f619-40d3-8cc2-b676be579c0e" absoluteBounds="5.3900000000000006, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0aca9891-1725-48e3-ab10-af242fbc4087" isExpanded="false" absoluteBounds="5.375, 1.125, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/allContract" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13fd5fc5-e047-4415-90b3-33d00a367942" absoluteBounds="5.3900000000000006, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="45fc31e5-7345-46e1-9f84-b4ad53a705e2" isExpanded="false" absoluteBounds="5.375, 1.75, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/allFuncty" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46545304-98a2-4265-9e90-75b3811e7ab6" absoluteBounds="5.39, 2.2100000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c774f7bf-9664-429d-8573-b6c5ff02bb35" isExpanded="false" absoluteBounds="6.375, 3.75, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/allNietBeschikbaar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f7cfbef-e33b-45a4-9f0e-55bf30ae4f06" absoluteBounds="6.3900000000000006, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e23c4efc-5457-47f7-9f75-b8d3bb3ccdf4" isExpanded="false" absoluteBounds="5.375, 3.25, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/relProjectdefault" />
+      <nestedChildShapes>
+        <elementListCompartment Id="584a3635-a2ad-4379-aaea-652dc29292bd" absoluteBounds="5.3900000000000006, 3.7100000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="68164459-9ae0-481c-9bbf-3211242ad82d" isExpanded="false" absoluteBounds="0.5, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/PoortViewRegistratiebevoegd" />
+      <nestedChildShapes>
+        <elementListCompartment Id="825ab0c4-7122-4579-ae71-68a4de284f82" absoluteBounds="0.51500000000000057, 3.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="559d41dd-ce21-405e-8a68-5bba084c9b72" isExpanded="false" absoluteBounds="0.5, 1.75, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/Easy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="42742c05-e42b-4915-8a8b-d37c0300a417" absoluteBounds="0.51500000000000012, 2.21, 1.9700000000000002, 6.2107340494791661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="edda416b-1a79-4719-8e8d-f66f87cecb12" isExpanded="false" absoluteBounds="0.5, 1.125, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/Lijsten" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ef02bce-88e2-4a1a-a5b4-6b9059530653" absoluteBounds="0.51499999999999968, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7ccb99c9-82a1-4d1b-9174-1eba997e958f" isExpanded="false" absoluteBounds="8.625, 3.5, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/relVakmandefault" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ccbaef2-ca49-4126-8710-47521a44fe00" absoluteBounds="8.64, 3.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.375 : 0.725); (10.05468875 : 0.725); (10.05468875 : 3.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbLPdfOutputDataContext/allArbeidsRelaty/allArbeidsRelaty_relVakmandefault" />
+      <nodes>
+        <classShapeMoniker Id="696086bd-4893-4484-9cda-5ee353f746b6" />
+        <classShapeMoniker Id="7ccb99c9-82a1-4d1b-9174-1eba997e958f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.375 : 1.35); (8.99218375 : 1.35); (8.99218375 : 3.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbLPdfOutputDataContext/allContract/allContract_relVakmandefault" />
+      <nodes>
+        <classShapeMoniker Id="0aca9891-1725-48e3-ab10-af242fbc4087" />
+        <classShapeMoniker Id="7ccb99c9-82a1-4d1b-9174-1eba997e958f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.375 : 1.975); (8.90885041666666 : 1.975 : JumpStart); (9.07551708333333 : 1.975 : JumpEnd); (9.52343625 : 1.975); (9.52343625 : 3.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbLPdfOutputDataContext/allFuncty/allFuncty_relVakmandefault" />
+      <nodes>
+        <classShapeMoniker Id="45fc31e5-7345-46e1-9f84-b4ad53a705e2" />
+        <classShapeMoniker Id="7ccb99c9-82a1-4d1b-9174-1eba997e958f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2960d8f3-a12e-4c85-a4be-f0b49ff8e56f" isExpanded="false" absoluteBounds="0.5, 3.25, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/PoortViewProject" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ade0d65-4581-4e63-8c27-0d38ab636a6e" absoluteBounds="0.51500000000000012, 3.7100000000000009, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0110a137-3995-4820-bffc-9e8756dc313a" isExpanded="false" absoluteBounds="0.5, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/PoortViewBedrijf" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0976948-460c-474e-bb60-06fbf392ff7a" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7309a5cb-7e85-4383-aa90-35357a572a6b" isExpanded="false" absoluteBounds="2.875, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/PoortViewMandagen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1010b1d-6362-4060-9201-dd958fb0af1f" absoluteBounds="2.8899999999999997, 0.96, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a67146ae-cbed-4058-9a0d-638f1b629f1b" isExpanded="false" absoluteBounds="2.875, 1.125, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/PoortViewMandagenNoRel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b256431-51b3-4dbe-9681-0ef1ed526b90" absoluteBounds="2.89, 1.585, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9763146e-87f6-4ebf-b8d8-0c66cd7ae709" isExpanded="false" absoluteBounds="2.875, 2.5, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/PoortViewVakman" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd152233-9bc6-408a-a490-b505bac8b09e" absoluteBounds="2.89, 2.96, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="175678dd-afec-4560-87c1-b5aa5fda75b7" isExpanded="false" absoluteBounds="2.875, 3.25, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/PoortViewVakmanNoDefault" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11ce05a3-93cb-4778-b1f6-77ab5e890b8c" absoluteBounds="2.89, 3.71, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="48307ae2-574e-48e2-bdac-740182dd0a9b" isExpanded="false" absoluteBounds="2.875, 1.875, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/PoortViewKetenpartner" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0402e5d4-11f8-47df-b2f4-01f69a0a837b" absoluteBounds="2.89, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="484f221a-7c5c-4712-b502-47c0d7be7eee" isExpanded="false" absoluteBounds="5.375, 2.5, 2, 0.45">
+      <DataClassMoniker Name="/dbLPdfOutputDataContext/allKetenpartner" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23260e29-bfb9-44dc-a625-bfbad961c172" absoluteBounds="5.39, 2.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.375 : 2.725); (8.90885041666666 : 2.725 : JumpStart); (9.07551708333333 : 2.725 : JumpEnd); (9.44010291666667 : 2.725 : JumpStart); (9.60676958333333 : 2.725 : JumpEnd); (9.97135541666667 : 2.725 : JumpStart); (10.1380220833333 : 2.725 : JumpEnd); (10.371096875 : 2.725); (10.371096875 : 3.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbLPdfOutputDataContext/allKetenpartner/allKetenpartner_relVakmandefault" />
+      <nodes>
+        <classShapeMoniker Id="484f221a-7c5c-4712-b502-47c0d7be7eee" />
+        <classShapeMoniker Id="7ccb99c9-82a1-4d1b-9174-1eba997e958f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

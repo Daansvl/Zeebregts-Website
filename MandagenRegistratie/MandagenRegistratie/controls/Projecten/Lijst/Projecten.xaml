@@ -1,0 +1,56 @@
+﻿<local:MenuControl x:Class="MandagenRegistratie.controls.Projecten.Lijst.Projecten"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:j="http://schemas.microsoft.com/netfx/2007/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZeebregtsLogic;assembly=ZeebregtsLogic"
+             mc:Ignorable="d" 
+             d:DesignHeight="690" d:DesignWidth="1050" HorizontalAlignment="Center" SizeChanged="MenuControl_SizeChanged_1">
+
+        <DockPanel x:Name="dpProjecten" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" PreviewKeyDown="Grid_PreviewKeyDown">
+        <TextBox DockPanel.Dock="Top" Height="23" HorizontalAlignment="Center" Margin="0,10,0,0" Name="txtSearch" VerticalAlignment="Top" Width="500" PreviewKeyUp="txtSearch_PreviewKeyUp" />
+
+
+        <DataGrid LostFocus="dgProjecten_LostFocus" GotFocus="dgProjecten_GotFocus" LostKeyboardFocus="dgProjecten_LostKeyboardFocus" DockPanel.Dock="Bottom" IsSynchronizedWithCurrentItem="False" SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Stretch" Margin="0,10,0,0" VerticalAlignment="Stretch" x:Name="dgProjecten" MouseDoubleClick="dgProjecten_MouseDoubleClick" AlternatingRowBackground="#FFC5D9F1">
+            <!--<DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
+            </DataGrid.Resources>-->
+
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static j:SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkBlue"/>
+                <SolidColorBrush x:Key="{x:Static j:SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="White"/>
+                <SolidColorBrush x:Key="{x:Static j:SystemColors.HighlightBrushKey}" Color="DarkBlue"/>
+                <SolidColorBrush x:Key="{x:Static j:SystemColors.HighlightTextBrushKey}" Color="White"/>
+            </DataGrid.Resources>
+            
+            <!--<DataGrid.Resources>
+                <SolidColorBrush x:Key="SelectionColorKey" Color="DarkBlue"/>
+                
+                <Style TargetType="DataGridRow">
+                    <Style.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="{Binding Source={StaticResource SelectionColorKey}, Path=Color}"/>
+                    </Style.Resources>
+                </Style>
+            </DataGrid.Resources>-->
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=ProjectNrOrigineel}" Width="90" Header="ProjectNr" />
+                <DataGridTextColumn Binding="{Binding Path=ZProjectNaam}" Width="200*" Header="Naam project" />
+                <DataGridTextColumn Binding="{Binding Path=Projectplaats}" Width="150*" Header="Plaats" />
+                <DataGridTextColumn Binding="{Binding Path=Bedrijfsnaam}" Width="200*" Header="Opdrachtgever" />
+                <DataGridTextColumn Binding="{Binding Path=ZPersoonFullname}" Width="180*" Header="Projectleider" />
+                <!--<DataGridTextColumn Width="180*" Header="Projectleider">
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding StringFormat="{}{0} {1} {2}">
+                            <Binding Path="voornaam"/>
+                            <Binding Path="tussenvoegsel"/>
+                            <Binding Path="achternaam"/>
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                </DataGridTextColumn>-->
+                <!--<DataGridTextColumn Binding="{Binding Path=Adres}" Width="200*" Header="Adres" />
+                <DataGridTextColumn Binding="{Binding Path=Actief}" Width="80*" Header="Actief" />-->
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</local:MenuControl>

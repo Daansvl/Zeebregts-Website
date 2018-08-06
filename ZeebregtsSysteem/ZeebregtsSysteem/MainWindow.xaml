@@ -1,0 +1,13 @@
+﻿<Window x:Class="ZeebregtsSysteem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Title="MainWindow" Height="350" Width="525" KeyDown="Window_KeyDown">
+    <Grid>
+        <WindowsFormsHost x:Name="wfContainer" Margin="6,-2,-6,2">
+        </WindowsFormsHost>
+        <Button Content="MainApplication" Height="46" HorizontalAlignment="Left" Margin="12,12,0,0" Name="btnMainApplication" VerticalAlignment="Top" Width="170" Click="btnMainApplication_Click" />
+        <Button Content="MandagenRegistratie" Height="46" HorizontalAlignment="Left" Margin="12,92,0,0" Name="btnMandagenRegistratie" VerticalAlignment="Top" Width="170" Click="btnMandagenRegistratie_Click" />
+        <Button Content="SQ2Excel" Height="46" HorizontalAlignment="Left" Margin="12,169,0,0" Name="btnSQL2Excel" VerticalAlignment="Top" Width="170" Click="btnSQL2Excel_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,37 @@
+﻿<local:MenuControl x:Class="MandagenRegistratie.controls.Projecten.Overzicht.ProjectEdit"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZeebregtsLogic;assembly=ZeebregtsLogic"
+             mc:Ignorable="d"
+             d:DesignHeight="710" d:DesignWidth="1050">
+    <Grid>
+        <TabControl TabStripPlacement="Bottom" Height="650" Name="tabControl" Background="White">
+            <TabItem Header="Details" Name="tabDetails">
+                <ScrollViewer>
+                    <WrapPanel x:Name="wpDetailsEdit" Width="700">
+                        <Label Content="Detail info" Height="28" Width="700" FontWeight="Bold" />
+                        <Label Content="Project Nr" Height="28" Width="200" Background="Bisque" />
+                        <Label x:Name="lblProjectNr" Height="28" Width="400" />
+                        <Label Content="Project naam" Height="28" Width="200" Background="Bisque" />
+                        <TextBox Height="23" Name="txtProjectnaam" Width="400" IsEnabled="False" />
+                        <Label Content="Actief" Height="28" Width="200" Background="Bisque" />
+                        <CheckBox Height="23" Name="cbActief" Width="400" />
+                        <Label Content="Projectleider" Height="28" Width="200" Background="Bisque" />
+                        <Label Height="23" Name="lblProjectleider" Width="400" />
+                        <Label Content="Postcode" Height="28" Width="200" Background="Bisque" />
+                        <TextBox Height="23" Name="txtPostcodeCijfers" Width="200" KeyUp="AutoVulAdres" />
+                        <TextBox Height="23" Name="txtPostcodeLetters" Width="200" KeyUp="AutoVulAdres" />
+                        <Label Content="Huisnummer" Height="28" Width="200" Background="Bisque" />
+                        <TextBox Height="23" Name="txtHuisnummer" Width="400" KeyUp="AdresAanvullen" />
+                        <Label Content="Adres" Height="28" Width="200" Background="Bisque" />
+                        <TextBox Height="23" Name="txtAdres" Width="400" KeyUp="AdresWijzigen" />
+
+                    </WrapPanel>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </Grid>
+
+</local:MenuControl>

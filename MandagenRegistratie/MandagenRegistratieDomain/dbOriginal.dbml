@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Zeebregtsdb" Class="dbOriginalDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=Zeebregtsdb;Integrated Security=True" SettingsObjectName="MandagenRegistratieDomain.Properties.Settings" SettingsPropertyName="ZeebregtsdbConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MDRadressen" Member="MDRadressens">
+    <Type Name="MDRadressen">
+      <Column Name="adres_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="land" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="plaats" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="huisnummer_toevoeging" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="straat_1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="straat_2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="postcode_cijfers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="postcode_letters" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="huis_postbus_nummer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MDRproject" Member="MDRprojects">
+    <Type Name="MDRproject">
+      <Column Name="project_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="project_NR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="naam_project" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="plaats" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="opdrachtgeverZEEBREGTS_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="adres_id_bouw" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="aannemer_projectnummer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="aannemer_contractnummer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nacalculatiecode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="adres_id_factuur" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MDRbedrijf" Member="MDRbedrijfs">
+    <Type Name="MDRbedrijf">
+      <Column Name="bedrijf_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bedrijf_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="naam" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="zoeknaam" Type="System.String" DbType="NVarChar(52)" CanBeNull="true" />
+      <Column Name="plaats" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="adres_id_bezoek" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="adres_id_post" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MDRpersoon" Member="MDRpersoons">
+    <Type Name="MDRpersoon">
+      <Column Name="persoon_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="persoon_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="voorletters" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="voornaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tussenvoegsel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="achternaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="man" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="bedrijf_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="telefoon_nr_1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="telefoon_nr_2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="telefoon_nr_3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="adres_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="geboortedatum" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="zaemail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="zamobiel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="zatelefoonvast" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="zafax" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

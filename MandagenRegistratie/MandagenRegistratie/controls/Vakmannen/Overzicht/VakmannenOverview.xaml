@@ -1,0 +1,29 @@
+﻿<local:MenuControl x:Class="MandagenRegistratie.controls.Vakmannen.Overzicht.VakmannenOverview"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:ZeebregtsLogic;assembly=ZeebregtsLogic"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1050">
+    <Grid>
+        <CheckBox Content="Toon alleen mijn vakmannen" Height="16" HorizontalAlignment="Left" Margin="12,13,0,0" Name="cbMijnProjecten" VerticalAlignment="Top" Unchecked="cbMijnProjecten_Checked" Checked="cbMijnProjecten_Checked" />
+        <TextBox x:Name="txtSearch" Height="23" HorizontalAlignment="Right" Margin="0,10,431,0" VerticalAlignment="Top" Width="420" TextChanged="txtSearch_TextChanged" />
+        <DataGrid IsReadOnly="True" AutoGenerateColumns="False" Height="306" HorizontalAlignment="Left" Margin="199,49,0,0" VerticalAlignment="Top" Width="825" x:Name="dgVakmannen" MouseDoubleClick="dgVakmannen_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ContactId Origineel" Binding="{Binding Path=ContactIdOrigineel}"/>
+                <DataGridTextColumn Header="Bsn Vakman" Binding="{Binding Path=Bsn}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <CheckBox Content="Toon alle contacten" Height="16" HorizontalAlignment="Left" Margin="12,35,0,0" Name="cbAlleContacten" VerticalAlignment="Top" Checked="cbAlleContacten_Checked" Unchecked="cbAlleContacten_Checked" />
+        <DataGrid AutoGenerateColumns="False" Height="306" HorizontalAlignment="Left" Margin="199,49,0,0" Name="dgContacten" VerticalAlignment="Top" Width="825" Visibility="Collapsed">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=persoon_nr}" Header="Persoon nr" />
+                <DataGridTextColumn Binding="{Binding Path=voorletters}" Header="Voorletters" />
+                <DataGridTextColumn Binding="{Binding Path=voornaam}" Header="Voornaam" />
+                <DataGridTextColumn Binding="{Binding Path=tussenvoegsel}" Header="Tussenvoegsel" />
+                <DataGridTextColumn Binding="{Binding Path=achternaam}" Header="Achternaam" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</local:MenuControl>

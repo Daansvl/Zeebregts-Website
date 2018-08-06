@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Linq2handelingenLog">
+  <DataContextMoniker Name="/Linq2handelingenLogDataContext" />
+  <nestedChildShapes>
+    <classShape Id="19a006fa-3a63-411f-a109-32ab0c76120b" absoluteBounds="0.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/Linq2handelingenLogDataContext/log_handeling_gebruiker" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e646437-1466-47c4-9227-429ddbe84409" absoluteBounds="0.76499999999999968, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4a4961bb-fa18-42f0-a752-d0342dbe978d" absoluteBounds="3.25, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/Linq2handelingenLogDataContext/gebruikers_handelingen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f735f00-aa69-4b37-8066-1ded7bc214e3" absoluteBounds="3.2649999999999997, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

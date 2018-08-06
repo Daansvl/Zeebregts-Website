@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BFBA866-8797-494F-B07B-5C2DCB054E90}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDR2PDF</RootNamespace>
+    <AssemblyName>MDR Output PDF</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>C:\Users\Juraci\Desktop\Builds\MandagenRegistratie\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Beta|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Beta\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Test\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <OutputPath>bin\Dev\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pdf.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>481F2472EA82C847DDC0ED1208EED40C0F4D8B49</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MDR2PDF_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="evohtmltopdf, Version=4.6.0.0, Culture=neutral, PublicKeyToken=e1fcbb86597de299, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\evohtmltopdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="ZeebregtsLogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ZeebregtsSysteem\ZeebregtsLogic\bin\Release\ZeebregtsLogic.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1b_WeeklijstExternen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1b_WeeklijstExternen.Designer.cs">
+      <DependentUpon>1b_WeeklijstExternen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1c_WeeklijstExternenBAM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1c_WeeklijstExternenBAM.Designer.cs">
+      <DependentUpon>1c_WeeklijstExternenBAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_Intrn_vkm_pr_prjct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="8a pr wk pr prd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="8a pr wk pr prd.Designer.cs">
+      <DependentUpon>8a pr wk pr prd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="8b pr wk pr utvrdr pr prd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="8b pr wk pr utvrdr pr prd.Designer.cs">
+      <DependentUpon>8b pr wk pr utvrdr pr prd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="8c LK pr wk pr project pr prd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="8c LK pr wk pr project pr prd.Designer.cs">
+      <DependentUpon>8c LK pr wk pr project pr prd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="8d pr wk pr vakman pr prd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="8d pr wk pr vakman pr prd.Designer.cs">
+      <DependentUpon>8d pr wk pr vakman pr prd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="8e pr wk pr ketenp pr prd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="8e pr wk pr ketenp pr prd.Designer.cs">
+      <DependentUpon>8e pr wk pr ketenp pr prd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="dbLMandagen.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbLMandagen.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="dbLPdfOutput.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbLPdfOutput.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="dbLZeebregtsDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbLZeebregtsDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="EvoTools.cs" />
+    <Compile Include="GlobaleVars.cs" />
+    <Compile Include="1aWeekOverzicht.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1aWeekOverzicht.Designer.cs">
+      <DependentUpon>1aWeekOverzicht.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LijstTools.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LijstTools.Designer.cs">
+      <DependentUpon>LijstTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MszTools.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MszTools.Designer.cs">
+      <DependentUpon>MszTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartScherm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartScherm.Designer.cs">
+      <DependentUpon>StartScherm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USMario.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USMario.Designer.cs">
+      <DependentUpon>USMario.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="USMarioStart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USMarioStart.Designer.cs">
+      <DependentUpon>USMarioStart.cs</DependentUpon>
+    </Compile>
+    <None Include="dbLPdfOutput.dbml.layout">
+      <DependentUpon>dbLPdfOutput.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="StartScherm.resx">
+      <DependentUpon>StartScherm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USMario.resx">
+      <DependentUpon>USMario.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USMarioStart.resx">
+      <DependentUpon>USMarioStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Config\App.Beta.config" />
+    <None Include="Config\App.Debug.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Config\App.Release.config" />
+    <None Include="Config\App.Dev.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbLMandagen.dbml.layout">
+      <DependentUpon>dbLMandagen.dbml</DependentUpon>
+    </None>
+    <None Include="dbLPdfOutput.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbLPdfOutput.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbLZeebregtsDB.dbml.layout">
+      <DependentUpon>dbLZeebregtsDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="dbLMandagen.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbLMandagen.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbLZeebregtsDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbLZeebregtsDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MDR2PDF_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\html\Algemeen\container.html" />
+    <Content Include="bin\Debug\html\Algemeen\containerNoInfoBlock.html" />
+    <Content Include="bin\Debug\html\Algemeen\footer.html" />
+    <Content Include="bin\Debug\html\Algemeen\footer2.html" />
+    <Content Include="bin\Debug\html\Algemeen\logo.png" />
+    <Content Include="bin\Debug\html\Algemeen\stylesheet OLD.css" />
+    <Content Include="bin\Debug\html\Algemeen\stylesheet.css" />
+    <Content Include="bin\Debug\html\Algemeen\stylesheetOLD2.css" />
+    <Content Include="bin\Debug\html\HTMLPage1.html" />
+    <Content Include="bin\Debug\html\Lijst1a\Container.html" />
+    <Content Include="bin\Debug\html\Lijst1a\ProjectRegel.html" />
+    <Content Include="bin\Debug\html\Lijst1a\ProjectTabel.html" />
+    <Content Include="bin\Debug\html\Lijst1\footer_1bc.html" />
+    <Content Include="bin\Debug\html\Lijst1\Lijst1_bc.html" />
+    <Content Include="bin\Debug\html\Lijst8\tabel.htm" />
+    <Content Include="bin\Debug\html\Lijst8\tabel_subregel.htm" />
+    <Content Include="bin\Debug\html\Lijst8\tabel_totaalregel.htm" />
+    <Content Include="bin\Debug\html\logo.png" />
+    <Content Include="bin\Debug\html\tabel.htm" />
+    <Content Include="bin\Debug\html\ZeebregtsPDF.png" />
+    <Content Include="HTMLPage1.html" />
+    <Content Include="pdf.ico" />
+    <Content Include="Resources\evohtmltopdf.dll" />
+    <Content Include="Resources\evohtmltopdf.xml" />
+    <Content Include="Resources\html\Algemeen\container.html" />
+    <Content Include="Resources\html\Algemeen\footer.html" />
+    <Content Include="Resources\html\Algemeen\footer2.html" />
+    <Content Include="Resources\html\Algemeen\logo.png" />
+    <Content Include="Resources\html\Algemeen\stylesheet OLD.css" />
+    <Content Include="Resources\html\Algemeen\stylesheet.css" />
+    <Content Include="Resources\html\Algemeen\stylesheetOLD2.css" />
+    <Content Include="Resources\html\Lijst8b\tabel.htm" />
+    <Content Include="Resources\html\Lijst8b\tabel_subregel.htm" />
+    <Content Include="Resources\html\Lijst8b\tabel_totaalregel.htm" />
+    <None Include="Resources\evointernal.dat" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\search %281%29.png" />
+    <None Include="Resources\kruisje.png" />
+    <None Include="Resources\Search.gif" />
+    <None Include="Resources\Settings.png" />
+    <None Include="Resources\Knipsel.JPG" />
+    <None Include="Resources\Iphone instellingen.png" />
+    <None Include="Resources\iphone-batterij-snel-leeg-instellingen.jpg" />
+    <None Include="Resources\instellingen-150x150.jpg" />
+    <None Include="bin\Debug\animaatjes-agenda-85987.png" />
+    <None Include="bin\Debug\html\agenda.png" />
+    <None Include="bin\Debug\html\agenda2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild">
+    <Delete Files="$(TargetDir)$(TargetFileName).config" />
+    <Copy SourceFiles="$(ProjectDir)\Config\App.$(Configuration).config" DestinationFiles="$(TargetDir)$(TargetFileName).config" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

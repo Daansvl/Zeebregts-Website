@@ -1,0 +1,49 @@
+﻿<UserControl IsVisibleChanged="UserControl_IsVisibleChanged" x:Class="zeebregtsCs.usercontrols.telefoonnummer_user_control"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Background="{StaticResource {x:Static SystemColors.ControlLightLightBrushKey}}" VisualTextRenderingMode="Aliased" SnapsToDevicePixels="True">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="136"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="270"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Column="0" Grid.Row="0" Background="{StaticResource {x:Static SystemColors.ControlBrushKey}}">
+            <Label x:Name="naam_lbl" VerticalAlignment="Center" Content="Telefoonnummer"/>
+            <ComboBox SelectionChanged="CBB_type_SelectionChanged" x:Name="CBB_type" Width="130" Height="21" Canvas.Top="2">
+                <ComboBoxItem Content="vast" />
+                <ComboBoxItem Content="mobiel" />
+                <ComboBoxItem Content="fax" />
+                <ComboBoxItem Content="v.o.i.p" />
+                <ComboBoxItem Content="Skype" />
+                <ComboBoxItem Content="bedrijfsnummer" />
+            </ComboBox>
+        </Canvas>
+        <Canvas Grid.Column="2" Grid.Row="0" Background="#EEEEEEEE">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox SelectionChanged="CBB_land_SelectionChanged" Canvas.Top="2"  Height="21"  x:Name="CBB_land" Width="117" Margin="6,2,4,0">
+                        <ComboBoxItem Content="NL"/>
+                        <ComboBoxItem Content="BE"/>
+                        <ComboBoxItem Content="DE"/>
+                        <ComboBoxItem Content="overig"/>
+                    </ComboBox>
+                    <ComboBox x:Name="CBB_overige_landen" HorizontalAlignment="Center" VerticalAlignment="Center" SelectionChanged="CBB_overige_landen_SelectionChanged" ItemsSource="{Binding}" PreviewTextInput="CBB_overige_landen_PreviewTextInput"  IsEditable="True" IsTextSearchEnabled="True" Width="117" Margin="6,0,4,0" Visibility="Collapsed"/>
+                    <StackPanel Margin="0,0,4,0" Orientation="Vertical">
+                        <TextBox Margin="0,2,0,0"  VerticalAlignment="Center" PreviewKeyDown="TB_prefix_PreviewKeyDown" TextChanged="TB_TextChanged" PreviewMouseUp="TB_prefix_PreviewMouseUp" GotFocus="TB_prefix_GotFocus" LostFocus="TB_prefix_LostFocus" x:Name="TB_prefix"  Width="40"/>
+                    </StackPanel>
+                    <TextBox PreviewKeyDown="TB_abbonee_nr_PreviewKeyDown" VerticalAlignment="Center" HorizontalAlignment="Center" TextChanged="TB_TextChanged" PreviewMouseUp="TB_prefix_PreviewMouseUp" GotFocus="TB_prefix_GotFocus" LostFocus="TB_prefix_LostFocus" x:Name="TB_abbonee_nr" Width="70"/>
+                    <Label x:Name="lbl_nr" HorizontalAlignment="Center" VerticalAlignment="Center" Content="telnr" Visibility="Collapsed"/>
+                    <Canvas>
+                        <Label x:Name="del" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Canvas.Top="-5" Content="X" Foreground="DarkGray" FontSize="18" FontWeight="Normal" MouseDown="del_MouseDown" />
+                    </Canvas>
+                </StackPanel>
+            </StackPanel>
+        </Canvas>
+    </Grid>
+</UserControl>

@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="MandagenRegistratie.controls.Navigatie.NavigatieMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="75" d:DesignWidth="849">
+    <Grid>
+        <Button Content="Terug" Height="41" HorizontalAlignment="Left" Margin="16,18,0,0" Name="btnTerug" VerticalAlignment="Top" Width="219" Click="btnTerug_Click" />
+        <Button Content="Gereed" Height="41" HorizontalAlignment="Left" Margin="618,18,0,0" Name="btnGereed" VerticalAlignment="Top" Width="219" />
+    </Grid>
+</UserControl>

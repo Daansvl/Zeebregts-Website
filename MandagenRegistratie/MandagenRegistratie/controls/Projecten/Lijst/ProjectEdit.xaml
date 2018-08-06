@@ -1,0 +1,94 @@
+﻿<local:MenuControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZeebregtsLogic;assembly=ZeebregtsLogic"
+             xmlns:vhDatePicker="clr-namespace:vhDatePicker;assembly=vhDatePicker"
+             xmlns:vhCalendar="clr-namespace:vhCalendar;assembly=vhCalendar"
+             x:Class="MandagenRegistratie.controls.Projecten.Lijst.ProjectEdit"
+             mc:Ignorable="d"
+             d:DesignHeight="710" d:DesignWidth="1050">
+    <Grid>
+        <TabControl TabStripPlacement="Bottom" MinHeight="580" x:Name="tabControl" Background="White" BorderThickness="0" BorderBrush="White">
+            <TabItem Header="Details" x:Name="tabDetails">
+                <ScrollViewer>
+                    <WrapPanel x:Name="wpDetailsEdit" Width="600">
+                        <Label FontWeight="ExtraBold" Content="Project" Height="28" Width="450" Background="#FFFFFFFF" />
+                        <Label Content="Project Nr" Height="28" Width="200" Background="#FFC5D9F1" />
+                        <Label x:Name="lblProjectNr" Height="28" Width="250" />
+                        <Label Content="Project naam" Height="28" Width="200" Background="#FFC5D9F1" />
+                        <TextBox Height="23" x:Name="txtProjectnaam" Width="250" IsEnabled="False" />
+                        <Label Content="Projectleider" Height="28" Width="200" Background="#FFC5D9F1" />
+                        <Label Height="23" x:Name="lblProjectleider" Width="250" />
+                        <Label FontWeight="ExtraBold" Content="Referentie opdrachtgever" Height="28" Width="450" Background="#FFFFFFFF" Margin="0,28,0,0" />
+                        <Label Content="Projectcode extern" Height="28" Width="200" Background="#FFC5D9F1" />
+                        <TextBox Height="23" x:Name="txtProjectcodeExtern" Width="250" />
+                        <Label Content="Project contractnummer" Height="28" Width="200" Background="#FFC5D9F1" />
+                        <TextBox Height="23" x:Name="txtProjectContractnummer" Width="250" />
+                        <Label Content="Project nacalculatiecode" Height="28" Width="200" Background="#FFC5D9F1" />
+                        <TextBox Height="23" x:Name="txtProjectNacalculatiecode" Width="250" />
+                        <Label FontWeight="ExtraBold" Content="Adres project" Height="28" Width="450" Background="#FFFFFFFF" Margin="0,28,0,0" />
+                        <Label Content="Postcode" Height="28" Width="200" Background="#FFC5D9F1" />
+                        <TextBox Height="23" x:Name="txtPostcodeCijfers" Width="250" KeyUp="AutoVulAdres" />
+                        <Label Content="Huisnummer" Height="28" Width="200" Background="#FFC5D9F1" />
+                        <TextBox Height="23" x:Name="txtHuisnummer" Width="250" />
+                        <Label Content="Straat" Height="28" Width="200" Background="#FFC5D9F1" />
+                        <TextBox Height="23" x:Name="txtAdres" Width="250" KeyUp="AdresWijzigen" />
+                        <Label Content="Plaats" Height="28" Width="200" Background="#FFC5D9F1" />
+                        <TextBox Height="23" x:Name="txtPlaats" Width="250" />
+                        <Label Content="Land" Height="28" Width="200" Background="#FFC5D9F1" />
+                        <TextBox Height="23" x:Name="txtLand" Width="250" />
+                        <Label FontWeight="ExtraBold" Content="Projectleiders" Height="25"  Width="450" Margin="0,25,0,0" Background="#FFFFFFFF" />
+                        <WrapPanel x:Name="wpPeriodes" Width="600" VerticalAlignment="Stretch">
+                            <ItemsControl x:Name="itemsPeriodes">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" Width="700">
+                                            <Label Content="Van" Height="25"  Width="30" Background="#FFC5D9F1" />
+                                            <Label Height="25" Content="{Binding periodeVan}" Background="#FFC5D9F1" Width="70" />
+                                            <Label Content="t/m" Height="25"  Width="30" Background="#FFC5D9F1" />
+                                            <Label Height="25" Content="{Binding periodeTot}"  Width="70" Background="#FFC5D9F1" />
+                                            <Label Height="25" Content="{Binding periodeProjectleider}"  Width="250" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel Orientation="Vertical"/>
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                            </ItemsControl>
+                            <Label Content="Huidige projecteigenaar" Height="28" Width="200" Background="#FFC5D9F1" />
+                            <Label x:Name="lblHuidigeProjectEigenaar" Height="25"  Width="250" >
+                            </Label>
+
+                        </WrapPanel>
+                        <WrapPanel Width="600" x:Name="wpUrenOverdragen" Visibility="Visible">
+                            <Label FontWeight="ExtraBold" Content="Eigen uren overdragen" Height="25"  Width="450" Margin="0,25,0,0" Background="#FFFFFFFF" />
+                            <Label Content="Alle uren vanaf" Height="28" Width="200" Background="#FFC5D9F1" />
+                            <Label x:Name="lblBeginDatum" Content="geen selectie gemaakt" Width="220" MouseDown="lblBeginDatum_MouseDown_1"/>
+                            <Image x:Name="imgCalendar" Source="pack://application:,,,/images/calendar.png" Width="30" />
+                            <Image x:Name="imgCalendarOn" Source="pack://application:,,,/images/calendar-on.png" Visibility="Collapsed" Width="30" MouseDown="lblBeginDatum_MouseDown_1" />
+                            <Label Visibility="Collapsed" x:Name="lblBeginDatumOpvulling" Content="" Height="150" Width="200" Background="#FFC5D9F1" />
+                            <vhCalendar:Calendar FooterVisibility="Collapsed" Visibility="Collapsed" x:Name="dpBeginDatum" VerticalAlignment="Top" SelectedDateChanged="dpBeginDatum_SelectedDateChanged_1" WeekColumnVisibility="Visible" Width="250" Height="150"></vhCalendar:Calendar>
+                            <Label Visibility="Collapsed" x:Name="lblTotenMet" Content="Tot en met" Height="28" Width="200" Background="#FFC5D9F1" />
+                            <Label Visibility="Collapsed" x:Name="lblEindDatum" Content="" Width="220" MouseDown="lblEindDatum_MouseDown_1"/>
+                            <Image Visibility="Collapsed" x:Name="dpEinddatumButton" Source="pack://application:,,,/images/calendar-on.png" Width="30" MouseDown="lblEindDatum_MouseDown_1" />
+                            <Label Visibility="Collapsed" x:Name="lblTotenMetOpvulling" Content="" Height="150" Width="200" Background="#FFC5D9F1" />
+                            <vhCalendar:Calendar FooterVisibility="Collapsed" WeekColumnVisibility="Visible" Visibility="Collapsed" Height="150" HorizontalAlignment="Right" Width="250" Margin="0,0,100,0" x:Name="dpEindDatum" VerticalAlignment="Top" SelectedDateChanged="dpEindDatum_SelectedDateChanged_1" />
+                            <Label Content="Overdragen aan projectleider" Height="28" Width="200" Background="#FFC5D9F1" />
+                            <ComboBox Width="250" Height="25" x:Name="cbProjectleiders"/>
+                        </WrapPanel>
+                        <WrapPanel Width="600" x:Name="wpEigenaar">
+                            <Label FontWeight="ExtraBold" Content="Projecteigenaar" Height="25"  Width="450" Margin="0,25,0,0" Background="#FFFFFFFF" />
+                            <Label Content="Wijzig projecteigenaar" Height="28" Width="200" Background="#FFC5D9F1" />
+                            <ComboBox Width="250" Height="25" x:Name="cbProjectleiders2" IsEnabled="False"/>
+                        </WrapPanel>
+                    </WrapPanel>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </Grid>
+
+</local:MenuControl>

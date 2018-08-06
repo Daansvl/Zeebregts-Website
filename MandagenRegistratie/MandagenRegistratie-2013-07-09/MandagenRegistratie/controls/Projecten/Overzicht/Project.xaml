@@ -1,0 +1,40 @@
+﻿<local:MenuControl x:Class="MandagenRegistratie.controls.Projecten.Overzicht.Project"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZeebregtsLogic;assembly=ZeebregtsLogic"
+             mc:Ignorable="d" 
+             d:DesignHeight="710" d:DesignWidth="1050" SizeChanged="MenuControl_SizeChanged">
+    <DockPanel VerticalAlignment="Stretch" LastChildFill="True">
+        <TabControl TabStripPlacement="Bottom" MinHeight="650" VerticalAlignment="Stretch" Name="tabControl" Background="White" DockPanel.Dock="Top">
+            <TabItem Header="Planning" Name="tabPlanning" IsEnabled="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsSelected="True" GotFocus="tabPlanning_GotFocus">
+            </TabItem>
+            <TabItem Header="Gegevens" Name="tabDetails" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" GotFocus="tabDetails_GotFocus">
+                <ScrollViewer>
+                    <WrapPanel x:Name="wpDetails" Width="700" VerticalAlignment="Stretch">
+                        <Label Content="Detail info" Height="28" Width="700" />
+                        <Label Content="Project Nr" Height="28" Width="200" Background="Bisque" />
+                        <Label x:Name="lblProjectNr" Height="28" Width="400" />
+                        <Label Content="Project naam" Height="28" Width="200" Background="Bisque" />
+                        <Label Height="23" Name="lblProjectnaam" Width="400" />
+                        <Label Content="Opdrachtgever" Height="28" Width="200" Background="Bisque" />
+                        <Label Height="23" Name="lblOpdrachtgever" Width="400" />
+                        <Label Content="Actief" Height="28" Width="200" Background="Bisque" />
+                        <Label Height="23" Name="lblActief" Width="400" />
+                        <Label Content="Projectleider" Height="28" Width="200" Background="Bisque" />
+                        <Label Height="23" Name="lblProjectleider" Width="400" />
+                        <Label Content="Postcode" Height="28" Width="200" Background="Bisque" />
+                        <Label Height="23" Name="lblPostcode" Width="400" />
+                        <Label Content="Huisnummer" Height="28" Width="200" Background="Bisque" />
+                        <Label Height="23" Name="lblHuisnummer" Width="400" />
+                        <Label Content="Adres" Height="28" Width="200" Background="Bisque" />
+                        <Label Height="23" Name="lblAdres" Width="400" />
+
+
+                    </WrapPanel>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</local:MenuControl>

@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="MandagenRegistratie.controls.Projecten.Dagview.ProjectDagOverzicht"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignWidth="150">
+    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Orientation="Vertical">
+        <StackPanel HorizontalAlignment="Left" Height="20" Width="150"/>
+        <Label x:Name="lblDag" Content="Projectnaam" HorizontalAlignment="Left" Width="150" FontWeight="ExtraBold" />
+        <Label x:Name="lblDefaultUren" Content="Default uren -->" HorizontalAlignment="Right" Width="100" FontWeight="ExtraBold" />
+        <StackPanel x:Name="spVakmanDag" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Orientation="Vertical">
+        </StackPanel>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,38 @@
+﻿<local:MenuControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZeebregtsLogic;assembly=ZeebregtsLogic"
+             x:Class="MandagenRegistratie.controls.Admin.Comparison"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1000">
+    
+    <StackPanel Width="Auto" Height="Auto" HorizontalAlignment="Left" Orientation="Vertical" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
+        <StackPanel x:Name="spCalendar" Height="180" Width="600" Orientation="Horizontal">
+            <ComboBox Width="50px" Height="30px" x:Name="cbWeeknummers" SelectionChanged="cbWeeknummers_SelectionChanged_1" />
+            <Calendar x:Name="calCalendar" SelectionMode="SingleDate" Margin="10" />
+            <Calendar x:Name="calCalendar2" SelectionMode="SingleDate" Margin="10" />
+            <Button Content="Refresh" Height="30" Width="75" Margin="15" VerticalAlignment="Top" Click="Button_Click_1"/>
+        </StackPanel>
+        <Label Content="Verschillen tussen Live en Beta"/>
+        <Label x:Name="lblLiveCount"/>
+        <DataGrid AutoGenerateColumns="True" CanUserDeleteRows="True" CanUserAddRows="False" x:Name="dgmandagen" Width="Auto" Height="330" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <!--<DataGrid.Columns>
+                <DataGridTextColumn Header="Gebruiker CUSTOM"
+                      Binding="{Binding Gebruikersnaam}" Width="*" />
+                <DataGridTemplateColumn Width="*" Header="Projectleider CUSTOM">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label x:Name="lblContactnaam" Content="{Binding Gebruikersnaam}"></Label>-->
+            <!--<ComboBox x:Name="cbProjectleiders" Height="23" SelectedValuePath="ProjectleiderId" ItemsSource="{Binding ElementName=listProjectleiders}" DisplayMemberPath="ProjectleiderId" Width="494" SelectedValue="{Binding ProjectleiderId}" />-->
+            <!--</DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>-->
+        </DataGrid>
+        <Label Height="10"/>
+
+    </StackPanel>
+
+</local:MenuControl>

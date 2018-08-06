@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MDRDEV" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost\sqlexpress;Initial Catalog=MDRDEV;User ID=sa" SettingsObjectName="MandagenRegistratieDomain.Properties.Settings" SettingsPropertyName="MDRDEVConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Setting" Member="Settings">
+    <Type Name="Setting">
+      <Column Name="SettingsId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GebruikerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SettingsNaam" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SettingsValue" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Loggen" Member="Loggens">
+    <Type Name="Loggen">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Ipaddress" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gebruiker" Member="Gebruikers">
+    <Type Name="Gebruiker">
+      <Column Name="GebruikerId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Gebruikersnaam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Windowsidentity" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Gebruikersrol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectleiderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsProjectleider" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CanLoginAsProjectleider" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsAdministrator" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ContactIdOrigineel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PersoonNrOrigineel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CanPrint" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsManager" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vakman" Member="Vakmans">
+    <Type Name="Vakman">
+      <Column Name="VakmanId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContactIdOrigineel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BedrijfIdOrigineel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Actief" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Intern" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ZZP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Bsn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Loonkosten" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="[Var]" Member="Var" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Kvk" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ProjectleiderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Adres" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Postcode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Huisnummer" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Plaats" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Land" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ophaaladres" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ophaalpostcode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ophaalhuisnummer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ophaalplaats" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ophaalland" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsChauffeur" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsChauffeurMa" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsChauffeurDi" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsChauffeurWo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsChauffeurDo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsChauffeurVr" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsChauffeurZa" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsChauffeurZo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsBijrijder" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsBijrijderMa" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsBijrijderDi" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsBijrijderWo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsBijrijderDo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsBijrijderVr" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsBijrijderZa" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsBijrijderZo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Kenteken" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ma" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Di" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Wo" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Do" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Vr" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Za" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Zo" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Werkweek" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="DefaultBeginuur" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DefaultBeginminuut" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Vakman_Mandagen" Member="Mandagens" ThisKey="VakmanId" OtherKey="VakmanId" Type="Mandagen" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mandagen" Member="Mandagens">
+    <Type Name="Mandagen">
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VakmanId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Begintijd" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Eindtijd" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Uren" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Minuten" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectleiderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Geannulleerd" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Gewijzigd" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Bevestigd" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Bevestigingsdatum" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsChauffeurHeen" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsChauffeurTerug" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="KentekenHeen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KentekenTerug" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Definitief" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Mutatiedatum" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MutatieDoorProjectleiderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Vakman_Mandagen" Member="Vakman" ThisKey="VakmanId" OtherKey="VakmanId" Type="Vakman" IsForeignKey="true" />
+      <Association Name="Project_Mandagen" Member="Project" ThisKey="ProjectId" OtherKey="ProjectId" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Project" Member="Projects">
+    <Type Name="Project">
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectNr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Naam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectleiderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Actief" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Mutatiedatum" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Postcode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Huisnummer" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Adres" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Project_Mandagen" Member="Mandagens" ThisKey="ProjectId" OtherKey="ProjectId" Type="Mandagen" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwContactAll" Member="vwContactAlls">
+    <Type Name="vwContactAll">
+      <Column Name="persoon_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="persoon_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="voornaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tussenvoegsel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="achternaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ZPersoonFullname" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="bedrijfnaam" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="bedrijfzoeknaam" Type="System.String" DbType="NVarChar(52)" CanBeNull="true" />
+      <Column Name="bedrijfplaats" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bedrijf_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMandagen" Member="vwMandagens">
+    <Type Name="vwMandagen">
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VakmanId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContactIdOrigineel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Begintijd" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Eindtijd" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Uren" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Minuten" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectleiderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Geannulleerd" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Bevestigd" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Mutatiedatum" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MutatieDoorProjectleiderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Naam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="achternaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="voornaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tussenvoegsel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gebruikersnaam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="project_NR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="naam_project" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwProject" Member="vwProjects">
+    <Type Name="vwProject">
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Naam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectleiderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Actief" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Mutatiedatum" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Postcode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Huisnummer" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Adres" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="persoon_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="persoon_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bedrijf_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="man" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="voorletters" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="voornaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tussenvoegsel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="achternaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ZPersoonFullname" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Bedrijfsnaam" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ProjectNrOrigineel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ZProjectNaam" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Projectplaats" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bedrijfsplaats" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwProjectAll" Member="vwProjectAlls">
+    <Type Name="vwProjectAll">
+      <Column Name="persoon_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="persoon_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bedrijf_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="man" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="voorletters" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="voornaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tussenvoegsel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="achternaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ZPersoonFullname" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="ProjectNrOrigineel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Bedrijfsnaam" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="naam_project" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="plaats" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwVakman" Member="vwVakmans">
+    <Type Name="vwVakman">
+      <Column Name="VakmanId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContactIdOrigineel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Actief" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Intern" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ZZP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Bsn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Loonkosten" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="[Var]" Member="Var" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Kvk" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ProjectleiderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Adres" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Postcode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Huisnummer" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ophaaladres" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ophaalpostcode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ophaalhuisnummer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsChauffeur" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Kenteken" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ma" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Di" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Wo" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Do" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Vr" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Za" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Zo" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Werkweek" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="DefaultBeginuur" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DefaultBeginminuut" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="voornaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tussenvoegsel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="achternaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ZPersoonFullname" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="bedrijfnaam" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="bedrijfzoeknaam" Type="System.String" DbType="NVarChar(52)" CanBeNull="true" />
+      <Column Name="bedrijfplaats" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Plaats" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Land" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ophaalplaats" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ophaalland" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="persoon_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="persoon_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BedrijfIdOrigineel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMandagenBeta" Member="vwMandagenBetas">
+    <Type Name="vwMandagenBeta">
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VakmanId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContactIdOrigineel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Begintijd" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Eindtijd" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Uren" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Minuten" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectleiderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Geannulleerd" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Bevestigd" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Mutatiedatum" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MutatieDoorProjectleiderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Naam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="achternaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="voornaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tussenvoegsel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gebruikersnaam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectIdOrigineel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="project_NR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="naam_project" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMDRContactAll" Member="vwMDRContactAlls">
+    <Type Name="vwMDRContactAll">
+      <Column Name="persoon_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="persoon_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="voornaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tussenvoegsel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="achternaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ZPersoonFullname" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="bedrijfnaam" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="bedrijfzoeknaam" Type="System.String" DbType="NVarChar(52)" CanBeNull="true" />
+      <Column Name="bedrijfplaats" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bedrijf_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMDRMandagen" Member="vwMDRMandagens">
+    <Type Name="vwMDRMandagen">
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VakmanId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContactIdOrigineel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Begintijd" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Eindtijd" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Uren" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Minuten" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectleiderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Geannulleerd" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Bevestigd" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Mutatiedatum" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MutatieDoorProjectleiderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Naam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="achternaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="voornaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tussenvoegsel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gebruikersnaam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="project_NR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="naam_project" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMDRMandagenBeta" Member="vwMDRMandagenBetas">
+    <Type Name="vwMDRMandagenBeta">
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VakmanId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContactIdOrigineel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Begintijd" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Eindtijd" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Uren" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Minuten" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectleiderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Geannulleerd" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Bevestigd" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Mutatiedatum" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MutatieDoorProjectleiderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Naam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="achternaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="voornaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tussenvoegsel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gebruikersnaam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="project_NR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="naam_project" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMDRProject" Member="vwMDRProjects">
+    <Type Name="vwMDRProject">
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Naam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectleiderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Actief" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Mutatiedatum" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Postcode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Huisnummer" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Adres" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="persoon_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="persoon_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bedrijf_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="man" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="voorletters" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="voornaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tussenvoegsel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="achternaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ZPersoonFullname" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Bedrijfsnaam" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ProjectNrOrigineel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ZProjectNaam" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Projectplaats" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bedrijfsplaats" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMDRProjectAll" Member="vwMDRProjectAlls">
+    <Type Name="vwMDRProjectAll">
+      <Column Name="persoon_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="persoon_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bedrijf_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="man" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="voorletters" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="voornaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tussenvoegsel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="achternaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ZPersoonFullname" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="ProjectNrOrigineel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Bedrijfsnaam" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="naam_project" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="plaats" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMDRVakman" Member="vwMDRVakmans">
+    <Type Name="vwMDRVakman">
+      <Column Name="VakmanId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContactIdOrigineel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Actief" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Intern" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ZZP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Bsn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Loonkosten" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="[Var]" Member="Var" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Kvk" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ProjectleiderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Adres" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Postcode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Huisnummer" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ophaaladres" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ophaalpostcode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ophaalhuisnummer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsChauffeur" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Kenteken" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ma" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Di" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Wo" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Do" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Vr" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Za" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Zo" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="Werkweek" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="DefaultBeginuur" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DefaultBeginminuut" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="voornaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tussenvoegsel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="achternaam" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ZPersoonFullname" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="bedrijfnaam" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="bedrijfzoeknaam" Type="System.String" DbType="NVarChar(52)" CanBeNull="true" />
+      <Column Name="bedrijfplaats" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Plaats" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Land" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ophaalplaats" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ophaalland" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="persoon_nr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="persoon_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BedrijfIdOrigineel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Configuration" Member="Configurations">
+    <Type Name="Configuration">
+      <Column Name="ConfigurationName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ConfigurationValue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,841 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D6BFC3C-DCD3-4604-8B49-77BD37ED4378}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>zeebregtsCs</RootNamespace>
+    <AssemblyName>zeebregtsCs</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>\\192.160.0.3\Bestanden\Bestanden\master\5.1%29 ontwikkeling\systeem Zeebregts\project Daan\Module 1 Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>22</ApplicationRevision>
+    <ApplicationVersion>1.5.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>zbwebico2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>zeebregtsCs.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7FBF010EDB7506F9FEF01B397029157A22FBA1CD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>zeebregtsCs_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelLibrary">
+      <HintPath>Resources\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\ZeebregtsSysteem\ZeebregtsSysteem\packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices.Auth">
+      <HintPath>..\..\ZeebregtsSysteem\ZeebregtsSysteem\packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.IdentityModel.6.1.7600.16394\lib\net35\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Extensions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=69c3241e6f0468ca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Reference Assemblies\Microsoft\Microsoft Identity Extensions\1.0\Microsoft.IdentityModel.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\WPFToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adminscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adminscreen.Designer.cs">
+      <DependentUpon>Adminscreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdresDataSet.cs">
+      <DependentUpon>AdresDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AdresDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdresDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="adres_user_control.xaml.cs">
+      <DependentUpon>adres_user_control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedFilter.xaml.cs">
+      <DependentUpon>AdvancedFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdvFilterDataset.cs">
+      <DependentUpon>AdvFilterDataset.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AdvFilterDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdvFilterDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="base_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bedrijfformdataset.cs">
+      <DependentUpon>bedrijfformdataset.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bedrijfformdataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bedrijfformdataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CSV_parser.cs" />
+    <Compile Include="CustomControls\CustomCombo.xaml.cs">
+      <DependentUpon>CustomCombo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="customPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="customPanel.Designer.cs">
+      <DependentUpon>customPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dubbele_invoer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dubbele_invoer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dubblinv_linq.cs" />
+    <Compile Include="ExchangeComs\EWSFunctions.cs" />
+    <Compile Include="ExchangeComs\ExchangeContactItem.cs" />
+    <Compile Include="filterd_box.cs">
+      <DependentUpon>filterd_box.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="filterd_box.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>filterd_box.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormColl.cs" />
+    <Compile Include="FormManager.cs" />
+    <Compile Include="Form_helper.cs" />
+    <Compile Include="get_netnr.cs" />
+    <Compile Include="handelingen_logger.cs" />
+    <Compile Include="handelingen_log_dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>handelingen_log_dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="haxor_dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>haxor_dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="haxor_panel.xaml.cs">
+      <DependentUpon>haxor_panel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="instellingen_zb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="instellingen_zb.Designer.cs">
+      <DependentUpon>instellingen_zb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="linq2sql.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>linq2sql.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingScreen.xaml.cs">
+      <DependentUpon>LoadingScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="multibox.xaml.cs">
+      <DependentUpon>multibox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MultiColumnComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="newrecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newrecord.Designer.cs">
+      <DependentUpon>newrecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="overview1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="overview1.Designer.cs">
+      <DependentUpon>overview1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bedrijfform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bedrijfform.Designer.cs">
+      <DependentUpon>bedrijfform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="persoonsformdataset.cs">
+      <DependentUpon>persoonsformdataset.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="persoonsformdataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>persoonsformdataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="persoon_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="persoon_form.Designer.cs">
+      <DependentUpon>persoon_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pro6ppService.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="project_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="project_form.Designer.cs">
+      <DependentUpon>project_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ExchangeService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Settings_data.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Settings_data.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Steden.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Steden.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="taak_bepaler.cs" />
+    <Compile Include="testset.cs">
+      <DependentUpon>testset.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="testset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>testset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TextBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextBrowser.Designer.cs">
+      <DependentUpon>TextBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update.Designer.cs">
+      <DependentUpon>update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telefoonnummer_user_control.xaml.cs">
+      <DependentUpon>telefoonnummer_user_control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="variabelDataSet.cs">
+      <DependentUpon>variabelDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Variabele_set.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Variabele_set.Designer.cs">
+      <DependentUpon>Variabele_set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="verwijder_panel.xaml.cs">
+      <DependentUpon>verwijder_panel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="zeebregtsdbDataSet.cs">
+      <DependentUpon>zeebregtsdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zeebregtsdbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zeebregtsdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="variabelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>variabelDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Adminscreen.resx">
+      <DependentUpon>Adminscreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_form.resx">
+      <DependentUpon>base_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="instellingen_zb.resx">
+      <DependentUpon>instellingen_zb.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram2.cd" />
+    <None Include="handelingen_log_dataset.xsc">
+      <DependentUpon>handelingen_log_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="handelingen_log_dataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>handelingen_log_dataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="handelingen_log_dataset.xss">
+      <DependentUpon>handelingen_log_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="linq2sql.dbml.layout">
+      <DependentUpon>linq2sql.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="overview1.resx">
+      <DependentUpon>overview1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bedrijfform.resx">
+      <DependentUpon>bedrijfform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="persoon_form.resx">
+      <DependentUpon>persoon_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="project_form.resx">
+      <DependentUpon>project_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newrecord.resx">
+      <DependentUpon>newrecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextBrowser.resx">
+      <DependentUpon>TextBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update.resx">
+      <DependentUpon>update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Variabele_set.resx">
+      <DependentUpon>Variabele_set.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AdresDataSet.xsc">
+      <DependentUpon>AdresDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AdresDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>AdresDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AdresDataSet.xss">
+      <DependentUpon>AdresDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AdvFilterDataset.xsc">
+      <DependentUpon>AdvFilterDataset.xsd</DependentUpon>
+    </None>
+    <None Include="AdvFilterDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AdvFilterDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AdvFilterDataset.xss">
+      <DependentUpon>AdvFilterDataset.xsd</DependentUpon>
+    </None>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bedrijfformdataset.xsc">
+      <DependentUpon>bedrijfformdataset.xsd</DependentUpon>
+    </None>
+    <None Include="bedrijfformdataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bedrijfformdataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bedrijfformdataset.xss">
+      <DependentUpon>bedrijfformdataset.xsd</DependentUpon>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="dubbele_invoer.xsc">
+      <DependentUpon>dubbele_invoer.xsd</DependentUpon>
+    </None>
+    <None Include="dubbele_invoer.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dubbele_invoer.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dubbele_invoer.xss">
+      <DependentUpon>dubbele_invoer.xsd</DependentUpon>
+    </None>
+    <None Include="filterd_box.xsc">
+      <DependentUpon>filterd_box.xsd</DependentUpon>
+    </None>
+    <None Include="filterd_box.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>filterd_box.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="filterd_box.xss">
+      <DependentUpon>filterd_box.xsd</DependentUpon>
+    </None>
+    <None Include="haxor_dataset.xsc">
+      <DependentUpon>haxor_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="haxor_dataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>haxor_dataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="haxor_dataset.xss">
+      <DependentUpon>haxor_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="linq2sql.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>linq2sql.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="persoonsformdataset.xsc">
+      <DependentUpon>persoonsformdataset.xsd</DependentUpon>
+    </None>
+    <None Include="persoonsformdataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>persoonsformdataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="persoonsformdataset.xss">
+      <DependentUpon>persoonsformdataset.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\netnrs.csv" />
+    <None Include="Resources\pijl re.jpg" />
+    <None Include="Service References\ExchangeService\ExchangeContactsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ExchangeService\service.wsdl" />
+    <None Include="Service References\ExchangeService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ExchangeService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Settings_data.xsc">
+      <DependentUpon>Settings_data.xsd</DependentUpon>
+    </None>
+    <None Include="Settings_data.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Settings_data.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Settings_data.xss">
+      <DependentUpon>Settings_data.xsd</DependentUpon>
+    </None>
+    <None Include="Steden.xsc">
+      <DependentUpon>Steden.xsd</DependentUpon>
+    </None>
+    <None Include="Steden.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Steden.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Steden.xss">
+      <DependentUpon>Steden.xsd</DependentUpon>
+    </None>
+    <None Include="testset.xsc">
+      <DependentUpon>testset.xsd</DependentUpon>
+    </None>
+    <None Include="testset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>testset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="testset.xss">
+      <DependentUpon>testset.xsd</DependentUpon>
+    </None>
+    <None Include="variabelDataSet.xsc">
+      <DependentUpon>variabelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="variabelDataSet.xss">
+      <DependentUpon>variabelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="zeebregtsCs_TemporaryKey.pfx" />
+    <None Include="zeebregtsdbDataSet.xsc">
+      <DependentUpon>zeebregtsdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="zeebregtsdbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zeebregtsdbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zeebregtsdbDataSet.xss">
+      <DependentUpon>zeebregtsdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="zeebregtsdbDataSet11.xsc">
+      <DependentUpon>variabelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="variabelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>variabelDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zeebregtsdbDataSet11.xss">
+      <DependentUpon>variabelDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ExchangeService\configuration91.svcinfo" />
+    <None Include="Service References\ExchangeService\configuration.svcinfo" />
+    <None Include="Service References\ExchangeService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Resources\ExcelLibrary.dll" />
+    <Content Include="zbcs.ico" />
+    <Content Include="zbwebico2.ico" />
+    <None Include="Resources\new_pijl.gif" />
+    <None Include="Resources\LAN-Party_pictogram_gray.svg.med.jpg" />
+    <None Include="Resources\sym_function_x-blue_gray.jpg" />
+    <None Include="Resources\information-symbol_gray.jpg" />
+    <None Include="Resources\haxorgray.jpg" />
+    <None Include="Resources\haxor.jpg" />
+    <None Include="Resources\LAN-Party_pictogram.svg.med.png" />
+    <None Include="Resources\sym_function_x-blue.png" />
+    <None Include="Resources\information-symbol.png" />
+    <Resource Include="Resources\waiting.gif" />
+    <Resource Include="Resources\pijl_up.jpg" />
+    <Resource Include="Resources\pijl_dwn.jpg" />
+    <Resource Include="Resources\ajax-loader.gif" />
+    <None Include="Resources\tt.gif" />
+    <None Include="tt.bmp" />
+    <None Include="Resources\ZoekProject2.bmp" />
+    <None Include="Resources\ZoekContact2.bmp" />
+    <None Include="Resources\ZoekBedrijf2.bmp" />
+    <None Include="Resources\Wijzig21.bmp" />
+    <None Include="Resources\Wijzig2.bmp" />
+    <None Include="Resources\Verwijder2.bmp" />
+    <None Include="Resources\Verder.bmp" />
+    <None Include="Resources\Upkleur.bmp" />
+    <None Include="Resources\Update2.bmp" />
+    <None Include="Resources\Up.bmp" />
+    <None Include="Resources\Terug.bmp" />
+    <None Include="Resources\Se.bmp" />
+    <None Include="Resources\Prkleur.bmp" />
+    <None Include="Resources\Prkleur %281%29.bmp" />
+    <None Include="Resources\Pr.bmp" />
+    <None Include="Resources\Plkleur.bmp" />
+    <None Include="Resources\Plkleur %281%29.bmp" />
+    <None Include="Resources\Pl.bmp" />
+    <None Include="Resources\Pe.bmp" />
+    <None Include="Resources\Oftab.bmp" />
+    <None Include="Resources\Ofkleur.bmp" />
+    <None Include="Resources\Ofkleur %281%29.bmp" />
+    <None Include="Resources\Nieuw2.bmp" />
+    <None Include="Resources\Menu2.bmp" />
+    <None Include="Resources\Inkleur.bmp" />
+    <None Include="Resources\InfoProject21.bmp" />
+    <None Include="Resources\InfoProject2.bmp" />
+    <None Include="Resources\InfoContact2.bmp" />
+    <None Include="Resources\InfoBedrijf2.bmp" />
+    <None Include="Resources\Iftab.bmp" />
+    <None Include="Resources\Gereed21.bmp" />
+    <None Include="Resources\Gereed2.bmp" />
+    <None Include="Resources\Cokleur.bmp" />
+    <None Include="Resources\Cl.bmp" />
+    <None Include="Resources\Bekleur.bmp" />
+    <None Include="Resources\Be.bmp" />
+    <None Include="Resources\Bdtab.bmp" />
+    <None Include="Resources\Annuleer2.bmp" />
+    <None Include="Resources\Alleprojecten2.bmp" />
+    <None Include="Resources\AlleContacten.bmp" />
+    <None Include="Resources\AlleBedrijven2.bmp" />
+    <None Include="Resources\ZoekProject2.tif" />
+    <None Include="Resources\ZoekContact2.tif" />
+    <None Include="Resources\ZoekBedrijf2.tif" />
+    <None Include="Resources\Wijzig21.tif" />
+    <None Include="Resources\Wijzig2.tif" />
+    <None Include="Resources\Verwijder2.tif" />
+    <None Include="Resources\verwijder.jpg" />
+    <None Include="Resources\Verder.tif" />
+    <None Include="Resources\Upkleur.tif" />
+    <None Include="Resources\Update2.tif" />
+    <None Include="Resources\Up.tif" />
+    <None Include="Resources\Terug.tif" />
+    <None Include="Resources\Se.tif" />
+    <None Include="Resources\Prkleur.tif" />
+    <None Include="Resources\Prkleur %281%29.tif" />
+    <None Include="Resources\Plkleur.tif" />
+    <None Include="Resources\Plkleur %281%29.tif" />
+    <None Include="Resources\Pl.tif" />
+    <Resource Include="Resources\pijl re2.jpg" />
+    <Resource Include="Resources\pijl re1.jpg" />
+    <None Include="Resources\Pe.tif" />
+    <None Include="Resources\oftabgray.bmp" />
+    <None Include="Resources\Oftab.tif" />
+    <None Include="Resources\Ofkleur.tif" />
+    <None Include="Resources\Ofkleur %281%29.tif" />
+    <None Include="Resources\Nieuwe logo klein.gif" />
+    <None Include="Resources\Nieuwe logo klein transparant.gif" />
+    <None Include="Resources\Nieuw2.tif" />
+    <None Include="Resources\Nieuw - Bitmapafbeelding.bmp" />
+    <None Include="Resources\Menu2.tif" />
+    <None Include="Resources\left_btn.bmp" />
+    <None Include="Resources\Inkleur.tif" />
+    <None Include="Resources\InfoProject21.tif" />
+    <None Include="Resources\InfoProject2.tif" />
+    <None Include="Resources\InfoContact2.tif" />
+    <None Include="Resources\InfoBedrijf2.tif" />
+    <None Include="Resources\image_probl.JPG" />
+    <None Include="Resources\iftabgray.bmp" />
+    <None Include="Resources\Iftab.tif" />
+    <None Include="Resources\grid.png" />
+    <None Include="Resources\Gereed21.tif" />
+    <None Include="Resources\Gereed2.tif" />
+    <None Include="Resources\favicon.ico" />
+    <None Include="Resources\Cokleur.tif" />
+    <None Include="Resources\Cl.tif" />
+    <None Include="Resources\Bekleur.tif" />
+    <None Include="Resources\bdtapgray.bmp" />
+    <None Include="Resources\Bdtab.tif" />
+    <None Include="Resources\Annuleer2.tif" />
+    <None Include="Resources\Alleprojecten2.tif" />
+    <None Include="Resources\AlleContacten.tif" />
+    <None Include="Resources\AlleBedrijven2.tif" />
+    <None Include="oftabgray.bmp" />
+    <None Include="iftabgray.bmp" />
+    <None Include="bdtapgray.bmp" />
+    <Content Include="favicon.ico" />
+    <Resource Include="Images\pijl dwn.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="left_btn.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="adres_user_control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdvancedFilter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\CustomCombo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="haxor_panel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoadingScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="multibox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="telefoonnummer_user_control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="verwijder_panel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GebruikersMonitor\GebruikersMonitor.csproj">
+      <Project>{4737D60D-F0CF-4471-A537-DB0AA5D0AE2B}</Project>
+      <Name>GebruikersMonitor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WPFcontrolLib\WPFcontrolLib.csproj">
+      <Project>{ae752bc7-73bb-450c-b704-71957d2453f9}</Project>
+      <Name>WPFcontrolLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ExchangeService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

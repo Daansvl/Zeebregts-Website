@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="MandagenRegistratie.controls.VakmanDag"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignWidth="100">
+    <StackPanel x:Name="spVakmandag" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Orientation="Vertical" MouseLeftButtonDown="spVakmandag_MouseLeftButtonDown">
+        <StackPanel x:Name="spIsGewijzigd" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Orientation="Horizontal" Visibility="Hidden">
+            <Rectangle x:Name="recOK" Width="20" Height="20" IsEnabled="True" ContextMenuService.ShowOnDisabled="True" HorizontalAlignment="Center" MouseLeftButtonDown="recOK_MouseLeftButtonDown" ToolTip="Wijzigingen goedkeuren">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="C:\Qualino\Projects\MandagenRegistratie\MandagenRegistratie\images\ok-button.jpg"></ImageBrush>
+                </Rectangle.Fill>
+                <Rectangle.ContextMenu>
+                    <ContextMenu Name="cmOk">
+                        <MenuItem x:Name="btnDagGoedkeuren" Header="Dag goedkeuren" Click="btnDagGoedkeuren_Click_1"/>
+                        <MenuItem x:Name="btnReeksGoedkeuren" Header="Alles goedkeuren" Click="btnReeksGoedkeuren_Click"/>
+                    </ContextMenu>
+                </Rectangle.ContextMenu>
+            </Rectangle>
+            <Rectangle x:Name="recCancel" Width="20" Height="20" IsEnabled="True" ContextMenuService.ShowOnDisabled="True" HorizontalAlignment="Center" MouseLeftButtonDown="recCancel_MouseLeftButtonDown" ToolTip="Wijzigingen annuleren">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="C:\Qualino\Projects\MandagenRegistratie\MandagenRegistratie\images\cancel-button.png"></ImageBrush>
+                </Rectangle.Fill>
+                <Rectangle.ContextMenu>
+                    <ContextMenu Name="cmCancel">
+                        <MenuItem x:Name="btnDagAnnuleren" Header="Dag annuleren" Click="btnDagAnnuleren_Click_1"/>
+                        <MenuItem x:Name="btnReeksAnnuleren" Header="Alles annuleren" Click="btnReeksAnnuleren_Click"/>
+                    </ContextMenu>
+                </Rectangle.ContextMenu>
+            </Rectangle>
+            <Rectangle x:Name="recReadGeannulleerd" Width="20" Height="20" IsEnabled="True" ContextMenuService.ShowOnDisabled="True" HorizontalAlignment="Center" MouseLeftButtonDown="recReadGeannulleerd_MouseLeftButtonDown" ToolTip="Annulleringen goedkeuren">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="C:\Qualino\Projects\MandagenRegistratie\MandagenRegistratie\images\ok-button.jpg"></ImageBrush>
+                </Rectangle.Fill>
+                <Rectangle.ContextMenu>
+                    <ContextMenu Name="cmReadGeannulleerd">
+                        <MenuItem x:Name="btnDagReadGeannulleerd" Header="Dag goedkeuren" Click="btnDagReadGeannulleerd_Click_1"/>
+                        <MenuItem x:Name="btnReeksReadGeannulleerd" Header="Alles goedkeuren" Click="btnReeksReadGeannulleerd_Click_1"/>
+                    </ContextMenu>
+                </Rectangle.ContextMenu>
+            </Rectangle>
+        </StackPanel>
+
+        <Label x:Name="lblDag" Content="Ma" HorizontalAlignment="Left" Width="100" />
+        <Label x:Name="lblDagUren" Content="Ma" HorizontalAlignment="Left" Width="100" />
+        <StackPanel x:Name="spVakmanDag" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Orientation="Vertical">
+        </StackPanel>
+    </StackPanel>
+</UserControl>

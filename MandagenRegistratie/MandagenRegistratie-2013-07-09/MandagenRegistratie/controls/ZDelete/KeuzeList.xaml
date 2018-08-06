@@ -1,0 +1,80 @@
+﻿<UserControl x:Name="KeuzeLijst"
+    x:Class="eBrochure_zeebregts.KeuzeControls.KeuzeList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:eBrochure_zeebregts.KeuzeControls"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400"
+             Margin="0,30,0,0">
+    <UserControl.Resources>
+        <local:VisibilityConverter x:Key="VisConv"/>
+        <local:InvVisibilityConverter x:Key="InvVisConv"/>
+        <local:EnabledConvertor x:Key="EnablConv"/>
+    </UserControl.Resources>
+    <StackPanel x:Name="MotherPnl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20,0,10,0">
+        <Border BorderBrush="Black" x:Name="OptBorder" BorderThickness="1" Margin="0,0,0,5"/>
+        <TextBlock x:Name="KLtile" FontFamily="Lucida Grande" FontSize="12" Foreground="{Binding Path=IsEnabled,ElementName=KeuzeLijst,Converter={StaticResource EnablConv}}"/>
+        <ScrollViewer BorderThickness="0" VerticalScrollBarVisibility="Auto">
+            <ListBox x:Name="ListBox" BorderThickness="0">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="235"/>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="300"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Border BorderBrush="Black" BorderThickness="1"  Grid.Row="0" Grid.ColumnSpan="4" Margin="0,4,0,4" Visibility="{Binding HorizontalLine, Converter={StaticResource VisConv}}"/>
+                            <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1">
+                                <RadioButton GroupName="{Binding GroupName,Mode=TwoWay}" Grid.Column="0" Grid.Row="1" IsChecked="{Binding Gekozen,Mode=TwoWay}" Visibility="{Binding IsEnkel,Mode=TwoWay, Converter={StaticResource VisConv}}" IsEnabled="{Binding Beschikbaar,Mode=OneWay}"><!--IsEnabled="{Binding Beschikbaar,Mode=OneWay}"-->
+                                    <!--<RadioButton.Content>
+                                        <TextBlock Text="{Binding Naam,Mode=TwoWay}" TextWrapping="Wrap"/>   
+                                    </RadioButton.Content>-->
+                                </RadioButton>
+                                <CheckBox Grid.Column="0" Grid.Row="1" IsChecked="{Binding Gekozen,Mode=TwoWay}" Visibility="{Binding IsEnkel,Mode=TwoWay, Converter={StaticResource InvVisConv}}" IsEnabled="{Binding Beschikbaar,Mode=OneWay}"><!--IsEnabled="{Binding Beschikbaar,Mode=OneWay}"-->
+                                    <!--<CheckBox.Content>
+                                        <TextBlock Text="{Binding Naam,Mode=TwoWay}" TextWrapping="Wrap" />
+                                    </CheckBox.Content>-->
+                                </CheckBox>
+                                <TextBlock Grid.Column="0" Grid.Row="1" Text="{Binding Naam,Mode=TwoWay}" TextWrapping="Wrap" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" >
+                                <!--<Button Width="20" Height="20" Content="i" Visibility="{Binding BtnsNotInHeader, Converter={StaticResource VisConv}}" IsEnabled="{Binding Beschikbaar,Mode=TwoWay}" Margin="5,0,5,0" VerticalAlignment="Top"/>-->
+                            
+                            </StackPanel>
+                            <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.Column="2" Margin="4,0,4,0" Visibility="{Binding VerticalLine,Converter={StaticResource VisConv}}" />
+                            <ListBox Grid.Column="3" Grid.Row="1" BorderThickness="0" ItemsSource="{Binding Opbouw,Mode=TwoWay}" Padding="0"><!--IsEnabled="{Binding Beschikbaar,Mode=OneWay}"-->
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="160"/>
+                                                <ColumnDefinition Width="60"/>
+                                                <ColumnDefinition Width="60"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="{Binding Omschrijving}" TextWrapping="Wrap" Margin="0,0,10,0"/>
+                                            <TextBlock Grid.Column="1" Text="{Binding Meters}" TextAlignment="Right" FontStyle="{Binding TextStijl}"/>
+                                            <TextBlock Grid.Column="2" Text="{Binding Prijs}" TextAlignment="Right" FontStyle="{Binding TextStijl}" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                            <Border BorderBrush="Black" BorderThickness="1" Grid.Row="2" Grid.ColumnSpan="4" Height="2" Margin="0,4,0,4" Visibility="{Binding BottomLine, Converter={StaticResource VisConv}}"/>
+                            </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
+    
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+        </StackPanel>
+    </StackPanel>
+</UserControl>
