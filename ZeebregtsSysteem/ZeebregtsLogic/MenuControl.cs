@@ -102,17 +102,6 @@ namespace ZeebregtsLogic
             // load the page into the contentcontrol
             //((PageContainer)((DockPanel)((ContentControl)Parent).Parent).Parent).GoBack();
             Tools.FindVisualParent<PageContainer>(this).GoBack();
-             
-        }
-
-        public void PageGoBack(string pagesubtitle)
-        {
-
-            // load the page into the contentcontrol
-            //((PageContainer)((DockPanel)((ContentControl)Parent).Parent).Parent).GoBack();
-            Tools.FindVisualParent<PageContainer>(this).GoBack(pagesubtitle);
-
-            // Tools.FindVisualParent<PageContainer>(this).lblPageSubtitle.Content = pagesubtitle;
 
         }
 

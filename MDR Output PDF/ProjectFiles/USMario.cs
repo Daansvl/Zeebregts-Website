@@ -108,7 +108,6 @@ namespace MDR2PDF
         public List<MANDAGREGISTER> pMANDAGREGISTER = new List<MANDAGREGISTER>();
 
         public string SublijstCode = string.Empty;
-        public bool BSN_Tonen = false;
 
         public class cPROJECT
         {
@@ -509,11 +508,11 @@ namespace MDR2PDF
             {
                 case "1a":
                     Lijst1a LIJST1a = new Lijst1a();
+                    //LIJST1a.Maak_Lijst(pSTARTDATUM, pEINDEDATUM, GetAllXMandagen_InclusiefOptions());
                     LIJST1a.Maak_Lijst(pSTARTDATUM, pEINDEDATUM, pdfGeselecteerdeMandagen, pdfAllArbeidsrelatie, pdfAllRegistratiebevoegd, pdfProject, pdfBedrijf, pdfVakman, LijstGegevens());
                     LIJST1a.Dispose();
                     break;
                 case "1b":
-                case "1bbsn":
                     // Bij Lijst 1b gaat het alleen om Externen, dus controleer of er sprake is van mandagrecords met externen
                     //int Extern = pdfAllContract.Where(y => y.ContractNaam.ToLower().Contains("extern")).Select(x => x.ContractID).FirstOrDefault();
                     //var pdfGeselecteerdeMandagen_Externen = pdfGeselecteerdeMandagen.Where(x => x.ContractVW == Extern).ToList();
@@ -522,14 +521,12 @@ namespace MDR2PDF
                     //    MessageBox.Show("U heeft geen Externen geselecteerd, Weeklijst Externen heeft geen zin");
                     //    break;
                     //}
-                    _1b_WeeklijstExternen Lijst1b = new _1b_WeeklijstExternen(SublijstCode);
+                    _1b_WeeklijstExternen Lijst1b = new _1b_WeeklijstExternen();
                     Lijst1b.Maak_Lijst(pSTARTDATUM, pEINDEDATUM, pdfGeselecteerdeMandagen, pdfAllArbeidsrelatie, pdfAllRegistratiebevoegd, pdfProject, pdfBedrijf, pdfVakman, LijstGegevens(), false);
                     Lijst1b.Dispose();
                     break;
                 case "1c": // We gebruiken de standaard lijst1b, maar dan met uitgebreide cakman-nfo (naam, adres etc) in vooraf-tabel
-                case "1cbsn":
-                case "1czap":
-                    _1b_WeeklijstExternen Lijst1c = new _1b_WeeklijstExternen(SublijstCode);
+                    _1b_WeeklijstExternen Lijst1c = new _1b_WeeklijstExternen();
                     Lijst1c.Maak_Lijst(pSTARTDATUM, pEINDEDATUM, pdfGeselecteerdeMandagen, pdfAllArbeidsrelatie, pdfAllRegistratiebevoegd, pdfProject, pdfBedrijf, pdfVakman, LijstGegevens(),true);
                     Lijst1c.Dispose();
                     break;
@@ -539,14 +536,9 @@ namespace MDR2PDF
                     Lijst8a.Dispose();
                     break;
                 case "8b":
-                    try {
-                        _8b_pr_wk_pr_utvrdr_pr_prd Lijst8b = new _8b_pr_wk_pr_utvrdr_pr_prd();
-                        Lijst8b.Maak_Lijst(mindag, maxdag, pdfGeselecteerdeMandagen, pdfAllRegistratiebevoegd, pdfAllContract, LijstGegevens());
-                        Lijst8b.Dispose();
-                        } catch (Exception e)
-                        {
-                            MessageBox.Show("Er is iets misgegaan in module 8b. Info voor Marino: Current Dir = [" + Environment.CurrentDirectory + "] message = " +  e.Message);
-                        }
+                    _8b_pr_wk_pr_utvrdr_pr_prd Lijst8b = new _8b_pr_wk_pr_utvrdr_pr_prd();
+                    Lijst8b.Maak_Lijst(mindag, maxdag, pdfGeselecteerdeMandagen, pdfAllRegistratiebevoegd, pdfAllContract, LijstGegevens());
+                    Lijst8b.Dispose();
                     break;
                 case "8c":
                     _8c_LK_pr_wk_pr_project_pr_prd Lijst8c = new _8c_LK_pr_wk_pr_project_pr_prd();
@@ -825,27 +817,22 @@ namespace MDR2PDF
             {
                 case "Jaar":
                     rbJaar.Checked = true;
-                    cbbJaar.SelectedIndex = -1;
                     cbbJaar.SelectedIndex = Math.Max(0,Math.Min(cbbJaar.Items.Count - 1,(easy.PeriodeOffset + PeriodeSelectieNU[0]))); // Offset tov 'NU'
                     break;
                 case "Kwartaal":
                     rbKwartaal.Checked = true;
-                    cbbKwartaal.SelectedIndex = -1;
                     cbbKwartaal.SelectedIndex = Math.Max(0,Math.Min(cbbKwartaal.Items.Count - 1,(easy.PeriodeOffset + PeriodeSelectieNU[1]))); // Offset tov 'NU';
                     break;
                 case "Maand":
                     rbMaand.Checked = true;
-                    cbbMaand.SelectedIndex = -1;
                     cbbMaand.SelectedIndex = Math.Max(0,Math.Min(cbbMaand.Items.Count - 1,(easy.PeriodeOffset + PeriodeSelectieNU[2]))); // Offset tov 'NU';
                     break;
                 case "Week":
                     rbWeek.Checked = true;
-                    cbbWeek.SelectedIndex = -1;
                     cbbWeek.SelectedIndex = Math.Max(0,Math.Min(cbbWeek.Items.Count - 1,(easy.PeriodeOffset + PeriodeSelectieNU[3]))); // Offset tov 'NU';
                     break;
                 case "Dag":
                     rbDag.Checked = true;
-                    cbbDag.SelectedIndex = -1;
                     cbbDag.SelectedIndex = Math.Max(0,Math.Min(cbbDag.Items.Count - 1,(easy.PeriodeOffset + PeriodeSelectieNU[4]))); // Offset tov 'NU';
                     break;
                 case "Datum":
@@ -860,9 +847,7 @@ namespace MDR2PDF
                     break;
                 default:
                     rbMaand.Checked = true;
-                    int i = cbbMaand.SelectedIndex;
-                    cbbMaand.SelectedIndex = -1;
-                    cbbMaand.SelectedIndex = i;
+                    cbbMaand.SelectedIndex = 0;
                     break;
             }
 
@@ -1123,19 +1108,8 @@ namespace MDR2PDF
                 // Bepaal positie van 'vandaag' (nodig om later easysave stand tov 'NU' te bepalen)
                 if (DateTime.Now.Year <= jaar)
                     PeriodeSelectieNU[0] = cbbJaar.Items.Count - 1;
-
-                // Zet standaard jaar-keuze op huidig jaar
-                if (jaar < DateTime.Now.Year)
-                {
-                    int i = cbbJaar.Items.Count - 2;
-                    if (i > -1 && cbbJaar.SelectedIndex == -1)
-                    {
-                        cbbJaar.SelectedIndex = i;
-                        cbbJaar.SelectedItem = cbbJaar.Items[i];//.Items.Count - 1;
-                    }
-                }
             }
-            //cbbJaar.SelectedIndex = -1;
+            cbbJaar.SelectedIndex = -1;
 
             // maanden + kwartalen
             var Maanden = _Dagen.Select(x => new { x.Year, x.Month }).Distinct().OrderByDescending(x => x.Year).ThenByDescending (x => x.Month).ToList();
@@ -1145,16 +1119,6 @@ namespace MDR2PDF
             foreach (var jaarmaand in Maanden)
             {
                 cbbMaand.Items.Add(string.Format("{0} - {1}", jaarmaand.Year, pl_MaandStrings[jaarmaand.Month]));
-                // Zet standaard maand-keuze op huidige maand
-                if (new DateTime(jaarmaand.Year,jaarmaand.Month,1) < new DateTime(DateTime.Now.Year, DateTime.Now.Month,1))
-                {
-                    int i = cbbMaand.Items.Count - 2;
-                    if (i > -1 && cbbMaand.SelectedIndex == -1)
-                    {
-                        cbbMaand.SelectedIndex = i;
-                        cbbMaand.SelectedItem = cbbMaand.Items[i];//.Items.Count - 1;
-                    }
-                }
                 // Bepaal positie van 'vandaag' (nodig om later easysave stand tov 'NU' te bepalen)
                 if (DateTime.Now.Year <= jaarmaand.Year && DateTime.Now.Month <= jaarmaand.Month)
                     PeriodeSelectieNU[2] = cbbMaand.Items.Count - 1;
@@ -1167,42 +1131,17 @@ namespace MDR2PDF
                     // Bepaal positie van 'vandaag' (nodig om later easysave stand tov 'NU' te bepalen)
                     if (DateTime.Now.Year <= jaarmaand.Year && DateTime.Now.Month <= jaarmaand.Month)
                         PeriodeSelectieNU[1] = cbbKwartaal.Items.Count - 1;
-
-                    // Zet standaard kwartaal-keuze op huidig kwartaal
-                    if (new DateTime(jaarmaand.Year, jaarmaand.Month, 1) < new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1) && kwartaalnr != ((DateTime.Now.Month-1)/3 + 1))
-                    {
-                        int i = cbbKwartaal.Items.Count - 2;
-                        if (i > -1 && cbbKwartaal.SelectedIndex == -1)
-                        {
-                            cbbKwartaal.SelectedIndex = i;
-                            cbbKwartaal.SelectedItem = cbbKwartaal.Items[i];//.Items.Count - 1;
-                        }
-                    }
-
                 }
             }
-            //cbbKwartaal.SelectedIndex = -1;
-            //cbbJaar.SelectedItem = -1;
+            cbbKwartaal.SelectedIndex = -1;
+            cbbJaar.SelectedItem = -1;
 
             // Weken en dagen
             cbbWeek.Items.Clear();
             cbbDag.Items.Clear();
-
-            //var __DagenOrderTest = _Dagen.Where(x => x >= new DateTime(1015, 07, 01) && x <= new DateTime(2015, 07, 31)).Union(_Dagen);
             foreach (DateTime dag in _Dagen.OrderByDescending(x=>x))
             {
                 cbbDag.Items.Add(string.Format("{0:yyyy-MM-dd}",dag));
-
-                // Zet standaard dag keuze op huidige datum
-                if (dag.Date < DateTime.Now.Date)
-                {
-                    int i = cbbDag.Items.Count - 2;
-                    if (i > -1 && cbbDag.SelectedIndex == -1)
-                    {
-                        cbbDag.SelectedIndex = i;
-                        cbbDag.SelectedItem = cbbDag.Items[i];//.Items.Count - 1;
-                    }
-                }
                 int weeknr = weekNumber(dag);
                 // Bepaal positie van 'vandaag' (nodig om later easysave stand tov 'NU' te bepalen)
                 if (DateTime.Now.Date <= dag.Date)
@@ -1218,21 +1157,10 @@ namespace MDR2PDF
                     cbbWeek.Items.Add(week);
                     if (DateTime.Now.Date <= dag.Date)
                         PeriodeSelectieNU[3] = cbbWeek.Items.Count - 1;
-
-                    // Zet standaard weekkeuze op huidige week
-                    if (dag.Date < DateTime.Now.Date && weekNumber(dag) != weekNumber(DateTime.Now))
-                    {
-                        int i = cbbWeek.Items.Count - 2;
-                        if (i > -1 && cbbWeek.SelectedIndex == -1)
-                        {
-                            cbbWeek.SelectedIndex = i;
-                            cbbWeek.SelectedItem = cbbWeek.Items[i];//.Items.Count - 1;
-                        }
-                    }
                 }
             }
-            //cbbWeek.SelectedItem = -1;
-            //cbbWeek.SelectedIndex = -1;
+            cbbWeek.SelectedItem = -1;
+            cbbWeek.SelectedIndex = -1;
         }
 
         internal void IinitializeConfigSettings(string Env )
@@ -1638,10 +1566,7 @@ namespace MDR2PDF
         {
             //pStartDatum = monthCalendarOneWeek.SelectionRange.Start;
             DateTime Startdag = new DateTime(jaar, 1, 1);
-            int DagVanDeWeek = (int)Startdag.DayOfWeek;
             int dag = (int)Startdag.DayOfWeek - 1;
-            if (dag > 3) // Kijk, 1-januari op een vrijdag, zaterdag of zondag valt, dan moeten we een week verder zijn
-                dag -= 7;
             return Startdag.AddDays(dag * -1);
         }
 
@@ -2346,7 +2271,7 @@ namespace MDR2PDF
                     cbbJaar.Visible = true;
                     if (RB.Name != pubNaamPeriodeSelector)
                     {
-                        //cbbJaar.SelectedItem = null;
+                        cbbJaar.SelectedItem = null;
                         cbbJaar.Text = "- Selecteer - ";
                     }
                     //DATUMTEST
@@ -2362,7 +2287,7 @@ namespace MDR2PDF
                     cbbKwartaal.Visible = true;
                     if (RB.Name != pubNaamPeriodeSelector)
                     {
-                        //cbbKwartaal.SelectedItem = null;
+                        cbbKwartaal.SelectedItem = null;
                         cbbKwartaal.Text = "- Selecteer - ";
                     }
                     break;
@@ -2370,7 +2295,7 @@ namespace MDR2PDF
                     cbbMaand.Visible = true;
                     if (RB.Name != pubNaamPeriodeSelector)
                     {
-                        //cbbMaand.SelectedItem = null;
+                        cbbMaand.SelectedItem = null;
                         cbbMaand.Text = "- Selecteer - ";
                     }
                     //DATUMTEST
@@ -2385,7 +2310,7 @@ namespace MDR2PDF
                     cbbWeek .Visible = true;
                     if (RB.Name != pubNaamPeriodeSelector)
                     {
-                        //cbbWeek.SelectedItem = null;
+                        cbbWeek.SelectedItem = null;
                         cbbWeek.Text = "- Selecteer - ";
                     }
                     //DATUMTEST
@@ -2400,7 +2325,7 @@ namespace MDR2PDF
                     cbbDag.Visible = true;
                     if (RB.Name != pubNaamPeriodeSelector)
                     {
-                        //cbbDag.SelectedItem = null;
+                        cbbDag.SelectedItem = null;
                         cbbDag.Text = "- Selecteer - ";
                     }
                     break;
@@ -2956,11 +2881,7 @@ namespace MDR2PDF
                 }
             }
             senderComboBox.DropDownWidth = width;
-
-            if (cbbMaand.SelectedItem != null)
-                cbbMaand.Text = cbbMaand.SelectedItem.ToString();
-
-            //}
+        //}
         }
 
 
@@ -2968,17 +2889,12 @@ namespace MDR2PDF
         {
             // Pas breedte aan
             MszTools.AdjustWidthComboBox_DropDown(sender, e);
-            if (cbbJaar.SelectedItem != null)
-                cbbJaar.Text = cbbJaar.SelectedItem.ToString();
         }
 
         private void cbbWeek_DropDown(object sender, EventArgs e)
         {
             // Pas breedte aan
             MszTools.AdjustWidthComboBox_DropDown(sender, e);
-            if (cbbWeek.SelectedItem != null)
-                cbbWeek.Text = cbbWeek.SelectedItem.ToString();
-
         }
 
         private void monthCalendarDatum_MouseHover(object sender, EventArgs e)
@@ -2990,16 +2906,12 @@ namespace MDR2PDF
         {
             // Pas breedte aan
             MszTools.AdjustWidthComboBox_DropDown(sender, e);
-            if (cbbKwartaal.SelectedItem != null)
-                cbbKwartaal.Text = cbbKwartaal.SelectedItem.ToString();
         }
 
         private void cbbDag_DropDown(object sender, EventArgs e)
         {
             // Pas breedte aan
             MszTools.AdjustWidthComboBox_DropDown(sender, e);
-            if (cbbDag.SelectedItem != null)
-                cbbDag.Text = cbbDag.SelectedItem.ToString();
         }
 
         private static void adjustListSize(ListView lst)
@@ -3046,10 +2958,7 @@ namespace MDR2PDF
             for (int i = 0; i < PDFSETTINGS.Lijstgegevens.SubLijst.Count; i++)
             {
                 if (PDFSETTINGS.Lijstgegevens.SubLijst[i].SubTitel == lblSubform.Text)
-                {
                     SublijstCode = PDFSETTINGS.Lijstgegevens.SubLijst[i].SubCode;
-                    BSN_Tonen = PDFSETTINGS.Lijstgegevens.SubLijst[i].SubTitel.Contains("BSN");
-                }
             }
 
 

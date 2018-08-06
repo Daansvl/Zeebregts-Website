@@ -17,13 +17,14 @@ namespace MDR2PDF
 {
     public partial class _8b_pr_wk_pr_utvrdr_pr_prd : UserControl
     {
+
         static string xHtmlFolder = ConfigurationManager.AppSettings["htmlFolder"].ToString();
         public EvoTools ET = new EvoTools(xHtmlFolder);
 
-        static string pathtabel = System.IO.Path.Combine(xHtmlFolder, "html/Lijst8/tabel.htm");
-        static string pathtabel_subregel = System.IO.Path.Combine(xHtmlFolder, "html/Lijst8/tabel_subregel.htm");
-        static string pathtabel_totaalregel = System.IO.Path.Combine(xHtmlFolder, "html/Lijst8/tabel_totaalregel.htm");
-        static string pathlogo = System.IO.Path.Combine(xHtmlFolder, "html/logo.png");
+        static string pathtabel = System.IO.Path.Combine(Environment.CurrentDirectory, "html/Lijst8/tabel.htm");
+        static string pathtabel_subregel = System.IO.Path.Combine(Environment.CurrentDirectory, "html/Lijst8/tabel_subregel.htm");
+        static string pathtabel_totaalregel = System.IO.Path.Combine(Environment.CurrentDirectory, "html/Lijst8/tabel_totaalregel.htm");
+        static string pathlogo = System.IO.Path.Combine(Environment.CurrentDirectory, "html/logo.png");
 
         public string htmlTabel = File.ReadAllText(pathtabel); //(public wordt steeds opnieuw gelezen!)
         static string htmlTabelSubRegel = File.ReadAllText(pathtabel_subregel); //Static wordt eenmalig gelezen!

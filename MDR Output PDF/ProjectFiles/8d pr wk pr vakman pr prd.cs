@@ -18,6 +18,9 @@ namespace MDR2PDF
         static string xHtmlFolder = ConfigurationManager.AppSettings["htmlFolder"].ToString();
         public EvoTools ET = new EvoTools(xHtmlFolder);
 
+        //static string pathtabel = System.IO.Path.Combine(xHtmlFolder, "html/Lijst8NEW/tabel.htm");
+        //static string pathtabel_subregel = System.IO.Path.Combine(xHtmlFolder, "html/Lijst8NEW/tabel_subregel8a.htm");
+        //static string pathtabel_totaalregel = System.IO.Path.Combine(xHtmlFolder, "html/Lijst8NEW/tabel_totaalregel8a.htm");
         static string pathtabel = System.IO.Path.Combine(xHtmlFolder, "html/Lijst8/tabel.htm");
         static string pathtabel_subregel = System.IO.Path.Combine(xHtmlFolder, "html/Lijst8/tabel_subregel.htm");
         static string pathtabel_totaalregel = System.IO.Path.Combine(xHtmlFolder, "html/Lijst8/tabel_totaalregel.htm");

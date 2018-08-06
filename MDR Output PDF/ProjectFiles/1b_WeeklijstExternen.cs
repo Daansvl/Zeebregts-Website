@@ -26,14 +26,13 @@ namespace MDR2PDF
 
 
         // EVO HTML Variabelen
-        static string pathcontainerBSN = System.IO.Path.Combine(xHtmlFolder, "html/Lijst1/Lijst1_bc_BSN.html");
-        static string pathcontainerNEW = System.IO.Path.Combine(xHtmlFolder, "html/Lijst1/Lijst1_bc_NEW.html");
-        static string pathcontainerZAP = System.IO.Path.Combine(xHtmlFolder, "html/Lijst1/Lijst1_bc_ZAP.html");
+        //static string pathcontainer = System.IO.Path.Combine(xHtmlFolder, "html/Lijst1b/Lijst1b.html");
+        static string pathcontainer = System.IO.Path.Combine(xHtmlFolder, "html/Lijst1/Lijst1_bc.html");
         static string pathfooter = System.IO.Path.Combine(xHtmlFolder, "html/Lijst1/footer_1bc.html");
-        static string pathfooterZAP = System.IO.Path.Combine(xHtmlFolder, "html/Lijst1/footer_1bcZAP.html");
+        //static string pathhandtekening = System.IO.Path.Combine(xHtmlFolder, "html/Lijst1/handtekening.png").Replace("\\","/");
         static string pathhandtekening = "http://www.essed.com/40df86d0-a86d-11e4-bcd8-0800200c9a66/PL000000/handtekening0.png";
 
-        public string htmlcontainer = string.Empty;
+        public string htmlcontainer = File.ReadAllText(pathcontainer); // Public ipv static zodat het opnieuw wordt ingelezen
         public string htmlfooter = File.ReadAllText(pathfooter); // Public ipv static zodat het opnieuw wordt ingelezen
 
         // Werkelijke waarde pas toekennen in initialize(), kan hier niet
@@ -50,9 +49,6 @@ namespace MDR2PDF
         public int DetailregelsLeft = 0; // Aantal regels dat er nog afgedrukt zullen worden
         public bool TussenLijntjeNodig = false;
 
-        public bool SHOW_BSN;
-        public bool ZAP_Briefpapier;
-
         // Zodat we een melding kunnen geven als gegevens van een vakman ontbreken
         string VakmannenWithNoBedrijf = string.Empty;
         string VakmannenWithNoBsn = string.Empty;
@@ -62,20 +58,9 @@ namespace MDR2PDF
         string ProjectenWithVakmanNulls = string.Empty;
 
 
-        public _1b_WeeklijstExternen(string _Lijstcode)
+        public _1b_WeeklijstExternen()
         {
-            SHOW_BSN = _Lijstcode.ToLower().Contains("bsn");
-            ZAP_Briefpapier = _Lijstcode.ToLower().Contains("zap");
-
             InitializeComponent();
-            if (ZAP_Briefpapier)
-            {
-                htmlcontainer = File.ReadAllText(pathcontainerZAP);
-                htmlfooter = File.ReadAllText(pathfooterZAP);
-            } else
-            {
-                htmlcontainer = File.ReadAllText(SHOW_BSN ? pathcontainerBSN : pathcontainerNEW);
-            }
 
             HTMLTotaal = VerwijderLabel(htmlcontainer, "VakmanTabel");
             HTMLTotaal = VerwijderLabel(HTMLTotaal, "Projecttabel");
@@ -260,7 +245,7 @@ namespace MDR2PDF
                 }
                 //tabel = tabel.Replace("{Projectleider}", Uitvoerders);
                 var Opdrachtgever = _AllBedrijven.Where(x => x.bedrijf_nr == DitProject.BedrijfVW).FirstOrDefault();
-                tabel = tabel.Replace("{Opdrachtgever}", Opdrachtgever == null ? "Onbekend" : Opdrachtgever.naam); ;
+                tabel = tabel.Replace("{Opdrachtgever}", Opdrachtgever.naam); ;
 
 
                 // ProjectTotaal hele periode (en gedetailleerd per vakman)
@@ -396,46 +381,38 @@ namespace MDR2PDF
             // Sla naam vd vakman op als gegevens ontbreken
             if ((_ZijnBedrijf == null || _ZijnBedrijf.naam.Length < 1) && !VakmannenWithNoBedrijf.Contains(DezeVakman.Naam))
                 VakmannenWithNoBedrijf += (VakmannenWithNoBedrijf.Length > 0 ? ", " : "") + DezeVakman.Naam;
+            if ((DezeVakman.Bsn == null || DezeVakman.Bsn.Length < 1) && !VakmannenWithNoBsn.Contains(DezeVakman.Naam))
+                VakmannenWithNoBsn += (VakmannenWithNoBsn.Length > 0 ? ", " : "") + DezeVakman.Naam;
+            if (DezeVakman.geboortedatum == null && !VakmannenWithNoGeboortedatum.Contains(DezeVakman.Naam))
+                VakmannenWithNoGeboortedatum += (VakmannenWithNoGeboortedatum.Length > 0 ? ", " : "") + DezeVakman.Naam;
 
-            if (SHOW_BSN)
+            // Check if ID ongeldig of verlopen
+            if (DezeVakman.SoortID == null || DezeVakman.IDstring == null || DezeVakman.GeldigTot == null || DezeVakman.IDstring.Length < 1)
             {
-                if ((DezeVakman.Bsn == null || DezeVakman.Bsn.Length < 1) && !VakmannenWithNoBsn.Contains(DezeVakman.Naam))
-                    VakmannenWithNoBsn += (VakmannenWithNoBsn.Length > 0 ? ", " : "") + DezeVakman.Naam;
-                if (DezeVakman.geboortedatum == null && !VakmannenWithNoGeboortedatum.Contains(DezeVakman.Naam))
-                    VakmannenWithNoGeboortedatum += (VakmannenWithNoGeboortedatum.Length > 0 ? ", " : "") + DezeVakman.Naam;
-
-
-                // Check if ID ongeldig of verlopen
-                if (DezeVakman.SoortID == null || DezeVakman.IDstring == null || DezeVakman.GeldigTot == null || DezeVakman.IDstring.Length < 1)
+                if (!VakmannenWithNoID.Contains(DezeVakman.Naam))
+                    VakmannenWithNoID += (VakmannenWithNoID.Length > 0 ? ", " : "") + DezeVakman.Naam;
+                DezeVakman.IDstring = string.Empty;
+            }
+            else
+            {
+                if (DezeVakman.GeldigTot < DezeVakman.LastDate)
                 {
-                    if (!VakmannenWithNoID.Contains(DezeVakman.Naam))
-                        VakmannenWithNoID += (VakmannenWithNoID.Length > 0 ? ", " : "") + DezeVakman.Naam;
+                    if (!VakmannenWithVerlopenID.Contains(DezeVakman.Naam))
+                        VakmannenWithVerlopenID += (VakmannenWithVerlopenID.Length > 0 ? ", " : "") + DezeVakman.Naam;
+                    //DezeVakman.IDstring += string.Format("{0} \n(geldig tot {1:d MMMM yyy})",DezeVakman.IDstring,DezeVakman.GeldigTot);
                     DezeVakman.IDstring = string.Empty;
-                }
-                else
-                {
-                    if (DezeVakman.GeldigTot < DezeVakman.LastDate)
-                    {
-                        if (!VakmannenWithVerlopenID.Contains(DezeVakman.Naam))
-                            VakmannenWithVerlopenID += (VakmannenWithVerlopenID.Length > 0 ? ", " : "") + DezeVakman.Naam;
-                        //DezeVakman.IDstring += string.Format("{0} \n(geldig tot {1:d MMMM yyy})",DezeVakman.IDstring,DezeVakman.GeldigTot);
-                        DezeVakman.IDstring = string.Empty;
-                    }
                 }
             }
                 
             string regel = VakmanRegel;
             regel = regel.Replace("{Nr}", (++VakmanNr).ToString());
             regel = regel.Replace("{Vakman}", DezeVakman.Naam);
-            if (SHOW_BSN)
-            {
-                regel = regel.Replace("{Bsn}", DezeVakman.BSNLandcode + " " + DezeVakman.Bsn ?? "");
-                regel = regel.Replace("{GebDatum}", string.Format("{0:dd-MM-yyyy}", DezeVakman.geboortedatum));
-                if (DezeVakman.IDstring.Length < 2)
-                    regel = regel.Replace("{IDNummer}", "");
-                else
-                    regel = regel.Replace("{IDNummer}", string.Format("{0} {1} {2}", DezeVakman.SoortID ?? "", DezeVakman.IDstring == null ? "" : "nr:", DezeVakman.IDstring ?? ""));
-            }
+            regel = regel.Replace("{Bsn}",  DezeVakman.BSNLandcode + " " + DezeVakman.Bsn ?? "");
+            regel = regel.Replace("{GebDatum}", string.Format("{0:dd-MM-yyyy}",DezeVakman.geboortedatum ));
+            if (DezeVakman.IDstring.Length < 2)
+                regel = regel.Replace("{IDNummer}", "");
+            else
+                regel = regel.Replace("{IDNummer}", string.Format("{0} {1} {2}", DezeVakman.SoortID ?? "", DezeVakman.IDstring == null ? "" : "nr:", DezeVakman.IDstring ?? ""));
             regel = regel.Replace("{BedrijfsAdres}", _ZijnBedrijf == null ? "" : _ZijnBedrijf.straat);// DezeVakman.Adres);
             string pc = _ZijnBedrijf == null || _ZijnBedrijf.postcode == null ? "" : _ZijnBedrijf.postcode.Trim().ToUpper();
             regel = regel.Replace("{BedrijfsAdresPostcode}", pc.Length == 6 ? pc.Substring(0, 4) + " " + pc.Substring(4, 2) : pc);

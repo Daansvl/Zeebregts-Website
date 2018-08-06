@@ -39,9 +39,10 @@
             // btnTerug
             // 
             this.btnTerug.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTerug.Location = new System.Drawing.Point(43, -1);
+            this.btnTerug.Location = new System.Drawing.Point(57, -1);
+            this.btnTerug.Margin = new System.Windows.Forms.Padding(4);
             this.btnTerug.Name = "btnTerug";
-            this.btnTerug.Size = new System.Drawing.Size(75, 23);
+            this.btnTerug.Size = new System.Drawing.Size(100, 28);
             this.btnTerug.TabIndex = 1;
             this.btnTerug.Text = "Terug";
             this.btnTerug.UseVisualStyleBackColor = false;
@@ -53,16 +54,18 @@
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(992, 750);
+            this.panel1.Size = new System.Drawing.Size(1345, 753);
             this.panel1.TabIndex = 2;
             // 
             // btVerder
             // 
             this.btVerder.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btVerder.Location = new System.Drawing.Point(891, 0);
+            this.btVerder.Location = new System.Drawing.Point(1188, 0);
+            this.btVerder.Margin = new System.Windows.Forms.Padding(4);
             this.btVerder.Name = "btVerder";
-            this.btVerder.Size = new System.Drawing.Size(75, 23);
+            this.btVerder.Size = new System.Drawing.Size(100, 28);
             this.btVerder.TabIndex = 1;
             this.btVerder.Text = "Bevestig";
             this.btVerder.UseVisualStyleBackColor = false;
@@ -77,15 +80,16 @@
             // 
             // StartScherm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(0, 750);
-            this.ClientSize = new System.Drawing.Size(1009, 612);
+            this.ClientSize = new System.Drawing.Size(1345, 753);
             this.Controls.Add(this.btVerder);
             this.Controls.Add(this.btnTerug);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StartScherm";
             this.Text = "PDF Output";
             this.ResumeLayout(false);

@@ -540,6 +540,12 @@ namespace zeebregtsCs
                 Console.WriteLine(ex.Message);
             }
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            var service = ExchangeComs.EWSFunctions.GetNewServiceHook();
+            ExchangeComs.EWSFunctions.MakeFolder(service);
+        }
        
       
         

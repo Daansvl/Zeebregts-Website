@@ -6616,7 +6616,7 @@ namespace zeebregtsCs
             //MessageBox.Show("ProjNum is " + curItem.ProjNum );
 
 
-            string myDocspath = @"\\OFFICE-SERVER\Bestanden\Bestanden\ProjectFolders (Module 1 Test)\" + id;
+            string myDocspath = @"\\PROLIANT\bedrijfsdata\Bestanden\ProjectFolders\" + id;
             if (Directory.Exists(myDocspath))
             {
                 string windir = Environment.GetEnvironmentVariable("WINDIR");

@@ -291,8 +291,7 @@ namespace MDR2PDF
             string w_directory = System.IO.Directory.GetCurrentDirectory();
             DateTime c3 = System.IO.File.GetLastWriteTime(System.IO.Path.Combine(w_directory, w_file));
 
-            label3.Text = "Versie " + c3.ToString("yyyy-MM-dd HH:mm:ss")
-            ;
+            label3.Text = "Versie "+c3.ToString("yyyy-MM-dd HH:mm:ss");
 
         }
 
@@ -330,8 +329,6 @@ namespace MDR2PDF
                 ET.Log("2e aanroep Bouwlijst");
                 BouwLijst();
                 ET.Log("2e aanroep Bouwlijst");
-
-                // dit zet Juraci hier neer op 4 mei 2015
             }
             catch { }
         }
@@ -465,7 +462,7 @@ namespace MDR2PDF
             ET.Log("Lijsten LOADED");
 
             pubLIJSTEN.Clear();
-            var _lijsten = dbLijst.Lijstens.OrderBy(x => x.ID).ToList();
+            var _lijsten = dbLijst.Lijstens.OrderBy(x => x.SubCode).ToList();
             classLijstgegevens lijstje; classSubLijstGegevens sublijst;
 
             // Voor iedere hoofdlijst

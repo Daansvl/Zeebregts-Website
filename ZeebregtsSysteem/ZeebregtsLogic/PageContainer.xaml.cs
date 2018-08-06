@@ -255,7 +255,7 @@ namespace ZeebregtsLogic
                  }
                  else
                  {
-                     pcWindow.Title = title; // + " || Niet verbonden";
+                     pcWindow.Title = title + " || Niet verbonden";
                      log.Log("Status: Niet verbonden --> useChatFunction=false");
                  }
              }
@@ -958,35 +958,6 @@ namespace ZeebregtsLogic
                     LoadControlGoingback((System.Windows.Controls.Control)control);
                 }
             }
-        }
-
-        public void GoBack(string pagesubtitle)
-        {
-            List<object> listNavigationHistory = ApplicationState.GetValue<List<object>>(ApplicationVariables.listNavigationHistory);
-
-            if (ApplicationState.GetValue<List<object>>(ApplicationVariables.listNavigationHistory).Count > 1)
-            {
-                int counter = ApplicationState.GetValue<List<object>>(ApplicationVariables.listNavigationHistory).Count;
-
-                // load the previous page into the contentcontrol
-                object control = ApplicationState.GetValue<List<object>>(ApplicationVariables.listNavigationHistory)[counter - 2];
-
-                if (control.GetType().BaseType == typeof(WFControl))
-                {
-                    LoadControlGoingback((WFControl)control);
-                }
-                else if (control.GetType().BaseType == typeof(MenuControl))
-                {
-                    LoadControlGoingback((MenuControl)control);
-                }
-                else
-                {
-                    LoadControlGoingback((System.Windows.Controls.Control)control);
-                }
-            }
-
-            SetPageSubTitle(pagesubtitle);
-
         }
 
         private void ReloadMenuHandler(object sender, RoutedEventArgs e)

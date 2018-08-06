@@ -19,7 +19,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <PublishUrl>\\192.160.0.3\Bestanden\Bestanden\master\5.1%29 ontwikkeling\systeem Zeebregts\project Daan\Module 1 Publish\</PublishUrl>
+    <PublishUrl>D:\Development\deploy\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -29,9 +29,9 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <InstallUrl>\\proliant\bedrijfsdata\Software-installers\Zeebregts CS\</InstallUrl>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>22</ApplicationRevision>
+    <ApplicationRevision>31</ApplicationRevision>
     <ApplicationVersion>1.5.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -147,7 +147,6 @@
     </Compile>
     <Compile Include="AdresDataSet.cs">
       <DependentUpon>AdresDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="AdresDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -162,7 +161,6 @@
     </Compile>
     <Compile Include="AdvFilterDataset.cs">
       <DependentUpon>AdvFilterDataset.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="AdvFilterDataset.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -174,7 +172,6 @@
     </Compile>
     <Compile Include="bedrijfformdataset.cs">
       <DependentUpon>bedrijfformdataset.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="bedrijfformdataset.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -201,7 +198,6 @@
     <Compile Include="ExchangeComs\ExchangeContactItem.cs" />
     <Compile Include="filterd_box.cs">
       <DependentUpon>filterd_box.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="filterd_box.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -279,7 +275,6 @@
     </Compile>
     <Compile Include="persoonsformdataset.cs">
       <DependentUpon>persoonsformdataset.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="persoonsformdataset.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -325,7 +320,6 @@
     <Compile Include="taak_bepaler.cs" />
     <Compile Include="testset.cs">
       <DependentUpon>testset.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="testset.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -349,7 +343,6 @@
     </Compile>
     <Compile Include="variabelDataSet.cs">
       <DependentUpon>variabelDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Variabele_set.cs">
       <SubType>UserControl</SubType>

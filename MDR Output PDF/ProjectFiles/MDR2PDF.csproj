@@ -113,6 +113,7 @@
       <HintPath>Resources\evohtmltopdf.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -334,9 +335,6 @@
     <Content Include="Resources\html\Algemeen\stylesheet OLD.css" />
     <Content Include="Resources\html\Algemeen\stylesheet.css" />
     <Content Include="Resources\html\Algemeen\stylesheetOLD2.css" />
-    <Content Include="Resources\html\Lijst8b\tabel.htm" />
-    <Content Include="Resources\html\Lijst8b\tabel_subregel.htm" />
-    <Content Include="Resources\html\Lijst8b\tabel_totaalregel.htm" />
     <None Include="Resources\evointernal.dat" />
     <None Include="Resources\search.png" />
     <None Include="Resources\search %281%29.png" />

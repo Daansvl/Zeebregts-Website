@@ -118,8 +118,6 @@ namespace MandagenRegistratie.controls.Login
                 ApplicationState.SetValue(ApplicationVariables.intGebruikerId, gebruiker.GebruikerId);
                 ApplicationState.SetValue(ApplicationVariables.objGebruiker, gebruiker);
 
-                //ApplicationState.SetValue(ApplicationVariables.strWindowStatus, "Ingelogd als " + gebruiker.Gebruikersnaam);
-
                 if (isFirstLogin)
                 {
                     ApplicationState.SetValue(ApplicationVariables.objGebruikerFirst, gebruiker);
@@ -152,32 +150,15 @@ namespace MandagenRegistratie.controls.Login
                     // haal bijbehorende contact op uit database daan
                     dbOriginalRepository dbrepOr = new dbOriginalRepository();
                     MDRpersoon contactpersoon = dbrepOr.GetContact(gebruiker.ContactIdOrigineel);
-                    MDRpersoon contactpersoonFirst = dbrepOr.GetContact(ApplicationState.GetValue<Gebruiker>(ApplicationVariables.objGebruikerFirst).ContactIdOrigineel);
 
                     PageContainer pcWindow = Tools.FindVisualParent<PageContainer>((DependencyObject)sender);
 
-                    if (pcWindow != null)
-                    {
-                        string[] statusArray = pcWindow.Title.Split(new string[] { "||" }, StringSplitOptions.None);
+                    string statusChat = pcWindow.Title.Split(new string[] { "||" }, StringSplitOptions.None)[2];
 
-                        string statusChat = "";
+                    pcWindow.Title = ConfigurationManager.AppSettings["WindowTitle"].ToString() + " || Welkom " + (contactpersoon.voornaam + " " + contactpersoon.tussenvoegsel + " " + contactpersoon.achternaam).ToStringTrimmed() + " ||" + statusChat; // +" Status ZeebregtsChannelService: Actief";
 
-                        if (statusArray.Length > 2)
-                        {
-                            statusChat = statusArray[2];
-                        }
+                    //
 
-                        // (contactpersoon.voornaam + " " + contactpersoon.tussenvoegsel + " " + contactpersoon.achternaam).ToStringTrimmed()
-                        if (contactpersoon.persoon_ID == contactpersoonFirst.persoon_ID)
-                        {
-                            pcWindow.Title = ConfigurationManager.AppSettings["WindowTitle"].ToString() + " || Welkom " + (contactpersoon.voornaam + " " + contactpersoon.tussenvoegsel + " " + contactpersoon.achternaam).ToStringTrimmed() + " ||" + statusChat; // +" Status ZeebregtsChannelService: Actief";
-                        }
-                        else
-                        {
-                            pcWindow.Title = ConfigurationManager.AppSettings["WindowTitle"].ToString() + " || Welkom " + (contactpersoonFirst.voornaam + " " + contactpersoonFirst.tussenvoegsel + " " + contactpersoonFirst.achternaam).ToStringTrimmed() + " | (Ingelogd als " + (contactpersoon.voornaam + " " + contactpersoon.tussenvoegsel + " " + contactpersoon.achternaam).ToStringTrimmed() + ") ||" + statusChat; // +" Status ZeebregtsChannelService: Actief";
-                        }
-                        //
-                    }
                     // informeer gebruiker dat ie automatisch ingelogd is
                     //MessageBox.Show("Welkom " + gebruiker.Gebruikersnaam + ", u bent automatisch ingelogd als projectleider: " + (contactpersoon.voornaam + " " + contactpersoon.tussenvoegsel + " " + contactpersoon.achternaam).ToStringTrimmed());
                     //MessageBox.Show("Welkom " + gebruiker.Gebruikersnaam + ", u bent automatisch ingelogd als projectleider: " + gebruiker.Gebruikersnaam);
@@ -200,18 +181,8 @@ namespace MandagenRegistratie.controls.Login
 
             LoginAls((int)cbProjectleiders.SelectedValue, false, this);
 
-
-            string pagesubtitle = string.Empty;
-
-            dbOriginalRepository dbrepOr = new dbOriginalRepository();
-            MDRpersoon contactpersoon = dbrepOr.GetContact(ApplicationState.GetValue<Gebruiker>(ApplicationVariables.objGebruiker).ContactIdOrigineel);
-            if (contactpersoon != null)
-            {
-                pagesubtitle = "Ingelogd als " + contactpersoon.voornaam + " " + contactpersoon.achternaam;
-            }
-
             // na het saven terug in history
-            PageGoBack(pagesubtitle);
+            PageGoBack();
 
         }
 

@@ -223,7 +223,8 @@
             // 
             this.monthCalendarStart.CausesValidation = false;
             this.monthCalendarStart.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
-            this.monthCalendarStart.Location = new System.Drawing.Point(-3, 180);
+            this.monthCalendarStart.Location = new System.Drawing.Point(-4, 222);
+            this.monthCalendarStart.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.monthCalendarStart.MaxDate = new System.DateTime(2999, 1, 28, 0, 0, 0, 0);
             this.monthCalendarStart.MaxSelectionCount = 1;
             this.monthCalendarStart.Name = "monthCalendarStart";
@@ -237,7 +238,8 @@
             // 
             // monthCalendarEind
             // 
-            this.monthCalendarEind.Location = new System.Drawing.Point(9, 218);
+            this.monthCalendarEind.Location = new System.Drawing.Point(12, 268);
+            this.monthCalendarEind.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.monthCalendarEind.MaxSelectionCount = 1;
             this.monthCalendarEind.Name = "monthCalendarEind";
             this.monthCalendarEind.ShowTodayCircle = false;
@@ -250,9 +252,10 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(198, 5);
+            this.button9.Location = new System.Drawing.Point(264, 6);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(117, 24);
+            this.button9.Size = new System.Drawing.Size(156, 30);
             this.button9.TabIndex = 57;
             this.button9.Text = "Test";
             this.button9.UseVisualStyleBackColor = true;
@@ -263,7 +266,8 @@
             // 
             this.monthCalendarDatum.CausesValidation = false;
             this.monthCalendarDatum.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
-            this.monthCalendarDatum.Location = new System.Drawing.Point(3, 112);
+            this.monthCalendarDatum.Location = new System.Drawing.Point(4, 138);
+            this.monthCalendarDatum.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.monthCalendarDatum.MaxSelectionCount = 1;
             this.monthCalendarDatum.Name = "monthCalendarDatum";
             this.monthCalendarDatum.ShowTodayCircle = false;
@@ -281,9 +285,11 @@
             this.gbUitvoerders.Controls.Add(this.tableLayoutPanelUitvoerders);
             this.gbUitvoerders.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbUitvoerders.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbUitvoerders.Location = new System.Drawing.Point(455, 3);
+            this.gbUitvoerders.Location = new System.Drawing.Point(606, 4);
+            this.gbUitvoerders.Margin = new System.Windows.Forms.Padding(4);
             this.gbUitvoerders.Name = "gbUitvoerders";
-            this.gbUitvoerders.Size = new System.Drawing.Size(220, 76);
+            this.gbUitvoerders.Padding = new System.Windows.Forms.Padding(4);
+            this.gbUitvoerders.Size = new System.Drawing.Size(294, 94);
             this.gbUitvoerders.TabIndex = 65;
             this.gbUitvoerders.TabStop = false;
             this.gbUitvoerders.Text = "Registratiebevoegd";
@@ -297,25 +303,25 @@
             this.tableLayoutPanelUitvoerders.Controls.Add(this.cbAllUitvoerders, 0, 1);
             this.tableLayoutPanelUitvoerders.Controls.Add(this.lvRegistratiebevoegd, 0, 2);
             this.tableLayoutPanelUitvoerders.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelUitvoerders.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanelUitvoerders.Margin = new System.Windows.Forms.Padding(30, 30, 3, 3);
+            this.tableLayoutPanelUitvoerders.Location = new System.Drawing.Point(4, 20);
+            this.tableLayoutPanelUitvoerders.Margin = new System.Windows.Forms.Padding(40, 37, 4, 4);
             this.tableLayoutPanelUitvoerders.Name = "tableLayoutPanelUitvoerders";
             this.tableLayoutPanelUitvoerders.RowCount = 3;
             this.tableLayoutPanelUitvoerders.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanelUitvoerders.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanelUitvoerders.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelUitvoerders.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelUitvoerders.Size = new System.Drawing.Size(214, 57);
+            this.tableLayoutPanelUitvoerders.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanelUitvoerders.Size = new System.Drawing.Size(286, 70);
             this.tableLayoutPanelUitvoerders.TabIndex = 34;
             // 
             // cbAllUitvoerders
             // 
             this.cbAllUitvoerders.AutoSize = true;
             this.cbAllUitvoerders.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAllUitvoerders.Location = new System.Drawing.Point(21, 0);
-            this.cbAllUitvoerders.Margin = new System.Windows.Forms.Padding(21, 0, 3, 0);
+            this.cbAllUitvoerders.Location = new System.Drawing.Point(28, 0);
+            this.cbAllUitvoerders.Margin = new System.Windows.Forms.Padding(28, 0, 4, 0);
             this.cbAllUitvoerders.Name = "cbAllUitvoerders";
-            this.cbAllUitvoerders.Size = new System.Drawing.Size(106, 17);
+            this.cbAllUitvoerders.Size = new System.Drawing.Size(140, 21);
             this.cbAllUitvoerders.TabIndex = 56;
             this.cbAllUitvoerders.Text = "(Alles selecteren)";
             this.cbAllUitvoerders.UseVisualStyleBackColor = true;
@@ -333,11 +339,11 @@
             this.lvRegistratiebevoegd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvRegistratiebevoegd.FullRowSelect = true;
             this.lvRegistratiebevoegd.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lvRegistratiebevoegd.Location = new System.Drawing.Point(17, 17);
-            this.lvRegistratiebevoegd.Margin = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.lvRegistratiebevoegd.Location = new System.Drawing.Point(23, 21);
+            this.lvRegistratiebevoegd.Margin = new System.Windows.Forms.Padding(23, 0, 0, 0);
             this.lvRegistratiebevoegd.MultiSelect = false;
             this.lvRegistratiebevoegd.Name = "lvRegistratiebevoegd";
-            this.lvRegistratiebevoegd.Size = new System.Drawing.Size(197, 40);
+            this.lvRegistratiebevoegd.Size = new System.Drawing.Size(263, 49);
             this.lvRegistratiebevoegd.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvRegistratiebevoegd.TabIndex = 87;
             this.lvRegistratiebevoegd.UseCompatibleStateImageBehavior = false;
@@ -360,10 +366,11 @@
             this.gbVakManSoort.Controls.Add(this.tableLayoutPanel1);
             this.gbVakManSoort.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbVakManSoort.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbVakManSoort.Location = new System.Drawing.Point(229, 3);
-            this.gbVakManSoort.Margin = new System.Windows.Forms.Padding(3, 3, 9, 3);
+            this.gbVakManSoort.Location = new System.Drawing.Point(305, 4);
+            this.gbVakManSoort.Margin = new System.Windows.Forms.Padding(4, 4, 12, 4);
             this.gbVakManSoort.Name = "gbVakManSoort";
-            this.gbVakManSoort.Size = new System.Drawing.Size(214, 76);
+            this.gbVakManSoort.Padding = new System.Windows.Forms.Padding(4);
+            this.gbVakManSoort.Size = new System.Drawing.Size(285, 94);
             this.gbVakManSoort.TabIndex = 64;
             this.gbVakManSoort.TabStop = false;
             this.gbVakManSoort.Text = "Arbeidsrelaties";
@@ -377,25 +384,25 @@
             this.tableLayoutPanel1.Controls.Add(this.cbAllArbeidsrelaties, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lvArbeidsrelaties, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(30, 0, 3, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 20);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(40, 0, 4, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(208, 57);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(277, 70);
             this.tableLayoutPanel1.TabIndex = 34;
             // 
             // cbAllArbeidsrelaties
             // 
             this.cbAllArbeidsrelaties.AutoSize = true;
             this.cbAllArbeidsrelaties.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAllArbeidsrelaties.Location = new System.Drawing.Point(21, 0);
-            this.cbAllArbeidsrelaties.Margin = new System.Windows.Forms.Padding(21, 0, 3, 0);
+            this.cbAllArbeidsrelaties.Location = new System.Drawing.Point(28, 0);
+            this.cbAllArbeidsrelaties.Margin = new System.Windows.Forms.Padding(28, 0, 4, 0);
             this.cbAllArbeidsrelaties.Name = "cbAllArbeidsrelaties";
-            this.cbAllArbeidsrelaties.Size = new System.Drawing.Size(106, 17);
+            this.cbAllArbeidsrelaties.Size = new System.Drawing.Size(140, 21);
             this.cbAllArbeidsrelaties.TabIndex = 56;
             this.cbAllArbeidsrelaties.Text = "(Alles selecteren)";
             this.cbAllArbeidsrelaties.UseVisualStyleBackColor = true;
@@ -413,11 +420,11 @@
             this.lvArbeidsrelaties.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvArbeidsrelaties.FullRowSelect = true;
             this.lvArbeidsrelaties.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lvArbeidsrelaties.Location = new System.Drawing.Point(17, 17);
-            this.lvArbeidsrelaties.Margin = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.lvArbeidsrelaties.Location = new System.Drawing.Point(23, 21);
+            this.lvArbeidsrelaties.Margin = new System.Windows.Forms.Padding(23, 0, 0, 0);
             this.lvArbeidsrelaties.MultiSelect = false;
             this.lvArbeidsrelaties.Name = "lvArbeidsrelaties";
-            this.lvArbeidsrelaties.Size = new System.Drawing.Size(191, 40);
+            this.lvArbeidsrelaties.Size = new System.Drawing.Size(254, 49);
             this.lvArbeidsrelaties.Sorting = System.Windows.Forms.SortOrder.Descending;
             this.lvArbeidsrelaties.TabIndex = 87;
             this.lvArbeidsrelaties.UseCompatibleStateImageBehavior = false;
@@ -455,11 +462,12 @@
             this.groupBoxProjectnVakmannen.Controls.Add(this.tabControlProjecten);
             this.groupBoxProjectnVakmannen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxProjectnVakmannen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxProjectnVakmannen.Location = new System.Drawing.Point(3, 167);
-            this.groupBoxProjectnVakmannen.MinimumSize = new System.Drawing.Size(608, 200);
+            this.groupBoxProjectnVakmannen.Location = new System.Drawing.Point(4, 208);
+            this.groupBoxProjectnVakmannen.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxProjectnVakmannen.MinimumSize = new System.Drawing.Size(811, 246);
             this.groupBoxProjectnVakmannen.Name = "groupBoxProjectnVakmannen";
-            this.groupBoxProjectnVakmannen.Padding = new System.Windows.Forms.Padding(9, 7, 9, 9);
-            this.groupBoxProjectnVakmannen.Size = new System.Drawing.Size(672, 432);
+            this.groupBoxProjectnVakmannen.Padding = new System.Windows.Forms.Padding(12, 9, 12, 11);
+            this.groupBoxProjectnVakmannen.Size = new System.Drawing.Size(896, 536);
             this.groupBoxProjectnVakmannen.TabIndex = 67;
             this.groupBoxProjectnVakmannen.TabStop = false;
             this.groupBoxProjectnVakmannen.Text = "Selecteer projecten of vakmannen";
@@ -468,9 +476,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(574, 60);
+            this.label7.Location = new System.Drawing.Point(765, 74);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 15);
+            this.label7.Size = new System.Drawing.Size(63, 18);
             this.label7.TabIndex = 82;
             this.label7.Text = "alles  tot";
             // 
@@ -478,18 +487,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(492, 60);
+            this.label5.Location = new System.Drawing.Point(656, 74);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 15);
+            this.label5.Size = new System.Drawing.Size(65, 18);
             this.label5.TabIndex = 81;
             this.label5.Text = "alles van";
             // 
             // lblDatabase
             // 
             this.lblDatabase.AutoSize = true;
-            this.lblDatabase.Location = new System.Drawing.Point(586, 13);
+            this.lblDatabase.Location = new System.Drawing.Point(781, 16);
+            this.lblDatabase.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDatabase.Name = "lblDatabase";
-            this.lblDatabase.Size = new System.Drawing.Size(14, 13);
+            this.lblDatabase.Size = new System.Drawing.Size(17, 17);
             this.lblDatabase.TabIndex = 80;
             this.lblDatabase.Text = "0";
             this.lblDatabase.Visible = false;
@@ -497,9 +508,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(637, 24);
+            this.label3.Location = new System.Drawing.Point(849, 30);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(14, 13);
+            this.label3.Size = new System.Drawing.Size(17, 17);
             this.label3.TabIndex = 61;
             this.label3.Text = "0";
             this.label3.Visible = false;
@@ -509,9 +521,10 @@
             this.cbShowAllTot.AutoSize = true;
             this.cbShowAllTot.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cbShowAllTot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbShowAllTot.Location = new System.Drawing.Point(609, 47);
+            this.cbShowAllTot.Location = new System.Drawing.Point(812, 58);
+            this.cbShowAllTot.Margin = new System.Windows.Forms.Padding(4);
             this.cbShowAllTot.Name = "cbShowAllTot";
-            this.cbShowAllTot.Size = new System.Drawing.Size(15, 14);
+            this.cbShowAllTot.Size = new System.Drawing.Size(18, 17);
             this.cbShowAllTot.TabIndex = 71;
             this.cbShowAllTot.UseVisualStyleBackColor = true;
             this.cbShowAllTot.CheckedChanged += new System.EventHandler(this.cbShowAllTot_CheckedChanged);
@@ -521,9 +534,10 @@
             this.cbShowAllVan.AutoSize = true;
             this.cbShowAllVan.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cbShowAllVan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbShowAllVan.Location = new System.Drawing.Point(529, 47);
+            this.cbShowAllVan.Location = new System.Drawing.Point(705, 58);
+            this.cbShowAllVan.Margin = new System.Windows.Forms.Padding(4);
             this.cbShowAllVan.Name = "cbShowAllVan";
-            this.cbShowAllVan.Size = new System.Drawing.Size(15, 14);
+            this.cbShowAllVan.Size = new System.Drawing.Size(18, 17);
             this.cbShowAllVan.TabIndex = 71;
             this.cbShowAllVan.UseVisualStyleBackColor = true;
             this.cbShowAllVan.CheckedChanged += new System.EventHandler(this.cbShowAllVanaf_CheckedChanged);
@@ -532,9 +546,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(492, 45);
+            this.label4.Location = new System.Drawing.Point(656, 55);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 15);
+            this.label4.Size = new System.Drawing.Size(43, 18);
             this.label4.TabIndex = 79;
             this.label4.Text = "Toon";
             // 
@@ -544,10 +559,10 @@
             this.picSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picSearch.BackgroundImage")));
             this.picSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picSearch.ImageLocation = "";
-            this.picSearch.Location = new System.Drawing.Point(397, 49);
+            this.picSearch.Location = new System.Drawing.Point(529, 60);
             this.picSearch.Margin = new System.Windows.Forms.Padding(0);
             this.picSearch.Name = "picSearch";
-            this.picSearch.Size = new System.Drawing.Size(17, 17);
+            this.picSearch.Size = new System.Drawing.Size(23, 21);
             this.picSearch.TabIndex = 73;
             this.picSearch.TabStop = false;
             // 
@@ -555,9 +570,10 @@
             // 
             this.picStopSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picStopSearch.BackgroundImage")));
             this.picStopSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picStopSearch.Location = new System.Drawing.Point(397, 49);
+            this.picStopSearch.Location = new System.Drawing.Point(529, 60);
+            this.picStopSearch.Margin = new System.Windows.Forms.Padding(4);
             this.picStopSearch.Name = "picStopSearch";
-            this.picStopSearch.Size = new System.Drawing.Size(17, 17);
+            this.picStopSearch.Size = new System.Drawing.Size(23, 21);
             this.picStopSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picStopSearch.TabIndex = 77;
             this.picStopSearch.TabStop = false;
@@ -567,9 +583,10 @@
             // tbSearch
             // 
             this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.Location = new System.Drawing.Point(24, 47);
+            this.tbSearch.Location = new System.Drawing.Point(32, 58);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(4);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(393, 20);
+            this.tbSearch.Size = new System.Drawing.Size(523, 23);
             this.tbSearch.TabIndex = 2;
             this.tbSearch.Visible = false;
             this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
@@ -580,9 +597,10 @@
             // 
             this.tbSearchClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSearchClick.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbSearchClick.Location = new System.Drawing.Point(24, 47);
+            this.tbSearchClick.Location = new System.Drawing.Point(32, 58);
+            this.tbSearchClick.Margin = new System.Windows.Forms.Padding(4);
             this.tbSearchClick.Name = "tbSearchClick";
-            this.tbSearchClick.Size = new System.Drawing.Size(393, 20);
+            this.tbSearchClick.Size = new System.Drawing.Size(523, 23);
             this.tbSearchClick.TabIndex = 78;
             this.tbSearchClick.Text = "Zoeken ...";
             this.tbSearchClick.Click += new System.EventHandler(this.tbSearchClick_Click);
@@ -591,18 +609,20 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(574, 45);
+            this.label6.Location = new System.Drawing.Point(765, 55);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 15);
+            this.label6.Size = new System.Drawing.Size(43, 18);
             this.label6.TabIndex = 75;
             this.label6.Text = "Toon";
             // 
             // button4
             // 
             this.button4.AutoSize = true;
-            this.button4.Location = new System.Drawing.Point(277, 15);
+            this.button4.Location = new System.Drawing.Point(369, 18);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(83, 27);
+            this.button4.Size = new System.Drawing.Size(111, 33);
             this.button4.TabIndex = 69;
             this.button4.Text = "Kopiëren";
             this.button4.UseVisualStyleBackColor = false;
@@ -614,12 +634,12 @@
             this.tabControlProjecten.Controls.Add(this.tabPage4);
             this.tabControlProjecten.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlProjecten.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlProjecten.Location = new System.Drawing.Point(9, 20);
-            this.tabControlProjecten.Margin = new System.Windows.Forms.Padding(5);
+            this.tabControlProjecten.Location = new System.Drawing.Point(12, 25);
+            this.tabControlProjecten.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.tabControlProjecten.Name = "tabControlProjecten";
             this.tabControlProjecten.Padding = new System.Drawing.Point(0, 0);
             this.tabControlProjecten.SelectedIndex = 0;
-            this.tabControlProjecten.Size = new System.Drawing.Size(654, 403);
+            this.tabControlProjecten.Size = new System.Drawing.Size(872, 500);
             this.tabControlProjecten.TabIndex = 60;
             this.tabControlProjecten.SelectedIndexChanged += new System.EventHandler(this.tabControlProjecten_SelectedIndexChanged);
             this.tabControlProjecten.MouseHover += new System.EventHandler(this.tabControlProjecten_MouseHover);
@@ -627,9 +647,10 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.tableLayoutPanelAllPlusTabProjecten);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 26);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(646, 377);
+            this.tabPage3.Size = new System.Drawing.Size(864, 470);
             this.tabPage3.TabIndex = 4;
             this.tabPage3.Text = "Projecten";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -648,22 +669,22 @@
             this.tableLayoutPanelAllPlusTabProjecten.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanelAllPlusTabProjecten.Name = "tableLayoutPanelAllPlusTabProjecten";
             this.tableLayoutPanelAllPlusTabProjecten.RowCount = 4;
-            this.tableLayoutPanelAllPlusTabProjecten.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanelAllPlusTabProjecten.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanelAllPlusTabProjecten.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanelAllPlusTabProjecten.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanelAllPlusTabProjecten.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelAllPlusTabProjecten.Size = new System.Drawing.Size(646, 377);
+            this.tableLayoutPanelAllPlusTabProjecten.Size = new System.Drawing.Size(864, 470);
             this.tableLayoutPanelAllPlusTabProjecten.TabIndex = 1;
             // 
             // cbAllProjecten
             // 
             this.cbAllProjecten.AutoSize = true;
             this.cbAllProjecten.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAllProjecten.Location = new System.Drawing.Point(4, 33);
-            this.cbAllProjecten.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
+            this.cbAllProjecten.Location = new System.Drawing.Point(5, 41);
+            this.cbAllProjecten.Margin = new System.Windows.Forms.Padding(5, 4, 4, 4);
             this.cbAllProjecten.Name = "cbAllProjecten";
-            this.cbAllProjecten.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.cbAllProjecten.Size = new System.Drawing.Size(113, 17);
+            this.cbAllProjecten.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.cbAllProjecten.Size = new System.Drawing.Size(149, 21);
             this.cbAllProjecten.TabIndex = 1;
             this.cbAllProjecten.Text = "(Alles selecteren)";
             this.cbAllProjecten.UseVisualStyleBackColor = true;
@@ -688,11 +709,11 @@
             listViewItem2.StateImageIndex = 0;
             this.lvProjecten.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem2});
-            this.lvProjecten.Location = new System.Drawing.Point(7, 53);
-            this.lvProjecten.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.lvProjecten.Location = new System.Drawing.Point(9, 66);
+            this.lvProjecten.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.lvProjecten.MultiSelect = false;
             this.lvProjecten.Name = "lvProjecten";
-            this.lvProjecten.Size = new System.Drawing.Size(639, 324);
+            this.lvProjecten.Size = new System.Drawing.Size(855, 404);
             this.lvProjecten.Sorting = System.Windows.Forms.SortOrder.Descending;
             this.lvProjecten.TabIndex = 94;
             this.lvProjecten.UseCompatibleStateImageBehavior = false;
@@ -728,10 +749,10 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.tableLayoutPanel3);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 26);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(646, 377);
+            this.tabPage4.Size = new System.Drawing.Size(864, 470);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Vakmannen";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -747,21 +768,21 @@
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(646, 377);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(864, 470);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // cbAllVakmannen
             // 
             this.cbAllVakmannen.AutoSize = true;
             this.cbAllVakmannen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAllVakmannen.Location = new System.Drawing.Point(4, 33);
-            this.cbAllVakmannen.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
+            this.cbAllVakmannen.Location = new System.Drawing.Point(5, 41);
+            this.cbAllVakmannen.Margin = new System.Windows.Forms.Padding(5, 4, 4, 4);
             this.cbAllVakmannen.Name = "cbAllVakmannen";
-            this.cbAllVakmannen.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.cbAllVakmannen.Size = new System.Drawing.Size(113, 17);
+            this.cbAllVakmannen.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.cbAllVakmannen.Size = new System.Drawing.Size(149, 21);
             this.cbAllVakmannen.TabIndex = 2;
             this.cbAllVakmannen.Text = "(Alles selecteren)";
             this.cbAllVakmannen.UseVisualStyleBackColor = true;
@@ -784,11 +805,11 @@
             this.lvVakmannen.ForeColor = System.Drawing.Color.Black;
             this.lvVakmannen.FullRowSelect = true;
             this.lvVakmannen.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lvVakmannen.Location = new System.Drawing.Point(7, 53);
-            this.lvVakmannen.Margin = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.lvVakmannen.Location = new System.Drawing.Point(9, 66);
+            this.lvVakmannen.Margin = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.lvVakmannen.MultiSelect = false;
             this.lvVakmannen.Name = "lvVakmannen";
-            this.lvVakmannen.Size = new System.Drawing.Size(639, 324);
+            this.lvVakmannen.Size = new System.Drawing.Size(855, 404);
             this.lvVakmannen.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvVakmannen.TabIndex = 0;
             this.lvVakmannen.UseCompatibleStateImageBehavior = false;
@@ -831,9 +852,10 @@
             this.cbClipboard.AutoSize = true;
             this.cbClipboard.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cbClipboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbClipboard.Location = new System.Drawing.Point(20, 108);
+            this.cbClipboard.Location = new System.Drawing.Point(27, 133);
+            this.cbClipboard.Margin = new System.Windows.Forms.Padding(4);
             this.cbClipboard.Name = "cbClipboard";
-            this.cbClipboard.Size = new System.Drawing.Size(143, 17);
+            this.cbClipboard.Size = new System.Drawing.Size(187, 21);
             this.cbClipboard.TabIndex = 67;
             this.cbClipboard.Text = "Copy output to ClipBoard";
             this.cbClipboard.UseVisualStyleBackColor = false;
@@ -843,9 +865,10 @@
             // 
             this.cbShowAllWeek.AutoSize = true;
             this.cbShowAllWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbShowAllWeek.Location = new System.Drawing.Point(20, 40);
+            this.cbShowAllWeek.Location = new System.Drawing.Point(27, 49);
+            this.cbShowAllWeek.Margin = new System.Windows.Forms.Padding(4);
             this.cbShowAllWeek.Name = "cbShowAllWeek";
-            this.cbShowAllWeek.Size = new System.Drawing.Size(80, 17);
+            this.cbShowAllWeek.Size = new System.Drawing.Size(99, 21);
             this.cbShowAllWeek.TabIndex = 64;
             this.cbShowAllWeek.Text = "Hele Week";
             this.cbShowAllWeek.UseVisualStyleBackColor = true;
@@ -862,12 +885,13 @@
             this.gbInstellingen.Controls.Add(this.cbClipboard);
             this.gbInstellingen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbInstellingen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbInstellingen.Location = new System.Drawing.Point(3, 455);
-            this.gbInstellingen.Margin = new System.Windows.Forms.Padding(3, 3, 3, 6);
-            this.gbInstellingen.MaximumSize = new System.Drawing.Size(254, 0);
-            this.gbInstellingen.MinimumSize = new System.Drawing.Size(254, 0);
+            this.gbInstellingen.Location = new System.Drawing.Point(4, 567);
+            this.gbInstellingen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 7);
+            this.gbInstellingen.MaximumSize = new System.Drawing.Size(339, 0);
+            this.gbInstellingen.MinimumSize = new System.Drawing.Size(339, 0);
             this.gbInstellingen.Name = "gbInstellingen";
-            this.gbInstellingen.Size = new System.Drawing.Size(254, 144);
+            this.gbInstellingen.Padding = new System.Windows.Forms.Padding(4);
+            this.gbInstellingen.Size = new System.Drawing.Size(339, 178);
             this.gbInstellingen.TabIndex = 75;
             this.gbInstellingen.TabStop = false;
             this.gbInstellingen.Text = "Instellingen";
@@ -875,10 +899,10 @@
             // llbEasy
             // 
             this.llbEasy.AutoSize = true;
-            this.llbEasy.Location = new System.Drawing.Point(18, 69);
-            this.llbEasy.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.llbEasy.Location = new System.Drawing.Point(24, 85);
+            this.llbEasy.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.llbEasy.Name = "llbEasy";
-            this.llbEasy.Size = new System.Drawing.Size(84, 13);
+            this.llbEasy.Size = new System.Drawing.Size(107, 17);
             this.llbEasy.TabIndex = 68;
             this.llbEasy.TabStop = true;
             this.llbEasy.Text = "Easy Settings";
@@ -888,10 +912,10 @@
             // 
             this.lbPLHidden.AutoSize = true;
             this.lbPLHidden.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPLHidden.Location = new System.Drawing.Point(187, 46);
-            this.lbPLHidden.Margin = new System.Windows.Forms.Padding(20, 0, 3, 0);
+            this.lbPLHidden.Location = new System.Drawing.Point(249, 57);
+            this.lbPLHidden.Margin = new System.Windows.Forms.Padding(27, 0, 4, 0);
             this.lbPLHidden.Name = "lbPLHidden";
-            this.lbPLHidden.Size = new System.Drawing.Size(62, 13);
+            this.lbPLHidden.Size = new System.Drawing.Size(81, 17);
             this.lbPLHidden.TabIndex = 57;
             this.lbPLHidden.Text = "lbPLHidden";
             // 
@@ -904,9 +928,10 @@
             this.EasyUser.Items.AddRange(new object[] {
             "Manager",
             "Projectleider"});
-            this.EasyUser.Location = new System.Drawing.Point(270, 21);
+            this.EasyUser.Location = new System.Drawing.Point(360, 26);
+            this.EasyUser.Margin = new System.Windows.Forms.Padding(4);
             this.EasyUser.Name = "EasyUser";
-            this.EasyUser.Size = new System.Drawing.Size(121, 21);
+            this.EasyUser.Size = new System.Drawing.Size(160, 25);
             this.EasyUser.TabIndex = 91;
             this.EasyUser.SelectedIndexChanged += new System.EventHandler(this.EasyUser_SelectedIndexChanged);
             // 
@@ -919,8 +944,9 @@
             this.lblSubform.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblSubform.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubform.Location = new System.Drawing.Point(0, 0);
+            this.lblSubform.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSubform.Name = "lblSubform";
-            this.lblSubform.Size = new System.Drawing.Size(1108, 0);
+            this.lblSubform.Size = new System.Drawing.Size(1339, 0);
             this.lblSubform.TabIndex = 84;
             this.lblSubform.Text = "lblSubform";
             this.lblSubform.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -929,9 +955,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(321, 12);
+            this.label2.Location = new System.Drawing.Point(428, 15);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.Size = new System.Drawing.Size(16, 17);
             this.label2.TabIndex = 85;
             this.label2.Text = "0";
             this.label2.Visible = false;
@@ -942,11 +969,13 @@
             this.gbPeriode.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gbPeriode.Controls.Add(this.tlp2col);
             this.gbPeriode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbPeriode.Location = new System.Drawing.Point(3, 123);
-            this.gbPeriode.MaximumSize = new System.Drawing.Size(254, 0);
-            this.gbPeriode.MinimumSize = new System.Drawing.Size(254, 0);
+            this.gbPeriode.Location = new System.Drawing.Point(4, 152);
+            this.gbPeriode.Margin = new System.Windows.Forms.Padding(4);
+            this.gbPeriode.MaximumSize = new System.Drawing.Size(339, 0);
+            this.gbPeriode.MinimumSize = new System.Drawing.Size(339, 0);
             this.gbPeriode.Name = "gbPeriode";
-            this.gbPeriode.Size = new System.Drawing.Size(254, 220);
+            this.gbPeriode.Padding = new System.Windows.Forms.Padding(4);
+            this.gbPeriode.Size = new System.Drawing.Size(339, 275);
             this.gbPeriode.TabIndex = 66;
             this.gbPeriode.TabStop = false;
             this.gbPeriode.Text = "Periode";
@@ -972,10 +1001,10 @@
             this.tlp2col.Controls.Add(this.rbJaar, 0, 0);
             this.tlp2col.Controls.Add(this.rbDag, 0, 4);
             this.tlp2col.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlp2col.Location = new System.Drawing.Point(3, 16);
-            this.tlp2col.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.tlp2col.Location = new System.Drawing.Point(4, 20);
+            this.tlp2col.Margin = new System.Windows.Forms.Padding(0, 0, 4, 4);
             this.tlp2col.Name = "tlp2col";
-            this.tlp2col.Padding = new System.Windows.Forms.Padding(15, 5, 0, 0);
+            this.tlp2col.Padding = new System.Windows.Forms.Padding(20, 6, 0, 0);
             this.tlp2col.RowCount = 8;
             this.tlp2col.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlp2col.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -985,8 +1014,8 @@
             this.tlp2col.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlp2col.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlp2col.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlp2col.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tlp2col.Size = new System.Drawing.Size(248, 201);
+            this.tlp2col.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tlp2col.Size = new System.Drawing.Size(331, 251);
             this.tlp2col.TabIndex = 0;
             this.tlp2col.MouseLeave += new System.EventHandler(this.monthCalendarStart_MouseLeave);
             // 
@@ -1010,10 +1039,11 @@
             "oktober",
             "november",
             "december"});
-            this.cbbWeek.Location = new System.Drawing.Point(125, 92);
+            this.cbbWeek.Location = new System.Drawing.Point(166, 115);
+            this.cbbWeek.Margin = new System.Windows.Forms.Padding(4);
             this.cbbWeek.MaxDropDownItems = 5;
             this.cbbWeek.Name = "cbbWeek";
-            this.cbbWeek.Size = new System.Drawing.Size(107, 21);
+            this.cbbWeek.Size = new System.Drawing.Size(141, 25);
             this.cbbWeek.TabIndex = 41;
             this.cbbWeek.Text = "- Selecteer -";
             this.cbbWeek.Visible = false;
@@ -1024,9 +1054,10 @@
             // rbKwartaal
             // 
             this.rbKwartaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbKwartaal.Location = new System.Drawing.Point(18, 36);
+            this.rbKwartaal.Location = new System.Drawing.Point(24, 45);
+            this.rbKwartaal.Margin = new System.Windows.Forms.Padding(4);
             this.rbKwartaal.Name = "rbKwartaal";
-            this.rbKwartaal.Size = new System.Drawing.Size(82, 22);
+            this.rbKwartaal.Size = new System.Drawing.Size(109, 27);
             this.rbKwartaal.TabIndex = 9;
             this.rbKwartaal.Text = "Kwartaal";
             this.rbKwartaal.UseVisualStyleBackColor = true;
@@ -1037,10 +1068,11 @@
             this.pnDatePickers.AutoSize = true;
             this.pnDatePickers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnDatePickers.Controls.Add(this.buttonDatum);
-            this.pnDatePickers.Location = new System.Drawing.Point(125, 148);
+            this.pnDatePickers.Location = new System.Drawing.Point(166, 185);
+            this.pnDatePickers.Margin = new System.Windows.Forms.Padding(4);
             this.pnDatePickers.Name = "pnDatePickers";
             this.tlp2col.SetRowSpan(this.pnDatePickers, 3);
-            this.pnDatePickers.Size = new System.Drawing.Size(44, 41);
+            this.pnDatePickers.Size = new System.Drawing.Size(46, 42);
             this.pnDatePickers.TabIndex = 44;
             // 
             // buttonDatum
@@ -1050,7 +1082,8 @@
             this.buttonDatum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDatum.Image = ((System.Drawing.Image)(resources.GetObject("buttonDatum.Image")));
-            this.buttonDatum.Location = new System.Drawing.Point(3, 0);
+            this.buttonDatum.Location = new System.Drawing.Point(4, 0);
+            this.buttonDatum.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDatum.Name = "buttonDatum";
             this.buttonDatum.Size = new System.Drawing.Size(38, 38);
             this.buttonDatum.TabIndex = 43;
@@ -1061,10 +1094,11 @@
             // rbAnders
             // 
             this.rbAnders.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbAnders.Location = new System.Drawing.Point(18, 176);
+            this.rbAnders.Location = new System.Drawing.Point(24, 220);
+            this.rbAnders.Margin = new System.Windows.Forms.Padding(4);
             this.rbAnders.Name = "rbAnders";
             this.tlp2col.SetRowSpan(this.rbAnders, 2);
-            this.rbAnders.Size = new System.Drawing.Size(82, 22);
+            this.rbAnders.Size = new System.Drawing.Size(109, 27);
             this.rbAnders.TabIndex = 10;
             this.rbAnders.Text = "Naar keuze";
             this.rbAnders.UseVisualStyleBackColor = true;
@@ -1089,11 +1123,12 @@
             "oktober",
             "november",
             "december"});
-            this.cbbDag.Location = new System.Drawing.Point(125, 120);
+            this.cbbDag.Location = new System.Drawing.Point(166, 150);
+            this.cbbDag.Margin = new System.Windows.Forms.Padding(4);
             this.cbbDag.MaxDropDownItems = 5;
             this.cbbDag.MaxLength = 15;
             this.cbbDag.Name = "cbbDag";
-            this.cbbDag.Size = new System.Drawing.Size(107, 21);
+            this.cbbDag.Size = new System.Drawing.Size(141, 25);
             this.cbbDag.TabIndex = 41;
             this.cbbDag.Text = "- Selecteer -";
             this.cbbDag.Visible = false;
@@ -1103,9 +1138,10 @@
             // rbWeek
             // 
             this.rbWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbWeek.Location = new System.Drawing.Point(18, 92);
+            this.rbWeek.Location = new System.Drawing.Point(24, 115);
+            this.rbWeek.Margin = new System.Windows.Forms.Padding(4);
             this.rbWeek.Name = "rbWeek";
-            this.rbWeek.Size = new System.Drawing.Size(82, 22);
+            this.rbWeek.Size = new System.Drawing.Size(109, 27);
             this.rbWeek.TabIndex = 7;
             this.rbWeek.Text = "Week";
             this.rbWeek.UseVisualStyleBackColor = true;
@@ -1130,11 +1166,12 @@
             "oktober",
             "november",
             "december"});
-            this.cbbMaand.Location = new System.Drawing.Point(125, 64);
+            this.cbbMaand.Location = new System.Drawing.Point(166, 80);
+            this.cbbMaand.Margin = new System.Windows.Forms.Padding(4);
             this.cbbMaand.MaxDropDownItems = 5;
             this.cbbMaand.MaxLength = 15;
             this.cbbMaand.Name = "cbbMaand";
-            this.cbbMaand.Size = new System.Drawing.Size(107, 21);
+            this.cbbMaand.Size = new System.Drawing.Size(141, 25);
             this.cbbMaand.TabIndex = 40;
             this.cbbMaand.Text = "- Selecteer -";
             this.cbbMaand.Visible = false;
@@ -1144,9 +1181,10 @@
             // rbDatum
             // 
             this.rbDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDatum.Location = new System.Drawing.Point(18, 148);
+            this.rbDatum.Location = new System.Drawing.Point(24, 185);
+            this.rbDatum.Margin = new System.Windows.Forms.Padding(4);
             this.rbDatum.Name = "rbDatum";
-            this.rbDatum.Size = new System.Drawing.Size(82, 22);
+            this.rbDatum.Size = new System.Drawing.Size(109, 27);
             this.rbDatum.TabIndex = 42;
             this.rbDatum.Text = "Datum";
             this.rbDatum.UseVisualStyleBackColor = true;
@@ -1163,11 +1201,12 @@
             "2e Kwartaal",
             "3e Kwartaal",
             "4e Kwartaal"});
-            this.cbbKwartaal.Location = new System.Drawing.Point(125, 36);
+            this.cbbKwartaal.Location = new System.Drawing.Point(166, 45);
+            this.cbbKwartaal.Margin = new System.Windows.Forms.Padding(4);
             this.cbbKwartaal.MaxDropDownItems = 5;
             this.cbbKwartaal.MaxLength = 15;
             this.cbbKwartaal.Name = "cbbKwartaal";
-            this.cbbKwartaal.Size = new System.Drawing.Size(107, 21);
+            this.cbbKwartaal.Size = new System.Drawing.Size(141, 25);
             this.cbbKwartaal.TabIndex = 39;
             this.cbbKwartaal.Text = "- Selecteer -";
             this.cbbKwartaal.Visible = false;
@@ -1177,9 +1216,10 @@
             // rbMaand
             // 
             this.rbMaand.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMaand.Location = new System.Drawing.Point(18, 64);
+            this.rbMaand.Location = new System.Drawing.Point(24, 80);
+            this.rbMaand.Margin = new System.Windows.Forms.Padding(4);
             this.rbMaand.Name = "rbMaand";
-            this.rbMaand.Size = new System.Drawing.Size(82, 22);
+            this.rbMaand.Size = new System.Drawing.Size(109, 27);
             this.rbMaand.TabIndex = 8;
             this.rbMaand.Text = "Maand";
             this.rbMaand.UseVisualStyleBackColor = true;
@@ -1191,11 +1231,12 @@
             this.cbbJaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbJaar.FormattingEnabled = true;
             this.cbbJaar.IntegralHeight = false;
-            this.cbbJaar.Location = new System.Drawing.Point(125, 8);
+            this.cbbJaar.Location = new System.Drawing.Point(166, 10);
+            this.cbbJaar.Margin = new System.Windows.Forms.Padding(4);
             this.cbbJaar.MaxDropDownItems = 5;
             this.cbbJaar.MaxLength = 15;
             this.cbbJaar.Name = "cbbJaar";
-            this.cbbJaar.Size = new System.Drawing.Size(107, 21);
+            this.cbbJaar.Size = new System.Drawing.Size(141, 25);
             this.cbbJaar.TabIndex = 36;
             this.cbbJaar.Text = "- Selecteer -";
             this.cbbJaar.Visible = false;
@@ -1206,9 +1247,10 @@
             // 
             this.rbJaar.Checked = true;
             this.rbJaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbJaar.Location = new System.Drawing.Point(18, 8);
+            this.rbJaar.Location = new System.Drawing.Point(24, 10);
+            this.rbJaar.Margin = new System.Windows.Forms.Padding(4);
             this.rbJaar.Name = "rbJaar";
-            this.rbJaar.Size = new System.Drawing.Size(91, 22);
+            this.rbJaar.Size = new System.Drawing.Size(121, 27);
             this.rbJaar.TabIndex = 5;
             this.rbJaar.TabStop = true;
             this.rbJaar.Text = "Jaar";
@@ -1218,9 +1260,10 @@
             // rbDag
             // 
             this.rbDag.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDag.Location = new System.Drawing.Point(18, 120);
+            this.rbDag.Location = new System.Drawing.Point(24, 150);
+            this.rbDag.Margin = new System.Windows.Forms.Padding(4);
             this.rbDag.Name = "rbDag";
-            this.rbDag.Size = new System.Drawing.Size(82, 22);
+            this.rbDag.Size = new System.Drawing.Size(109, 27);
             this.rbDag.TabIndex = 6;
             this.rbDag.Text = "Dag";
             this.rbDag.UseVisualStyleBackColor = true;
@@ -1238,11 +1281,13 @@
             this.gbLijsten.Controls.Add(this.rbLijst0);
             this.gbLijsten.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbLijsten.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbLijsten.Location = new System.Drawing.Point(3, 349);
-            this.gbLijsten.MaximumSize = new System.Drawing.Size(254, 162);
-            this.gbLijsten.MinimumSize = new System.Drawing.Size(254, 0);
+            this.gbLijsten.Location = new System.Drawing.Point(4, 435);
+            this.gbLijsten.Margin = new System.Windows.Forms.Padding(4);
+            this.gbLijsten.MaximumSize = new System.Drawing.Size(339, 200);
+            this.gbLijsten.MinimumSize = new System.Drawing.Size(339, 0);
             this.gbLijsten.Name = "gbLijsten";
-            this.gbLijsten.Size = new System.Drawing.Size(254, 100);
+            this.gbLijsten.Padding = new System.Windows.Forms.Padding(4);
+            this.gbLijsten.Size = new System.Drawing.Size(339, 124);
             this.gbLijsten.TabIndex = 68;
             this.gbLijsten.TabStop = false;
             this.gbLijsten.Text = "Lijst";
@@ -1252,9 +1297,10 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(160, 43);
+            this.radioButton3.Location = new System.Drawing.Point(213, 53);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
+            this.radioButton3.Size = new System.Drawing.Size(110, 21);
             this.radioButton3.TabIndex = 81;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "radioButton3";
@@ -1266,9 +1312,10 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(98, 64);
+            this.radioButton2.Location = new System.Drawing.Point(131, 79);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
+            this.radioButton2.Size = new System.Drawing.Size(110, 21);
             this.radioButton2.TabIndex = 80;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "radioButton2";
@@ -1280,9 +1327,10 @@
             // 
             this.rbLijst4.AutoSize = true;
             this.rbLijst4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbLijst4.Location = new System.Drawing.Point(148, 20);
+            this.rbLijst4.Location = new System.Drawing.Point(198, 24);
+            this.rbLijst4.Margin = new System.Windows.Forms.Padding(4);
             this.rbLijst4.Name = "rbLijst4";
-            this.rbLijst4.Size = new System.Drawing.Size(85, 17);
+            this.rbLijst4.Size = new System.Drawing.Size(110, 21);
             this.rbLijst4.TabIndex = 79;
             this.rbLijst4.TabStop = true;
             this.rbLijst4.Text = "radioButton1";
@@ -1294,9 +1342,10 @@
             // 
             this.rbLijst3.AutoSize = true;
             this.rbLijst3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbLijst3.Location = new System.Drawing.Point(91, 41);
+            this.rbLijst3.Location = new System.Drawing.Point(121, 50);
+            this.rbLijst3.Margin = new System.Windows.Forms.Padding(4);
             this.rbLijst3.Name = "rbLijst3";
-            this.rbLijst3.Size = new System.Drawing.Size(58, 17);
+            this.rbLijst3.Size = new System.Drawing.Size(75, 21);
             this.rbLijst3.TabIndex = 78;
             this.rbLijst3.TabStop = true;
             this.rbLijst3.Text = "rbLijst3";
@@ -1308,9 +1357,10 @@
             // 
             this.rbLijst2.AutoSize = true;
             this.rbLijst2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbLijst2.Location = new System.Drawing.Point(91, 20);
+            this.rbLijst2.Location = new System.Drawing.Point(121, 25);
+            this.rbLijst2.Margin = new System.Windows.Forms.Padding(4);
             this.rbLijst2.Name = "rbLijst2";
-            this.rbLijst2.Size = new System.Drawing.Size(58, 17);
+            this.rbLijst2.Size = new System.Drawing.Size(75, 21);
             this.rbLijst2.TabIndex = 77;
             this.rbLijst2.TabStop = true;
             this.rbLijst2.Text = "rbLijst2";
@@ -1322,9 +1372,10 @@
             // 
             this.rbLijst1.AutoSize = true;
             this.rbLijst1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbLijst1.Location = new System.Drawing.Point(27, 41);
+            this.rbLijst1.Location = new System.Drawing.Point(36, 50);
+            this.rbLijst1.Margin = new System.Windows.Forms.Padding(4);
             this.rbLijst1.Name = "rbLijst1";
-            this.rbLijst1.Size = new System.Drawing.Size(58, 17);
+            this.rbLijst1.Size = new System.Drawing.Size(75, 21);
             this.rbLijst1.TabIndex = 76;
             this.rbLijst1.TabStop = true;
             this.rbLijst1.Text = "rbLijst1";
@@ -1336,9 +1387,10 @@
             // 
             this.rbLijst0.AutoSize = true;
             this.rbLijst0.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbLijst0.Location = new System.Drawing.Point(27, 20);
+            this.rbLijst0.Location = new System.Drawing.Point(36, 25);
+            this.rbLijst0.Margin = new System.Windows.Forms.Padding(4);
             this.rbLijst0.Name = "rbLijst0";
-            this.rbLijst0.Size = new System.Drawing.Size(58, 17);
+            this.rbLijst0.Size = new System.Drawing.Size(75, 21);
             this.rbLijst0.TabIndex = 75;
             this.rbLijst0.TabStop = true;
             this.rbLijst0.Text = "rbLijst0";
@@ -1352,11 +1404,13 @@
             this.gbGeselecteerdePeriode.Controls.Add(this.panelPeriode);
             this.gbGeselecteerdePeriode.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbGeselecteerdePeriode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbGeselecteerdePeriode.Location = new System.Drawing.Point(3, 3);
-            this.gbGeselecteerdePeriode.MaximumSize = new System.Drawing.Size(254, 0);
-            this.gbGeselecteerdePeriode.MinimumSize = new System.Drawing.Size(254, 0);
+            this.gbGeselecteerdePeriode.Location = new System.Drawing.Point(4, 4);
+            this.gbGeselecteerdePeriode.Margin = new System.Windows.Forms.Padding(4);
+            this.gbGeselecteerdePeriode.MaximumSize = new System.Drawing.Size(339, 0);
+            this.gbGeselecteerdePeriode.MinimumSize = new System.Drawing.Size(339, 0);
             this.gbGeselecteerdePeriode.Name = "gbGeselecteerdePeriode";
-            this.gbGeselecteerdePeriode.Size = new System.Drawing.Size(254, 114);
+            this.gbGeselecteerdePeriode.Padding = new System.Windows.Forms.Padding(4);
+            this.gbGeselecteerdePeriode.Size = new System.Drawing.Size(339, 140);
             this.gbGeselecteerdePeriode.TabIndex = 79;
             this.gbGeselecteerdePeriode.TabStop = false;
             this.gbGeselecteerdePeriode.Text = "Geselecteerde periode";
@@ -1370,19 +1424,20 @@
             this.panelPeriode.Controls.Add(this.label1);
             this.panelPeriode.Controls.Add(this.lblVan);
             this.panelPeriode.Controls.Add(this.lblTot);
-            this.panelPeriode.Location = new System.Drawing.Point(12, 19);
-            this.panelPeriode.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.panelPeriode.Location = new System.Drawing.Point(16, 23);
+            this.panelPeriode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 0);
             this.panelPeriode.Name = "panelPeriode";
-            this.panelPeriode.Size = new System.Drawing.Size(230, 79);
+            this.panelPeriode.Size = new System.Drawing.Size(307, 97);
             this.panelPeriode.TabIndex = 5;
             // 
             // lblTotWeek
             // 
             this.lblTotWeek.AutoSize = true;
             this.lblTotWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotWeek.Location = new System.Drawing.Point(42, 57);
+            this.lblTotWeek.Location = new System.Drawing.Point(56, 70);
+            this.lblTotWeek.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotWeek.Name = "lblTotWeek";
-            this.lblTotWeek.Size = new System.Drawing.Size(55, 15);
+            this.lblTotWeek.Size = new System.Drawing.Size(67, 18);
             this.lblTotWeek.TabIndex = 38;
             this.lblTotWeek.Text = "Week 65";
             this.lblTotWeek.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1391,9 +1446,10 @@
             // 
             this.lblVanWeek.AutoSize = true;
             this.lblVanWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVanWeek.Location = new System.Drawing.Point(42, 19);
+            this.lblVanWeek.Location = new System.Drawing.Point(56, 23);
+            this.lblVanWeek.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVanWeek.Name = "lblVanWeek";
-            this.lblVanWeek.Size = new System.Drawing.Size(55, 15);
+            this.lblVanWeek.Size = new System.Drawing.Size(67, 18);
             this.lblVanWeek.TabIndex = 37;
             this.lblVanWeek.Text = "Week 42";
             this.lblVanWeek.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1402,9 +1458,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 44);
+            this.label10.Location = new System.Drawing.Point(8, 54);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 13);
+            this.label10.Size = new System.Drawing.Size(29, 17);
             this.label10.TabIndex = 12;
             this.label10.Text = "Tot";
             // 
@@ -1412,9 +1469,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 6);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.Size = new System.Drawing.Size(33, 17);
             this.label1.TabIndex = 11;
             this.label1.Text = "Van";
             // 
@@ -1422,9 +1480,10 @@
             // 
             this.lblVan.AutoSize = true;
             this.lblVan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVan.Location = new System.Drawing.Point(42, 4);
+            this.lblVan.Location = new System.Drawing.Point(56, 5);
+            this.lblVan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVan.Name = "lblVan";
-            this.lblVan.Size = new System.Drawing.Size(104, 15);
+            this.lblVan.Size = new System.Drawing.Size(120, 18);
             this.lblVan.TabIndex = 34;
             this.lblVan.Text = "maandag 12 april";
             this.lblVan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1433,9 +1492,10 @@
             // 
             this.lblTot.AutoSize = true;
             this.lblTot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTot.Location = new System.Drawing.Point(42, 42);
+            this.lblTot.Location = new System.Drawing.Point(56, 52);
+            this.lblTot.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTot.Name = "lblTot";
-            this.lblTot.Size = new System.Drawing.Size(123, 15);
+            this.lblTot.Size = new System.Drawing.Size(144, 18);
             this.lblTot.TabIndex = 35;
             this.lblTot.Text = "zondag 19 april 2013";
             this.lblTot.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1446,20 +1506,20 @@
             this.tlpHoofd.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tlpHoofd.BackColor = System.Drawing.Color.White;
             this.tlpHoofd.ColumnCount = 2;
-            this.tlpHoofd.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 266F));
-            this.tlpHoofd.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 684F));
-            this.tlpHoofd.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpHoofd.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 355F));
+            this.tlpHoofd.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 912F));
+            this.tlpHoofd.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tlpHoofd.Controls.Add(this.tlpLinks, 0, 0);
             this.tlpHoofd.Controls.Add(this.tlpRechts, 1, 0);
-            this.tlpHoofd.Location = new System.Drawing.Point(25, 34);
-            this.tlpHoofd.Margin = new System.Windows.Forms.Padding(8);
-            this.tlpHoofd.MinimumSize = new System.Drawing.Size(950, 0);
+            this.tlpHoofd.Location = new System.Drawing.Point(33, 42);
+            this.tlpHoofd.Margin = new System.Windows.Forms.Padding(10);
+            this.tlpHoofd.MinimumSize = new System.Drawing.Size(1267, 0);
             this.tlpHoofd.Name = "tlpHoofd";
-            this.tlpHoofd.Padding = new System.Windows.Forms.Padding(7, 1, 15, 4);
+            this.tlpHoofd.Padding = new System.Windows.Forms.Padding(9, 1, 20, 5);
             this.tlpHoofd.RowCount = 2;
             this.tlpHoofd.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpHoofd.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tlpHoofd.Size = new System.Drawing.Size(972, 615);
+            this.tlpHoofd.Size = new System.Drawing.Size(1296, 764);
             this.tlpHoofd.TabIndex = 86;
             this.tlpHoofd.Visible = false;
             // 
@@ -1473,15 +1533,15 @@
             this.tlpLinks.Controls.Add(this.gbInstellingen, 0, 3);
             this.tlpLinks.Controls.Add(this.gbGeselecteerdePeriode, 0, 0);
             this.tlpLinks.Controls.Add(this.gbPeriode, 0, 1);
-            this.tlpLinks.Location = new System.Drawing.Point(10, 4);
-            this.tlpLinks.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.tlpLinks.Location = new System.Drawing.Point(13, 5);
+            this.tlpLinks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 0);
             this.tlpLinks.Name = "tlpLinks";
             this.tlpLinks.RowCount = 4;
             this.tlpLinks.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpLinks.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpLinks.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpLinks.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpLinks.Size = new System.Drawing.Size(260, 605);
+            this.tlpLinks.Size = new System.Drawing.Size(347, 752);
             this.tlpLinks.TabIndex = 0;
             // 
             // tlpRechts
@@ -1500,13 +1560,14 @@
             this.tlpRechts.Controls.Add(this.gbUitvoerders, 2, 0);
             this.tlpRechts.Controls.Add(this.gbContract, 0, 0);
             this.tlpRechts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpRechts.Location = new System.Drawing.Point(276, 4);
+            this.tlpRechts.Location = new System.Drawing.Point(368, 5);
+            this.tlpRechts.Margin = new System.Windows.Forms.Padding(4);
             this.tlpRechts.Name = "tlpRechts";
             this.tlpRechts.RowCount = 3;
             this.tlpRechts.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpRechts.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpRechts.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpRechts.Size = new System.Drawing.Size(678, 602);
+            this.tlpRechts.Size = new System.Drawing.Size(904, 748);
             this.tlpRechts.TabIndex = 1;
             // 
             // groupBox2
@@ -1516,9 +1577,11 @@
             this.groupBox2.Controls.Add(this.tableLayoutPanel5);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(455, 85);
+            this.groupBox2.Location = new System.Drawing.Point(606, 106);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(220, 76);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(294, 94);
             this.groupBox2.TabIndex = 81;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Beschikbaarheid";
@@ -1532,23 +1595,24 @@
             this.tableLayoutPanel5.Controls.Add(this.cbAllNietBeschikbaar, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.lvNB, 0, 2);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 20);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(214, 57);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(286, 70);
             this.tableLayoutPanel5.TabIndex = 80;
             // 
             // cbAllNietBeschikbaar
             // 
             this.cbAllNietBeschikbaar.AutoSize = true;
             this.cbAllNietBeschikbaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAllNietBeschikbaar.Location = new System.Drawing.Point(21, 0);
-            this.cbAllNietBeschikbaar.Margin = new System.Windows.Forms.Padding(21, 0, 3, 0);
+            this.cbAllNietBeschikbaar.Location = new System.Drawing.Point(28, 0);
+            this.cbAllNietBeschikbaar.Margin = new System.Windows.Forms.Padding(28, 0, 4, 0);
             this.cbAllNietBeschikbaar.Name = "cbAllNietBeschikbaar";
-            this.cbAllNietBeschikbaar.Size = new System.Drawing.Size(106, 17);
+            this.cbAllNietBeschikbaar.Size = new System.Drawing.Size(140, 21);
             this.cbAllNietBeschikbaar.TabIndex = 57;
             this.cbAllNietBeschikbaar.Text = "(Alles selecteren)";
             this.cbAllNietBeschikbaar.UseVisualStyleBackColor = true;
@@ -1566,11 +1630,11 @@
             this.lvNB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvNB.FullRowSelect = true;
             this.lvNB.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lvNB.Location = new System.Drawing.Point(17, 17);
-            this.lvNB.Margin = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.lvNB.Location = new System.Drawing.Point(23, 21);
+            this.lvNB.Margin = new System.Windows.Forms.Padding(23, 0, 0, 0);
             this.lvNB.MultiSelect = false;
             this.lvNB.Name = "lvNB";
-            this.lvNB.Size = new System.Drawing.Size(197, 40);
+            this.lvNB.Size = new System.Drawing.Size(263, 49);
             this.lvNB.Sorting = System.Windows.Forms.SortOrder.Descending;
             this.lvNB.TabIndex = 87;
             this.lvNB.UseCompatibleStateImageBehavior = false;
@@ -1593,10 +1657,11 @@
             this.gbFuncties.Controls.Add(this.tableLayoutPanel4);
             this.gbFuncties.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbFuncties.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbFuncties.Location = new System.Drawing.Point(229, 85);
-            this.gbFuncties.Margin = new System.Windows.Forms.Padding(3, 3, 9, 3);
+            this.gbFuncties.Location = new System.Drawing.Point(305, 106);
+            this.gbFuncties.Margin = new System.Windows.Forms.Padding(4, 4, 12, 4);
             this.gbFuncties.Name = "gbFuncties";
-            this.gbFuncties.Size = new System.Drawing.Size(214, 76);
+            this.gbFuncties.Padding = new System.Windows.Forms.Padding(4);
+            this.gbFuncties.Size = new System.Drawing.Size(285, 94);
             this.gbFuncties.TabIndex = 81;
             this.gbFuncties.TabStop = false;
             this.gbFuncties.Text = "Functies";
@@ -1610,23 +1675,24 @@
             this.tableLayoutPanel4.Controls.Add(this.cbAllFuncties, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.lvFuncties, 0, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 20);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(208, 57);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(277, 70);
             this.tableLayoutPanel4.TabIndex = 80;
             // 
             // cbAllFuncties
             // 
             this.cbAllFuncties.AutoSize = true;
             this.cbAllFuncties.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAllFuncties.Location = new System.Drawing.Point(21, 0);
-            this.cbAllFuncties.Margin = new System.Windows.Forms.Padding(21, 0, 3, 0);
+            this.cbAllFuncties.Location = new System.Drawing.Point(28, 0);
+            this.cbAllFuncties.Margin = new System.Windows.Forms.Padding(28, 0, 4, 0);
             this.cbAllFuncties.Name = "cbAllFuncties";
-            this.cbAllFuncties.Size = new System.Drawing.Size(106, 17);
+            this.cbAllFuncties.Size = new System.Drawing.Size(140, 21);
             this.cbAllFuncties.TabIndex = 57;
             this.cbAllFuncties.Text = "(Alles selecteren)";
             this.cbAllFuncties.UseVisualStyleBackColor = true;
@@ -1644,11 +1710,11 @@
             this.lvFuncties.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvFuncties.FullRowSelect = true;
             this.lvFuncties.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lvFuncties.Location = new System.Drawing.Point(17, 17);
-            this.lvFuncties.Margin = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.lvFuncties.Location = new System.Drawing.Point(23, 21);
+            this.lvFuncties.Margin = new System.Windows.Forms.Padding(23, 0, 0, 0);
             this.lvFuncties.MultiSelect = false;
             this.lvFuncties.Name = "lvFuncties";
-            this.lvFuncties.Size = new System.Drawing.Size(191, 40);
+            this.lvFuncties.Size = new System.Drawing.Size(254, 49);
             this.lvFuncties.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvFuncties.TabIndex = 87;
             this.lvFuncties.UseCompatibleStateImageBehavior = false;
@@ -1671,11 +1737,12 @@
             this.gbKetenpartneers.Controls.Add(this.tableLayoutPanel2);
             this.gbKetenpartneers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbKetenpartneers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbKetenpartneers.Location = new System.Drawing.Point(3, 85);
-            this.gbKetenpartneers.Margin = new System.Windows.Forms.Padding(3, 3, 9, 3);
-            this.gbKetenpartneers.MinimumSize = new System.Drawing.Size(0, 20);
+            this.gbKetenpartneers.Location = new System.Drawing.Point(4, 106);
+            this.gbKetenpartneers.Margin = new System.Windows.Forms.Padding(4, 4, 12, 4);
+            this.gbKetenpartneers.MinimumSize = new System.Drawing.Size(0, 25);
             this.gbKetenpartneers.Name = "gbKetenpartneers";
-            this.gbKetenpartneers.Size = new System.Drawing.Size(214, 76);
+            this.gbKetenpartneers.Padding = new System.Windows.Forms.Padding(4);
+            this.gbKetenpartneers.Size = new System.Drawing.Size(285, 94);
             this.gbKetenpartneers.TabIndex = 81;
             this.gbKetenpartneers.TabStop = false;
             this.gbKetenpartneers.Text = "Ketenpartners";
@@ -1689,23 +1756,24 @@
             this.tableLayoutPanel2.Controls.Add(this.cbAllKetenpartners, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.lvKetenpartners, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 20);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(208, 57);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(277, 70);
             this.tableLayoutPanel2.TabIndex = 80;
             // 
             // cbAllKetenpartners
             // 
             this.cbAllKetenpartners.AutoSize = true;
             this.cbAllKetenpartners.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAllKetenpartners.Location = new System.Drawing.Point(21, 0);
-            this.cbAllKetenpartners.Margin = new System.Windows.Forms.Padding(21, 0, 3, 0);
+            this.cbAllKetenpartners.Location = new System.Drawing.Point(28, 0);
+            this.cbAllKetenpartners.Margin = new System.Windows.Forms.Padding(28, 0, 4, 0);
             this.cbAllKetenpartners.Name = "cbAllKetenpartners";
-            this.cbAllKetenpartners.Size = new System.Drawing.Size(106, 17);
+            this.cbAllKetenpartners.Size = new System.Drawing.Size(140, 21);
             this.cbAllKetenpartners.TabIndex = 57;
             this.cbAllKetenpartners.Text = "(Alles selecteren)";
             this.cbAllKetenpartners.UseVisualStyleBackColor = true;
@@ -1723,11 +1791,11 @@
             this.lvKetenpartners.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvKetenpartners.FullRowSelect = true;
             this.lvKetenpartners.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lvKetenpartners.Location = new System.Drawing.Point(17, 17);
-            this.lvKetenpartners.Margin = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.lvKetenpartners.Location = new System.Drawing.Point(23, 21);
+            this.lvKetenpartners.Margin = new System.Windows.Forms.Padding(23, 0, 0, 0);
             this.lvKetenpartners.MultiSelect = false;
             this.lvKetenpartners.Name = "lvKetenpartners";
-            this.lvKetenpartners.Size = new System.Drawing.Size(191, 40);
+            this.lvKetenpartners.Size = new System.Drawing.Size(254, 49);
             this.lvKetenpartners.Sorting = System.Windows.Forms.SortOrder.Descending;
             this.lvKetenpartners.TabIndex = 87;
             this.lvKetenpartners.UseCompatibleStateImageBehavior = false;
@@ -1750,10 +1818,11 @@
             this.gbContract.Controls.Add(this.tableLayoutPanel6);
             this.gbContract.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbContract.Location = new System.Drawing.Point(3, 3);
-            this.gbContract.Margin = new System.Windows.Forms.Padding(3, 3, 9, 3);
+            this.gbContract.Location = new System.Drawing.Point(4, 4);
+            this.gbContract.Margin = new System.Windows.Forms.Padding(4, 4, 12, 4);
             this.gbContract.Name = "gbContract";
-            this.gbContract.Size = new System.Drawing.Size(214, 76);
+            this.gbContract.Padding = new System.Windows.Forms.Padding(4);
+            this.gbContract.Size = new System.Drawing.Size(285, 94);
             this.gbContract.TabIndex = 65;
             this.gbContract.TabStop = false;
             this.gbContract.Text = "Contract";
@@ -1767,25 +1836,25 @@
             this.tableLayoutPanel6.Controls.Add(this.cbAllContracten, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.lvContracten, 0, 2);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(30, 30, 3, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(4, 20);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(40, 37, 4, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(208, 57);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(277, 70);
             this.tableLayoutPanel6.TabIndex = 34;
             // 
             // cbAllContracten
             // 
             this.cbAllContracten.AutoSize = true;
             this.cbAllContracten.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAllContracten.Location = new System.Drawing.Point(21, 0);
-            this.cbAllContracten.Margin = new System.Windows.Forms.Padding(21, 0, 3, 0);
+            this.cbAllContracten.Location = new System.Drawing.Point(28, 0);
+            this.cbAllContracten.Margin = new System.Windows.Forms.Padding(28, 0, 4, 0);
             this.cbAllContracten.Name = "cbAllContracten";
-            this.cbAllContracten.Size = new System.Drawing.Size(106, 17);
+            this.cbAllContracten.Size = new System.Drawing.Size(140, 21);
             this.cbAllContracten.TabIndex = 56;
             this.cbAllContracten.Text = "(Alles selecteren)";
             this.cbAllContracten.UseVisualStyleBackColor = true;
@@ -1806,11 +1875,11 @@
             listViewItem1.StateImageIndex = 0;
             this.lvContracten.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.lvContracten.Location = new System.Drawing.Point(17, 17);
-            this.lvContracten.Margin = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.lvContracten.Location = new System.Drawing.Point(23, 21);
+            this.lvContracten.Margin = new System.Windows.Forms.Padding(23, 0, 0, 0);
             this.lvContracten.MultiSelect = false;
             this.lvContracten.Name = "lvContracten";
-            this.lvContracten.Size = new System.Drawing.Size(191, 40);
+            this.lvContracten.Size = new System.Drawing.Size(254, 49);
             this.lvContracten.Sorting = System.Windows.Forms.SortOrder.Descending;
             this.lvContracten.TabIndex = 87;
             this.lvContracten.UseCompatibleStateImageBehavior = false;
@@ -1829,9 +1898,10 @@
             // EasySave
             // 
             this.EasySave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EasySave.Location = new System.Drawing.Point(154, 21);
+            this.EasySave.Location = new System.Drawing.Point(205, 26);
+            this.EasySave.Margin = new System.Windows.Forms.Padding(4);
             this.EasySave.Name = "EasySave";
-            this.EasySave.Size = new System.Drawing.Size(112, 22);
+            this.EasySave.Size = new System.Drawing.Size(149, 27);
             this.EasySave.TabIndex = 87;
             this.EasySave.Text = "Easy  Save";
             this.EasySave.UseVisualStyleBackColor = true;
@@ -1840,9 +1910,10 @@
             // EasyLoad
             // 
             this.EasyLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EasyLoad.Location = new System.Drawing.Point(36, 21);
+            this.EasyLoad.Location = new System.Drawing.Point(48, 26);
+            this.EasyLoad.Margin = new System.Windows.Forms.Padding(4);
             this.EasyLoad.Name = "EasyLoad";
-            this.EasyLoad.Size = new System.Drawing.Size(112, 22);
+            this.EasyLoad.Size = new System.Drawing.Size(149, 27);
             this.EasyLoad.TabIndex = 87;
             this.EasyLoad.Text = "Easy  Load    ";
             this.EasyLoad.UseVisualStyleBackColor = true;
@@ -1856,35 +1927,36 @@
             this.toolStripMenuItem2,
             this.toolStripMenuItem3});
             this.cMnuStrpRegBevVraag.Name = "cMnuStrpRegBevVraag";
-            this.cMnuStrpRegBevVraag.Size = new System.Drawing.Size(282, 70);
+            this.cMnuStrpRegBevVraag.Size = new System.Drawing.Size(345, 76);
             this.cMnuStrpRegBevVraag.Text = "Geselecteerde Registratiebevoegde moet zijn:";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(281, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(344, 24);
             this.toolStripMenuItem1.Text = "Vaste selectie";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(281, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(344, 24);
             this.toolStripMenuItem2.Text = "Ingelogde Registratiebevoegde of Allen";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(281, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(344, 24);
             this.toolStripMenuItem3.Text = "Ingelogde Registratiebevoegde of Niets";
             // 
             // EasyME
             // 
             this.EasyME.AutoSize = true;
             this.EasyME.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EasyME.Location = new System.Drawing.Point(397, 21);
+            this.EasyME.Location = new System.Drawing.Point(529, 26);
+            this.EasyME.Margin = new System.Windows.Forms.Padding(4);
             this.EasyME.Name = "EasyME";
             this.EasyME.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.EasyME.Size = new System.Drawing.Size(42, 17);
+            this.EasyME.Size = new System.Drawing.Size(50, 21);
             this.EasyME.TabIndex = 89;
             this.EasyME.Text = "ME";
             this.EasyME.UseVisualStyleBackColor = true;
@@ -1898,9 +1970,11 @@
             this.gbEasy.Controls.Add(this.EasyUser);
             this.gbEasy.Controls.Add(this.EasySave);
             this.gbEasy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbEasy.Location = new System.Drawing.Point(100, 583);
+            this.gbEasy.Location = new System.Drawing.Point(133, 718);
+            this.gbEasy.Margin = new System.Windows.Forms.Padding(4);
             this.gbEasy.Name = "gbEasy";
-            this.gbEasy.Size = new System.Drawing.Size(476, 56);
+            this.gbEasy.Padding = new System.Windows.Forms.Padding(4);
+            this.gbEasy.Size = new System.Drawing.Size(635, 69);
             this.gbEasy.TabIndex = 92;
             this.gbEasy.TabStop = false;
             this.gbEasy.Text = "Easy";
@@ -1916,10 +1990,10 @@
             this.buttonTot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTot.Image = ((System.Drawing.Image)(resources.GetObject("buttonTot.Image")));
             this.buttonTot.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonTot.Location = new System.Drawing.Point(230, 322);
+            this.buttonTot.Location = new System.Drawing.Point(307, 396);
             this.buttonTot.Margin = new System.Windows.Forms.Padding(0);
             this.buttonTot.Name = "buttonTot";
-            this.buttonTot.Size = new System.Drawing.Size(38, 54);
+            this.buttonTot.Size = new System.Drawing.Size(51, 66);
             this.buttonTot.TabIndex = 16;
             this.buttonTot.Text = "Tot";
             this.buttonTot.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1934,11 +2008,11 @@
             this.buttonVan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVan.Image = ((System.Drawing.Image)(resources.GetObject("buttonVan.Image")));
             this.buttonVan.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonVan.Location = new System.Drawing.Point(186, 322);
+            this.buttonVan.Location = new System.Drawing.Point(248, 396);
             this.buttonVan.Margin = new System.Windows.Forms.Padding(0);
             this.buttonVan.Name = "buttonVan";
             this.buttonVan.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.buttonVan.Size = new System.Drawing.Size(38, 54);
+            this.buttonVan.Size = new System.Drawing.Size(51, 66);
             this.buttonVan.TabIndex = 15;
             this.buttonVan.Text = "Van";
             this.buttonVan.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1948,9 +2022,10 @@
             // 
             // HideAll
             // 
-            this.HideAll.Location = new System.Drawing.Point(377, 12);
+            this.HideAll.Location = new System.Drawing.Point(12, 15);
+            this.HideAll.Margin = new System.Windows.Forms.Padding(4);
             this.HideAll.Name = "HideAll";
-            this.HideAll.Size = new System.Drawing.Size(728, 385);
+            this.HideAll.Size = new System.Drawing.Size(971, 474);
             this.HideAll.TabIndex = 93;
             this.HideAll.TabStop = false;
             // 
@@ -1965,9 +2040,10 @@
             this.lvDatum.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem3,
             listViewItem4});
-            this.lvDatum.Location = new System.Drawing.Point(272, 177);
+            this.lvDatum.Location = new System.Drawing.Point(229, 218);
+            this.lvDatum.Margin = new System.Windows.Forms.Padding(4);
             this.lvDatum.Name = "lvDatum";
-            this.lvDatum.Size = new System.Drawing.Size(122, 203);
+            this.lvDatum.Size = new System.Drawing.Size(162, 249);
             this.lvDatum.TabIndex = 94;
             this.lvDatum.UseCompatibleStateImageBehavior = false;
             this.lvDatum.View = System.Windows.Forms.View.Details;
@@ -1981,7 +2057,7 @@
             // 
             // USMario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -1998,9 +2074,9 @@
             this.Controls.Add(this.monthCalendarEind);
             this.Controls.Add(this.monthCalendarStart);
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.MinimumSize = new System.Drawing.Size(450, 325);
+            this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "USMario";
-            this.Size = new System.Drawing.Size(1108, 657);
+            this.Size = new System.Drawing.Size(1339, 816);
             this.gbUitvoerders.ResumeLayout(false);
             this.gbUitvoerders.PerformLayout();
             this.tableLayoutPanelUitvoerders.ResumeLayout(false);

@@ -179,17 +179,8 @@ namespace MDR2PDF
             pdfConverter.PdfFooterOptions.FooterHeight = 60;
 
             // Logo linksBoven
-            HtmlToPdfElement HtmlLogo;
-            if (htmlFooter.ToLower().Contains("afbouw"))
-            {
-                HtmlLogo = new HtmlToPdfElement(5, 0, 0, 0,
-                        "<img alt=\"\" src=\"http://www.essed.com/40df86d0-a86d-11e4-bcd8-0800200c9a66/logoZAP.png\" style=\"margin-bottom:15px\"/>", null, 1024, 0);
-            } else
-            {
-                HtmlLogo = new HtmlToPdfElement(5, 0, 0, 0,
-                        //"<img alt=\"\" src=\"http://www.zeebregts.nl/images/logo.png\" style=\"margin-bottom:15px\"/>", null, 1024, 0);
-                        "<img alt=\"\" src=\"http://www.essed.com/40df86d0-a86d-11e4-bcd8-0800200c9a66/logo.png\" style=\"margin-bottom:15px\"/>", null, 1024, 0);
-            }
+            HtmlToPdfElement HtmlLogo  = new HtmlToPdfElement(5, 0, 0, 0,
+                    "<img alt=\"\" src=\"http://www.zeebregts.nl/images/logo.png\" style=\"margin-bottom:15px\"/>", null , 1024,0);
             HtmlLogo.FitHeight = true;
             HtmlLogo.EmbedFonts = true;
             pdfConverter.PdfHeaderOptions.AddElement(HtmlLogo);

@@ -16,15 +16,11 @@ namespace zeebregtsCs.ExchangeComs
             ServicePointManager.ServerCertificateValidationCallback += (sender, cert, chain, sslPolicyErrors) => true;
 
             Microsoft.Exchange.WebServices.Data.ExchangeService service = new Microsoft.Exchange.WebServices.Data.ExchangeService(ExchangeVersion.Exchange2013_SP1);
-            service.Credentials = new WebCredentials("Daan van Leth", "DvL2013#");
+            service.Credentials = new WebCredentials("joost@zeebregts.nl", "Pallas18#2015");
             service.UseDefaultCredentials = false;
 
             service.TraceEnabled = false;
-            //service.TraceFlags = TraceFlags.All;
-
-            //service.AutodiscoverUrl("daan@zeebregts.nl", RedirectionUrlValidationCallback);
-            service.Url = new Uri("https://192.160.0.201/EWS/Exchange.asmx");
-
+            service.Url = new Uri("https://outlook.office365.com/EWS/Exchange.asmx");
             return service;
         }
 
@@ -288,53 +284,11 @@ namespace zeebregtsCs.ExchangeComs
             }
             var contacts = service.FindItems(f_id, filterCol, contactView);
 
-            if (contacts != null && contacts.First() != null)
+            if (contacts != null && contacts.Count() > 0 && contacts.First() != null)
             {
                 Console.WriteLine("Contact Found");
                 returnID = (contacts.First() as Contact).Id;
             }
-            
-            //var f_id = FindFolder(service);
-            //var folderIds = new List<FolderId>();
-            //folderIds.Add(f_id);
-            //// Only use the Contacts folder.
-
-            //NameResolutionCollection resolvedNames = service.ResolveName(surnameCommaGivenname, folderIds, ResolveNameSearchLocation.DirectoryOnly, true);// service.ResolveName(surnameCommaGivenname, ResolveNameSearchLocation.ContactsThenDirectory, true);
-            //// Output the list of candidates.   
-            //var previousId = "";
-            //var returnID = new ItemId("0");
-            //Console.WriteLine("Searching contact: " + surnameCommaGivenname);
-            //if(resolvedNames.Count == 0)
-            //{
-            //    Console.WriteLine("No contact found");
-            //}
-            //foreach (NameResolution nameRes in resolvedNames)
-            //{
-            //    Console.WriteLine("Contact found:");
-            //    Console.WriteLine("Contact name: " + nameRes.Mailbox.Name);
-            //    //Console.WriteLine("Contact e-mail address: " + nameRes.Mailbox.Address);
-            //    //Console.WriteLine("Mailbox type: " + nameRes.Mailbox.MailboxType);
-            //    //Console.WriteLine("Mailbox type: " + nameRes.Mailbox.Id);
-
-            //    if (String.IsNullOrEmpty(previousId))
-            //    {
-            //        //first iteration
-            //        previousId = nameRes.Mailbox.Id.ToString();
-            //    }
-            //    if (previousId != nameRes.Mailbox.Id.ToString())
-            //    {
-            //        //conflicting results found
-            //        Console.WriteLine("Cant Find definitive match");
-
-            //        break;
-            //    }
-            //    else
-            //    {
-            //        returnID = nameRes.Mailbox.Id;
-            //    }
-
-
-            //}
 
             return returnID;
         }
@@ -354,12 +308,23 @@ namespace zeebregtsCs.ExchangeComs
                 var folderresponse2 = service.FindFolders(folderresponse.First().Id, filter2, responseview2);
                 if (folderresponse2.Count() == 1)
                 {
-                    resultid = folderresponse2.First().Id;
+                    var responseview3 = new FolderView(1);
+                    var filter3 = new SearchFilter.IsEqualTo(FolderSchema.DisplayName, "syncContacts");
+                    var folderresponse3 = service.FindFolders(folderresponse2.First().Id, filter3, responseview3);
+                    if (folderresponse3.Count() == 1)
+                    {
+                        resultid = folderresponse3.First().Id;
+                    }
                 }
             }
             return resultid;
         }
 
-       
+       public static void MakeFolder(Microsoft.Exchange.WebServices.Data.ExchangeService service)
+        {
+           ContactsFolder folder = new ContactsFolder(service);
+           folder.DisplayName = "syncContacts";
+           folder.Save(FindFolder(service));
+        }
     }
 }

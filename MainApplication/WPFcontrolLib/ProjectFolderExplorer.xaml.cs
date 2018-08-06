@@ -55,7 +55,7 @@ namespace WPFcontrolLib
             //MessageBox.Show("ProjNum is " + curItem.ProjNum );
 
 
-            string myDocspath = @"\\OFFICE-SERVER\Bestanden\Bestanden\ProjectFolders (Module 1 Test)\" + curItem.ProjNum;
+            string myDocspath = @"\\PROLIANT\bedrijfsdata\Bestanden\ProjectFolders\" + curItem.ProjNum;
             if (Directory.Exists(myDocspath))
             {
                 string windir = Environment.GetEnvironmentVariable("WINDIR");
